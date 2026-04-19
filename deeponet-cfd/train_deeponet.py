@@ -8,9 +8,15 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 def parse_args():
     parser = argparse.ArgumentParser(
-        description="Train DeepONet model on CFDBench dataset",
+        description="Train DeepONet model on CFDBench dataset (OOD Version)",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
+OOD Design Overview:
+  - BaseDeepONetTrainer: Abstract base class defining the training interface
+  - PyTorchDeepONetTrainer: PyTorch-specific implementation
+  - PaddleDeepONetTrainer: PaddlePaddle-specific implementation  
+  - TrainerFactory: Factory class to create appropriate trainer
+
 Examples:
   # PyTorch, default parameters
   python train_deeponet.py --framework pytorch
@@ -33,7 +39,7 @@ Examples:
         "--framework",
         type=str,
         default="pytorch",
-        choices=["pytorch", "paddle"],
+        choices=["pytorch", "paddle", "torch", "paddlepaddle"],
         help="Deep learning framework to use (default: pytorch)"
     )
     
@@ -230,20 +236,8 @@ Examples:
     return parser.parse_args()
 
 
-def main():
-    args = parse_args()
-    
-    print("=" * 80)
-    print("DEEPONET TRAINING STARTING")
-    print("=" * 80)
-    print(f"Framework: {args.framework}")
-    print(f"Quick Train: {args.quick_train}")
-    print(f"Epochs: {args.epochs}")
-    print(f"Batch Size: {args.batch_size}")
-    print(f"Learning Rate: {args.learning_rate}")
-    print("=" * 80)
-    
-    train_kwargs = {
+def args_to_config(args) -> dict:
+    return {
         "branch_input_dim": args.branch_input_dim,
         "trunk_input_dim": args.trunk_input_dim,
         "branch_hidden_layers": args.branch_hidden_layers,
@@ -271,64 +265,69 @@ def main():
         "verbose": args.verbose,
         "device": args.device
     }
+
+
+def main():
+    args = parse_args()
+    
+    print("=" * 80)
+    print("DEEPONET TRAINING STARTING (OOD VERSION)")
+    print("=" * 80)
+    print(f"Framework: {args.framework}")
+    print(f"Quick Train: {args.quick_train}")
+    print(f"Epochs: {args.epochs}")
+    print(f"Batch Size: {args.batch_size}")
+    print(f"Learning Rate: {args.learning_rate}")
+    print(f"Design Pattern: Factory + Template Method")
+    print("=" * 80)
+    
+    config_dict = args_to_config(args)
     
     try:
-        if args.framework.lower() == "pytorch":
-            from train.trainer_pytorch import train_deeponet_pytorch, quick_train_pytorch
-            
-            if args.quick_train:
-                result = quick_train_pytorch(
-                    epochs=args.epochs,
-                    batch_size=args.batch_size,
-                    n_train_samples=args.n_train_samples,
-                    n_test_samples=args.n_test_samples,
-                    grid_size=args.grid_size,
-                    **{k: v for k, v in train_kwargs.items() 
-                       if k not in ['epochs', 'batch_size', 'n_train_samples', 'n_test_samples', 'grid_size']}
-                )
-            else:
-                result = train_deeponet_pytorch(**train_kwargs)
+        from train import TrainerFactory, train_deeponet, quick_train_deeponet
         
-        elif args.framework.lower() == "paddle":
-            from train.trainer_paddle import train_deeponet_paddle, quick_train_paddle
-            
-            if args.quick_train:
-                result = quick_train_paddle(
-                    epochs=args.epochs,
-                    batch_size=args.batch_size,
-                    n_train_samples=args.n_train_samples,
-                    n_test_samples=args.n_test_samples,
-                    grid_size=args.grid_size,
-                    **{k: v for k, v in train_kwargs.items() 
-                       if k not in ['epochs', 'batch_size', 'n_train_samples', 'n_test_samples', 'grid_size']}
-                )
-            else:
-                result = train_deeponet_paddle(**train_kwargs)
+        available_frameworks = TrainerFactory.get_available_frameworks()
+        print(f"Available frameworks: {available_frameworks}")
+        
+        if args.quick_train:
+            print("\nUsing quick_train_deeponet() via factory...")
+            result = quick_train_deeponet(
+                framework=args.framework,
+                epochs=args.epochs,
+                **config_dict
+            )
+        else:
+            print("\nUsing train_deeponet() via factory...")
+            result = train_deeponet(
+                framework=args.framework,
+                **config_dict
+            )
         
         print("\n" + "=" * 80)
         print("TRAINING RESULTS SUMMARY")
         print("=" * 80)
-        print(f"Framework: {result.get('framework', 'unknown')}")
-        print(f"Device: {result.get('device', 'unknown')}")
-        print(f"Final Train Loss: {result.get('final_train_loss', 'N/A')}")
-        print(f"Final Test Loss: {result.get('final_test_loss', 'N/A')}")
-        print(f"Best Train Loss: {result.get('best_train_loss', 'N/A')}")
-        print(f"Best Test Loss: {result.get('best_test_loss', 'N/A')}")
-        print(f"Model Saved At: {result.get('model_path', 'Not saved')}")
+        print(f"Framework: {result.framework}")
+        print(f"Device: {result.device}")
+        print(f"Final Train Loss: {result.final_train_loss}")
+        print(f"Final Test Loss:  {result.final_test_loss}")
+        print(f"Best Train Loss:  {result.best_train_loss}")
+        print(f"Best Test Loss:   {result.best_test_loss}")
+        print(f"Model Saved At:   {result.model_path or 'Not saved'}")
+        print(f"Duration:         {result.duration_seconds:.2f} seconds")
         print("=" * 80)
         
         return result
         
+    except ValueError as e:
+        print(f"\nError: {e}")
+        print(f"Please install the required framework first.")
+        sys.exit(1)
     except ImportError as e:
-        print(f"Error: {e}")
-        print(f"Please install {args.framework} first:")
-        if args.framework == "pytorch":
-            print("  pip install torch")
-        else:
-            print("  pip install paddlepaddle")
+        print(f"\nImport Error: {e}")
+        print(f"Available frameworks: {TrainerFactory.get_available_frameworks() if 'TrainerFactory' in dir() else 'None'}")
         sys.exit(1)
     except Exception as e:
-        print(f"Training failed with error: {e}")
+        print(f"\nTraining failed with error: {type(e).__name__}: {e}")
         import traceback
         traceback.print_exc()
         sys.exit(1)
