@@ -1,12 +1,13 @@
 import os
 import sys
+import numpy as np
 from typing import Dict, Optional, List, Tuple, Any
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
 from train.base_trainer import BaseDeepONetTrainer, TrainingConfig, TrainingResult
 from models.deeponet_pytorch import DeepONet
-from data.cfd_bench_dataset import create_datasets, HAS_TORCH
+from data.cfd_bench_dataset import create_datasets, HAS_TORCH, CFDDatasetPyTorch
 
 try:
     import torch
@@ -81,33 +82,87 @@ class PyTorchDeepONetTrainer(BaseDeepONetTrainer):
         self.criterion = nn.MSELoss()
         return self.criterion
     
+    def _create_dataset_from_arrays(
+        self,
+        branch_inputs: np.ndarray,
+        trunk_inputs: np.ndarray,
+        outputs: np.ndarray,
+        normalize: bool = True
+    ) -> Any:
+        return CFDDatasetPyTorch(
+            branch_inputs,
+            trunk_inputs,
+            outputs,
+            normalize=normalize
+        )
+    
+    def _create_data_loader(self, dataset: Any, shuffle: bool = True) -> Any:
+        return DataLoader(
+            dataset,
+            batch_size=self.config.batch_size,
+            shuffle=shuffle,
+            num_workers=0
+        )
+    
     def prepare_data(self) -> Tuple[Any, Any]:
-        self.train_dataset, self.test_dataset, self.actual_branch_dim, \
-            self.actual_trunk_dim, self.actual_output_dim = create_datasets(
-                n_train=self.config.n_train_samples,
-                n_test=self.config.n_test_samples,
-                grid_size=self.config.grid_size,
-                problem_type=self.config.problem_type,
-                normalize=self.config.normalize_data,
-                framework="pytorch"
-            )
-        
-        self.train_loader = DataLoader(
-            self.train_dataset,
-            batch_size=self.config.batch_size,
-            shuffle=True,
-            num_workers=0
-        )
-        
-        self.test_loader = DataLoader(
-            self.test_dataset,
-            batch_size=self.config.batch_size,
-            shuffle=False,
-            num_workers=0
-        )
-        
-        if self.config.normalize_data:
-            self.normalization_params = self.train_dataset.get_normalization_params()
+        if self.config.has_external_dataset():
+            self.logger.info("Using external dataset...")
+            
+            dataset_config = self.config.dataset_config
+            
+            if dataset_config.train_dataset is not None:
+                self.set_datasets(
+                    dataset_config.train_dataset,
+                    dataset_config.test_dataset
+                )
+                if hasattr(dataset_config.train_dataset, 'branch_inputs'):
+                    self.actual_branch_dim = dataset_config.train_dataset.branch_inputs.shape[1]
+                    self.actual_trunk_dim = dataset_config.train_dataset.trunk_inputs.shape[-1]
+                    self.actual_output_dim = dataset_config.train_dataset.outputs.shape[1]
+                elif hasattr(dataset_config.train_dataset, '__len__'):
+                    sample = next(iter(DataLoader(dataset_config.train_dataset, batch_size=1)))
+                    if len(sample) >= 3:
+                        self.actual_branch_dim = sample[0].shape[-1]
+                        self.actual_trunk_dim = sample[1].shape[-1]
+                        self.actual_output_dim = sample[2].shape[-1]
+            
+            elif dataset_config.dataset_path is not None:
+                self.load_dataset_from_path(
+                    dataset_config.dataset_path,
+                    format=dataset_config.dataset_format
+                )
+            
+            elif dataset_config.branch_inputs is not None:
+                self.load_dataset_from_arrays(
+                    branch_inputs=dataset_config.branch_inputs,
+                    trunk_inputs=dataset_config.trunk_inputs,
+                    outputs=dataset_config.outputs,
+                    test_branch_inputs=dataset_config.test_branch_inputs,
+                    test_trunk_inputs=dataset_config.test_trunk_inputs,
+                    test_outputs=dataset_config.test_outputs
+                )
+            
+            if self.actual_branch_dim > 0:
+                self.config.branch_input_dim = self.actual_branch_dim
+                self.config.trunk_input_dim = self.actual_trunk_dim
+                self.config.output_dim = self.actual_output_dim
+        else:
+            self.logger.info("Generating synthetic dataset...")
+            self.train_dataset, self.test_dataset, self.actual_branch_dim, \
+                self.actual_trunk_dim, self.actual_output_dim = create_datasets(
+                    n_train=self.config.n_train_samples,
+                    n_test=self.config.n_test_samples,
+                    grid_size=self.config.grid_size,
+                    problem_type=self.config.problem_type,
+                    normalize=self.config.normalize_data,
+                    framework="pytorch"
+                )
+            
+            self.train_loader = self._create_data_loader(self.train_dataset, shuffle=True)
+            self.test_loader = self._create_data_loader(self.test_dataset, shuffle=False)
+            
+            if self.config.normalize_data:
+                self.normalization_params = self.train_dataset.get_normalization_params()
         
         return self.train_loader, self.test_loader
     

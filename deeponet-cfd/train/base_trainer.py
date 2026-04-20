@@ -3,11 +3,53 @@ from typing import Dict, Optional, List, Tuple, Any
 from datetime import datetime
 import os
 import sys
+import numpy as np
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from config.logging_config import setup_logger, TrainingLogger
 from data.cfd_bench_dataset import CFDDataGenerator
+
+
+class DatasetConfig:
+    
+    def __init__(
+        self,
+        train_dataset: Any = None,
+        test_dataset: Any = None,
+        dataset_path: Optional[str] = None,
+        dataset_format: Optional[str] = None,
+        branch_inputs: Any = None,
+        trunk_inputs: Any = None,
+        outputs: Any = None,
+        test_branch_inputs: Any = None,
+        test_trunk_inputs: Any = None,
+        test_outputs: Any = None
+    ):
+        self.train_dataset = train_dataset
+        self.test_dataset = test_dataset
+        self.dataset_path = dataset_path
+        self.dataset_format = dataset_format
+        self.branch_inputs = branch_inputs
+        self.trunk_inputs = trunk_inputs
+        self.outputs = outputs
+        self.test_branch_inputs = test_branch_inputs
+        self.test_trunk_inputs = test_trunk_inputs
+        self.test_outputs = test_outputs
+    
+    def has_external_dataset(self) -> bool:
+        return (
+            self.train_dataset is not None or
+            self.dataset_path is not None or
+            self.branch_inputs is not None
+        )
+    
+    def to_dict(self) -> Dict[str, Any]:
+        return {
+            'dataset_path': self.dataset_path,
+            'dataset_format': self.dataset_format,
+            'has_external_dataset': self.has_external_dataset()
+        }
 
 
 class TrainingConfig:
@@ -39,7 +81,12 @@ class TrainingConfig:
         model_save_path: Optional[str] = None,
         log_file: Optional[str] = None,
         verbose: bool = True,
-        device: Optional[str] = None
+        device: Optional[str] = None,
+        dataset_config: Optional[DatasetConfig] = None,
+        train_dataset: Any = None,
+        test_dataset: Any = None,
+        dataset_path: Optional[str] = None,
+        dataset_format: Optional[str] = None
     ):
         if branch_hidden_layers is None:
             branch_hidden_layers = [256, 256, 256]
@@ -72,6 +119,18 @@ class TrainingConfig:
         self.log_file = log_file
         self.verbose = verbose
         self.device = device
+        
+        if dataset_config is None:
+            dataset_config = DatasetConfig(
+                train_dataset=train_dataset,
+                test_dataset=test_dataset,
+                dataset_path=dataset_path,
+                dataset_format=dataset_format
+            )
+        self.dataset_config = dataset_config
+    
+    def has_external_dataset(self) -> bool:
+        return self.dataset_config.has_external_dataset()
     
     def to_dict(self) -> Dict[str, Any]:
         return {
@@ -100,11 +159,15 @@ class TrainingConfig:
             'model_save_path': self.model_save_path,
             'log_file': self.log_file,
             'verbose': self.verbose,
-            'device': self.device
+            'device': self.device,
+            'dataset_config': self.dataset_config.to_dict()
         }
     
     @classmethod
     def from_dict(cls, config_dict: Dict[str, Any]) -> 'TrainingConfig':
+        dataset_config_dict = config_dict.pop('dataset_config', None)
+        if dataset_config_dict:
+            config_dict['dataset_config'] = DatasetConfig(**dataset_config_dict)
         return cls(**config_dict)
 
 
@@ -202,6 +265,20 @@ class BaseDeepONetTrainer(ABC):
         pass
     
     @abstractmethod
+    def _create_dataset_from_arrays(
+        self,
+        branch_inputs: np.ndarray,
+        trunk_inputs: np.ndarray,
+        outputs: np.ndarray,
+        normalize: bool = True
+    ) -> Any:
+        pass
+    
+    @abstractmethod
+    def _create_data_loader(self, dataset: Any, shuffle: bool = True) -> Any:
+        pass
+    
+    @abstractmethod
     def train_epoch(self, epoch: int) -> float:
         pass
     
@@ -220,6 +297,185 @@ class BaseDeepONetTrainer(ABC):
     @abstractmethod
     def get_current_learning_rate(self) -> float:
         pass
+    
+    def load_dataset_from_path(
+        self,
+        filepath: str,
+        format: Optional[str] = None
+    ) -> Tuple[Any, Any]:
+        self.logger.info(f"Loading dataset from: {filepath}")
+        
+        if format is None:
+            if filepath.endswith('.npz'):
+                format = 'npz'
+            elif filepath.endswith('.h5') or filepath.endswith('.hdf5'):
+                format = 'hdf5'
+            else:
+                raise ValueError(f"Cannot determine format from filename: {filepath}")
+        
+        if format.lower() == 'npz':
+            data = np.load(filepath, allow_pickle=True)
+            
+            train_branch = data['train_branch']
+            train_trunk = data['train_trunk']
+            train_output = data['train_output']
+            test_branch = data['test_branch']
+            test_trunk = data['test_trunk']
+            test_output = data['test_output']
+            
+        elif format.lower() == 'hdf5':
+            try:
+                import h5py
+            except ImportError:
+                raise ImportError("h5py is required for HDF5 format. Install with: pip install h5py")
+            
+            with h5py.File(filepath, 'r') as f:
+                train_branch = f['train/branch_inputs'][:]
+                train_trunk = f['train/trunk_inputs'][:]
+                train_output = f['train/outputs'][:]
+                test_branch = f['test/branch_inputs'][:]
+                test_trunk = f['test/trunk_inputs'][:]
+                test_output = f['test/outputs'][:]
+        else:
+            raise ValueError(f"Unsupported format: {format}. Use 'npz' or 'hdf5'.")
+        
+        self.actual_branch_dim = train_branch.shape[1]
+        self.actual_trunk_dim = train_trunk.shape[-1]
+        self.actual_output_dim = train_output.shape[1]
+        
+        self.config.branch_input_dim = self.actual_branch_dim
+        self.config.trunk_input_dim = self.actual_trunk_dim
+        self.config.output_dim = self.actual_output_dim
+        
+        self.config.n_train_samples = len(train_branch)
+        self.config.n_test_samples = len(test_branch)
+        
+        self.train_dataset = self._create_dataset_from_arrays(
+            train_branch, train_trunk, train_output,
+            normalize=self.config.normalize_data
+        )
+        self.test_dataset = self._create_dataset_from_arrays(
+            test_branch, test_trunk, test_output,
+            normalize=self.config.normalize_data
+        )
+        
+        if hasattr(self.train_dataset, 'get_normalization_params'):
+            self.normalization_params = self.train_dataset.get_normalization_params()
+        
+        self.train_loader = self._create_data_loader(self.train_dataset, shuffle=True)
+        self.test_loader = self._create_data_loader(self.test_dataset, shuffle=False)
+        
+        self.logger.info(f"Dataset loaded successfully:")
+        self.logger.info(f"  Train samples: {len(self.train_dataset)}")
+        self.logger.info(f"  Test samples: {len(self.test_dataset)}")
+        self.logger.info(f"  Branch input dim: {self.actual_branch_dim}")
+        self.logger.info(f"  Trunk input dim: {self.actual_trunk_dim}")
+        self.logger.info(f"  Output dim: {self.actual_output_dim}")
+        
+        return self.train_dataset, self.test_dataset
+    
+    def load_dataset_from_arrays(
+        self,
+        branch_inputs: np.ndarray,
+        trunk_inputs: np.ndarray,
+        outputs: np.ndarray,
+        test_branch_inputs: Optional[np.ndarray] = None,
+        test_trunk_inputs: Optional[np.ndarray] = None,
+        test_outputs: Optional[np.ndarray] = None,
+        test_split: float = 0.2,
+        shuffle: bool = True
+    ) -> Tuple[Any, Any]:
+        self.logger.info("Loading dataset from arrays...")
+        
+        n_samples = len(branch_inputs)
+        
+        if test_branch_inputs is None:
+            n_test = int(n_samples * test_split)
+            n_train = n_samples - n_test
+            
+            if shuffle:
+                indices = np.random.permutation(n_samples)
+            else:
+                indices = np.arange(n_samples)
+            
+            train_indices = indices[:n_train]
+            test_indices = indices[n_train:]
+            
+            train_branch = branch_inputs[train_indices]
+            train_trunk = trunk_inputs[train_indices]
+            train_output = outputs[train_indices]
+            
+            test_branch = branch_inputs[test_indices]
+            test_trunk = trunk_inputs[test_indices]
+            test_output = outputs[test_indices]
+        else:
+            train_branch = branch_inputs
+            train_trunk = trunk_inputs
+            train_output = outputs
+            
+            test_branch = test_branch_inputs
+            test_trunk = test_trunk_inputs
+            test_output = test_outputs
+        
+        self.actual_branch_dim = train_branch.shape[1]
+        self.actual_trunk_dim = train_trunk.shape[-1]
+        self.actual_output_dim = train_output.shape[1]
+        
+        self.config.branch_input_dim = self.actual_branch_dim
+        self.config.trunk_input_dim = self.actual_trunk_dim
+        self.config.output_dim = self.actual_output_dim
+        
+        self.config.n_train_samples = len(train_branch)
+        self.config.n_test_samples = len(test_branch)
+        
+        self.train_dataset = self._create_dataset_from_arrays(
+            train_branch, train_trunk, train_output,
+            normalize=self.config.normalize_data
+        )
+        self.test_dataset = self._create_dataset_from_arrays(
+            test_branch, test_trunk, test_output,
+            normalize=self.config.normalize_data
+        )
+        
+        if hasattr(self.train_dataset, 'get_normalization_params'):
+            self.normalization_params = self.train_dataset.get_normalization_params()
+        
+        self.train_loader = self._create_data_loader(self.train_dataset, shuffle=True)
+        self.test_loader = self._create_data_loader(self.test_dataset, shuffle=False)
+        
+        self.logger.info(f"Dataset loaded from arrays:")
+        self.logger.info(f"  Train samples: {len(self.train_dataset)}")
+        self.logger.info(f"  Test samples: {len(self.test_dataset)}")
+        
+        return self.train_dataset, self.test_dataset
+    
+    def set_datasets(
+        self,
+        train_dataset: Any,
+        test_dataset: Any
+    ) -> Tuple[Any, Any]:
+        self.logger.info("Setting external datasets...")
+        
+        self.train_dataset = train_dataset
+        self.test_dataset = test_dataset
+        
+        self.train_loader = self._create_data_loader(self.train_dataset, shuffle=True)
+        self.test_loader = self._create_data_loader(self.test_dataset, shuffle=False)
+        
+        n_train = len(self.train_dataset) if hasattr(self.train_dataset, '__len__') else 0
+        n_test = len(self.test_dataset) if hasattr(self.test_dataset, '__len__') else 0
+        
+        self.config.n_train_samples = n_train
+        self.config.n_test_samples = n_test
+        
+        if hasattr(self.train_dataset, 'get_normalization_params'):
+            self.normalization_params = self.train_dataset.get_normalization_params()
+        
+        self.logger.info(f"Datasets set:")
+        self.logger.info(f"  Train samples: {n_train}")
+        self.logger.info(f"  Test samples: {n_test}")
+        
+        return self.train_dataset, self.test_dataset
     
     def _log_start(self):
         self.result.start_time = datetime.now()

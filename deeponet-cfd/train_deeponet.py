@@ -233,11 +233,26 @@ Examples:
         help="Device to use (cuda/cpu for PyTorch, gpu/cpu for Paddle)"
     )
     
+    parser.add_argument(
+        "--dataset_path",
+        type=str,
+        default=None,
+        help="Path to pre-generated dataset file (npz or hdf5 format)"
+    )
+    
+    parser.add_argument(
+        "--dataset_format",
+        type=str,
+        default=None,
+        choices=["npz", "hdf5"],
+        help="Format of the dataset file (default: auto-detect from extension)"
+    )
+    
     return parser.parse_args()
 
 
 def args_to_config(args) -> dict:
-    return {
+    config_dict = {
         "branch_input_dim": args.branch_input_dim,
         "trunk_input_dim": args.trunk_input_dim,
         "branch_hidden_layers": args.branch_hidden_layers,
@@ -265,6 +280,12 @@ def args_to_config(args) -> dict:
         "verbose": args.verbose,
         "device": args.device
     }
+    
+    if args.dataset_path:
+        config_dict["dataset_path"] = args.dataset_path
+        config_dict["dataset_format"] = args.dataset_format
+    
+    return config_dict
 
 
 def main():
@@ -278,6 +299,16 @@ def main():
     print(f"Epochs: {args.epochs}")
     print(f"Batch Size: {args.batch_size}")
     print(f"Learning Rate: {args.learning_rate}")
+    if args.dataset_path:
+        print(f"Dataset Path: {args.dataset_path}")
+        if args.dataset_format:
+            print(f"Dataset Format: {args.dataset_format}")
+    else:
+        print(f"Dataset: Generating synthetic data")
+        print(f"  Train Samples: {args.n_train_samples}")
+        print(f"  Test Samples: {args.n_test_samples}")
+        print(f"  Grid Size: {args.grid_size}")
+        print(f"  Problem Type: {args.problem_type}")
     print(f"Design Pattern: Factory + Template Method")
     print("=" * 80)
     
