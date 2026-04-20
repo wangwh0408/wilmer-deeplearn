@@ -1,6 +1,7 @@
 from train.base_trainer import (
     TrainingConfig,
     TrainingResult,
+    DatasetConfig,
     BaseDeepONetTrainer
 )
 
@@ -27,6 +28,7 @@ except ImportError:
 __all__ = [
     'TrainingConfig',
     'TrainingResult',
+    'DatasetConfig',
     'BaseDeepONetTrainer',
     'TrainerFactory',
     'train_deeponet',
