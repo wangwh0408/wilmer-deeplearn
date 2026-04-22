@@ -1,0 +1,11 @@
+paddlepaddle==2.6.2
+numpy==1.24.4
+scipy==1.11.4
+matplotlib==3.7.5
+h5py==3.10.0
+pyyaml==6.0.1
+tqdm==4.66.2
+pandas==2.0.3
+seaborn==0.13.2
+jupyter==1.0.0
+ipython==8.17.2
