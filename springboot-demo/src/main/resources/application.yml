@@ -55,3 +55,18 @@ python:
     timeout-minutes: 120
     default-model-path: fno2_model.pth
     redirect-error-stream: true
+    working-directory: c:/traework/a/wilmer-deeplearn/deeponet-cfd
+
+fno:
+  train:
+    default-framework: pytorch
+    data-root: c:/traework/a/wilmer-deeplearn/data
+    default-epochs: 100
+    default-batch-size: 8
+    default-learning-rate: 0.001
+    default-modes1: 12
+    default-modes2: 12
+    default-width: 32
+    default-n-layers: 4
+    default-hidden-dim: 128
+    default-seed: 42

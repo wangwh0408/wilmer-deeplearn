@@ -7,6 +7,12 @@ from .cfd_bench_dataset import (
     HAS_TORCH,
     HAS_PADDLE
 )
+from .cfdbench_loader import (
+    CFDBCase,
+    CFDBCategory,
+    CFDBenchDataset,
+    create_cfdbench_dataloaders
+)
 
 __all__ = [
     'CFDDataGenerator',
@@ -15,5 +21,9 @@ __all__ = [
     'CFDDatasetPaddle',
     'create_datasets',
     'HAS_TORCH',
-    'HAS_PADDLE'
+    'HAS_PADDLE',
+    'CFDBCase',
+    'CFDBCategory',
+    'CFDBenchDataset',
+    'create_cfdbench_dataloaders'
 ]

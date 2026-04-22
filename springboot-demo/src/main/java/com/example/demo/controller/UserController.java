@@ -67,7 +67,7 @@ public class UserController {
     @PutMapping("/{id}")
     public Result<User> update(@PathVariable Long id, @Valid @RequestBody User user) {
         Optional<User> existing = userService.findById(id);
-        if (existing.isEmpty()) {
+        if (!existing.isPresent()) {
             return Result.error(404, "用户不存在");
         }
         user.setId(id);
@@ -78,7 +78,7 @@ public class UserController {
     @DeleteMapping("/{id}")
     public Result<Void> delete(@PathVariable Long id) {
         Optional<User> existing = userService.findById(id);
-        if (existing.isEmpty()) {
+        if (!existing.isPresent()) {
             return Result.error(404, "用户不存在");
         }
         userService.deleteById(id);
