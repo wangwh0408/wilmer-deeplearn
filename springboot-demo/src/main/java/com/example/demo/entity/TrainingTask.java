@@ -10,6 +10,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 @Data
 public class TrainingTask implements Serializable {
@@ -40,13 +41,14 @@ public class TrainingTask implements Serializable {
     private Double bestTestLoss;
     private String modelPath;
 
-    private List<TrainingLogEntry> logs;
-    private transient AtomicInteger sequenceCounter = new AtomicInteger(0);
+    private final List<TrainingLogEntry> logs = new CopyOnWriteArrayList<>();
+    private transient final AtomicInteger sequenceCounter = new AtomicInteger(0);
+    private transient final ReentrantReadWriteLock logLock = new ReentrantReadWriteLock();
+
+    private volatile int lastReadIndex = -1;
 
     public TrainingTask() {
-        this.logs = new CopyOnWriteArrayList<>();
         this.status = Status.PENDING;
-        this.sequenceCounter = new AtomicInteger(0);
     }
 
     public TrainingTask(String taskId) {
@@ -55,9 +57,6 @@ public class TrainingTask implements Serializable {
     }
 
     public int getNextSequence() {
-        if (sequenceCounter == null) {
-            sequenceCounter = new AtomicInteger(0);
-        }
         return sequenceCounter.getAndIncrement();
     }
 
@@ -103,8 +102,79 @@ public class TrainingTask implements Serializable {
         return new ArrayList<>(orderedLogs.subList(fromIndex, orderedLogs.size()));
     }
 
+    public List<TrainingLogEntry> getLogsSinceSequence(int fromSequence) {
+        List<TrainingLogEntry> result = new ArrayList<>();
+        List<TrainingLogEntry> orderedLogs = getLogsOrderedBySequence();
+        
+        for (TrainingLogEntry entry : orderedLogs) {
+            if (entry.getSequence() != null && entry.getSequence() > fromSequence) {
+                result.add(entry);
+            }
+        }
+        return result;
+    }
+
+    public List<TrainingLogEntry> getNewLogs() {
+        List<TrainingLogEntry> orderedLogs = getLogsOrderedBySequence();
+        int currentIndex = orderedLogs.size();
+        
+        if (lastReadIndex >= 0 && lastReadIndex < currentIndex) {
+            List<TrainingLogEntry> newLogs = new ArrayList<>(
+                orderedLogs.subList(lastReadIndex, currentIndex)
+            );
+            lastReadIndex = currentIndex;
+            return newLogs;
+        }
+        
+        lastReadIndex = currentIndex;
+        return new ArrayList<>();
+    }
+
+    public List<TrainingLogEntry> getNewLogsBySequence() {
+        List<TrainingLogEntry> allLogs = getLogsOrderedBySequence();
+        if (allLogs.isEmpty()) {
+            return new ArrayList<>();
+        }
+        
+        int maxSequence = -1;
+        for (TrainingLogEntry entry : allLogs) {
+            if (entry.getSequence() != null && entry.getSequence() > maxSequence) {
+                maxSequence = entry.getSequence();
+            }
+        }
+        
+        int currentMaxSequence = maxSequence;
+        if (currentMaxSequence <= lastReadIndex) {
+            return new ArrayList<>();
+        }
+        
+        List<TrainingLogEntry> result = new ArrayList<>();
+        for (TrainingLogEntry entry : allLogs) {
+            if (entry.getSequence() != null && entry.getSequence() > lastReadIndex) {
+                result.add(entry);
+            }
+        }
+        
+        lastReadIndex = currentMaxSequence;
+        return result;
+    }
+
+    public void resetLastReadIndex() {
+        this.lastReadIndex = -1;
+    }
+
     public int getLogCount() {
         return this.logs.size();
+    }
+
+    public int getMaxSequence() {
+        int max = -1;
+        for (TrainingLogEntry entry : this.logs) {
+            if (entry.getSequence() != null && entry.getSequence() > max) {
+                max = entry.getSequence();
+            }
+        }
+        return max;
     }
 
     public void markRunning() {
