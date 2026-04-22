@@ -85,6 +85,50 @@ public class FnoTrainController {
         return Result.success(logs);
     }
 
+    @GetMapping("/logs-by-sequence/{taskId}")
+    public Result<List<TrainingLogEntry>> getLogsBySequence(
+            @PathVariable String taskId,
+            @RequestParam(required = false) Integer sinceSequence) {
+        log.info("[FnoTrainController] Getting logs by sequence for task: {} (sinceSequence: {})", taskId, sinceSequence);
+
+        List<TrainingLogEntry> logs = fnoTrainService.getLogsBySequence(taskId, sinceSequence);
+
+        return Result.success(logs);
+    }
+
+    @GetMapping("/new-logs/{taskId}")
+    public Result<Map<String, Object>> getNewLogs(@PathVariable String taskId) {
+        log.info("[FnoTrainController] Getting new logs for task: {}", taskId);
+
+        List<TrainingLogEntry> newLogs = fnoTrainService.getNewLogs(taskId);
+        Integer currentMaxSeq = fnoTrainService.getCurrentMaxSequence(taskId);
+        TrainingTask task = fnoTrainService.getTaskStatus(taskId);
+
+        Map<String, Object> response = new HashMap<>();
+        response.put("logs", newLogs);
+        response.put("count", newLogs.size());
+        response.put("currentMaxSequence", currentMaxSeq);
+        response.put("taskStatus", task != null ? task.getStatus() : null);
+        response.put("taskFinished", task != null ? task.isFinished() : false);
+
+        return Result.success(response);
+    }
+
+    @GetMapping("/max-sequence/{taskId}")
+    public Result<Map<String, Object>> getMaxSequence(@PathVariable String taskId) {
+        log.info("[FnoTrainController] Getting max sequence for task: {}", taskId);
+
+        Integer maxSeq = fnoTrainService.getCurrentMaxSequence(taskId);
+        TrainingTask task = fnoTrainService.getTaskStatus(taskId);
+
+        Map<String, Object> response = new HashMap<>();
+        response.put("taskId", taskId);
+        response.put("maxSequence", maxSeq);
+        response.put("taskStatus", task != null ? task.getStatus() : null);
+
+        return Result.success(response);
+    }
+
     @PostMapping("/cancel/{taskId}")
     public Result<Map<String, Object>> cancelTraining(@PathVariable String taskId) {
         log.info("[FnoTrainController] Cancelling training task: {}", taskId);
@@ -121,6 +165,13 @@ public class FnoTrainController {
         Map<String, Object> info = new HashMap<>();
 
         info.put("supportedFrameworks", Arrays.asList("pytorch", "torch", "paddle", "paddlepaddle"));
+        info.put("unbufferedOutput", true);
+        info.put("unbufferedInfo", Arrays.asList(
+            "PYTHONUNBUFFERED=1 is set in environment",
+            "python -u flag is used",
+            "stdout and stderr are merged (redirectErrorStream=true)",
+            "Logs are ordered by sequence number"
+        ));
 
         Map<String, Object> defaultConfig = new HashMap<>();
         defaultConfig.put("framework", "pytorch");
@@ -138,10 +189,20 @@ public class FnoTrainController {
         endpoints.put("POST /api/fno/train/quick-test", "Quick test training (3 epochs, 5 cases)");
         endpoints.put("GET /api/fno/train/status/{taskId}", "Get task status");
         endpoints.put("GET /api/fno/train/logs/{taskId}", "Get task logs (add ?since=N to get logs after index N)");
+        endpoints.put("GET /api/fno/train/logs-by-sequence/{taskId}", "Get task logs by sequence number (add ?sinceSequence=N)");
+        endpoints.put("GET /api/fno/train/new-logs/{taskId}", "Get new logs since last call (auto-track sequence)");
+        endpoints.put("GET /api/fno/train/max-sequence/{taskId}", "Get current max sequence number");
         endpoints.put("POST /api/fno/train/cancel/{taskId}", "Cancel a running task");
         endpoints.put("GET /api/fno/train/tasks", "Get all tasks");
         endpoints.put("GET /api/fno/train/info", "Get API information");
         info.put("endpoints", endpoints);
+
+        Map<String, Object> logOrdering = new HashMap<>();
+        logOrdering.put("method1", "GET /api/fno/train/logs/{taskId} - All logs, ordered by sequence");
+        logOrdering.put("method2", "GET /api/fno/train/logs/{taskId}?since=100 - Logs after index 100");
+        logOrdering.put("method3", "GET /api/fno/train/logs-by-sequence/{taskId}?sinceSequence=100 - Logs with sequence > 100");
+        logOrdering.put("method4", "GET /api/fno/train/new-logs/{taskId} - Auto-track, get only new logs since last call");
+        info.put("logFetchingMethods", logOrdering);
 
         return Result.success(info);
     }
@@ -185,6 +246,26 @@ public class FnoTrainController {
         example.put("pytorch", pytorchExample);
         example.put("paddle", paddleExample);
 
+        Map<String, Object> pollingExample = new HashMap<>();
+        pollingExample.put("recommendedMethod", "GET /api/fno/train/new-logs/{taskId}");
+        pollingExample.put("description", "Automatically tracks the last fetched sequence, returns only new logs");
+        pollingExample.put("responseFields", Arrays.asList(
+            "logs: List of new log entries",
+            "count: Number of new logs",
+            "currentMaxSequence: Current max sequence number",
+            "taskStatus: Current task status",
+            "taskFinished: Whether task is finished (COMPLETED/FAILED/CANCELLED)"
+        ));
+        
+        Map<String, Object> pollingWorkflow = new HashMap<>();
+        pollingWorkflow.put("step1", "Start training: POST /api/fno/train/start");
+        pollingWorkflow.put("step2", "Poll for new logs: GET /api/fno/train/new-logs/{taskId}");
+        pollingWorkflow.put("step3", "Check if finished: response.taskFinished == true");
+        pollingWorkflow.put("step4", "If not finished, wait and repeat step 2");
+        
+        pollingExample.put("workflow", pollingWorkflow);
+        example.put("realtimeLogPolling", pollingExample);
+
         Map<String, Object> curlExample = new HashMap<>();
         curlExample.put("startTraining", "curl -X POST http://localhost:8080/api/fno/train/start \\\n" +
                 "  -H \"Content-Type: application/json\" \\\n" +
@@ -192,7 +273,9 @@ public class FnoTrainController {
 
         curlExample.put("getStatus", "curl http://localhost:8080/api/fno/train/status/<taskId>");
         curlExample.put("getLogs", "curl http://localhost:8080/api/fno/train/logs/<taskId>");
-        curlExample.put("getLogsSince", "curl http://localhost:8080/api/fno/train/logs/<taskId>?since=100");
+        curlExample.put("getLogsSinceIndex", "curl http://localhost:8080/api/fno/train/logs/<taskId>?since=100");
+        curlExample.put("getLogsSinceSequence", "curl http://localhost:8080/api/fno/train/logs-by-sequence/<taskId>?sinceSequence=100");
+        curlExample.put("getNewLogs", "curl http://localhost:8080/api/fno/train/new-logs/<taskId>");
         curlExample.put("cancelTask", "curl -X POST http://localhost:8080/api/fno/train/cancel/<taskId>");
 
         example.put("curlExamples", curlExample);

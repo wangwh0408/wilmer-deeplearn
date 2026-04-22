@@ -61,7 +61,6 @@ public class FnoTrainService {
         String taskId = taskManager.createTask(framework);
         TrainingTask task = taskManager.getTask(taskId);
 
-        int seq = 0;
         task.addLog(TrainingLogEntry.info(taskId, task.getNextSequence(), "Starting FNO training task..."));
         task.addLog(TrainingLogEntry.info(taskId, task.getNextSequence(), "Framework: " + framework));
         task.addLog(TrainingLogEntry.info(taskId, task.getNextSequence(), "Working directory: " + workingDir));
@@ -75,6 +74,12 @@ public class FnoTrainService {
             processBuilder.directory(new File(workingDir));
 
             processBuilder.redirectErrorStream(true);
+
+            Map<String, String> env = processBuilder.environment();
+            env.put("PYTHONUNBUFFERED", "1");
+            env.put("PYTHONDONTWRITEBYTECODE", "1");
+            
+            task.addLog(TrainingLogEntry.info(taskId, task.getNextSequence(), "Environment: PYTHONUNBUFFERED=1 (no buffering)"));
 
             task.markRunning();
 
@@ -117,24 +122,36 @@ public class FnoTrainService {
             return;
         }
 
+        final TrainingTask finalTaskRef = task;
+        
         Thread outputThread = new Thread(() -> {
-            try {
-                processStream(taskId, process.getInputStream());
-            } catch (Exception e) {
-                log.error("[FnoTrainService] Error reading process output for task: {}", taskId, e);
-                TrainingTask t = taskManager.getTask(taskId);
-                if (t != null) {
-                    t.addLog(TrainingLogEntry.error(t.getTaskId(), t.getNextSequence(), "Error reading output: " + e.getMessage()));
-                }
-            }
+            processStreamSynchronized(taskId, process.getInputStream(), finalTaskRef);
         });
 
+        outputThread.setName("LogReader-" + taskId.substring(0, 8));
         outputThread.setDaemon(true);
         outputThread.start();
 
         try {
             boolean finished = process.waitFor(config.getTimeoutMinutes(), TimeUnit.MINUTES);
-            outputThread.join(5000);
+            
+            outputThread.join(3000);
+            
+            try {
+                process.getInputStream().close();
+            } catch (Exception e) {
+                log.warn("[FnoTrainService] Failed to close input stream: {}", e.getMessage());
+            }
+            try {
+                process.getErrorStream().close();
+            } catch (Exception e) {
+                log.warn("[FnoTrainService] Failed to close error stream: {}", e.getMessage());
+            }
+            try {
+                process.getOutputStream().close();
+            } catch (Exception e) {
+                log.warn("[FnoTrainService] Failed to close output stream: {}", e.getMessage());
+            }
 
             TrainingTask finalTask = taskManager.getTask(taskId);
             if (finalTask == null) {
@@ -143,6 +160,8 @@ public class FnoTrainService {
 
             if (!finished) {
                 process.destroyForcibly();
+                process.waitFor(2, TimeUnit.SECONDS);
+                
                 finalTask.addLog(TrainingLogEntry.error(finalTask.getTaskId(), finalTask.getNextSequence(), 
                     "Process timeout after " + config.getTimeoutMinutes() + " minutes"));
                 finalTask.setExitCode(-1);
@@ -166,6 +185,12 @@ public class FnoTrainService {
         } catch (InterruptedException e) {
             log.warn("[FnoTrainService] Training interrupted for task: {}", taskId);
             process.destroyForcibly();
+            try {
+                process.waitFor(2, TimeUnit.SECONDS);
+            } catch (InterruptedException ie) {
+                Thread.currentThread().interrupt();
+            }
+            
             TrainingTask t = taskManager.getTask(taskId);
             if (t != null) {
                 t.addLog(TrainingLogEntry.warn(t.getTaskId(), t.getNextSequence(), "Training cancelled"));
@@ -175,32 +200,56 @@ public class FnoTrainService {
         }
     }
 
-    private void processStream(String taskId, InputStream inputStream) {
-        TrainingTask task = taskManager.getTask(taskId);
-        if (task == null) {
-            return;
-        }
-
+    private void processStreamSynchronized(String taskId, InputStream inputStream, TrainingTask task) {
         try (BufferedReader reader = new BufferedReader(
                 new InputStreamReader(inputStream, StandardCharsets.UTF_8))) {
+            
             String line;
             while ((line = reader.readLine()) != null) {
-                TrainingTask t = taskManager.getTask(taskId);
-                if (t == null) {
+                TrainingTask currentTask = taskManager.getTask(taskId);
+                if (currentTask == null) {
                     break;
                 }
 
-                int currentSeq = t.getNextSequence();
-                t.addLog(TrainingLogEntry.pythonOutput(t.getTaskId(), currentSeq, line));
-                log.info("[FnoTrainService] [Task: {}] [Seq: {}] [Python] {}", taskId, currentSeq, line);
-                parseOutputLine(t, line);
+                synchronized (currentTask) {
+                    int currentSeq = currentTask.getNextSequence();
+                    currentTask.addLog(TrainingLogEntry.pythonOutput(currentTask.getTaskId(), currentSeq, line));
+                    log.info("[FnoTrainService] [Task: {}] [Seq: {}] [Python] {}", taskId, currentSeq, line);
+                    parseOutputLine(currentTask, line);
+                }
             }
+            
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+            
+            String remainingLine;
+            try {
+                while ((remainingLine = reader.readLine()) != null) {
+                    TrainingTask currentTask = taskManager.getTask(taskId);
+                    if (currentTask == null) {
+                        break;
+                    }
+                    synchronized (currentTask) {
+                        int currentSeq = currentTask.getNextSequence();
+                        currentTask.addLog(TrainingLogEntry.pythonOutput(currentTask.getTaskId(), currentSeq, remainingLine));
+                        log.info("[FnoTrainService] [Task: {}] [Seq: {}] [Python] {}", taskId, currentSeq, remainingLine);
+                        parseOutputLine(currentTask, remainingLine);
+                    }
+                }
+            } catch (Exception e) {
+            }
+            
         } catch (Exception e) {
             log.error("[FnoTrainService] Error reading process stream for task: {}", taskId, e);
             TrainingTask t = taskManager.getTask(taskId);
             if (t != null) {
-                t.addLog(TrainingLogEntry.error(t.getTaskId(), t.getNextSequence(), 
-                    "Stream read error: " + e.getMessage()));
+                synchronized (t) {
+                    t.addLog(TrainingLogEntry.error(t.getTaskId(), t.getNextSequence(), 
+                        "Stream read error: " + e.getMessage()));
+                }
             }
         }
     }
@@ -264,7 +313,16 @@ public class FnoTrainService {
         Future<?> future = runningFutures.get(taskId);
 
         if (process != null && process.isAlive()) {
-            process.destroyForcibly();
+            try {
+                process.destroy();
+                if (!process.waitFor(3, TimeUnit.SECONDS)) {
+                    process.destroyForcibly();
+                }
+            } catch (InterruptedException e) {
+                process.destroyForcibly();
+                Thread.currentThread().interrupt();
+            }
+            
             runningProcesses.remove(taskId);
 
             if (future != null) {
@@ -274,8 +332,10 @@ public class FnoTrainService {
 
             TrainingTask task = taskManager.getTask(taskId);
             if (task != null) {
-                task.addLog(TrainingLogEntry.warn(task.getTaskId(), task.getNextSequence(), 
-                    "Training cancelled by user"));
+                synchronized (task) {
+                    task.addLog(TrainingLogEntry.warn(task.getTaskId(), task.getNextSequence(), 
+                        "Training cancelled by user"));
+                }
                 task.markCancelled();
             }
 
@@ -301,6 +361,36 @@ public class FnoTrainService {
         }
 
         return task.getLogsSince(since);
+    }
+
+    public List<TrainingLogEntry> getLogsBySequence(String taskId, Integer sinceSequence) {
+        TrainingTask task = taskManager.getTask(taskId);
+        if (task == null) {
+            return new ArrayList<>();
+        }
+
+        if (sinceSequence == null || sinceSequence < 0) {
+            return new ArrayList<>(task.getLogs());
+        }
+
+        return task.getLogsSinceSequence(sinceSequence);
+    }
+
+    public List<TrainingLogEntry> getNewLogs(String taskId) {
+        TrainingTask task = taskManager.getTask(taskId);
+        if (task == null) {
+            return new ArrayList<>();
+        }
+
+        return task.getNewLogsBySequence();
+    }
+
+    public Integer getCurrentMaxSequence(String taskId) {
+        TrainingTask task = taskManager.getTask(taskId);
+        if (task == null) {
+            return -1;
+        }
+        return task.getMaxSequence();
     }
 
     private List<String> buildCommand(FnoTrainRequest request) {
