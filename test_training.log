@@ -1,0 +1,436 @@
+[2026-05-02 21:58:21] [INFO] [0.00s] Start time: 2026-05-02 21:58:21
+[2026-05-02 21:58:21] [INFO] [0.00s] Device: cpu
+[2026-05-02 21:58:21] [INFO] [0.01s] Log file: test_training.log
+[2026-05-02 21:58:21] [INFO] [0.02s] 
+[2026-05-02 21:58:21] [INFO] [0.03s] TRAINING CONFIGURATION:
+[2026-05-02 21:58:21] [INFO] [0.04s]   data_root: C:\traework\data
+[2026-05-02 21:58:21] [INFO] [0.05s]   problems: ['cavity']
+[2026-05-02 21:58:21] [INFO] [0.06s]   categories: None
+[2026-05-02 21:58:21] [INFO] [0.06s]   classNum: 1
+[2026-05-02 21:58:21] [INFO] [0.07s]   modes: 12
+[2026-05-02 21:58:21] [INFO] [0.08s]   width: 32
+[2026-05-02 21:58:21] [INFO] [0.09s]   epochs: 3
+[2026-05-02 21:58:21] [INFO] [0.10s]   batch_size: 8
+[2026-05-02 21:58:21] [INFO] [0.11s]   learning_rate: 0.001
+[2026-05-02 21:58:21] [INFO] [0.12s]   weight_decay: 0.0001
+[2026-05-02 21:58:21] [INFO] [0.13s]   train_ratio: 0.8
+[2026-05-02 21:58:21] [INFO] [0.14s]   normalize: True
+[2026-05-02 21:58:21] [INFO] [0.15s]   max_cases_per_category: 2
+[2026-05-02 21:58:21] [INFO] [0.16s]   in_channels: 4
+[2026-05-02 21:58:21] [INFO] [0.17s]   out_channels: 2
+[2026-05-02 21:58:21] [INFO] [0.18s]   show_gradient_stats: True
+[2026-05-02 21:58:21] [INFO] [0.19s]   show_param_stats: True
+[2026-05-02 21:58:21] [INFO] [0.20s]   show_tensor_stats: True
+[2026-05-02 21:58:21] [INFO] [0.21s]   show_prediction_samples: True
+[2026-05-02 21:58:21] [INFO] [0.22s] 
+[2026-05-02 21:58:21] [PHASE] [0.23s] === STARTING: Data Loading ===
+[2026-05-02 21:58:21] [DATA] [0.24s] ============================================================
+[2026-05-02 21:58:21] [DATA] [0.25s] DATA LOADING PROCESS
+[2026-05-02 21:58:21] [DATA] [0.26s] ============================================================
+[2026-05-02 21:58:21] [DATA] [0.27s] Data root: C:\traework\data
+[2026-05-02 21:58:21] [DATA] [0.27s] Problems: ['cavity']
+[2026-05-02 21:58:21] [DATA] [0.28s] classNum: 1
+[2026-05-02 21:58:21] [DATA] [0.29s] Categories to use: ['bc']
+[2026-05-02 21:58:21] [DATA] [0.30s] Max cases per category: 2
+[2026-05-02 21:58:21] [DATA] [0.31s] Normalize: True
+[2026-05-02 21:58:21] [DATA] [0.32s] 
+[2026-05-02 21:58:21] [DATA] [0.34s] Processing problem: cavity
+[2026-05-02 21:58:21] [DATA] [0.35s]   Category: bc - Found 50 cases, using 2
+[2026-05-02 21:58:21] [DATA] [0.38s]     [LOAD] case0000: 10 time steps, 9 samples, shape=(64, 64)
+[2026-05-02 21:58:21] [DATA] [0.41s]     [LOAD] case0001: 11 time steps, 10 samples, shape=(64, 64)
+[2026-05-02 21:58:21] [DATA] [0.42s] 
+[2026-05-02 21:58:21] [DATA] [0.43s] ------------------------------------------------------------
+[2026-05-02 21:58:22] [DATA] [0.44s] DATA LOADING SUMMARY
+[2026-05-02 21:58:22] [DATA] [0.45s] ------------------------------------------------------------
+[2026-05-02 21:58:22] [DATA] [0.46s]   Total cases loaded: 2
+[2026-05-02 21:58:22] [DATA] [0.47s]   Total cases skipped: 0
+[2026-05-02 21:58:22] [DATA] [0.48s]   Total time-step pairs: 19
+[2026-05-02 21:58:22] [DATA] [0.49s] 
+[2026-05-02 21:58:22] [DATA] [0.50s] Computing normalization statistics...
+[2026-05-02 21:58:22] [DATA] [0.51s]   U Component:
+[2026-05-02 21:58:22] [DATA] [0.52s]     mean = 0.023579
+[2026-05-02 21:58:22] [DATA] [0.54s]     std  = 0.376494
+[2026-05-02 21:58:22] [DATA] [0.55s]     min  = -0.835910
+[2026-05-02 21:58:22] [DATA] [0.56s]     max  = 2.000000
+[2026-05-02 21:58:22] [DATA] [0.57s]   V Component:
+[2026-05-02 21:58:22] [DATA] [0.59s]     mean = -0.000162
+[2026-05-02 21:58:22] [DATA] [0.60s]     std  = 0.307426
+[2026-05-02 21:58:22] [DATA] [0.61s]     min  = -1.341040
+[2026-05-02 21:58:22] [DATA] [0.63s]     max  = 0.830370
+[2026-05-02 21:58:22] [DATA] [0.64s] 
+[2026-05-02 21:58:22] [DATA] [0.65s] Normalizing data...
+[2026-05-02 21:58:22] [DATA] [0.67s]   Normalization complete: 19 samples
+[2026-05-02 21:58:22] [DATA] [0.68s] 
+[2026-05-02 21:58:22] [DATA] [0.69s] ============================================================
+[2026-05-02 21:58:22] [DATA] [0.70s] DATA LOADING COMPLETE
+[2026-05-02 21:58:22] [DATA] [0.71s] ============================================================
+[2026-05-02 21:58:22] [PHASE] [0.73s] === COMPLETED: Data Loading (took 0.51s) ===
+[2026-05-02 21:58:22] [PHASE] [0.75s]     Details: 15 train, 4 test, 2 batches per epoch
+[2026-05-02 21:58:22] [INFO] [0.90s] Memory: CPU Memory: 156.61MB RSS
+[2026-05-02 21:58:22] [PHASE] [0.91s] === STARTING: Model Creation ===
+[2026-05-02 21:58:22] [INFO] [0.99s] Model Architecture:
+[2026-05-02 21:58:22] [INFO] [1.00s]   FNO2d with modes=12, width=32
+[2026-05-02 21:58:22] [INFO] [1.01s]   Input channels: 4 (2 data + 2 coords auto-added)
+[2026-05-02 21:58:22] [INFO] [1.03s]   Output channels: 2 (u, v velocity)
+[2026-05-02 21:58:22] [INFO] [1.04s]   Total parameters: 1,188,770
+[2026-05-02 21:58:22] [INFO] [1.06s]   Trainable parameters: 1,188,770
+[2026-05-02 21:58:22] [INFO] [1.07s] 
+  Layer-wise parameter count:
+[2026-05-02 21:58:22] [INFO] [1.09s]     fc0.weight: 128 params
+[2026-05-02 21:58:22] [INFO] [1.10s]     fc0.bias: 32 params
+[2026-05-02 21:58:22] [INFO] [1.11s]     conv0.weights1: 147,456 params
+[2026-05-02 21:58:22] [INFO] [1.12s]     conv0.weights2: 147,456 params
+[2026-05-02 21:58:22] [INFO] [1.13s]     conv1.weights1: 147,456 params
+[2026-05-02 21:58:22] [INFO] [1.14s]     conv1.weights2: 147,456 params
+[2026-05-02 21:58:22] [INFO] [1.15s]     conv2.weights1: 147,456 params
+[2026-05-02 21:58:22] [INFO] [1.17s]     conv2.weights2: 147,456 params
+[2026-05-02 21:58:22] [INFO] [1.18s]     conv3.weights1: 147,456 params
+[2026-05-02 21:58:22] [INFO] [1.19s]     conv3.weights2: 147,456 params
+[2026-05-02 21:58:22] [INFO] [1.20s]     w0.weight: 1,024 params
+[2026-05-02 21:58:22] [INFO] [1.21s]     w0.bias: 32 params
+[2026-05-02 21:58:22] [INFO] [1.22s]     w1.weight: 1,024 params
+[2026-05-02 21:58:22] [INFO] [1.23s]     w1.bias: 32 params
+[2026-05-02 21:58:22] [INFO] [1.24s]     w2.weight: 1,024 params
+[2026-05-02 21:58:22] [INFO] [1.25s]     w2.bias: 32 params
+[2026-05-02 21:58:22] [INFO] [1.26s]     w3.weight: 1,024 params
+[2026-05-02 21:58:22] [INFO] [1.27s]     w3.bias: 32 params
+[2026-05-02 21:58:22] [INFO] [1.29s]     bn0.weight: 32 params
+[2026-05-02 21:58:22] [INFO] [1.30s]     bn0.bias: 32 params
+[2026-05-02 21:58:22] [INFO] [1.31s]     bn1.weight: 32 params
+[2026-05-02 21:58:22] [INFO] [1.32s]     bn1.bias: 32 params
+[2026-05-02 21:58:22] [INFO] [1.34s]     bn2.weight: 32 params
+[2026-05-02 21:58:22] [INFO] [1.35s]     bn2.bias: 32 params
+[2026-05-02 21:58:22] [INFO] [1.36s]     bn3.weight: 32 params
+[2026-05-02 21:58:22] [INFO] [1.37s]     bn3.bias: 32 params
+[2026-05-02 21:58:22] [INFO] [1.38s]     fc1.weight: 4,096 params
+[2026-05-02 21:58:22] [INFO] [1.39s]     fc1.bias: 128 params
+[2026-05-02 21:58:22] [INFO] [1.40s]     fc2.weight: 256 params
+[2026-05-02 21:58:22] [INFO] [1.41s]     fc2.bias: 2 params
+[2026-05-02 21:58:22] [PHASE] [1.42s] === COMPLETED: Model Creation (took 0.51s) ===
+[2026-05-02 21:58:22] [PHASE] [1.43s]     Details: 1,188,770 parameters
+[2026-05-02 21:58:23] [INFO] [1.44s] Memory: CPU Memory: 168.11MB RSS
+[2026-05-02 21:58:23] [PHASE] [1.45s] === STARTING: Optimizer Setup ===
+[2026-05-02 21:58:35] [INFO] [13.55s] Optimizer: Adam
+[2026-05-02 21:58:35] [INFO] [13.56s]   Learning rate: 0.001
+[2026-05-02 21:58:35] [INFO] [13.57s]   Weight decay: 0.0001
+[2026-05-02 21:58:35] [INFO] [13.58s] Scheduler: StepLR (step=15, gamma=0.5)
+[2026-05-02 21:58:35] [INFO] [13.59s] Loss function: MSELoss
+[2026-05-02 21:58:35] [PHASE] [13.60s] === COMPLETED: Optimizer Setup (took 12.15s) ===
+[2026-05-02 21:58:35] [PHASE] [13.61s] === STARTING: Training ===
+[2026-05-02 21:58:35] [INFO] [13.62s] ================================================================================
+[2026-05-02 21:58:35] [INFO] [13.64s] TRAINING PROCESS - DETAILED LOGGING
+[2026-05-02 21:58:35] [INFO] [13.65s] ================================================================================
+[2026-05-02 21:58:35] [INFO] [13.66s] 
+[2026-05-02 21:58:35] [INFO] [13.67s] Logging features enabled:
+[2026-05-02 22:01:45] [INFO] [0.00s] Start time: 2026-05-02 22:01:45
+[2026-05-02 22:01:45] [INFO] [0.01s] Device: cpu
+[2026-05-02 22:01:45] [INFO] [0.02s] Log file: test_training.log
+[2026-05-02 22:01:45] [INFO] [0.03s] 
+[2026-05-02 22:01:45] [INFO] [0.05s] TRAINING CONFIGURATION:
+[2026-05-02 22:01:45] [INFO] [0.06s]   data_root: C:\traework\data
+[2026-05-02 22:01:45] [INFO] [0.07s]   problems: ['cavity']
+[2026-05-02 22:01:45] [INFO] [0.08s]   categories: None
+[2026-05-02 22:01:45] [INFO] [0.09s]   classNum: 1
+[2026-05-02 22:01:45] [INFO] [0.10s]   modes: 12
+[2026-05-02 22:01:45] [INFO] [0.11s]   width: 32
+[2026-05-02 22:01:45] [INFO] [0.12s]   epochs: 3
+[2026-05-02 22:01:45] [INFO] [0.13s]   batch_size: 8
+[2026-05-02 22:01:45] [INFO] [0.15s]   learning_rate: 0.001
+[2026-05-02 22:01:45] [INFO] [0.16s]   weight_decay: 0.0001
+[2026-05-02 22:01:45] [INFO] [0.17s]   train_ratio: 0.8
+[2026-05-02 22:01:45] [INFO] [0.18s]   normalize: True
+[2026-05-02 22:01:45] [INFO] [0.19s]   max_cases_per_category: 2
+[2026-05-02 22:01:45] [INFO] [0.20s]   in_channels: 4
+[2026-05-02 22:01:45] [INFO] [0.21s]   out_channels: 2
+[2026-05-02 22:01:45] [INFO] [0.22s]   show_gradient_stats: True
+[2026-05-02 22:01:45] [INFO] [0.23s]   show_param_stats: True
+[2026-05-02 22:01:45] [INFO] [0.24s]   show_tensor_stats: True
+[2026-05-02 22:01:45] [INFO] [0.25s]   show_prediction_samples: True
+[2026-05-02 22:01:45] [INFO] [0.26s] 
+[2026-05-02 22:01:45] [PHASE] [0.28s] === STARTING: Data Loading ===
+[2026-05-02 22:01:45] [DATA] [0.29s] ============================================================
+[2026-05-02 22:01:45] [DATA] [0.30s] DATA LOADING PROCESS
+[2026-05-02 22:01:45] [DATA] [0.31s] ============================================================
+[2026-05-02 22:01:45] [DATA] [0.32s] Data root: C:\traework\data
+[2026-05-02 22:01:45] [DATA] [0.33s] Problems: ['cavity']
+[2026-05-02 22:01:45] [DATA] [0.34s] classNum: 1
+[2026-05-02 22:01:45] [DATA] [0.36s] Categories to use: ['bc']
+[2026-05-02 22:01:45] [DATA] [0.37s] Max cases per category: 2
+[2026-05-02 22:01:45] [DATA] [0.38s] Normalize: True
+[2026-05-02 22:01:45] [DATA] [0.39s] 
+[2026-05-02 22:01:45] [DATA] [0.40s] Processing problem: cavity
+[2026-05-02 22:01:45] [DATA] [0.41s]   Category: bc - Found 50 cases, using 2
+[2026-05-02 22:01:45] [DATA] [0.43s]     [LOAD] case0000: 10 time steps, 9 samples, shape=(64, 64)
+[2026-05-02 22:01:45] [DATA] [0.44s]     [LOAD] case0001: 11 time steps, 10 samples, shape=(64, 64)
+[2026-05-02 22:01:45] [DATA] [0.46s] 
+[2026-05-02 22:01:45] [DATA] [0.47s] ------------------------------------------------------------
+[2026-05-02 22:01:45] [DATA] [0.48s] DATA LOADING SUMMARY
+[2026-05-02 22:01:45] [DATA] [0.49s] ------------------------------------------------------------
+[2026-05-02 22:01:45] [DATA] [0.50s]   Total cases loaded: 2
+[2026-05-02 22:01:45] [DATA] [0.51s]   Total cases skipped: 0
+[2026-05-02 22:01:45] [DATA] [0.52s]   Total time-step pairs: 19
+[2026-05-02 22:01:45] [DATA] [0.53s] 
+[2026-05-02 22:01:45] [DATA] [0.55s] Computing normalization statistics...
+[2026-05-02 22:01:45] [DATA] [0.56s]   U Component:
+[2026-05-02 22:01:45] [DATA] [0.57s]     mean = 0.023579
+[2026-05-02 22:01:45] [DATA] [0.58s]     std  = 0.376494
+[2026-05-02 22:01:45] [DATA] [0.59s]     min  = -0.835910
+[2026-05-02 22:01:45] [DATA] [0.60s]     max  = 2.000000
+[2026-05-02 22:01:45] [DATA] [0.62s]   V Component:
+[2026-05-02 22:01:45] [DATA] [0.63s]     mean = -0.000162
+[2026-05-02 22:01:45] [DATA] [0.64s]     std  = 0.307426
+[2026-05-02 22:01:45] [DATA] [0.65s]     min  = -1.341040
+[2026-05-02 22:01:46] [DATA] [0.66s]     max  = 0.830370
+[2026-05-02 22:01:46] [DATA] [0.67s] 
+[2026-05-02 22:01:46] [DATA] [0.69s] Normalizing data...
+[2026-05-02 22:01:46] [DATA] [0.70s]   Normalization complete: 19 samples
+[2026-05-02 22:01:46] [DATA] [0.71s] 
+[2026-05-02 22:01:46] [DATA] [0.72s] ============================================================
+[2026-05-02 22:01:46] [DATA] [0.74s] DATA LOADING COMPLETE
+[2026-05-02 22:01:46] [DATA] [0.75s] ============================================================
+[2026-05-02 22:01:46] [PHASE] [0.76s] === COMPLETED: Data Loading (took 0.48s) ===
+[2026-05-02 22:01:46] [PHASE] [0.77s]     Details: 15 train, 4 test, 2 batches per epoch
+[2026-05-02 22:01:46] [INFO] [0.82s] Memory: CPU Memory: 156.93MB RSS
+[2026-05-02 22:01:46] [PHASE] [0.84s] === STARTING: Model Creation ===
+[2026-05-02 22:01:46] [INFO] [0.89s] Model Architecture:
+[2026-05-02 22:01:46] [INFO] [0.91s]   FNO2d with modes=12, width=32
+[2026-05-02 22:01:46] [INFO] [0.92s]   Input channels: 4 (2 data + 2 coords auto-added)
+[2026-05-02 22:01:46] [INFO] [0.93s]   Output channels: 2 (u, v velocity)
+[2026-05-02 22:01:46] [INFO] [0.95s]   Total parameters: 1,188,770
+[2026-05-02 22:01:46] [INFO] [0.96s]   Trainable parameters: 1,188,770
+[2026-05-02 22:01:46] [INFO] [0.98s] 
+  Layer-wise parameter count:
+[2026-05-02 22:01:46] [INFO] [0.99s]     fc0.weight: 128 params
+[2026-05-02 22:01:46] [INFO] [1.01s]     fc0.bias: 32 params
+[2026-05-02 22:01:46] [INFO] [1.03s]     conv0.weights1: 147,456 params
+[2026-05-02 22:01:46] [INFO] [1.04s]     conv0.weights2: 147,456 params
+[2026-05-02 22:01:46] [INFO] [1.06s]     conv1.weights1: 147,456 params
+[2026-05-02 22:01:46] [INFO] [1.08s]     conv1.weights2: 147,456 params
+[2026-05-02 22:01:46] [INFO] [1.09s]     conv2.weights1: 147,456 params
+[2026-05-02 22:01:46] [INFO] [1.11s]     conv2.weights2: 147,456 params
+[2026-05-02 22:01:46] [INFO] [1.12s]     conv3.weights1: 147,456 params
+[2026-05-02 22:01:46] [INFO] [1.13s]     conv3.weights2: 147,456 params
+[2026-05-02 22:01:46] [INFO] [1.14s]     w0.weight: 1,024 params
+[2026-05-02 22:01:46] [INFO] [1.16s]     w0.bias: 32 params
+[2026-05-02 22:01:46] [INFO] [1.17s]     w1.weight: 1,024 params
+[2026-05-02 22:01:46] [INFO] [1.18s]     w1.bias: 32 params
+[2026-05-02 22:01:46] [INFO] [1.19s]     w2.weight: 1,024 params
+[2026-05-02 22:01:46] [INFO] [1.21s]     w2.bias: 32 params
+[2026-05-02 22:01:46] [INFO] [1.22s]     w3.weight: 1,024 params
+[2026-05-02 22:01:46] [INFO] [1.23s]     w3.bias: 32 params
+[2026-05-02 22:01:46] [INFO] [1.24s]     bn0.weight: 32 params
+[2026-05-02 22:01:46] [INFO] [1.26s]     bn0.bias: 32 params
+[2026-05-02 22:01:46] [INFO] [1.27s]     bn1.weight: 32 params
+[2026-05-02 22:01:46] [INFO] [1.28s]     bn1.bias: 32 params
+[2026-05-02 22:01:46] [INFO] [1.29s]     bn2.weight: 32 params
+[2026-05-02 22:01:46] [INFO] [1.31s]     bn2.bias: 32 params
+[2026-05-02 22:01:46] [INFO] [1.32s]     bn3.weight: 32 params
+[2026-05-02 22:01:46] [INFO] [1.33s]     bn3.bias: 32 params
+[2026-05-02 22:01:46] [INFO] [1.34s]     fc1.weight: 4,096 params
+[2026-05-02 22:01:46] [INFO] [1.36s]     fc1.bias: 128 params
+[2026-05-02 22:01:46] [INFO] [1.37s]     fc2.weight: 256 params
+[2026-05-02 22:01:46] [INFO] [1.39s]     fc2.bias: 2 params
+[2026-05-02 22:01:46] [PHASE] [1.40s] === COMPLETED: Model Creation (took 0.56s) ===
+[2026-05-02 22:01:46] [PHASE] [1.41s]     Details: 1,188,770 parameters
+[2026-05-02 22:01:46] [INFO] [1.42s] Memory: CPU Memory: 168.43MB RSS
+[2026-05-02 22:01:46] [PHASE] [1.44s] === STARTING: Optimizer Setup ===
+[2026-05-02 22:01:50] [INFO] [4.87s] Optimizer: Adam
+[2026-05-02 22:01:50] [INFO] [4.88s]   Learning rate: 0.001
+[2026-05-02 22:01:50] [INFO] [4.89s]   Weight decay: 0.0001
+[2026-05-02 22:01:50] [INFO] [4.90s] Scheduler: StepLR (step=15, gamma=0.5)
+[2026-05-02 22:01:50] [INFO] [4.91s] Loss function: MSELoss
+[2026-05-02 22:01:50] [PHASE] [4.92s] === COMPLETED: Optimizer Setup (took 3.48s) ===
+[2026-05-02 22:01:50] [PHASE] [4.94s] === STARTING: Training ===
+[2026-05-02 22:01:50] [INFO] [4.95s] ================================================================================
+[2026-05-02 22:01:50] [INFO] [4.96s] TRAINING PROCESS - DETAILED LOGGING
+[2026-05-02 22:01:50] [INFO] [4.97s] ================================================================================
+[2026-05-02 22:01:50] [INFO] [4.98s] 
+[2026-05-02 22:01:50] [INFO] [4.99s] Logging features enabled:
+[2026-05-02 22:01:50] [INFO] [5.01s]   - Gradient statistics: [YES]
+[2026-05-02 22:01:50] [INFO] [5.02s]   - Parameter statistics: [YES]
+[2026-05-02 22:01:50] [INFO] [5.03s]   - Tensor statistics: [YES]
+[2026-05-02 22:01:50] [INFO] [5.04s]   - Prediction samples: [YES]
+[2026-05-02 22:01:50] [INFO] [5.06s] 
+[2026-05-02 22:01:50] [INFO] [5.07s] 
+================================================================================
+[2026-05-02 22:01:50] [INFO] [5.08s] [EPOCH 1/3] START
+[2026-05-02 22:01:50] [INFO] [5.09s] ================================================================================
+[2026-05-02 22:01:50] [INFO] [5.10s]   Current learning rate: 1.00e-03
+[2026-05-02 22:01:50] [INFO] [5.11s]   Number of batches: 2
+[2026-05-02 22:01:50] [INFO] [5.13s]   Memory: CPU Memory: 207.77MB RSS
+[2026-05-02 22:01:50] [INFO] [5.14s] 
+[2026-05-02 22:01:50] [INFO] [5.18s] ------------------------------------------------------------
+[2026-05-02 22:01:50] [DETAIL] [5.19s] [Batch 1/2] INPUT DATA STATS
+[2026-05-02 22:01:50] [INFO] [5.20s]   Case: cavity/bc/case0001 (t=8)
+[2026-05-02 22:01:50] [TENSOR] [5.23s]   Tensor Stats - Input (first sample):
+[2026-05-02 22:01:50] [DETAIL] [5.24s]     shape: (64, 64, 2)
+[2026-05-02 22:01:50] [DETAIL] [5.25s]     dtype: torch.float32
+[2026-05-02 22:01:50] [DETAIL] [5.26s]     mean: 0.009593
+[2026-05-02 22:01:50] [DETAIL] [5.27s]     std: 1.318435
+[2026-05-02 22:01:50] [DETAIL] [5.29s]     min: -4.347578
+[2026-05-02 22:01:50] [DETAIL] [5.30s]     max: 5.249540
+[2026-05-02 22:01:50] [DETAIL] [5.31s]     median: -0.020902
+[2026-05-02 22:01:50] [TENSOR] [5.33s]   Tensor Stats - Target (first sample):
+[2026-05-02 22:01:50] [DETAIL] [5.34s]     shape: (64, 64, 2)
+[2026-05-02 22:01:50] [DETAIL] [5.36s]     dtype: torch.float32
+[2026-05-02 22:01:50] [DETAIL] [5.37s]     mean: 0.009591
+[2026-05-02 22:01:50] [DETAIL] [5.39s]     std: 1.321866
+[2026-05-02 22:01:50] [DETAIL] [5.40s]     min: -4.346826
+[2026-05-02 22:01:50] [DETAIL] [5.41s]     max: 5.249540
+[2026-05-02 22:01:50] [DETAIL] [5.43s]     median: -0.021128
+[2026-05-02 22:05:49] [INFO] [0.00s] Start time: 2026-05-02 22:05:49
+[2026-05-02 22:05:49] [INFO] [0.01s] Device: cpu
+[2026-05-02 22:05:49] [INFO] [0.03s] Log file: test_training.log
+[2026-05-02 22:05:49] [INFO] [0.04s] 
+[2026-05-02 22:05:49] [INFO] [0.05s] TRAINING CONFIGURATION:
+[2026-05-02 22:05:49] [INFO] [0.06s]   data_root: C:\traework\data
+[2026-05-02 22:05:49] [INFO] [0.07s]   problems: ['cavity']
+[2026-05-02 22:05:49] [INFO] [0.08s]   categories: None
+[2026-05-02 22:05:49] [INFO] [0.09s]   classNum: 1
+[2026-05-02 22:05:49] [INFO] [0.11s]   modes: 12
+[2026-05-02 22:05:49] [INFO] [0.12s]   width: 32
+[2026-05-02 22:05:49] [INFO] [0.13s]   epochs: 3
+[2026-05-02 22:05:49] [INFO] [0.14s]   batch_size: 8
+[2026-05-02 22:05:49] [INFO] [0.15s]   learning_rate: 0.001
+[2026-05-02 22:05:49] [INFO] [0.16s]   weight_decay: 0.0001
+[2026-05-02 22:05:49] [INFO] [0.18s]   train_ratio: 0.8
+[2026-05-02 22:05:49] [INFO] [0.19s]   normalize: True
+[2026-05-02 22:05:49] [INFO] [0.20s]   max_cases_per_category: 2
+[2026-05-02 22:05:49] [INFO] [0.21s]   in_channels: 4
+[2026-05-02 22:05:49] [INFO] [0.22s]   out_channels: 2
+[2026-05-02 22:05:49] [INFO] [0.24s]   show_gradient_stats: True
+[2026-05-02 22:05:49] [INFO] [0.25s]   show_param_stats: True
+[2026-05-02 22:05:49] [INFO] [0.26s]   show_tensor_stats: True
+[2026-05-02 22:05:49] [INFO] [0.27s]   show_prediction_samples: True
+[2026-05-02 22:05:49] [INFO] [0.28s] 
+[2026-05-02 22:05:49] [PHASE] [0.29s] === STARTING: Data Loading ===
+[2026-05-02 22:05:49] [DATA] [0.31s] ============================================================
+[2026-05-02 22:05:49] [DATA] [0.31s] DATA LOADING PROCESS
+[2026-05-02 22:05:49] [DATA] [0.33s] ============================================================
+[2026-05-02 22:05:49] [DATA] [0.34s] Data root: C:\traework\data
+[2026-05-02 22:05:49] [DATA] [0.35s] Problems: ['cavity']
+[2026-05-02 22:05:49] [DATA] [0.36s] classNum: 1
+[2026-05-02 22:05:49] [DATA] [0.37s] Categories to use: ['bc']
+[2026-05-02 22:05:49] [DATA] [0.39s] Max cases per category: 2
+[2026-05-02 22:05:49] [DATA] [0.40s] Normalize: True
+[2026-05-02 22:05:49] [DATA] [0.41s] 
+[2026-05-02 22:05:49] [DATA] [0.43s] Processing problem: cavity
+[2026-05-02 22:05:49] [DATA] [0.44s]   Category: bc - Found 50 cases, using 2
+[2026-05-02 22:05:49] [DATA] [0.46s]     [LOAD] case0000: 10 time steps, 9 samples, shape=(64, 64)
+[2026-05-02 22:05:49] [DATA] [0.47s]     [LOAD] case0001: 11 time steps, 10 samples, shape=(64, 64)
+[2026-05-02 22:05:49] [DATA] [0.49s] 
+[2026-05-02 22:05:49] [DATA] [0.50s] ------------------------------------------------------------
+[2026-05-02 22:05:49] [DATA] [0.51s] DATA LOADING SUMMARY
+[2026-05-02 22:05:49] [DATA] [0.53s] ------------------------------------------------------------
+[2026-05-02 22:05:49] [DATA] [0.54s]   Total cases loaded: 2
+[2026-05-02 22:05:49] [DATA] [0.56s]   Total cases skipped: 0
+[2026-05-02 22:05:49] [DATA] [0.57s]   Total time-step pairs: 19
+[2026-05-02 22:05:49] [DATA] [0.58s] 
+[2026-05-02 22:05:49] [DATA] [0.60s] Computing normalization statistics...
+[2026-05-02 22:05:49] [DATA] [0.61s]   U Component:
+[2026-05-02 22:05:49] [DATA] [0.62s]     mean = 0.023579
+[2026-05-02 22:05:49] [DATA] [0.63s]     std  = 0.376494
+[2026-05-02 22:05:49] [DATA] [0.64s]     min  = -0.835910
+[2026-05-02 22:05:49] [DATA] [0.65s]     max  = 2.000000
+[2026-05-02 22:05:49] [DATA] [0.67s]   V Component:
+[2026-05-02 22:05:49] [DATA] [0.68s]     mean = -0.000162
+[2026-05-02 22:05:50] [DATA] [0.69s]     std  = 0.307426
+[2026-05-02 22:05:50] [DATA] [0.70s]     min  = -1.341040
+[2026-05-02 22:05:50] [DATA] [0.71s]     max  = 0.830370
+[2026-05-02 22:05:50] [DATA] [0.72s] 
+[2026-05-02 22:05:50] [DATA] [0.73s] Normalizing data...
+[2026-05-02 22:05:50] [DATA] [0.74s]   Normalization complete: 19 samples
+[2026-05-02 22:05:50] [DATA] [0.76s] 
+[2026-05-02 22:05:50] [DATA] [0.77s] ============================================================
+[2026-05-02 22:05:50] [DATA] [0.78s] DATA LOADING COMPLETE
+[2026-05-02 22:05:50] [DATA] [0.80s] ============================================================
+[2026-05-02 22:05:50] [PHASE] [0.81s] === COMPLETED: Data Loading (took 0.51s) ===
+[2026-05-02 22:05:50] [PHASE] [0.82s]     Details: 15 train, 4 test, 2 batches per epoch
+[2026-05-02 22:05:50] [INFO] [0.87s] Memory: CPU Memory: 156.46MB RSS
+[2026-05-02 22:05:50] [PHASE] [0.88s] === STARTING: Model Creation ===
+[2026-05-02 22:05:50] [INFO] [0.92s] Model Architecture:
+[2026-05-02 22:05:50] [INFO] [0.94s]   FNO2d with modes=12, width=32
+[2026-05-02 22:05:50] [INFO] [0.95s]   Input channels: 4 (2 data + 2 coords auto-added)
+[2026-05-02 22:05:50] [INFO] [0.97s]   Output channels: 2 (u, v velocity)
+[2026-05-02 22:05:50] [INFO] [0.98s]   Total parameters: 1,188,770
+[2026-05-02 22:05:50] [INFO] [0.99s]   Trainable parameters: 1,188,770
+[2026-05-02 22:05:50] [INFO] [1.01s] 
+  Layer-wise parameter count:
+[2026-05-02 22:05:50] [INFO] [1.02s]     fc0.weight: 128 params
+[2026-05-02 22:05:50] [INFO] [1.03s]     fc0.bias: 32 params
+[2026-05-02 22:05:50] [INFO] [1.05s]     conv0.weights1: 147,456 params
+[2026-05-02 22:05:50] [INFO] [1.06s]     conv0.weights2: 147,456 params
+[2026-05-02 22:05:50] [INFO] [1.08s]     conv1.weights1: 147,456 params
+[2026-05-02 22:05:50] [INFO] [1.09s]     conv1.weights2: 147,456 params
+[2026-05-02 22:05:50] [INFO] [1.11s]     conv2.weights1: 147,456 params
+[2026-05-02 22:05:50] [INFO] [1.12s]     conv2.weights2: 147,456 params
+[2026-05-02 22:05:50] [INFO] [1.13s]     conv3.weights1: 147,456 params
+[2026-05-02 22:05:50] [INFO] [1.14s]     conv3.weights2: 147,456 params
+[2026-05-02 22:05:50] [INFO] [1.16s]     w0.weight: 1,024 params
+[2026-05-02 22:05:50] [INFO] [1.17s]     w0.bias: 32 params
+[2026-05-02 22:05:50] [INFO] [1.18s]     w1.weight: 1,024 params
+[2026-05-02 22:05:50] [INFO] [1.19s]     w1.bias: 32 params
+[2026-05-02 22:05:50] [INFO] [1.20s]     w2.weight: 1,024 params
+[2026-05-02 22:05:50] [INFO] [1.21s]     w2.bias: 32 params
+[2026-05-02 22:05:50] [INFO] [1.22s]     w3.weight: 1,024 params
+[2026-05-02 22:05:50] [INFO] [1.23s]     w3.bias: 32 params
+[2026-05-02 22:05:50] [INFO] [1.24s]     bn0.weight: 32 params
+[2026-05-02 22:05:50] [INFO] [1.25s]     bn0.bias: 32 params
+[2026-05-02 22:05:50] [INFO] [1.26s]     bn1.weight: 32 params
+[2026-05-02 22:05:50] [INFO] [1.28s]     bn1.bias: 32 params
+[2026-05-02 22:05:50] [INFO] [1.29s]     bn2.weight: 32 params
+[2026-05-02 22:05:50] [INFO] [1.30s]     bn2.bias: 32 params
+[2026-05-02 22:05:50] [INFO] [1.31s]     bn3.weight: 32 params
+[2026-05-02 22:05:50] [INFO] [1.32s]     bn3.bias: 32 params
+[2026-05-02 22:05:50] [INFO] [1.33s]     fc1.weight: 4,096 params
+[2026-05-02 22:05:50] [INFO] [1.34s]     fc1.bias: 128 params
+[2026-05-02 22:05:50] [INFO] [1.36s]     fc2.weight: 256 params
+[2026-05-02 22:05:50] [INFO] [1.37s]     fc2.bias: 2 params
+[2026-05-02 22:05:50] [PHASE] [1.38s] === COMPLETED: Model Creation (took 0.50s) ===
+[2026-05-02 22:05:50] [PHASE] [1.39s]     Details: 1,188,770 parameters
+[2026-05-02 22:05:50] [INFO] [1.40s] Memory: CPU Memory: 167.95MB RSS
+[2026-05-02 22:05:50] [PHASE] [1.41s] === STARTING: Optimizer Setup ===
+[2026-05-02 22:05:53] [INFO] [4.52s] Optimizer: Adam
+[2026-05-02 22:05:53] [INFO] [4.53s]   Learning rate: 0.001
+[2026-05-02 22:05:53] [INFO] [4.54s]   Weight decay: 0.0001
+[2026-05-02 22:05:53] [INFO] [4.56s] Scheduler: StepLR (step=15, gamma=0.5)
+[2026-05-02 22:05:53] [INFO] [4.59s] Loss function: MSELoss
+[2026-05-02 22:05:53] [PHASE] [4.60s] === COMPLETED: Optimizer Setup (took 3.19s) ===
+[2026-05-02 22:05:53] [PHASE] [4.62s] === STARTING: Training ===
+[2026-05-02 22:05:53] [INFO] [4.63s] ================================================================================
+[2026-05-02 22:05:53] [INFO] [4.64s] TRAINING PROCESS - DETAILED LOGGING
+[2026-05-02 22:05:53] [INFO] [4.65s] ================================================================================
+[2026-05-02 22:05:53] [INFO] [4.66s] 
+[2026-05-02 22:05:53] [INFO] [4.67s] Logging features enabled:
+[2026-05-02 22:05:53] [INFO] [4.69s]   - Gradient statistics: [YES]
+[2026-05-02 22:05:54] [INFO] [4.70s]   - Parameter statistics: [YES]
+[2026-05-02 22:05:54] [INFO] [4.71s]   - Tensor statistics: [YES]
+[2026-05-02 22:05:54] [INFO] [4.72s]   - Prediction samples: [YES]
+[2026-05-02 22:05:54] [INFO] [4.73s] 
+[2026-05-02 22:05:54] [INFO] [4.74s] 
+================================================================================
+[2026-05-02 22:05:54] [INFO] [4.75s] [EPOCH 1/3] START
+[2026-05-02 22:05:54] [INFO] [4.76s] ================================================================================
+[2026-05-02 22:05:54] [INFO] [4.77s]   Current learning rate: 1.00e-03
+[2026-05-02 22:05:54] [INFO] [4.79s]   Number of batches: 2
+[2026-05-02 22:05:54] [INFO] [4.80s]   Memory: CPU Memory: 207.84MB RSS
+[2026-05-02 22:05:54] [INFO] [4.81s] 
+[2026-05-02 22:05:54] [INFO] [4.82s] ------------------------------------------------------------
+[2026-05-02 22:05:54] [DETAIL] [4.83s] [Batch 1/2] INPUT DATA STATS
+[2026-05-02 22:05:54] [INFO] [4.85s]   Case: cavity/bc/case0000 (t=4)
+[2026-05-02 22:05:54] [TENSOR] [4.86s]   Tensor Stats - Input (first sample):
+[2026-05-02 22:05:54] [DETAIL] [4.87s]     shape: (64, 64, 2)
+[2026-05-02 22:05:54] [DETAIL] [4.89s]     dtype: torch.float32
+[2026-05-02 22:05:54] [DETAIL] [4.90s]     mean: -0.010594
+[2026-05-02 22:05:54] [DETAIL] [4.92s]     std: 0.635436
+[2026-05-02 22:05:54] [DETAIL] [4.93s]     min: -2.135098
+[2026-05-02 22:05:54] [DETAIL] [4.94s]     max: 2.593456
+[2026-05-02 22:05:54] [DETAIL] [4.96s]     median: -0.036984
+[2026-05-02 22:05:54] [TENSOR] [4.97s]   Tensor Stats - Target (first sample):
+[2026-05-02 22:05:54] [DETAIL] [4.98s]     shape: (64, 64, 2)
+[2026-05-02 22:05:54] [DETAIL] [4.99s]     dtype: torch.float32
+[2026-05-02 22:05:54] [DETAIL] [5.00s]     mean: -0.010596
+[2026-05-02 22:05:54] [DETAIL] [5.01s]     std: 0.642236
+[2026-05-02 22:05:54] [DETAIL] [5.03s]     min: -2.136783
+[2026-05-02 22:05:54] [DETAIL] [5.04s]     max: 2.593456
+[2026-05-02 22:05:54] [DETAIL] [5.06s]     median: -0.036922

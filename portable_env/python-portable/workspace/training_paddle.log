@@ -1,0 +1,616 @@
+2026-05-03 14:22:08,940 [INFO] [0.00s] 
+================================================================================
+2026-05-03 14:22:08,941 [INFO] [0.00s] FNO2 PADDLE TRAINING CONFIGURATION
+2026-05-03 14:22:08,941 [INFO] [0.00s] ================================================================================
+2026-05-03 14:22:08,941 [INFO] [0.00s] Framework: PaddlePaddle
+2026-05-03 14:22:08,941 [INFO] [0.00s] Paddle version: 2.6.2
+2026-05-03 14:22:08,941 [INFO] [0.00s] 
+2026-05-03 14:22:08,942 [INFO] [0.00s] classNum: 1
+2026-05-03 14:22:08,943 [INFO] [0.01s]   -> Using only: bc category
+2026-05-03 14:22:08,943 [INFO] [0.01s] Max cases per category: 2
+2026-05-03 14:22:08,944 [INFO] [0.01s] Epochs: 3
+2026-05-03 14:22:08,944 [INFO] [0.01s] Batch size: 4
+2026-05-03 14:22:08,944 [INFO] [0.01s] Learning rate: 0.001
+2026-05-03 14:22:08,944 [INFO] [0.01s] Log level: DEBUG
+2026-05-03 14:22:08,944 [INFO] [0.01s] Log to console: True
+2026-05-03 14:22:08,944 [INFO] [0.01s] Log to file: True
+2026-05-03 14:22:08,946 [INFO] [0.01s] ================================================================================
+2026-05-03 14:22:08,946 [INFO] [0.01s] 
+2026-05-03 14:22:08,960 [INFO] [0.01s] === STARTING: TRAINING INITIALIZATION ===
+2026-05-03 14:22:08,961 [INFO] [0.02s] Using device: cpu
+2026-05-03 14:22:08,961 [INFO] [0.02s] PaddlePaddle version: 2.6.2
+2026-05-03 14:22:08,961 [INFO] [0.02s] === COMPLETED: TRAINING INITIALIZATION (took 0.00s) ===
+2026-05-03 14:22:08,962 [INFO] [0.02s] === STARTING: DATA LOADING ===
+2026-05-03 14:22:08,962 [INFO] [0.02s] ============================================================
+2026-05-03 14:22:08,962 [INFO] [0.02s] DATA LOADING PROCESS
+2026-05-03 14:22:08,962 [INFO] [0.02s] ============================================================
+2026-05-03 14:22:08,962 [INFO] [0.02s] Data root: C:\traework\data
+2026-05-03 14:22:08,963 [INFO] [0.02s] Problems: ['cavity']
+2026-05-03 14:22:08,963 [INFO] [0.02s] classNum: 1
+2026-05-03 14:22:08,963 [INFO] [0.02s] Categories to use: ['bc']
+2026-05-03 14:22:08,963 [INFO] [0.02s] Max cases per category: 2
+2026-05-03 14:22:08,964 [INFO] [0.02s] Normalize: True
+2026-05-03 14:22:08,964 [INFO] [0.02s] 
+2026-05-03 14:22:08,966 [INFO] [0.02s] Processing problem: cavity
+2026-05-03 14:22:08,971 [INFO] [0.03s]   Category: bc - Found 50 cases, using 2
+2026-05-03 14:22:09,012 [INFO] [0.07s]     [LOAD] case0000: 10 time steps, 9 samples, shape=(64, 64)
+2026-05-03 14:22:09,045 [INFO] [0.10s]     [LOAD] case0001: 11 time steps, 10 samples, shape=(64, 64)
+2026-05-03 14:22:09,046 [INFO] [0.10s] 
+2026-05-03 14:22:09,046 [INFO] [0.10s] ------------------------------------------------------------
+2026-05-03 14:22:09,046 [INFO] [0.10s] DATA LOADING SUMMARY
+2026-05-03 14:22:09,046 [INFO] [0.10s] ------------------------------------------------------------
+2026-05-03 14:22:09,046 [INFO] [0.10s]   Total cases loaded: 2
+2026-05-03 14:22:09,046 [INFO] [0.10s]   Total cases skipped: 0
+2026-05-03 14:22:09,046 [INFO] [0.10s]   Total samples: 19
+2026-05-03 14:22:09,047 [INFO] [0.10s] 
+2026-05-03 14:22:09,047 [INFO] [0.10s] Computing normalization statistics...
+2026-05-03 14:22:09,054 [INFO] [0.11s]   U: mean=0.023579, std=0.376494, min=-0.835910, max=2.000000
+2026-05-03 14:22:09,055 [INFO] [0.11s]   V: mean=-0.000162, std=0.307426, min=-1.341040, max=0.830370
+2026-05-03 14:22:09,055 [INFO] [0.11s] 
+2026-05-03 14:22:09,055 [INFO] [0.11s] ============================================================
+2026-05-03 14:22:09,055 [INFO] [0.11s] DATA LOADING COMPLETE
+2026-05-03 14:22:09,055 [INFO] [0.11s] ============================================================
+2026-05-03 14:22:09,056 [INFO] [0.11s] 
+2026-05-03 14:22:09,056 [INFO] [0.11s] Dataset split: 15 train, 4 test
+2026-05-03 14:22:09,057 [INFO] [0.11s] Train batches: 4
+2026-05-03 14:22:09,057 [INFO] [0.11s] Test batches: 1
+2026-05-03 14:22:09,058 [INFO] [0.11s] === COMPLETED: DATA LOADING (took 0.10s) ===
+2026-05-03 14:22:09,058 [INFO] [0.11s] === STARTING: MODEL CREATION ===
+2026-05-03 14:22:09,237 [INFO] [0.29s] Model created successfully!
+2026-05-03 14:22:09,239 [INFO] [0.29s] Total parameters: 2,368,354
+2026-05-03 14:22:09,239 [INFO] [0.29s] Model configuration:
+2026-05-03 14:22:09,240 [INFO] [0.29s]   Fourier modes: 12
+2026-05-03 14:22:09,240 [INFO] [0.29s]   Channel width: 32
+2026-05-03 14:22:09,240 [INFO] [0.29s]   Input channels: 2
+2026-05-03 14:22:09,240 [INFO] [0.29s]   Output channels: 2
+2026-05-03 14:22:09,241 [INFO] [0.29s] 
+Layer-wise parameter count:
+2026-05-03 14:22:09,241 [INFO] [0.29s]     fc0.weight: 64 params
+2026-05-03 14:22:09,241 [INFO] [0.29s]     fc0.bias: 32 params
+2026-05-03 14:22:09,241 [INFO] [0.29s]     conv0.weights1_real: 147,456 params
+2026-05-03 14:22:09,241 [INFO] [0.29s]     conv0.weights1_imag: 147,456 params
+2026-05-03 14:22:09,242 [INFO] [0.30s]     conv0.weights2_real: 147,456 params
+2026-05-03 14:22:09,242 [INFO] [0.30s]     conv0.weights2_imag: 147,456 params
+2026-05-03 14:22:09,242 [INFO] [0.30s]     conv1.weights1_real: 147,456 params
+2026-05-03 14:22:09,242 [INFO] [0.30s]     conv1.weights1_imag: 147,456 params
+2026-05-03 14:22:09,242 [INFO] [0.30s]     conv1.weights2_real: 147,456 params
+2026-05-03 14:22:09,242 [INFO] [0.30s]     conv1.weights2_imag: 147,456 params
+2026-05-03 14:22:09,243 [INFO] [0.30s]     conv2.weights1_real: 147,456 params
+2026-05-03 14:22:09,243 [INFO] [0.30s]     conv2.weights1_imag: 147,456 params
+2026-05-03 14:22:09,243 [INFO] [0.30s]     conv2.weights2_real: 147,456 params
+2026-05-03 14:22:09,243 [INFO] [0.30s]     conv2.weights2_imag: 147,456 params
+2026-05-03 14:22:09,243 [INFO] [0.30s]     conv3.weights1_real: 147,456 params
+2026-05-03 14:22:09,243 [INFO] [0.30s]     conv3.weights1_imag: 147,456 params
+2026-05-03 14:22:09,244 [INFO] [0.30s]     conv3.weights2_real: 147,456 params
+2026-05-03 14:22:09,244 [INFO] [0.30s]     conv3.weights2_imag: 147,456 params
+2026-05-03 14:22:09,244 [INFO] [0.30s]     w0.weight: 1,024 params
+2026-05-03 14:22:09,244 [INFO] [0.30s]     w0.bias: 32 params
+2026-05-03 14:22:09,244 [INFO] [0.30s]     w1.weight: 1,024 params
+2026-05-03 14:22:09,244 [INFO] [0.30s]     w1.bias: 32 params
+2026-05-03 14:22:09,244 [INFO] [0.30s]     w2.weight: 1,024 params
+2026-05-03 14:22:09,244 [INFO] [0.30s]     w2.bias: 32 params
+2026-05-03 14:22:09,244 [INFO] [0.30s]     w3.weight: 1,024 params
+2026-05-03 14:22:09,245 [INFO] [0.30s]     w3.bias: 32 params
+2026-05-03 14:22:09,245 [INFO] [0.30s]     bn0.weight: 32 params
+2026-05-03 14:22:09,245 [INFO] [0.30s]     bn0.bias: 32 params
+2026-05-03 14:22:09,245 [INFO] [0.30s]     bn0._mean: 32 params
+2026-05-03 14:22:09,245 [INFO] [0.30s]     bn0._variance: 32 params
+2026-05-03 14:22:09,246 [INFO] [0.30s]     bn1.weight: 32 params
+2026-05-03 14:22:09,246 [INFO] [0.30s]     bn1.bias: 32 params
+2026-05-03 14:22:09,246 [INFO] [0.30s]     bn1._mean: 32 params
+2026-05-03 14:22:09,246 [INFO] [0.30s]     bn1._variance: 32 params
+2026-05-03 14:22:09,246 [INFO] [0.30s]     bn2.weight: 32 params
+2026-05-03 14:22:09,247 [INFO] [0.30s]     bn2.bias: 32 params
+2026-05-03 14:22:09,247 [INFO] [0.30s]     bn2._mean: 32 params
+2026-05-03 14:22:09,247 [INFO] [0.30s]     bn2._variance: 32 params
+2026-05-03 14:22:09,247 [INFO] [0.30s]     bn3.weight: 32 params
+2026-05-03 14:22:09,247 [INFO] [0.30s]     bn3.bias: 32 params
+2026-05-03 14:22:09,247 [INFO] [0.30s]     bn3._mean: 32 params
+2026-05-03 14:22:09,248 [INFO] [0.30s]     bn3._variance: 32 params
+2026-05-03 14:22:09,248 [INFO] [0.30s]     fc1.weight: 4,096 params
+2026-05-03 14:22:09,248 [INFO] [0.30s]     fc1.bias: 128 params
+2026-05-03 14:22:09,248 [INFO] [0.30s]     fc2.weight: 256 params
+2026-05-03 14:22:09,248 [INFO] [0.30s]     fc2.bias: 2 params
+2026-05-03 14:22:09,248 [INFO] [0.30s] === COMPLETED: MODEL CREATION (took 0.19s) ===
+2026-05-03 14:22:09,249 [INFO] [0.30s] === STARTING: OPTIMIZER AND LOSS SETUP ===
+2026-05-03 14:22:09,250 [INFO] [0.30s] Optimizer: Adam
+2026-05-03 14:22:09,250 [INFO] [0.30s] Learning rate: 0.001
+2026-05-03 14:22:09,251 [INFO] [0.30s] Weight decay: 1e-4
+2026-05-03 14:22:09,252 [INFO] [0.31s] Loss function: MSELoss
+2026-05-03 14:22:09,252 [INFO] [0.31s] LR scheduler: StepDecay (step_size=50, gamma=0.5)
+2026-05-03 14:22:09,252 [INFO] [0.31s] === COMPLETED: OPTIMIZER AND LOSS SETUP (took 0.00s) ===
+2026-05-03 14:22:09,252 [INFO] [0.31s] === STARTING: TRAINING CONFIGURATION SUMMARY ===
+2026-05-03 14:22:09,252 [INFO] [0.31s] ============================================================
+2026-05-03 14:22:09,252 [INFO] [0.31s] TRAINING CONFIGURATION
+2026-05-03 14:22:09,252 [INFO] [0.31s] ============================================================
+2026-05-03 14:22:09,252 [INFO] [0.31s]   Data root: C:\traework\data
+2026-05-03 14:22:09,252 [INFO] [0.31s]   Problems: ['cavity']
+2026-05-03 14:22:09,252 [INFO] [0.31s]   Categories: ['bc']
+2026-05-03 14:22:09,254 [INFO] [0.31s]   classNum: 1
+2026-05-03 14:22:09,254 [INFO] [0.31s]   Max cases per category: 2
+2026-05-03 14:22:09,255 [INFO] [0.31s]   Train ratio: 0.8
+2026-05-03 14:22:09,255 [INFO] [0.31s] 
+2026-05-03 14:22:09,255 [INFO] [0.31s]   Epochs: 3
+2026-05-03 14:22:09,255 [INFO] [0.31s]   Batch size: 4
+2026-05-03 14:22:09,255 [INFO] [0.31s]   Learning rate: 0.001
+2026-05-03 14:22:09,255 [INFO] [0.31s]   Fourier modes: 12
+2026-05-03 14:22:09,255 [INFO] [0.31s]   Channel width: 32
+2026-05-03 14:22:09,255 [INFO] [0.31s] 
+2026-05-03 14:22:09,256 [INFO] [0.31s]   Log file: training_paddle.log
+2026-05-03 14:22:09,256 [INFO] [0.31s]   Log level: DEBUG
+2026-05-03 14:22:09,256 [INFO] [0.31s]   Model save path: fno2_paddle_model.pth
+2026-05-03 14:22:09,256 [INFO] [0.31s] 
+2026-05-03 14:22:09,256 [INFO] [0.31s]   Detailed logging:
+2026-05-03 14:22:09,257 [INFO] [0.31s]     Gradient stats: [YES]
+2026-05-03 14:22:09,257 [INFO] [0.31s]     Parameter stats: [YES]
+2026-05-03 14:22:09,257 [INFO] [0.31s]     Tensor stats: [YES]
+2026-05-03 14:22:09,257 [INFO] [0.31s]     Prediction samples: [YES]
+2026-05-03 14:22:09,257 [INFO] [0.31s] ============================================================
+2026-05-03 14:22:09,257 [INFO] [0.31s] === COMPLETED: TRAINING CONFIGURATION SUMMARY (took 0.01s) ===
+2026-05-03 14:22:09,257 [INFO] [0.31s] === STARTING: TRAINING LOOP ===
+2026-05-03 14:22:09,257 [INFO] [0.31s] 
+2026-05-03 14:22:09,257 [INFO] [0.31s] ============================================================
+2026-05-03 14:22:09,259 [INFO] [0.31s] [EPOCH 1/3] START
+2026-05-03 14:22:09,259 [INFO] [0.31s] ============================================================
+2026-05-03 14:22:09,259 [INFO] [0.31s]   Current learning rate: 1.00e-03
+2026-05-03 14:23:46,588 [INFO] [0.01s] 
+================================================================================
+2026-05-03 14:23:46,589 [INFO] [0.01s] FNO2 PADDLE TRAINING CONFIGURATION
+2026-05-03 14:23:46,589 [INFO] [0.01s] ================================================================================
+2026-05-03 14:23:46,589 [INFO] [0.01s] Framework: PaddlePaddle
+2026-05-03 14:23:46,589 [INFO] [0.01s] Paddle version: 2.6.2
+2026-05-03 14:23:46,589 [INFO] [0.01s] 
+2026-05-03 14:23:46,589 [INFO] [0.01s] classNum: 1
+2026-05-03 14:23:46,589 [INFO] [0.01s]   -> Using only: bc category
+2026-05-03 14:23:46,589 [INFO] [0.01s] Max cases per category: 2
+2026-05-03 14:23:46,590 [INFO] [0.01s] Epochs: 3
+2026-05-03 14:23:46,590 [INFO] [0.01s] Batch size: 4
+2026-05-03 14:23:46,590 [INFO] [0.01s] Learning rate: 0.001
+2026-05-03 14:23:46,590 [INFO] [0.01s] Log level: DEBUG
+2026-05-03 14:23:46,590 [INFO] [0.01s] Log to console: True
+2026-05-03 14:23:46,590 [INFO] [0.01s] Log to file: True
+2026-05-03 14:23:46,590 [INFO] [0.01s] ================================================================================
+2026-05-03 14:23:46,590 [INFO] [0.01s] 
+2026-05-03 14:23:46,604 [INFO] [0.01s] === STARTING: TRAINING INITIALIZATION ===
+2026-05-03 14:23:46,604 [INFO] [0.01s] Using device: cpu
+2026-05-03 14:23:46,605 [INFO] [0.01s] PaddlePaddle version: 2.6.2
+2026-05-03 14:23:46,605 [INFO] [0.01s] === COMPLETED: TRAINING INITIALIZATION (took 0.00s) ===
+2026-05-03 14:23:46,605 [INFO] [0.01s] === STARTING: DATA LOADING ===
+2026-05-03 14:23:46,606 [INFO] [0.02s] ============================================================
+2026-05-03 14:23:46,606 [INFO] [0.02s] DATA LOADING PROCESS
+2026-05-03 14:23:46,606 [INFO] [0.02s] ============================================================
+2026-05-03 14:23:46,606 [INFO] [0.02s] Data root: C:\traework\data
+2026-05-03 14:23:46,607 [INFO] [0.02s] Problems: ['cavity']
+2026-05-03 14:23:46,607 [INFO] [0.02s] classNum: 1
+2026-05-03 14:23:46,607 [INFO] [0.02s] Categories to use: ['bc']
+2026-05-03 14:23:46,607 [INFO] [0.02s] Max cases per category: 2
+2026-05-03 14:23:46,607 [INFO] [0.02s] Normalize: True
+2026-05-03 14:23:46,607 [INFO] [0.02s] 
+2026-05-03 14:23:46,608 [INFO] [0.02s] Processing problem: cavity
+2026-05-03 14:23:46,610 [INFO] [0.02s]   Category: bc - Found 50 cases, using 2
+2026-05-03 14:23:46,619 [INFO] [0.03s]     [LOAD] case0000: 10 time steps, 9 samples, shape=(64, 64)
+2026-05-03 14:23:46,624 [INFO] [0.03s]     [LOAD] case0001: 11 time steps, 10 samples, shape=(64, 64)
+2026-05-03 14:23:46,624 [INFO] [0.03s] 
+2026-05-03 14:23:46,624 [INFO] [0.03s] ------------------------------------------------------------
+2026-05-03 14:23:46,624 [INFO] [0.03s] DATA LOADING SUMMARY
+2026-05-03 14:23:46,624 [INFO] [0.03s] ------------------------------------------------------------
+2026-05-03 14:23:46,624 [INFO] [0.03s]   Total cases loaded: 2
+2026-05-03 14:23:46,624 [INFO] [0.03s]   Total cases skipped: 0
+2026-05-03 14:23:46,624 [INFO] [0.03s]   Total samples: 19
+2026-05-03 14:23:46,624 [INFO] [0.03s] 
+2026-05-03 14:23:46,624 [INFO] [0.03s] Computing normalization statistics...
+2026-05-03 14:23:46,627 [INFO] [0.04s]   U: mean=0.023579, std=0.376494, min=-0.835910, max=2.000000
+2026-05-03 14:23:46,627 [INFO] [0.04s]   V: mean=-0.000162, std=0.307426, min=-1.341040, max=0.830370
+2026-05-03 14:23:46,628 [INFO] [0.04s] 
+2026-05-03 14:23:46,628 [INFO] [0.04s] ============================================================
+2026-05-03 14:23:46,628 [INFO] [0.04s] DATA LOADING COMPLETE
+2026-05-03 14:23:46,629 [INFO] [0.04s] ============================================================
+2026-05-03 14:23:46,629 [INFO] [0.04s] 
+2026-05-03 14:23:46,629 [INFO] [0.04s] Dataset split: 15 train, 4 test
+2026-05-03 14:23:46,629 [INFO] [0.04s] Train batches: 4
+2026-05-03 14:23:46,629 [INFO] [0.04s] Test batches: 1
+2026-05-03 14:23:46,631 [INFO] [0.04s] === COMPLETED: DATA LOADING (took 0.03s) ===
+2026-05-03 14:23:46,631 [INFO] [0.04s] === STARTING: MODEL CREATION ===
+2026-05-03 14:23:46,772 [INFO] [0.18s] Model created successfully!
+2026-05-03 14:23:46,772 [INFO] [0.18s] Total parameters: 2,368,418
+2026-05-03 14:23:46,772 [INFO] [0.18s] Model configuration:
+2026-05-03 14:23:46,772 [INFO] [0.18s]   Fourier modes: 12
+2026-05-03 14:23:46,772 [INFO] [0.18s]   Channel width: 32
+2026-05-03 14:23:46,772 [INFO] [0.18s]   Input channels: 4 (2 data + 2 coords auto-added)
+2026-05-03 14:23:46,772 [INFO] [0.18s]   Output channels: 2 (u, v velocity)
+2026-05-03 14:23:46,773 [INFO] [0.18s] 
+Layer-wise parameter count:
+2026-05-03 14:23:46,773 [INFO] [0.18s]     fc0.weight: 128 params
+2026-05-03 14:23:46,773 [INFO] [0.18s]     fc0.bias: 32 params
+2026-05-03 14:23:46,773 [INFO] [0.18s]     conv0.weights1_real: 147,456 params
+2026-05-03 14:23:46,774 [INFO] [0.18s]     conv0.weights1_imag: 147,456 params
+2026-05-03 14:23:46,774 [INFO] [0.18s]     conv0.weights2_real: 147,456 params
+2026-05-03 14:23:46,774 [INFO] [0.18s]     conv0.weights2_imag: 147,456 params
+2026-05-03 14:23:46,774 [INFO] [0.18s]     conv1.weights1_real: 147,456 params
+2026-05-03 14:23:46,774 [INFO] [0.18s]     conv1.weights1_imag: 147,456 params
+2026-05-03 14:23:46,774 [INFO] [0.18s]     conv1.weights2_real: 147,456 params
+2026-05-03 14:23:46,775 [INFO] [0.18s]     conv1.weights2_imag: 147,456 params
+2026-05-03 14:23:46,775 [INFO] [0.18s]     conv2.weights1_real: 147,456 params
+2026-05-03 14:23:46,775 [INFO] [0.18s]     conv2.weights1_imag: 147,456 params
+2026-05-03 14:23:46,775 [INFO] [0.18s]     conv2.weights2_real: 147,456 params
+2026-05-03 14:23:46,776 [INFO] [0.19s]     conv2.weights2_imag: 147,456 params
+2026-05-03 14:23:46,776 [INFO] [0.19s]     conv3.weights1_real: 147,456 params
+2026-05-03 14:23:46,776 [INFO] [0.19s]     conv3.weights1_imag: 147,456 params
+2026-05-03 14:23:46,776 [INFO] [0.19s]     conv3.weights2_real: 147,456 params
+2026-05-03 14:23:46,776 [INFO] [0.19s]     conv3.weights2_imag: 147,456 params
+2026-05-03 14:23:46,777 [INFO] [0.19s]     w0.weight: 1,024 params
+2026-05-03 14:23:46,777 [INFO] [0.19s]     w0.bias: 32 params
+2026-05-03 14:23:46,777 [INFO] [0.19s]     w1.weight: 1,024 params
+2026-05-03 14:23:46,777 [INFO] [0.19s]     w1.bias: 32 params
+2026-05-03 14:23:46,777 [INFO] [0.19s]     w2.weight: 1,024 params
+2026-05-03 14:23:46,777 [INFO] [0.19s]     w2.bias: 32 params
+2026-05-03 14:23:46,777 [INFO] [0.19s]     w3.weight: 1,024 params
+2026-05-03 14:23:46,778 [INFO] [0.19s]     w3.bias: 32 params
+2026-05-03 14:23:46,778 [INFO] [0.19s]     bn0.weight: 32 params
+2026-05-03 14:23:46,778 [INFO] [0.19s]     bn0.bias: 32 params
+2026-05-03 14:23:46,778 [INFO] [0.19s]     bn0._mean: 32 params
+2026-05-03 14:23:46,779 [INFO] [0.19s]     bn0._variance: 32 params
+2026-05-03 14:23:46,779 [INFO] [0.19s]     bn1.weight: 32 params
+2026-05-03 14:23:46,779 [INFO] [0.19s]     bn1.bias: 32 params
+2026-05-03 14:23:46,779 [INFO] [0.19s]     bn1._mean: 32 params
+2026-05-03 14:23:46,779 [INFO] [0.19s]     bn1._variance: 32 params
+2026-05-03 14:23:46,779 [INFO] [0.19s]     bn2.weight: 32 params
+2026-05-03 14:23:46,779 [INFO] [0.19s]     bn2.bias: 32 params
+2026-05-03 14:23:46,780 [INFO] [0.19s]     bn2._mean: 32 params
+2026-05-03 14:23:46,780 [INFO] [0.19s]     bn2._variance: 32 params
+2026-05-03 14:23:46,780 [INFO] [0.19s]     bn3.weight: 32 params
+2026-05-03 14:23:46,780 [INFO] [0.19s]     bn3.bias: 32 params
+2026-05-03 14:23:46,780 [INFO] [0.19s]     bn3._mean: 32 params
+2026-05-03 14:23:46,780 [INFO] [0.19s]     bn3._variance: 32 params
+2026-05-03 14:23:46,780 [INFO] [0.19s]     fc1.weight: 4,096 params
+2026-05-03 14:23:46,780 [INFO] [0.19s]     fc1.bias: 128 params
+2026-05-03 14:23:46,780 [INFO] [0.19s]     fc2.weight: 256 params
+2026-05-03 14:23:46,782 [INFO] [0.19s]     fc2.bias: 2 params
+2026-05-03 14:23:46,782 [INFO] [0.19s] === COMPLETED: MODEL CREATION (took 0.15s) ===
+2026-05-03 14:23:46,782 [INFO] [0.19s] === STARTING: OPTIMIZER AND LOSS SETUP ===
+2026-05-03 14:23:46,782 [INFO] [0.19s] Optimizer: Adam
+2026-05-03 14:23:46,782 [INFO] [0.19s] Learning rate: 0.001
+2026-05-03 14:23:46,783 [INFO] [0.19s] Weight decay: 1e-4
+2026-05-03 14:23:46,783 [INFO] [0.19s] Loss function: MSELoss
+2026-05-03 14:23:46,783 [INFO] [0.19s] LR scheduler: StepDecay (step_size=50, gamma=0.5)
+2026-05-03 14:23:46,783 [INFO] [0.19s] === COMPLETED: OPTIMIZER AND LOSS SETUP (took 0.00s) ===
+2026-05-03 14:23:46,783 [INFO] [0.19s] === STARTING: TRAINING CONFIGURATION SUMMARY ===
+2026-05-03 14:23:46,783 [INFO] [0.19s] ============================================================
+2026-05-03 14:23:46,783 [INFO] [0.19s] TRAINING CONFIGURATION
+2026-05-03 14:23:46,783 [INFO] [0.19s] ============================================================
+2026-05-03 14:23:46,783 [INFO] [0.19s]   Data root: C:\traework\data
+2026-05-03 14:23:46,783 [INFO] [0.19s]   Problems: ['cavity']
+2026-05-03 14:23:46,783 [INFO] [0.19s]   Categories: ['bc']
+2026-05-03 14:23:46,785 [INFO] [0.19s]   classNum: 1
+2026-05-03 14:23:46,785 [INFO] [0.20s]   Max cases per category: 2
+2026-05-03 14:23:46,786 [INFO] [0.20s]   Train ratio: 0.8
+2026-05-03 14:23:46,786 [INFO] [0.20s] 
+2026-05-03 14:23:46,786 [INFO] [0.20s]   Epochs: 3
+2026-05-03 14:23:46,786 [INFO] [0.20s]   Batch size: 4
+2026-05-03 14:23:46,786 [INFO] [0.20s]   Learning rate: 0.001
+2026-05-03 14:23:46,786 [INFO] [0.20s]   Fourier modes: 12
+2026-05-03 14:23:46,787 [INFO] [0.20s]   Channel width: 32
+2026-05-03 14:23:46,787 [INFO] [0.20s] 
+2026-05-03 14:23:46,787 [INFO] [0.20s]   Log file: training_paddle.log
+2026-05-03 14:23:46,787 [INFO] [0.20s]   Log level: DEBUG
+2026-05-03 14:23:46,787 [INFO] [0.20s]   Model save path: fno2_paddle_model.pth
+2026-05-03 14:23:46,787 [INFO] [0.20s] 
+2026-05-03 14:23:46,787 [INFO] [0.20s]   Detailed logging:
+2026-05-03 14:23:46,787 [INFO] [0.20s]     Gradient stats: [YES]
+2026-05-03 14:23:46,788 [INFO] [0.20s]     Parameter stats: [YES]
+2026-05-03 14:23:46,788 [INFO] [0.20s]     Tensor stats: [YES]
+2026-05-03 14:23:46,788 [INFO] [0.20s]     Prediction samples: [YES]
+2026-05-03 14:23:46,789 [INFO] [0.20s] ============================================================
+2026-05-03 14:23:46,789 [INFO] [0.20s] === COMPLETED: TRAINING CONFIGURATION SUMMARY (took 0.01s) ===
+2026-05-03 14:23:46,789 [INFO] [0.20s] === STARTING: TRAINING LOOP ===
+2026-05-03 14:23:46,789 [INFO] [0.20s] 
+2026-05-03 14:23:46,790 [INFO] [0.20s] ============================================================
+2026-05-03 14:23:46,791 [INFO] [0.20s] [EPOCH 1/3] START
+2026-05-03 14:23:46,791 [INFO] [0.20s] ============================================================
+2026-05-03 14:23:46,791 [INFO] [0.20s]   Current learning rate: 1.00e-03
+2026-05-03 14:23:48,702 [INFO] [2.11s] 
+2026-05-03 14:23:48,702 [INFO] [2.11s]   [Batch 1/4]
+2026-05-03 14:23:48,702 [INFO] [2.11s]     Case(s): cavity/bc/case0000, cavity/bc/case0000, cavity/bc/case0000...
+2026-05-03 14:23:48,702 [INFO] [2.11s]     Loss: 0.69421488
+2026-05-03 14:23:48,702 [INFO] [2.11s]     Running avg loss: 0.69421488
+2026-05-03 14:23:48,703 [INFO] [2.11s] 
+2026-05-03 14:23:48,703 [INFO] [2.11s]     [Batch 1/4] INPUT DATA STATS
+2026-05-03 14:23:48,703 [INFO] [2.11s] Tensor Stats - Input (first sample):
+2026-05-03 14:23:48,703 [INFO] [2.11s]   shape: (64, 64, 2)
+2026-05-03 14:23:48,703 [INFO] [2.11s]   dtype: float32
+2026-05-03 14:23:48,704 [INFO] [2.11s]   mean: -0.010596
+2026-05-03 14:23:48,704 [INFO] [2.11s]   std: 0.642197
+2026-05-03 14:23:48,705 [INFO] [2.11s]   min: -2.136783
+2026-05-03 14:23:48,705 [INFO] [2.11s]   max: 2.593456
+2026-05-03 14:23:48,706 [INFO] [2.12s]   median: -0.036892
+2026-05-03 14:23:48,707 [INFO] [2.12s] 
+2026-05-03 14:23:48,707 [INFO] [2.12s]     [Batch 1/4] TARGET DATA STATS
+2026-05-03 14:23:48,707 [INFO] [2.12s] Tensor Stats - Target (first sample):
+2026-05-03 14:23:48,707 [INFO] [2.12s]   shape: (64, 64, 2)
+2026-05-03 14:23:48,708 [INFO] [2.12s]   dtype: float32
+2026-05-03 14:23:48,708 [INFO] [2.12s]   mean: -0.010597
+2026-05-03 14:23:48,708 [INFO] [2.12s]   std: 0.646171
+2026-05-03 14:23:48,708 [INFO] [2.12s]   min: -2.137498
+2026-05-03 14:23:48,709 [INFO] [2.12s]   max: 2.593456
+2026-05-03 14:23:48,709 [INFO] [2.12s]   median: -0.036666
+2026-05-03 14:23:48,709 [INFO] [2.12s] 
+2026-05-03 14:23:48,709 [INFO] [2.12s]     [Batch 1/4] GRADIENT STATISTICS
+2026-05-03 14:23:48,753 [INFO] [2.16s]       Gradient norm (mean): 0.000000
+2026-05-03 14:23:48,753 [INFO] [2.16s]       Gradient norm (max):  0.000000
+2026-05-03 14:23:48,753 [INFO] [2.16s]       Gradient norm (min):  0.000000
+2026-05-03 14:23:48,754 [INFO] [2.16s]       Valid gradients:      38
+2026-05-03 14:23:48,754 [INFO] [2.16s]       Invalid gradients:    0
+2026-05-03 14:23:48,754 [WARNING] [2.16s]       [WARNING] Gradient vanishing detected: mean norm = 0.00e+00
+2026-05-03 14:23:48,754 [INFO] [2.16s] 
+2026-05-03 14:23:48,754 [INFO] [2.16s]     [Batch 1/4] PARAMETER STATISTICS
+2026-05-03 14:23:48,764 [INFO] [2.17s]       Param norm (mean): 2.069435
+2026-05-03 14:23:48,764 [INFO] [2.17s]       Param norm (max):  8.015431
+2026-05-03 14:23:48,765 [INFO] [2.18s]       Param norm (min):  0.001414
+2026-05-03 14:23:49,725 [INFO] [3.14s] 
+2026-05-03 14:23:49,725 [INFO] [3.14s]   [Batch 2/4]
+2026-05-03 14:23:49,725 [INFO] [3.14s]     Case(s): cavity/bc/case0000, cavity/bc/case0001, cavity/bc/case0001...
+2026-05-03 14:23:49,725 [INFO] [3.14s]     Loss: 0.80583686
+2026-05-03 14:23:49,726 [INFO] [3.14s]     Running avg loss: 0.75002587
+2026-05-03 14:23:50,580 [INFO] [3.99s] 
+2026-05-03 14:23:50,580 [INFO] [3.99s]   [Batch 3/4]
+2026-05-03 14:23:50,580 [INFO] [3.99s]     Case(s): cavity/bc/case0001, cavity/bc/case0001, cavity/bc/case0001...
+2026-05-03 14:23:50,581 [INFO] [3.99s]     Loss: 0.89268637
+2026-05-03 14:23:50,581 [INFO] [3.99s]     Running avg loss: 0.79757937
+2026-05-03 14:23:51,318 [INFO] [4.73s] 
+2026-05-03 14:23:51,318 [INFO] [4.73s]   [Batch 4/4]
+2026-05-03 14:23:51,318 [INFO] [4.73s]     Case(s): cavity/bc/case0000, cavity/bc/case0001, cavity/bc/case0000
+2026-05-03 14:23:51,318 [INFO] [4.73s]     Loss: 0.17739330
+2026-05-03 14:23:51,319 [INFO] [4.73s]     Running avg loss: 0.64253285
+2026-05-03 14:23:51,319 [INFO] [4.73s] 
+2026-05-03 14:23:51,319 [INFO] [4.73s]     [Batch 4/4] GRADIENT STATISTICS
+2026-05-03 14:23:51,356 [INFO] [4.77s]       Gradient norm (mean): 0.000000
+2026-05-03 14:23:51,356 [INFO] [4.77s]       Gradient norm (max):  0.000000
+2026-05-03 14:23:51,356 [INFO] [4.77s]       Gradient norm (min):  0.000000
+2026-05-03 14:23:51,356 [INFO] [4.77s]       Valid gradients:      38
+2026-05-03 14:23:51,356 [INFO] [4.77s]       Invalid gradients:    0
+2026-05-03 14:23:51,356 [WARNING] [4.77s]       [WARNING] Gradient vanishing detected: mean norm = 0.00e+00
+2026-05-03 14:23:51,356 [INFO] [4.77s] 
+2026-05-03 14:23:51,356 [INFO] [4.77s]     [Batch 4/4] PARAMETER STATISTICS
+2026-05-03 14:23:51,365 [INFO] [4.77s]       Param norm (mean): 2.253684
+2026-05-03 14:23:51,365 [INFO] [4.77s]       Param norm (max):  8.015445
+2026-05-03 14:23:51,365 [INFO] [4.77s]       Param norm (min):  0.001822
+2026-05-03 14:23:51,653 [INFO] [5.06s] 
+2026-05-03 14:23:51,653 [INFO] [5.06s]   [Test Batch] PREDICTION SAMPLES
+2026-05-03 14:23:51,653 [INFO] [5.06s]     Prediction stats (first sample):
+2026-05-03 14:23:51,653 [INFO] [5.06s]       Mean: -0.065499
+2026-05-03 14:23:51,653 [INFO] [5.06s]       Std:  0.228468
+2026-05-03 14:23:51,653 [INFO] [5.06s]       Min:  -0.629758
+2026-05-03 14:23:51,654 [INFO] [5.06s]       Max:  0.648683
+2026-05-03 14:23:51,654 [INFO] [5.06s]     True values stats (first sample):
+2026-05-03 14:23:51,654 [INFO] [5.06s]       Mean: 0.009590
+2026-05-03 14:23:51,654 [INFO] [5.06s]       Std:  1.324162
+2026-05-03 14:23:51,654 [INFO] [5.07s]       Min:  -4.346304
+2026-05-03 14:23:51,655 [INFO] [5.07s]       Max:  5.249540
+2026-05-03 14:23:51,655 [INFO] [5.07s]     Error stats (first sample):
+2026-05-03 14:23:51,655 [INFO] [5.07s]       Mean error: 0.810350
+2026-05-03 14:23:51,655 [INFO] [5.07s]       Max error:  4.769379
+2026-05-03 14:23:51,655 [INFO] [5.07s] 
+2026-05-03 14:23:51,655 [INFO] [5.07s]   [NEW BEST] Test loss improved: 0.97573489
+2026-05-03 14:23:51,685 [INFO] [5.10s]   Model saved to: C:\traework\a\wilmer-deeplearn\portable_env\python-portable\workspace\fno2_paddle_model.pth
+2026-05-03 14:23:51,685 [INFO] [5.10s] 
+2026-05-03 14:23:51,685 [INFO] [5.10s] ------------------------------------------------------------
+2026-05-03 14:23:51,686 [INFO] [5.10s] [EPOCH 1/3] SUMMARY
+2026-05-03 14:23:51,686 [INFO] [5.10s] ------------------------------------------------------------
+2026-05-03 14:23:51,686 [INFO] [5.10s]   Train loss:    0.67354215
+2026-05-03 14:23:51,686 [INFO] [5.10s]   Test loss:     0.97573489
+2026-05-03 14:23:51,686 [INFO] [5.10s]   Best test:     0.97573489
+2026-05-03 14:23:51,686 [INFO] [5.10s]   Learning rate: 1.00e-03
+2026-05-03 14:23:51,686 [INFO] [5.10s]   Duration:      4.90s
+2026-05-03 14:23:51,687 [INFO] [5.10s] ------------------------------------------------------------
+2026-05-03 14:23:51,687 [INFO] [5.10s] 
+2026-05-03 14:23:51,687 [INFO] [5.10s] ============================================================
+2026-05-03 14:23:51,687 [INFO] [5.10s] [EPOCH 2/3] START
+2026-05-03 14:23:51,687 [INFO] [5.10s] ============================================================
+2026-05-03 14:23:51,687 [INFO] [5.10s]   Current learning rate: 1.00e-03
+2026-05-03 14:23:52,529 [INFO] [5.94s] 
+2026-05-03 14:23:52,529 [INFO] [5.94s]   [Batch 1/4]
+2026-05-03 14:23:52,529 [INFO] [5.94s]     Case(s): cavity/bc/case0001, cavity/bc/case0001, cavity/bc/case0000...
+2026-05-03 14:23:52,529 [INFO] [5.94s]     Loss: 0.14896804
+2026-05-03 14:23:52,529 [INFO] [5.94s]     Running avg loss: 0.14896804
+2026-05-03 14:23:52,529 [INFO] [5.94s] 
+2026-05-03 14:23:52,529 [INFO] [5.94s]     [Batch 1/4] INPUT DATA STATS
+2026-05-03 14:23:52,530 [INFO] [5.94s] Tensor Stats - Input (first sample):
+2026-05-03 14:23:52,530 [INFO] [5.94s]   shape: (64, 64, 2)
+2026-05-03 14:23:52,530 [INFO] [5.94s]   dtype: float32
+2026-05-03 14:23:52,530 [INFO] [5.94s]   mean: 0.009704
+2026-05-03 14:23:52,530 [INFO] [5.94s]   std: 1.136357
+2026-05-03 14:23:52,531 [INFO] [5.94s]   min: -4.358467
+2026-05-03 14:23:52,531 [INFO] [5.94s]   max: 5.249540
+2026-05-03 14:23:52,531 [INFO] [5.94s]   median: -0.023511
+2026-05-03 14:23:52,532 [INFO] [5.94s] 
+2026-05-03 14:23:52,532 [INFO] [5.94s]     [Batch 1/4] TARGET DATA STATS
+2026-05-03 14:23:52,532 [INFO] [5.94s] Tensor Stats - Target (first sample):
+2026-05-03 14:23:52,532 [INFO] [5.94s]   shape: (64, 64, 2)
+2026-05-03 14:23:52,532 [INFO] [5.94s]   dtype: float32
+2026-05-03 14:23:52,534 [INFO] [5.94s]   mean: 0.009643
+2026-05-03 14:23:52,534 [INFO] [5.94s]   std: 1.215682
+2026-05-03 14:23:52,534 [INFO] [5.94s]   min: -4.361636
+2026-05-03 14:23:52,534 [INFO] [5.94s]   max: 5.249540
+2026-05-03 14:23:52,535 [INFO] [5.94s]   median: -0.022099
+2026-05-03 14:23:52,535 [INFO] [5.94s] 
+2026-05-03 14:23:52,535 [INFO] [5.94s]     [Batch 1/4] GRADIENT STATISTICS
+2026-05-03 14:23:52,575 [INFO] [5.98s]       Gradient norm (mean): 0.000000
+2026-05-03 14:23:52,575 [INFO] [5.98s]       Gradient norm (max):  0.000000
+2026-05-03 14:23:52,575 [INFO] [5.98s]       Gradient norm (min):  0.000000
+2026-05-03 14:23:52,575 [INFO] [5.98s]       Valid gradients:      38
+2026-05-03 14:23:52,576 [INFO] [5.99s]       Invalid gradients:    0
+2026-05-03 14:23:52,576 [WARNING] [5.99s]       [WARNING] Gradient vanishing detected: mean norm = 0.00e+00
+2026-05-03 14:23:52,576 [INFO] [5.99s] 
+2026-05-03 14:23:52,576 [INFO] [5.99s]     [Batch 1/4] PARAMETER STATISTICS
+2026-05-03 14:23:52,585 [INFO] [6.00s]       Param norm (mean): 2.303213
+2026-05-03 14:23:52,585 [INFO] [6.00s]       Param norm (max):  8.015478
+2026-05-03 14:23:52,585 [INFO] [6.00s]       Param norm (min):  0.001402
+2026-05-03 14:23:53,471 [INFO] [6.88s] 
+2026-05-03 14:23:53,471 [INFO] [6.88s]   [Batch 2/4]
+2026-05-03 14:23:53,473 [INFO] [6.88s]     Case(s): cavity/bc/case0000, cavity/bc/case0000, cavity/bc/case0000...
+2026-05-03 14:23:53,473 [INFO] [6.88s]     Loss: 0.06964353
+2026-05-03 14:23:53,473 [INFO] [6.88s]     Running avg loss: 0.10930578
+2026-05-03 14:23:54,335 [INFO] [7.74s] 
+2026-05-03 14:23:54,335 [INFO] [7.74s]   [Batch 3/4]
+2026-05-03 14:23:54,335 [INFO] [7.74s]     Case(s): cavity/bc/case0000, cavity/bc/case0000, cavity/bc/case0001...
+2026-05-03 14:23:54,335 [INFO] [7.74s]     Loss: 0.05804455
+2026-05-03 14:23:54,335 [INFO] [7.74s]     Running avg loss: 0.09221871
+2026-05-03 14:23:54,990 [INFO] [8.40s] 
+2026-05-03 14:23:54,990 [INFO] [8.40s]   [Batch 4/4]
+2026-05-03 14:23:54,990 [INFO] [8.40s]     Case(s): cavity/bc/case0001, cavity/bc/case0001, cavity/bc/case0001
+2026-05-03 14:23:54,991 [INFO] [8.40s]     Loss: 0.14270836
+2026-05-03 14:23:54,991 [INFO] [8.40s]     Running avg loss: 0.10484112
+2026-05-03 14:23:54,991 [INFO] [8.40s] 
+2026-05-03 14:23:54,991 [INFO] [8.40s]     [Batch 4/4] GRADIENT STATISTICS
+2026-05-03 14:23:55,026 [INFO] [8.44s]       Gradient norm (mean): 0.000000
+2026-05-03 14:23:55,026 [INFO] [8.44s]       Gradient norm (max):  0.000000
+2026-05-03 14:23:55,026 [INFO] [8.44s]       Gradient norm (min):  0.000000
+2026-05-03 14:23:55,026 [INFO] [8.44s]       Valid gradients:      38
+2026-05-03 14:23:55,026 [INFO] [8.44s]       Invalid gradients:    0
+2026-05-03 14:23:55,027 [WARNING] [8.44s]       [WARNING] Gradient vanishing detected: mean norm = 0.00e+00
+2026-05-03 14:23:55,027 [INFO] [8.44s] 
+2026-05-03 14:23:55,027 [INFO] [8.44s]     [Batch 4/4] PARAMETER STATISTICS
+2026-05-03 14:23:55,036 [INFO] [8.45s]       Param norm (mean): 2.421696
+2026-05-03 14:23:55,036 [INFO] [8.45s]       Param norm (max):  8.015984
+2026-05-03 14:23:55,036 [INFO] [8.45s]       Param norm (min):  0.001086
+2026-05-03 14:23:55,321 [INFO] [8.73s] 
+2026-05-03 14:23:55,322 [INFO] [8.73s]   [Test Batch] PREDICTION SAMPLES
+2026-05-03 14:23:55,322 [INFO] [8.73s]     Prediction stats (first sample):
+2026-05-03 14:23:55,322 [INFO] [8.73s]       Mean: -0.097074
+2026-05-03 14:23:55,322 [INFO] [8.73s]       Std:  0.512694
+2026-05-03 14:23:55,322 [INFO] [8.73s]       Min:  -1.856195
+2026-05-03 14:23:55,323 [INFO] [8.73s]       Max:  1.914216
+2026-05-03 14:23:55,323 [INFO] [8.73s]     True values stats (first sample):
+2026-05-03 14:23:55,323 [INFO] [8.73s]       Mean: 0.009590
+2026-05-03 14:23:55,323 [INFO] [8.73s]       Std:  1.324162
+2026-05-03 14:23:55,323 [INFO] [8.73s]       Min:  -4.346304
+2026-05-03 14:23:55,323 [INFO] [8.73s]       Max:  5.249540
+2026-05-03 14:23:55,323 [INFO] [8.73s]     Error stats (first sample):
+2026-05-03 14:23:55,323 [INFO] [8.73s]       Mean error: 0.613595
+2026-05-03 14:23:55,323 [INFO] [8.73s]       Max error:  3.828230
+2026-05-03 14:23:55,323 [INFO] [8.73s] 
+2026-05-03 14:23:55,324 [INFO] [8.73s]   [NEW BEST] Test loss improved: 0.58110571
+2026-05-03 14:23:55,362 [INFO] [8.77s]   Model saved to: C:\traework\a\wilmer-deeplearn\portable_env\python-portable\workspace\fno2_paddle_model.pth
+2026-05-03 14:23:55,362 [INFO] [8.77s] 
+2026-05-03 14:23:55,363 [INFO] [8.77s] ------------------------------------------------------------
+2026-05-03 14:23:55,363 [INFO] [8.77s] [EPOCH 2/3] SUMMARY
+2026-05-03 14:23:55,363 [INFO] [8.77s] ------------------------------------------------------------
+2026-05-03 14:23:55,363 [INFO] [8.77s]   Train loss:    0.10231664
+2026-05-03 14:23:55,363 [INFO] [8.77s]   Test loss:     0.58110571
+2026-05-03 14:23:55,363 [INFO] [8.77s]   Best test:     0.58110571
+2026-05-03 14:23:55,363 [INFO] [8.77s]   Learning rate: 1.00e-03
+2026-05-03 14:23:55,363 [INFO] [8.77s]   Duration:      3.68s
+2026-05-03 14:23:55,363 [INFO] [8.77s] ------------------------------------------------------------
+2026-05-03 14:23:55,364 [INFO] [8.77s] 
+2026-05-03 14:23:55,364 [INFO] [8.77s] ============================================================
+2026-05-03 14:23:55,364 [INFO] [8.77s] [EPOCH 3/3] START
+2026-05-03 14:23:55,364 [INFO] [8.77s] ============================================================
+2026-05-03 14:23:55,364 [INFO] [8.77s]   Current learning rate: 1.00e-03
+2026-05-03 14:23:56,252 [INFO] [9.66s] 
+2026-05-03 14:23:56,253 [INFO] [9.66s]   [Batch 1/4]
+2026-05-03 14:23:56,253 [INFO] [9.66s]     Case(s): cavity/bc/case0000, cavity/bc/case0001, cavity/bc/case0001...
+2026-05-03 14:23:56,253 [INFO] [9.66s]     Loss: 0.04393620
+2026-05-03 14:23:56,253 [INFO] [9.66s]     Running avg loss: 0.04393620
+2026-05-03 14:23:56,253 [INFO] [9.66s] 
+2026-05-03 14:23:56,253 [INFO] [9.66s]     [Batch 1/4] INPUT DATA STATS
+2026-05-03 14:23:56,253 [INFO] [9.66s] Tensor Stats - Input (first sample):
+2026-05-03 14:23:56,253 [INFO] [9.66s]   shape: (64, 64, 2)
+2026-05-03 14:23:56,253 [INFO] [9.66s]   dtype: float32
+2026-05-03 14:23:56,253 [INFO] [9.66s]   mean: -0.010593
+2026-05-03 14:23:56,255 [INFO] [9.66s]   std: 0.623070
+2026-05-03 14:23:56,255 [INFO] [9.66s]   min: -2.130981
+2026-05-03 14:23:56,255 [INFO] [9.66s]   max: 2.593456
+2026-05-03 14:23:56,255 [INFO] [9.66s]   median: -0.036872
+2026-05-03 14:23:56,255 [INFO] [9.66s] 
+2026-05-03 14:23:56,256 [INFO] [9.67s]     [Batch 1/4] TARGET DATA STATS
+2026-05-03 14:23:56,256 [INFO] [9.67s] Tensor Stats - Target (first sample):
+2026-05-03 14:23:56,256 [INFO] [9.67s]   shape: (64, 64, 2)
+2026-05-03 14:23:56,256 [INFO] [9.67s]   dtype: float32
+2026-05-03 14:23:56,256 [INFO] [9.67s]   mean: -0.010594
+2026-05-03 14:23:56,256 [INFO] [9.67s]   std: 0.635397
+2026-05-03 14:23:56,257 [INFO] [9.67s]   min: -2.135098
+2026-05-03 14:23:56,257 [INFO] [9.67s]   max: 2.593456
+2026-05-03 14:23:56,257 [INFO] [9.67s]   median: -0.036979
+2026-05-03 14:23:56,258 [INFO] [9.67s] 
+2026-05-03 14:23:56,259 [INFO] [9.67s]     [Batch 1/4] GRADIENT STATISTICS
+2026-05-03 14:23:56,320 [INFO] [9.73s]       Gradient norm (mean): 0.000000
+2026-05-03 14:23:56,320 [INFO] [9.73s]       Gradient norm (max):  0.000000
+2026-05-03 14:23:56,320 [INFO] [9.73s]       Gradient norm (min):  0.000000
+2026-05-03 14:23:56,320 [INFO] [9.73s]       Valid gradients:      38
+2026-05-03 14:23:56,321 [INFO] [9.73s]       Invalid gradients:    0
+2026-05-03 14:23:56,321 [WARNING] [9.73s]       [WARNING] Gradient vanishing detected: mean norm = 0.00e+00
+2026-05-03 14:23:56,321 [INFO] [9.73s] 
+2026-05-03 14:23:56,321 [INFO] [9.73s]     [Batch 1/4] PARAMETER STATISTICS
+2026-05-03 14:23:56,333 [INFO] [9.74s]       Param norm (mean): 2.452664
+2026-05-03 14:23:56,333 [INFO] [9.74s]       Param norm (max):  8.016170
+2026-05-03 14:23:56,333 [INFO] [9.74s]       Param norm (min):  0.001168
+2026-05-03 14:23:57,244 [INFO] [10.65s] 
+2026-05-03 14:23:57,244 [INFO] [10.65s]   [Batch 2/4]
+2026-05-03 14:23:57,244 [INFO] [10.65s]     Case(s): cavity/bc/case0001, cavity/bc/case0001, cavity/bc/case0000...
+2026-05-03 14:23:57,244 [INFO] [10.65s]     Loss: 0.04182563
+2026-05-03 14:23:57,244 [INFO] [10.65s]     Running avg loss: 0.04288092
+2026-05-03 14:23:58,121 [INFO] [11.53s] 
+2026-05-03 14:23:58,121 [INFO] [11.53s]   [Batch 3/4]
+2026-05-03 14:23:58,121 [INFO] [11.53s]     Case(s): cavity/bc/case0001, cavity/bc/case0001, cavity/bc/case0000...
+2026-05-03 14:23:58,121 [INFO] [11.53s]     Loss: 0.03650714
+2026-05-03 14:23:58,121 [INFO] [11.53s]     Running avg loss: 0.04075632
+2026-05-03 14:23:58,773 [INFO] [12.18s] 
+2026-05-03 14:23:58,773 [INFO] [12.18s]   [Batch 4/4]
+2026-05-03 14:23:58,773 [INFO] [12.18s]     Case(s): cavity/bc/case0000, cavity/bc/case0000, cavity/bc/case0001
+2026-05-03 14:23:58,774 [INFO] [12.18s]     Loss: 0.07755694
+2026-05-03 14:23:58,774 [INFO] [12.18s]     Running avg loss: 0.04995648
+2026-05-03 14:23:58,774 [INFO] [12.18s] 
+2026-05-03 14:23:58,774 [INFO] [12.18s]     [Batch 4/4] GRADIENT STATISTICS
+2026-05-03 14:23:58,814 [INFO] [12.22s]       Gradient norm (mean): 0.000000
+2026-05-03 14:23:58,814 [INFO] [12.22s]       Gradient norm (max):  0.000000
+2026-05-03 14:23:58,814 [INFO] [12.22s]       Gradient norm (min):  0.000000
+2026-05-03 14:23:58,814 [INFO] [12.22s]       Valid gradients:      38
+2026-05-03 14:23:58,814 [INFO] [12.22s]       Invalid gradients:    0
+2026-05-03 14:23:58,814 [WARNING] [12.22s]       [WARNING] Gradient vanishing detected: mean norm = 0.00e+00
+2026-05-03 14:23:58,815 [INFO] [12.23s] 
+2026-05-03 14:23:58,815 [INFO] [12.23s]     [Batch 4/4] PARAMETER STATISTICS
+2026-05-03 14:23:58,827 [INFO] [12.24s]       Param norm (mean): 2.530155
+2026-05-03 14:23:58,827 [INFO] [12.24s]       Param norm (max):  8.016857
+2026-05-03 14:23:58,827 [INFO] [12.24s]       Param norm (min):  0.000989
+2026-05-03 14:23:59,158 [INFO] [12.57s] 
+2026-05-03 14:23:59,158 [INFO] [12.57s]   [Test Batch] PREDICTION SAMPLES
+2026-05-03 14:23:59,159 [INFO] [12.57s]     Prediction stats (first sample):
+2026-05-03 14:23:59,160 [INFO] [12.57s]       Mean: -0.091833
+2026-05-03 14:23:59,160 [INFO] [12.57s]       Std:  0.826933
+2026-05-03 14:23:59,161 [INFO] [12.57s]       Min:  -2.916093
+2026-05-03 14:23:59,161 [INFO] [12.57s]       Max:  3.252175
+2026-05-03 14:23:59,161 [INFO] [12.57s]     True values stats (first sample):
+2026-05-03 14:23:59,161 [INFO] [12.57s]       Mean: 0.009590
+2026-05-03 14:23:59,162 [INFO] [12.57s]       Std:  1.324162
+2026-05-03 14:23:59,162 [INFO] [12.57s]       Min:  -4.346304
+2026-05-03 14:23:59,162 [INFO] [12.57s]       Max:  5.249540
+2026-05-03 14:23:59,162 [INFO] [12.57s]     Error stats (first sample):
+2026-05-03 14:23:59,162 [INFO] [12.57s]       Mean error: 0.393944
+2026-05-03 14:23:59,163 [INFO] [12.57s]       Max error:  2.639221
+2026-05-03 14:23:59,164 [INFO] [12.57s] 
+2026-05-03 14:23:59,164 [INFO] [12.57s]   [NEW BEST] Test loss improved: 0.27612060
+2026-05-03 14:23:59,214 [INFO] [12.62s]   Model saved to: C:\traework\a\wilmer-deeplearn\portable_env\python-portable\workspace\fno2_paddle_model.pth
+2026-05-03 14:23:59,214 [INFO] [12.62s] 
+2026-05-03 14:23:59,214 [INFO] [12.62s] ------------------------------------------------------------
+2026-05-03 14:23:59,215 [INFO] [12.62s] [EPOCH 3/3] SUMMARY
+2026-05-03 14:23:59,215 [INFO] [12.62s] ------------------------------------------------------------
+2026-05-03 14:23:59,215 [INFO] [12.62s]   Train loss:    0.04811645
+2026-05-03 14:23:59,215 [INFO] [12.62s]   Test loss:     0.27612060
+2026-05-03 14:23:59,216 [INFO] [12.63s]   Best test:     0.27612060
+2026-05-03 14:23:59,216 [INFO] [12.63s]   Learning rate: 1.00e-03
+2026-05-03 14:23:59,216 [INFO] [12.63s]   Duration:      3.85s
+2026-05-03 14:23:59,217 [INFO] [12.63s] ------------------------------------------------------------
+2026-05-03 14:23:59,217 [INFO] [12.63s] 
+2026-05-03 14:23:59,217 [INFO] [12.63s] ============================================================
+2026-05-03 14:23:59,217 [INFO] [12.63s] TRAINING COMPLETED
+2026-05-03 14:23:59,217 [INFO] [12.63s] ============================================================
+2026-05-03 14:23:59,217 [INFO] [12.63s]   Total duration: 12.43s (0.21 min)
+2026-05-03 14:23:59,217 [INFO] [12.63s]   Final train loss: 0.04811645
+2026-05-03 14:23:59,218 [INFO] [12.63s]   Final test loss:  0.27612060
+2026-05-03 14:23:59,219 [INFO] [12.63s]   Best test loss:   0.27612060
+2026-05-03 14:23:59,219 [INFO] [12.63s] 
+2026-05-03 14:23:59,219 [INFO] [12.63s]   Loss history (epoch: train_loss, test_loss):
+2026-05-03 14:23:59,220 [INFO] [12.63s]     Epoch   1: train=0.67354215, test=0.97573489
+2026-05-03 14:23:59,220 [INFO] [12.63s]     Epoch   2: train=0.10231664, test=0.58110571
+2026-05-03 14:23:59,220 [INFO] [12.63s]     Epoch   3: train=0.04811645, test=0.27612060
+2026-05-03 14:23:59,221 [INFO] [12.63s] === COMPLETED: TRAINING LOOP (took 12.43s) ===

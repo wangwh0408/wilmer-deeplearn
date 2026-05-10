@@ -1,0 +1,38 @@
+0 verbose cli C:\nvm4w\nodejs\node.exe C:\nvm4w\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.4
+2 info using node@v22.22.0
+3 silly config load:file:C:\Users\wolfboy111\nvm\v22.22.0\node_modules\npm\npmrc
+4 silly config load:file:C:\traework\a\wilmer-deeplearn\vue3-ftp-client\.npmrc
+5 silly config load:file:C:\Users\wolfboy111\.npmrc
+6 silly config load:file:C:\Program Files\nodejs\node_global\etc\npmrc
+7 verbose title npm outdated @element-plus/icons-vue @vitejs/plugin-vue vite vue element-plus axios vue-router sass
+8 verbose argv "outdated" "--json" "@element-plus/icons-vue" "@vitejs/plugin-vue" "vite" "vue" "element-plus" "axios" "vue-router" "sass"
+9 verbose logfile logs-max:10 dir:C:\traework\a\wilmer-deeplearn\vue3-ftp-client\.npm-cache\_logs\2026-05-09T12_02_12_835Z-
+10 verbose logfile C:\traework\a\wilmer-deeplearn\vue3-ftp-client\.npm-cache\_logs\2026-05-09T12_02_12_835Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+13 verbose shrinkwrap failed to load node_modules/.package-lock.json out of date, updated: node_modules
+14 http fetch GET 200 https://registry.npmmirror.com/axios 428ms (cache revalidated)
+15 http fetch GET 200 https://registry.npmmirror.com/@vitejs%2fplugin-vue 480ms (cache revalidated)
+16 http fetch GET 200 https://registry.npmmirror.com/@element-plus%2ficons-vue 485ms (cache revalidated)
+17 http fetch GET 200 https://registry.npmmirror.com/sass 481ms (cache revalidated)
+18 http fetch GET 200 https://registry.npmmirror.com/@element-plus%2ficons-vue 491ms (cache revalidated)
+19 http fetch GET 200 https://registry.npmmirror.com/vue 493ms (cache revalidated)
+20 http fetch GET 200 https://registry.npmmirror.com/vue 500ms (cache revalidated)
+21 http fetch GET 200 https://registry.npmmirror.com/vite 514ms (cache revalidated)
+22 http fetch GET 200 https://registry.npmmirror.com/vue 543ms (cache revalidated)
+23 http fetch GET 200 https://registry.npmmirror.com/vue 552ms (cache revalidated)
+24 http fetch GET 200 https://registry.npmmirror.com/vue 561ms (cache revalidated)
+25 http fetch GET 200 https://registry.npmmirror.com/vue 570ms (cache revalidated)
+26 http fetch GET 200 https://registry.npmmirror.com/vue 577ms (cache revalidated)
+27 http fetch GET 200 https://registry.npmmirror.com/element-plus 584ms (cache revalidated)
+28 http fetch GET 200 https://registry.npmmirror.com/vue-router 589ms (cache revalidated)
+29 http fetch GET 200 https://registry.npmmirror.com/sass 600ms (cache revalidated)
+30 http fetch GET 200 https://registry.npmmirror.com/vue 608ms (cache revalidated)
+31 http fetch GET 200 https://registry.npmmirror.com/vite 620ms (cache revalidated)
+32 verbose cwd C:\traework\a\wilmer-deeplearn\vue3-ftp-client
+33 verbose os Windows_NT 10.0.22631
+34 verbose node v22.22.0
+35 verbose npm  v10.9.4
+36 verbose exit 1
+37 verbose code 1

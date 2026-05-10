@@ -1,0 +1,80 @@
+{
+  "model_path": "C:\\traework\\a\\wilmer-deeplearn\\portable_env\\python-portable\\workspace\\fno2-model.pth",
+  "data_root": "C:\\ftpService\\CFDBench",
+  "config": {
+    "model_path": "C:\\traework\\a\\wilmer-deeplearn\\portable_env\\python-portable\\workspace\\fno2-model.pth",
+    "data_root": "C:\\ftpService\\CFDBench",
+    "problems": [
+      "cavity"
+    ],
+    "categories": [
+      "bc",
+      "geo",
+      "prop"
+    ],
+    "max_cases_per_category": 2,
+    "normalize": true,
+    "batch_size": 8,
+    "device": "cpu",
+    "metrics": [
+      "mse"
+    ],
+    "log_level": "INFO"
+  },
+  "normalization_params": {
+    "u_mean": 0.1291654407978058,
+    "u_std": 1.8101298909051513,
+    "u_min": -4.595440864562988,
+    "u_max": 10.0,
+    "v_mean": -0.000730057421606034,
+    "v_std": 1.3866992096765136,
+    "v_min": -6.686199188232422,
+    "v_max": 4.601555347442627
+  },
+  "num_samples": 85,
+  "average_loss": 0.9350546973593095,
+  "metrics": {
+    "u": {
+      "mse": 2.8411788940429688
+    },
+    "v": {
+      "mse": 1.9286836385726929
+    },
+    "combined": {
+      "mse": 2.3849308490753174
+    }
+  },
+  "per_sample_stats": {
+    "u": {
+      "mse_mean": 0.8671197640654795,
+      "mse_std": 0.5209626922261292
+    },
+    "v": {
+      "mse_mean": 1.0029895831337747,
+      "mse_std": 0.7568574708781154
+    }
+  },
+  "best_worst_samples": {
+    "best_u": {
+      "case": "cavity/bc/case0000",
+      "time_step": 0,
+      "mse_best": 0.013627519831061363
+    },
+    "worst_u": {
+      "case": "cavity/prop/case0050",
+      "time_step": 19,
+      "mse_worst": 1.575791358947754
+    },
+    "best_v": {
+      "case": "cavity/bc/case0000",
+      "time_step": 0,
+      "mse_best": 0.015625853091478348
+    },
+    "worst_v": {
+      "case": "cavity/prop/case0050",
+      "time_step": 19,
+      "mse_worst": 2.274158000946045
+    }
+  },
+  "evaluation_time": "2026-05-05 19:55:01"
+}

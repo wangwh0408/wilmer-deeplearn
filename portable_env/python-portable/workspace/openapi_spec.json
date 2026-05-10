@@ -1,0 +1,699 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "FNO2 Model API",
+    "description": "FastAPI-based web service for FNO2 velocity field prediction",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Health Check",
+        "operationId": "health_check_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/info": {
+      "get": {
+        "summary": "Get Model Information",
+        "operationId": "get_model_info_info_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InfoResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/predict": {
+      "post": {
+        "summary": "Predict Velocity Field",
+        "operationId": "predict_predict_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PredictRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PredictResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/reload": {
+      "post": {
+        "summary": "Reload Model",
+        "operationId": "reload_model_reload_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "anyOf": [
+                  {
+                    "$ref": "#/components/schemas/ReloadRequest"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "title": "Request"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReloadResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/shutdown": {
+      "get": {
+        "summary": "Shutdown Server",
+        "operationId": "shutdown_shutdown_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ShutdownResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Shutdown Server",
+        "operationId": "shutdown_shutdown_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ShutdownResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/docs": {
+      "get": {
+        "summary": "Swagger UI Documentation",
+        "description": "Swagger UI documentation with LOCAL resources (no CDN)",
+        "operationId": "custom_docs_docs_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/redoc": {
+      "get": {
+        "summary": "ReDoc Documentation",
+        "description": "ReDoc documentation with LOCAL resources (no CDN)",
+        "operationId": "custom_redoc_redoc_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "HealthResponse": {
+        "properties": {
+          "status": {
+            "type": "string",
+            "title": "Status",
+            "description": "Health status"
+          },
+          "model_loaded": {
+            "type": "boolean",
+            "title": "Model Loaded",
+            "description": "Whether the model is loaded"
+          },
+          "model_path": {
+            "type": "string",
+            "title": "Model Path",
+            "description": "Path to the loaded model"
+          },
+          "timestamp": {
+            "type": "string",
+            "title": "Timestamp",
+            "description": "Current timestamp"
+          }
+        },
+        "type": "object",
+        "required": [
+          "status",
+          "model_loaded",
+          "model_path",
+          "timestamp"
+        ],
+        "title": "HealthResponse"
+      },
+      "InfoResponse": {
+        "properties": {
+          "model_loaded": {
+            "type": "boolean",
+            "title": "Model Loaded",
+            "description": "Whether the model is loaded"
+          },
+          "model_path": {
+            "type": "string",
+            "title": "Model Path",
+            "description": "Path to the loaded model"
+          },
+          "framework": {
+            "type": "string",
+            "title": "Framework",
+            "description": "Framework used"
+          },
+          "device": {
+            "type": "string",
+            "title": "Device",
+            "description": "Device used"
+          },
+          "model_info": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Model Info",
+            "description": "Detailed model information"
+          },
+          "normalization_params": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Normalization Params",
+            "description": "Normalization parameters"
+          },
+          "timestamp": {
+            "type": "string",
+            "title": "Timestamp",
+            "description": "Current timestamp"
+          }
+        },
+        "type": "object",
+        "required": [
+          "model_loaded",
+          "model_path",
+          "framework",
+          "device",
+          "model_info",
+          "normalization_params",
+          "timestamp"
+        ],
+        "title": "InfoResponse"
+      },
+      "PredictRequest": {
+        "properties": {
+          "input": {
+            "anyOf": [
+              {
+                "items": {
+                  "items": {
+                    "items": {
+                      "type": "number"
+                    },
+                    "type": "array"
+                  },
+                  "type": "array"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Input",
+            "description": "Combined input data"
+          },
+          "u": {
+            "anyOf": [
+              {
+                "items": {
+                  "items": {
+                    "type": "number"
+                  },
+                  "type": "array"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "U",
+            "description": "U velocity data"
+          },
+          "v": {
+            "anyOf": [
+              {
+                "items": {
+                  "items": {
+                    "type": "number"
+                  },
+                  "type": "array"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "V",
+            "description": "V velocity data"
+          },
+          "height": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Height",
+            "description": "Cavity height (m)"
+          },
+          "width": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Width",
+            "description": "Cavity width (m)"
+          },
+          "vel_top": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Vel Top",
+            "description": "Top wall velocity (m/s)"
+          },
+          "density": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Density",
+            "description": "Fluid density (kg/m3)"
+          },
+          "viscosity": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Viscosity",
+            "description": "Dynamic viscosity (Pa*s)"
+          },
+          "dx": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Dx",
+            "description": "Grid spacing in x-direction (m)"
+          },
+          "dy": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Dy",
+            "description": "Grid spacing in y-direction (m)"
+          },
+          "denormalize": {
+            "type": "boolean",
+            "title": "Denormalize",
+            "description": "Whether to denormalize the output",
+            "default": true
+          },
+          "return_full": {
+            "type": "boolean",
+            "title": "Return Full",
+            "description": "Whether to return full raw output",
+            "default": false
+          }
+        },
+        "type": "object",
+        "title": "PredictRequest"
+      },
+      "PredictResponse": {
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "title": "Success",
+            "description": "Whether the prediction was successful",
+            "default": true
+          },
+          "inference_time_ms": {
+            "type": "number",
+            "title": "Inference Time Ms",
+            "description": "Inference time in milliseconds"
+          },
+          "output_shape": {
+            "items": {
+              "type": "integer"
+            },
+            "type": "array",
+            "title": "Output Shape",
+            "description": "Shape of the output tensor"
+          },
+          "u": {
+            "anyOf": [
+              {
+                "items": {
+                  "items": {
+                    "type": "number"
+                  },
+                  "type": "array"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "U",
+            "description": "Predicted U velocity"
+          },
+          "v": {
+            "anyOf": [
+              {
+                "items": {
+                  "items": {
+                    "type": "number"
+                  },
+                  "type": "array"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "V",
+            "description": "Predicted V velocity"
+          },
+          "raw_output": {
+            "anyOf": [
+              {
+                "items": {
+                  "items": {
+                    "items": {
+                      "type": "number"
+                    },
+                    "type": "array"
+                  },
+                  "type": "array"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Raw Output",
+            "description": "Raw model output"
+          }
+        },
+        "type": "object",
+        "required": [
+          "inference_time_ms",
+          "output_shape"
+        ],
+        "title": "PredictResponse"
+      },
+      "ReloadRequest": {
+        "properties": {
+          "model_path": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Model Path",
+            "description": "New model path"
+          },
+          "framework": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Framework",
+            "description": "Framework: auto, pytorch, or paddle"
+          }
+        },
+        "type": "object",
+        "title": "ReloadRequest"
+      },
+      "ReloadResponse": {
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "title": "Success",
+            "description": "Whether the reload was successful"
+          },
+          "model_path": {
+            "type": "string",
+            "title": "Model Path",
+            "description": "New model path"
+          },
+          "framework": {
+            "type": "string",
+            "title": "Framework",
+            "description": "Framework used"
+          },
+          "device": {
+            "type": "string",
+            "title": "Device",
+            "description": "Device used"
+          },
+          "model_info": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Model Info",
+            "description": "Detailed model information"
+          },
+          "normalization_params": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Normalization Params",
+            "description": "Normalization parameters"
+          },
+          "timestamp": {
+            "type": "string",
+            "title": "Timestamp",
+            "description": "Current timestamp"
+          }
+        },
+        "type": "object",
+        "required": [
+          "success",
+          "model_path",
+          "framework",
+          "device",
+          "model_info",
+          "normalization_params",
+          "timestamp"
+        ],
+        "title": "ReloadResponse"
+      },
+      "ShutdownResponse": {
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "title": "Success",
+            "description": "Whether the shutdown request was accepted",
+            "default": true
+          },
+          "message": {
+            "type": "string",
+            "title": "Message",
+            "description": "Shutdown message"
+          },
+          "timestamp": {
+            "type": "string",
+            "title": "Timestamp",
+            "description": "Current timestamp"
+          }
+        },
+        "type": "object",
+        "required": [
+          "message",
+          "timestamp"
+        ],
+        "title": "ShutdownResponse"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  }
+}

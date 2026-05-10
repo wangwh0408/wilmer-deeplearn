@@ -1,0 +1,1633 @@
+0 verbose cli C:\nvm4w\nodejs\node.exe C:\nvm4w\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.4
+2 info using node@v22.22.0
+3 silly config load:file:C:\Users\wolfboy111\nvm\v22.22.0\node_modules\npm\npmrc
+4 silly config load:file:C:\traework\a\wilmer-deeplearn\vue3-ftp-client\.npmrc
+5 silly config load:file:C:\Users\wolfboy111\.npmrc
+6 silly config load:file:C:\Program Files\nodejs\node_global\etc\npmrc
+7 verbose title npm install
+8 verbose argv "install"
+9 verbose logfile logs-max:10 dir:C:\traework\a\wilmer-deeplearn\vue3-ftp-client\.npm-cache\_logs\2026-04-23T15_41_05_306Z-
+10 verbose logfile C:\traework\a\wilmer-deeplearn\vue3-ftp-client\.npm-cache\_logs\2026-04-23T15_41_05_306Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+13 silly idealTree buildDeps
+14 silly fetch manifest vue@^3.4.21
+15 silly packumentCache full:https://registry.npmmirror.com/vue cache-miss
+16 http fetch GET 200 https://registry.npmmirror.com/npm 202ms
+17 http fetch GET 200 https://registry.npmmirror.com/vue 184ms (cache miss)
+18 silly packumentCache full:https://registry.npmmirror.com/vue set size:371707 disposed:false
+19 silly fetch manifest typescript@*
+20 silly packumentCache full:https://registry.npmmirror.com/typescript cache-miss
+21 http fetch GET 200 https://registry.npmmirror.com/typescript 321ms (cache miss)
+22 silly packumentCache full:https://registry.npmmirror.com/typescript set size:1685991 disposed:false
+23 silly fetch manifest vue-router@^4.3.0
+24 silly packumentCache full:https://registry.npmmirror.com/vue-router cache-miss
+25 http fetch GET 200 https://registry.npmmirror.com/vue-router 63ms (cache miss)
+26 silly packumentCache full:https://registry.npmmirror.com/vue-router set size:128527 disposed:false
+27 silly fetch manifest axios@^1.6.8
+28 silly packumentCache full:https://registry.npmmirror.com/axios cache-miss
+29 http fetch GET 200 https://registry.npmmirror.com/axios 37ms (cache miss)
+30 silly packumentCache full:https://registry.npmmirror.com/axios set size:128866 disposed:false
+31 silly fetch manifest element-plus@^2.6.1
+32 silly packumentCache full:https://registry.npmmirror.com/element-plus cache-miss
+33 http fetch GET 200 https://registry.npmmirror.com/element-plus 63ms (cache miss)
+34 silly packumentCache full:https://registry.npmmirror.com/element-plus set size:164058 disposed:false
+35 silly fetch manifest @element-plus/icons-vue@^2.3.1
+36 silly packumentCache full:https://registry.npmmirror.com/@element-plus%2ficons-vue cache-miss
+37 http fetch GET 200 https://registry.npmmirror.com/@element-plus%2ficons-vue 44ms (cache miss)
+38 silly packumentCache full:https://registry.npmmirror.com/@element-plus%2ficons-vue set size:34535 disposed:false
+39 silly fetch manifest @vitejs/plugin-vue@^5.0.4
+40 silly packumentCache full:https://registry.npmmirror.com/@vitejs%2fplugin-vue cache-miss
+41 http fetch GET 200 https://registry.npmmirror.com/@vitejs%2fplugin-vue 32ms (cache miss)
+42 silly packumentCache full:https://registry.npmmirror.com/@vitejs%2fplugin-vue set size:78278 disposed:false
+43 silly fetch manifest vite@^5.2.0
+44 silly packumentCache full:https://registry.npmmirror.com/vite cache-miss
+45 http fetch GET 200 https://registry.npmmirror.com/vite 932ms (cache miss)
+46 silly packumentCache full:https://registry.npmmirror.com/vite set size:6233607 disposed:false
+47 silly fetch manifest @types/node@^18.0.0 || >=20.0.0
+48 silly packumentCache full:https://registry.npmmirror.com/@types%2fnode cache-miss
+49 http fetch GET 200 https://registry.npmmirror.com/@types%2fnode 203ms (cache miss)
+50 silly packumentCache full:https://registry.npmmirror.com/@types%2fnode set size:1151960 disposed:false
+51 silly fetch manifest less@*
+52 silly packumentCache full:https://registry.npmmirror.com/less cache-miss
+53 http fetch GET 200 https://registry.npmmirror.com/less 30ms (cache miss)
+54 silly packumentCache full:https://registry.npmmirror.com/less set size:52137 disposed:false
+55 silly fetch manifest lightningcss@^1.21.0
+56 silly packumentCache full:https://registry.npmmirror.com/lightningcss cache-miss
+57 http fetch GET 200 https://registry.npmmirror.com/lightningcss 21ms (cache miss)
+58 silly packumentCache full:https://registry.npmmirror.com/lightningcss set size:32241 disposed:false
+59 silly fetch manifest sass@^1.72.0
+60 silly packumentCache full:https://registry.npmmirror.com/sass cache-miss
+61 http fetch GET 200 https://registry.npmmirror.com/sass 36ms (cache miss)
+62 silly packumentCache full:https://registry.npmmirror.com/sass set size:125617 disposed:false
+63 silly fetch manifest sass-embedded@*
+64 silly packumentCache full:https://registry.npmmirror.com/sass-embedded cache-miss
+65 http fetch GET 200 https://registry.npmmirror.com/sass-embedded 28ms (cache miss)
+66 silly packumentCache full:https://registry.npmmirror.com/sass-embedded set size:75103 disposed:false
+67 silly fetch manifest stylus@*
+68 silly packumentCache full:https://registry.npmmirror.com/stylus cache-miss
+69 http fetch GET 200 https://registry.npmmirror.com/stylus 26ms (cache miss)
+70 silly packumentCache full:https://registry.npmmirror.com/stylus set size:65242 disposed:false
+71 silly fetch manifest sugarss@*
+72 silly packumentCache full:https://registry.npmmirror.com/sugarss cache-miss
+73 http fetch GET 200 https://registry.npmmirror.com/sugarss 27ms (cache miss)
+74 silly packumentCache full:https://registry.npmmirror.com/sugarss set size:8151 disposed:false
+75 silly fetch manifest postcss@^8.3.3
+76 silly packumentCache full:https://registry.npmmirror.com/postcss cache-miss
+77 http fetch GET 200 https://registry.npmmirror.com/postcss 31ms (cache miss)
+78 silly packumentCache full:https://registry.npmmirror.com/postcss set size:96094 disposed:false
+79 silly fetch manifest terser@^5.4.0
+80 silly packumentCache full:https://registry.npmmirror.com/terser cache-miss
+81 http fetch GET 200 https://registry.npmmirror.com/terser 39ms (cache miss)
+82 silly packumentCache full:https://registry.npmmirror.com/terser set size:110563 disposed:false
+83 silly placeDep ROOT @element-plus/icons-vue@2.3.2 OK for: vue3-ftp-client@1.0.0 want: ^2.3.1
+84 silly placeDep ROOT vue@3.5.33 OK for: @element-plus/icons-vue@2.3.2 want: ^3.2.0
+85 silly placeDep ROOT @vitejs/plugin-vue@5.2.4 OK for: vue3-ftp-client@1.0.0 want: ^5.0.4
+86 silly placeDep ROOT vite@5.4.21 OK for: @vitejs/plugin-vue@5.2.4 want: ^5.0.0 || ^6.0.0
+87 silly placeDep ROOT axios@1.15.2 OK for: vue3-ftp-client@1.0.0 want: ^1.6.8
+88 silly placeDep ROOT element-plus@2.13.7 OK for: vue3-ftp-client@1.0.0 want: ^2.6.1
+89 silly placeDep ROOT sass@1.99.0 OK for: vue3-ftp-client@1.0.0 want: ^1.72.0
+90 silly placeDep ROOT vue-router@4.6.4 OK for: vue3-ftp-client@1.0.0 want: ^4.3.0
+91 silly fetch manifest @vue/shared@3.5.33
+92 silly packumentCache full:https://registry.npmmirror.com/@vue%2fshared cache-miss
+93 silly fetch manifest @vue/compiler-dom@3.5.33
+94 silly packumentCache full:https://registry.npmmirror.com/@vue%2fcompiler-dom cache-miss
+95 silly fetch manifest @vue/runtime-dom@3.5.33
+96 silly packumentCache full:https://registry.npmmirror.com/@vue%2fruntime-dom cache-miss
+97 silly fetch manifest @vue/compiler-sfc@3.5.33
+98 silly packumentCache full:https://registry.npmmirror.com/@vue%2fcompiler-sfc cache-miss
+99 silly fetch manifest @vue/server-renderer@3.5.33
+100 silly packumentCache full:https://registry.npmmirror.com/@vue%2fserver-renderer cache-miss
+101 silly fetch manifest esbuild@^0.21.3
+102 silly packumentCache full:https://registry.npmmirror.com/esbuild cache-miss
+103 silly fetch manifest postcss@^8.4.43
+104 silly packumentCache full:https://registry.npmmirror.com/postcss cache-hit
+105 silly fetch manifest rollup@^4.20.0
+106 silly packumentCache full:https://registry.npmmirror.com/rollup cache-miss
+107 http fetch GET 200 https://registry.npmmirror.com/@vue%2fshared 77ms (cache miss)
+108 silly packumentCache full:https://registry.npmmirror.com/@vue%2fshared set size:109500 disposed:false
+109 silly fetch manifest fsevents@~2.3.3
+110 silly packumentCache full:https://registry.npmmirror.com/fsevents cache-miss
+111 http fetch GET 200 https://registry.npmmirror.com/@vue%2fcompiler-dom 84ms (cache miss)
+112 silly packumentCache full:https://registry.npmmirror.com/@vue%2fcompiler-dom set size:116813 disposed:false
+113 silly fetch manifest follow-redirects@^1.15.11
+114 silly packumentCache full:https://registry.npmmirror.com/follow-redirects cache-miss
+115 http fetch GET 200 https://registry.npmmirror.com/fsevents 45ms (cache miss)
+116 silly packumentCache full:https://registry.npmmirror.com/fsevents set size:16344 disposed:false
+117 silly fetch manifest form-data@^4.0.5
+118 silly packumentCache full:https://registry.npmmirror.com/form-data cache-miss
+119 http fetch GET 200 https://registry.npmmirror.com/follow-redirects 54ms (cache miss)
+120 silly packumentCache full:https://registry.npmmirror.com/follow-redirects set size:30122 disposed:false
+121 silly fetch manifest proxy-from-env@^2.1.0
+122 silly packumentCache full:https://registry.npmmirror.com/proxy-from-env cache-miss
+123 http fetch GET 200 https://registry.npmmirror.com/@vue%2fserver-renderer 175ms (cache miss)
+124 silly packumentCache full:https://registry.npmmirror.com/@vue%2fserver-renderer set size:117035 disposed:false
+125 silly fetch manifest @ctrl/tinycolor@^4.2.0
+126 silly packumentCache full:https://registry.npmmirror.com/@ctrl%2ftinycolor cache-miss
+127 http fetch GET 200 https://registry.npmmirror.com/@vue%2fcompiler-sfc 189ms (cache miss)
+128 silly packumentCache full:https://registry.npmmirror.com/@vue%2fcompiler-sfc set size:163612 disposed:false
+129 silly fetch manifest @floating-ui/dom@^1.0.1
+130 silly packumentCache full:https://registry.npmmirror.com/@floating-ui%2fdom cache-miss
+131 http fetch GET 200 https://registry.npmmirror.com/form-data 90ms (cache miss)
+132 silly packumentCache full:https://registry.npmmirror.com/form-data set size:25145 disposed:false
+133 silly fetch manifest @popperjs/core@npm:@sxzz/popperjs-es@^2.11.7
+134 silly packumentCache full:https://registry.npmmirror.com/@sxzz%2fpopperjs-es cache-miss
+135 http fetch GET 200 https://registry.npmmirror.com/@vue%2fruntime-dom 232ms (cache miss)
+136 silly packumentCache full:https://registry.npmmirror.com/@vue%2fruntime-dom set size:116944 disposed:false
+137 silly fetch manifest @types/lodash@^4.17.20
+138 silly packumentCache full:https://registry.npmmirror.com/@types%2flodash cache-miss
+139 http fetch GET 200 https://registry.npmmirror.com/proxy-from-env 113ms (cache miss)
+140 silly packumentCache full:https://registry.npmmirror.com/proxy-from-env set size:6518 disposed:false
+141 silly fetch manifest @types/lodash-es@^4.17.12
+142 silly packumentCache full:https://registry.npmmirror.com/@types%2flodash-es cache-miss
+143 http fetch GET 200 https://registry.npmmirror.com/esbuild 273ms (cache miss)
+144 silly packumentCache full:https://registry.npmmirror.com/esbuild set size:212453 disposed:false
+145 silly fetch manifest @vueuse/core@12.0.0
+146 silly packumentCache full:https://registry.npmmirror.com/@vueuse%2fcore cache-miss
+147 http fetch GET 200 https://registry.npmmirror.com/@ctrl%2ftinycolor 124ms (cache miss)
+148 silly packumentCache full:https://registry.npmmirror.com/@ctrl%2ftinycolor set size:30467 disposed:false
+149 silly fetch manifest async-validator@^4.2.5
+150 silly packumentCache full:https://registry.npmmirror.com/async-validator cache-miss
+151 http fetch GET 200 https://registry.npmmirror.com/@floating-ui%2fdom 121ms (cache miss)
+152 silly packumentCache full:https://registry.npmmirror.com/@floating-ui%2fdom set size:61774 disposed:false
+153 silly fetch manifest dayjs@^1.11.19
+154 silly packumentCache full:https://registry.npmmirror.com/dayjs cache-miss
+155 http fetch GET 200 https://registry.npmmirror.com/@sxzz%2fpopperjs-es 113ms (cache miss)
+156 silly packumentCache full:https://registry.npmmirror.com/@sxzz%2fpopperjs-es set size:13147 disposed:false
+157 silly fetch manifest lodash@^4.17.23
+158 silly packumentCache full:https://registry.npmmirror.com/lodash cache-miss
+159 http fetch GET 200 https://registry.npmmirror.com/@types%2flodash-es 86ms (cache miss)
+160 silly packumentCache full:https://registry.npmmirror.com/@types%2flodash-es set size:9010 disposed:false
+161 silly fetch manifest lodash-es@^4.17.23
+162 silly packumentCache full:https://registry.npmmirror.com/lodash-es cache-miss
+163 http fetch GET 200 https://registry.npmmirror.com/@types%2flodash 123ms (cache miss)
+164 silly packumentCache full:https://registry.npmmirror.com/@types%2flodash set size:78641 disposed:false
+165 silly fetch manifest lodash-unified@^1.0.3
+166 silly packumentCache full:https://registry.npmmirror.com/lodash-unified cache-miss
+167 http fetch GET 200 https://registry.npmmirror.com/dayjs 76ms (cache miss)
+168 silly packumentCache full:https://registry.npmmirror.com/dayjs set size:58575 disposed:false
+169 silly fetch manifest memoize-one@^6.0.0
+170 silly packumentCache full:https://registry.npmmirror.com/memoize-one cache-miss
+171 http fetch GET 200 https://registry.npmmirror.com/lodash-es 75ms (cache miss)
+172 silly packumentCache full:https://registry.npmmirror.com/lodash-es set size:18574 disposed:false
+173 silly fetch manifest normalize-wheel-es@^1.2.0
+174 silly packumentCache full:https://registry.npmmirror.com/normalize-wheel-es cache-miss
+175 http fetch GET 200 https://registry.npmmirror.com/lodash 92ms (cache miss)
+176 silly packumentCache full:https://registry.npmmirror.com/lodash set size:29166 disposed:false
+177 silly fetch manifest vue-component-type-helpers@^3.2.4
+178 silly packumentCache full:https://registry.npmmirror.com/vue-component-type-helpers cache-miss
+179 http fetch GET 200 https://registry.npmmirror.com/async-validator 137ms (cache miss)
+180 silly packumentCache full:https://registry.npmmirror.com/async-validator set size:33991 disposed:false
+181 silly fetch manifest chokidar@^4.0.0
+182 silly packumentCache full:https://registry.npmmirror.com/chokidar cache-miss
+183 http fetch GET 200 https://registry.npmmirror.com/@vueuse%2fcore 175ms (cache miss)
+184 silly packumentCache full:https://registry.npmmirror.com/@vueuse%2fcore set size:176489 disposed:false
+185 silly fetch manifest immutable@^5.1.5
+186 silly packumentCache full:https://registry.npmmirror.com/immutable cache-miss
+187 http fetch GET 200 https://registry.npmmirror.com/lodash-unified 127ms (cache miss)
+188 silly packumentCache full:https://registry.npmmirror.com/lodash-unified set size:4317 disposed:false
+189 silly fetch manifest source-map-js@>=0.6.2 <2.0.0
+190 silly packumentCache full:https://registry.npmmirror.com/source-map-js cache-miss
+191 http fetch GET 200 https://registry.npmmirror.com/normalize-wheel-es 79ms (cache miss)
+192 silly packumentCache full:https://registry.npmmirror.com/normalize-wheel-es set size:5576 disposed:false
+193 silly fetch manifest @parcel/watcher@^2.4.1
+194 silly packumentCache full:https://registry.npmmirror.com/@parcel%2fwatcher cache-miss
+195 http fetch GET 200 https://registry.npmmirror.com/memoize-one 98ms (cache miss)
+196 silly packumentCache full:https://registry.npmmirror.com/memoize-one set size:21734 disposed:false
+197 silly fetch manifest @vue/devtools-api@^6.6.4
+198 silly packumentCache full:https://registry.npmmirror.com/@vue%2fdevtools-api cache-miss
+199 http fetch GET 200 https://registry.npmmirror.com/chokidar 84ms (cache miss)
+200 silly packumentCache full:https://registry.npmmirror.com/chokidar set size:40008 disposed:false
+201 http fetch GET 200 https://registry.npmmirror.com/vue-component-type-helpers 115ms (cache miss)
+202 silly packumentCache full:https://registry.npmmirror.com/vue-component-type-helpers set size:69950 disposed:false
+203 http fetch GET 200 https://registry.npmmirror.com/source-map-js 72ms (cache miss)
+204 silly packumentCache full:https://registry.npmmirror.com/source-map-js set size:14399 disposed:false
+205 http fetch GET 200 https://registry.npmmirror.com/immutable 97ms (cache miss)
+206 silly packumentCache full:https://registry.npmmirror.com/immutable set size:53967 disposed:false
+207 http fetch GET 200 https://registry.npmmirror.com/@parcel%2fwatcher 87ms (cache miss)
+208 silly packumentCache full:https://registry.npmmirror.com/@parcel%2fwatcher set size:24036 disposed:false
+209 http fetch GET 200 https://registry.npmmirror.com/@vue%2fdevtools-api 86ms (cache miss)
+210 silly packumentCache full:https://registry.npmmirror.com/@vue%2fdevtools-api set size:69923 disposed:false
+211 http fetch GET 200 https://registry.npmmirror.com/rollup 630ms (cache miss)
+212 silly packumentCache full:https://registry.npmmirror.com/rollup set size:680329 disposed:false
+213 silly placeDep ROOT follow-redirects@1.16.0 OK for: axios@1.15.2 want: ^1.15.11
+214 silly placeDep ROOT form-data@4.0.5 OK for: axios@1.15.2 want: ^4.0.5
+215 silly placeDep ROOT proxy-from-env@2.1.0 OK for: axios@1.15.2 want: ^2.1.0
+216 silly fetch manifest asynckit@^0.4.0
+217 silly packumentCache full:https://registry.npmmirror.com/asynckit cache-miss
+218 silly fetch manifest combined-stream@^1.0.8
+219 silly packumentCache full:https://registry.npmmirror.com/combined-stream cache-miss
+220 silly fetch manifest es-set-tostringtag@^2.1.0
+221 silly packumentCache full:https://registry.npmmirror.com/es-set-tostringtag cache-miss
+222 silly fetch manifest hasown@^2.0.2
+223 silly packumentCache full:https://registry.npmmirror.com/hasown cache-miss
+224 silly fetch manifest mime-types@^2.1.12
+225 silly packumentCache full:https://registry.npmmirror.com/mime-types cache-miss
+226 http fetch GET 200 https://registry.npmmirror.com/hasown 49ms (cache miss)
+227 silly packumentCache full:https://registry.npmmirror.com/hasown set size:4410 disposed:false
+228 http fetch GET 200 https://registry.npmmirror.com/asynckit 53ms (cache miss)
+229 silly packumentCache full:https://registry.npmmirror.com/asynckit set size:4942 disposed:false
+230 http fetch GET 200 https://registry.npmmirror.com/es-set-tostringtag 54ms (cache miss)
+231 silly packumentCache full:https://registry.npmmirror.com/es-set-tostringtag set size:6558 disposed:false
+232 http fetch GET 200 https://registry.npmmirror.com/mime-types 54ms (cache miss)
+233 silly packumentCache full:https://registry.npmmirror.com/mime-types set size:21356 disposed:false
+234 http fetch GET 200 https://registry.npmmirror.com/combined-stream 59ms (cache miss)
+235 silly packumentCache full:https://registry.npmmirror.com/combined-stream set size:7154 disposed:false
+236 silly placeDep ROOT @ctrl/tinycolor@4.2.0 OK for: element-plus@2.13.7 want: ^4.2.0
+237 silly placeDep ROOT @floating-ui/dom@1.7.6 OK for: element-plus@2.13.7 want: ^1.0.1
+238 silly placeDep ROOT @popperjs/core@2.11.8 OK for: element-plus@2.13.7 want: npm:@sxzz/popperjs-es@^2.11.7
+239 silly placeDep ROOT @types/lodash@4.17.24 OK for: element-plus@2.13.7 want: ^4.17.20
+240 silly placeDep ROOT @types/lodash-es@4.17.12 OK for: element-plus@2.13.7 want: ^4.17.12
+241 silly placeDep ROOT @vueuse/core@12.0.0 OK for: element-plus@2.13.7 want: 12.0.0
+242 silly placeDep ROOT async-validator@4.2.5 OK for: element-plus@2.13.7 want: ^4.2.5
+243 silly placeDep ROOT dayjs@1.11.20 OK for: element-plus@2.13.7 want: ^1.11.19
+244 silly placeDep ROOT lodash@4.18.1 OK for: element-plus@2.13.7 want: ^4.17.23
+245 silly placeDep ROOT lodash-es@4.18.1 OK for: element-plus@2.13.7 want: ^4.17.23
+246 silly placeDep ROOT lodash-unified@1.0.3 OK for: element-plus@2.13.7 want: ^1.0.3
+247 silly placeDep ROOT memoize-one@6.0.0 OK for: element-plus@2.13.7 want: ^6.0.0
+248 silly placeDep ROOT normalize-wheel-es@1.2.0 OK for: element-plus@2.13.7 want: ^1.2.0
+249 silly placeDep ROOT vue-component-type-helpers@3.2.7 OK for: element-plus@2.13.7 want: ^3.2.4
+250 silly fetch manifest @floating-ui/core@^1.7.5
+251 silly packumentCache full:https://registry.npmmirror.com/@floating-ui%2fcore cache-miss
+252 silly fetch manifest @floating-ui/utils@^0.2.11
+253 silly packumentCache full:https://registry.npmmirror.com/@floating-ui%2futils cache-miss
+254 silly fetch manifest @types/web-bluetooth@^0.0.20
+255 silly packumentCache full:https://registry.npmmirror.com/@types%2fweb-bluetooth cache-miss
+256 silly fetch manifest @vueuse/metadata@12.0.0
+257 silly packumentCache full:https://registry.npmmirror.com/@vueuse%2fmetadata cache-miss
+258 silly fetch manifest @vueuse/shared@12.0.0
+259 silly packumentCache full:https://registry.npmmirror.com/@vueuse%2fshared cache-miss
+260 http fetch GET 200 https://registry.npmmirror.com/@floating-ui%2fcore 30ms (cache miss)
+261 silly packumentCache full:https://registry.npmmirror.com/@floating-ui%2fcore set size:46119 disposed:false
+262 http fetch GET 200 https://registry.npmmirror.com/@floating-ui%2futils 37ms (cache miss)
+263 silly packumentCache full:https://registry.npmmirror.com/@floating-ui%2futils set size:8976 disposed:false
+264 http fetch GET 200 https://registry.npmmirror.com/@types%2fweb-bluetooth 57ms (cache miss)
+265 silly packumentCache full:https://registry.npmmirror.com/@types%2fweb-bluetooth set size:11994 disposed:false
+266 http fetch GET 200 https://registry.npmmirror.com/@vueuse%2fmetadata 65ms (cache miss)
+267 silly packumentCache full:https://registry.npmmirror.com/@vueuse%2fmetadata set size:87595 disposed:false
+268 http fetch GET 200 https://registry.npmmirror.com/@vueuse%2fshared 82ms (cache miss)
+269 silly packumentCache full:https://registry.npmmirror.com/@vueuse%2fshared set size:135216 disposed:false
+270 silly placeDep ROOT @floating-ui/core@1.7.5 OK for: @floating-ui/dom@1.7.6 want: ^1.7.5
+271 silly placeDep ROOT @floating-ui/utils@0.2.11 OK for: @floating-ui/dom@1.7.6 want: ^0.2.11
+272 silly placeDep ROOT @types/web-bluetooth@0.0.20 OK for: @vueuse/core@12.0.0 want: ^0.0.20
+273 silly placeDep ROOT @vueuse/metadata@12.0.0 OK for: @vueuse/core@12.0.0 want: 12.0.0
+274 silly placeDep ROOT @vueuse/shared@12.0.0 OK for: @vueuse/core@12.0.0 want: 12.0.0
+275 silly placeDep ROOT asynckit@0.4.0 OK for: form-data@4.0.5 want: ^0.4.0
+276 silly placeDep ROOT combined-stream@1.0.8 OK for: form-data@4.0.5 want: ^1.0.8
+277 silly placeDep ROOT es-set-tostringtag@2.1.0 OK for: form-data@4.0.5 want: ^2.1.0
+278 silly placeDep ROOT hasown@2.0.3 OK for: form-data@4.0.5 want: ^2.0.2
+279 silly placeDep ROOT mime-types@2.1.35 OK for: form-data@4.0.5 want: ^2.1.12
+280 silly fetch manifest delayed-stream@~1.0.0
+281 silly packumentCache full:https://registry.npmmirror.com/delayed-stream cache-miss
+282 silly fetch manifest es-errors@^1.3.0
+283 silly packumentCache full:https://registry.npmmirror.com/es-errors cache-miss
+284 silly fetch manifest get-intrinsic@^1.2.6
+285 silly packumentCache full:https://registry.npmmirror.com/get-intrinsic cache-miss
+286 silly fetch manifest has-tostringtag@^1.0.2
+287 silly packumentCache full:https://registry.npmmirror.com/has-tostringtag cache-miss
+288 silly fetch manifest function-bind@^1.1.2
+289 silly packumentCache full:https://registry.npmmirror.com/function-bind cache-miss
+290 silly fetch manifest mime-db@1.52.0
+291 silly packumentCache full:https://registry.npmmirror.com/mime-db cache-miss
+292 http fetch GET 200 https://registry.npmmirror.com/delayed-stream 40ms (cache miss)
+293 silly packumentCache full:https://registry.npmmirror.com/delayed-stream set size:4333 disposed:false
+294 http fetch GET 200 https://registry.npmmirror.com/function-bind 39ms (cache miss)
+295 silly packumentCache full:https://registry.npmmirror.com/function-bind set size:4376 disposed:false
+296 http fetch GET 200 https://registry.npmmirror.com/es-errors 43ms (cache miss)
+297 silly packumentCache full:https://registry.npmmirror.com/es-errors set size:4030 disposed:false
+298 http fetch GET 200 https://registry.npmmirror.com/has-tostringtag 44ms (cache miss)
+299 silly packumentCache full:https://registry.npmmirror.com/has-tostringtag set size:3448 disposed:false
+300 http fetch GET 200 https://registry.npmmirror.com/get-intrinsic 46ms (cache miss)
+301 silly packumentCache full:https://registry.npmmirror.com/get-intrinsic set size:11575 disposed:false
+302 http fetch GET 200 https://registry.npmmirror.com/mime-db 58ms (cache miss)
+303 silly packumentCache full:https://registry.npmmirror.com/mime-db set size:24206 disposed:false
+304 silly placeDep ROOT delayed-stream@1.0.0 OK for: combined-stream@1.0.8 want: ~1.0.0
+305 silly placeDep ROOT es-errors@1.3.0 OK for: es-set-tostringtag@2.1.0 want: ^1.3.0
+306 silly placeDep ROOT get-intrinsic@1.3.0 OK for: es-set-tostringtag@2.1.0 want: ^1.2.6
+307 silly placeDep ROOT has-tostringtag@1.0.2 OK for: es-set-tostringtag@2.1.0 want: ^1.0.2
+308 silly fetch manifest call-bind-apply-helpers@^1.0.2
+309 silly packumentCache full:https://registry.npmmirror.com/call-bind-apply-helpers cache-miss
+310 silly fetch manifest es-define-property@^1.0.1
+311 silly packumentCache full:https://registry.npmmirror.com/es-define-property cache-miss
+312 silly fetch manifest es-object-atoms@^1.1.1
+313 silly packumentCache full:https://registry.npmmirror.com/es-object-atoms cache-miss
+314 silly fetch manifest get-proto@^1.0.1
+315 silly packumentCache full:https://registry.npmmirror.com/get-proto cache-miss
+316 silly fetch manifest gopd@^1.2.0
+317 silly packumentCache full:https://registry.npmmirror.com/gopd cache-miss
+318 silly fetch manifest has-symbols@^1.1.0
+319 silly packumentCache full:https://registry.npmmirror.com/has-symbols cache-miss
+320 silly fetch manifest math-intrinsics@^1.1.0
+321 silly packumentCache full:https://registry.npmmirror.com/math-intrinsics cache-miss
+322 http fetch GET 200 https://registry.npmmirror.com/es-define-property 61ms (cache miss)
+323 silly packumentCache full:https://registry.npmmirror.com/es-define-property set size:2896 disposed:false
+324 silly fetch manifest has-symbols@^1.0.3
+325 silly packumentCache full:https://registry.npmmirror.com/has-symbols cache-miss
+326 http fetch GET 200 https://registry.npmmirror.com/call-bind-apply-helpers 63ms (cache miss)
+327 silly packumentCache full:https://registry.npmmirror.com/call-bind-apply-helpers set size:3532 disposed:false
+328 http fetch GET 200 https://registry.npmmirror.com/es-object-atoms 66ms (cache miss)
+329 silly packumentCache full:https://registry.npmmirror.com/es-object-atoms set size:3862 disposed:false
+330 http fetch GET 200 https://registry.npmmirror.com/get-proto 67ms (cache miss)
+331 silly packumentCache full:https://registry.npmmirror.com/get-proto set size:2799 disposed:false
+332 http fetch GET 200 https://registry.npmmirror.com/gopd 67ms (cache miss)
+333 silly packumentCache full:https://registry.npmmirror.com/gopd set size:3962 disposed:false
+334 http fetch GET 200 https://registry.npmmirror.com/math-intrinsics 65ms (cache miss)
+335 silly packumentCache full:https://registry.npmmirror.com/math-intrinsics set size:3012 disposed:false
+336 http fetch GET 200 https://registry.npmmirror.com/has-symbols 71ms (cache miss)
+337 silly packumentCache full:https://registry.npmmirror.com/has-symbols set size:5325 disposed:false
+338 http fetch GET 200 https://registry.npmmirror.com/has-symbols 21ms (cache miss)
+339 silly packumentCache full:https://registry.npmmirror.com/has-symbols set size:5325 disposed:false
+340 silly packumentCache full:https://registry.npmmirror.com/has-symbols dispose
+341 silly placeDep ROOT call-bind-apply-helpers@1.0.2 OK for: get-intrinsic@1.3.0 want: ^1.0.2
+342 silly placeDep ROOT es-define-property@1.0.1 OK for: get-intrinsic@1.3.0 want: ^1.0.1
+343 silly placeDep ROOT es-object-atoms@1.1.1 OK for: get-intrinsic@1.3.0 want: ^1.1.1
+344 silly placeDep ROOT function-bind@1.1.2 OK for: get-intrinsic@1.3.0 want: ^1.1.2
+345 silly placeDep ROOT get-proto@1.0.1 OK for: get-intrinsic@1.3.0 want: ^1.0.1
+346 silly placeDep ROOT gopd@1.2.0 OK for: get-intrinsic@1.3.0 want: ^1.2.0
+347 silly placeDep ROOT has-symbols@1.1.0 OK for: get-intrinsic@1.3.0 want: ^1.1.0
+348 silly placeDep ROOT math-intrinsics@1.1.0 OK for: get-intrinsic@1.3.0 want: ^1.1.0
+349 silly fetch manifest dunder-proto@^1.0.1
+350 silly packumentCache full:https://registry.npmmirror.com/dunder-proto cache-miss
+351 http fetch GET 200 https://registry.npmmirror.com/dunder-proto 29ms (cache miss)
+352 silly packumentCache full:https://registry.npmmirror.com/dunder-proto set size:2798 disposed:false
+353 silly placeDep ROOT dunder-proto@1.0.1 OK for: get-proto@1.0.1 want: ^1.0.1
+354 silly placeDep ROOT mime-db@1.52.0 OK for: mime-types@2.1.35 want: 1.52.0
+355 silly placeDep ROOT @parcel/watcher@2.5.6 OK for: sass@1.99.0 want: ^2.4.1
+356 silly placeDep ROOT chokidar@4.0.3 OK for: sass@1.99.0 want: ^4.0.0
+357 silly placeDep ROOT immutable@5.1.5 OK for: sass@1.99.0 want: ^5.1.5
+358 silly placeDep ROOT source-map-js@1.2.1 OK for: sass@1.99.0 want: >=0.6.2 <2.0.0
+359 silly fetch manifest detect-libc@^2.0.3
+360 silly packumentCache full:https://registry.npmmirror.com/detect-libc cache-miss
+361 silly fetch manifest is-glob@^4.0.3
+362 silly packumentCache full:https://registry.npmmirror.com/is-glob cache-miss
+363 silly fetch manifest node-addon-api@^7.0.0
+364 silly packumentCache full:https://registry.npmmirror.com/node-addon-api cache-miss
+365 silly fetch manifest picomatch@^4.0.3
+366 silly packumentCache full:https://registry.npmmirror.com/picomatch cache-miss
+367 silly fetch manifest @parcel/watcher-darwin-x64@2.5.6
+368 silly packumentCache full:https://registry.npmmirror.com/@parcel%2fwatcher-darwin-x64 cache-miss
+369 silly fetch manifest @parcel/watcher-darwin-arm64@2.5.6
+370 silly packumentCache full:https://registry.npmmirror.com/@parcel%2fwatcher-darwin-arm64 cache-miss
+371 silly fetch manifest @parcel/watcher-win32-x64@2.5.6
+372 silly packumentCache full:https://registry.npmmirror.com/@parcel%2fwatcher-win32-x64 cache-miss
+373 http fetch GET 200 https://registry.npmmirror.com/detect-libc 58ms (cache miss)
+374 silly packumentCache full:https://registry.npmmirror.com/detect-libc set size:10958 disposed:false
+375 silly fetch manifest @parcel/watcher-win32-arm64@2.5.6
+376 silly packumentCache full:https://registry.npmmirror.com/@parcel%2fwatcher-win32-arm64 cache-miss
+377 http fetch GET 200 https://registry.npmmirror.com/picomatch 63ms (cache miss)
+378 silly packumentCache full:https://registry.npmmirror.com/picomatch set size:23240 disposed:false
+379 silly fetch manifest @parcel/watcher-win32-ia32@2.5.6
+380 silly packumentCache full:https://registry.npmmirror.com/@parcel%2fwatcher-win32-ia32 cache-miss
+381 http fetch GET 200 https://registry.npmmirror.com/is-glob 70ms (cache miss)
+382 silly packumentCache full:https://registry.npmmirror.com/is-glob set size:7964 disposed:false
+383 silly fetch manifest @parcel/watcher-linux-x64-glibc@2.5.6
+384 silly packumentCache full:https://registry.npmmirror.com/@parcel%2fwatcher-linux-x64-glibc cache-miss
+385 http fetch GET 200 https://registry.npmmirror.com/node-addon-api 73ms (cache miss)
+386 silly packumentCache full:https://registry.npmmirror.com/node-addon-api set size:40593 disposed:false
+387 silly fetch manifest @parcel/watcher-linux-x64-musl@2.5.6
+388 silly packumentCache full:https://registry.npmmirror.com/@parcel%2fwatcher-linux-x64-musl cache-miss
+389 http fetch GET 200 https://registry.npmmirror.com/@parcel%2fwatcher-darwin-arm64 82ms (cache miss)
+390 silly packumentCache full:https://registry.npmmirror.com/@parcel%2fwatcher-darwin-arm64 set size:6029 disposed:false
+391 silly fetch manifest @parcel/watcher-linux-arm64-glibc@2.5.6
+392 silly packumentCache full:https://registry.npmmirror.com/@parcel%2fwatcher-linux-arm64-glibc cache-miss
+393 http fetch GET 200 https://registry.npmmirror.com/@parcel%2fwatcher-darwin-x64 90ms (cache miss)
+394 silly packumentCache full:https://registry.npmmirror.com/@parcel%2fwatcher-darwin-x64 set size:6053 disposed:false
+395 silly fetch manifest @parcel/watcher-linux-arm64-musl@2.5.6
+396 silly packumentCache full:https://registry.npmmirror.com/@parcel%2fwatcher-linux-arm64-musl cache-miss
+397 http fetch GET 200 https://registry.npmmirror.com/@parcel%2fwatcher-win32-x64 98ms (cache miss)
+398 silly packumentCache full:https://registry.npmmirror.com/@parcel%2fwatcher-win32-x64 set size:6060 disposed:false
+399 silly fetch manifest @parcel/watcher-linux-arm-glibc@2.5.6
+400 silly packumentCache full:https://registry.npmmirror.com/@parcel%2fwatcher-linux-arm-glibc cache-miss
+401 http fetch GET 200 https://registry.npmmirror.com/@parcel%2fwatcher-win32-arm64 81ms (cache miss)
+402 silly packumentCache full:https://registry.npmmirror.com/@parcel%2fwatcher-win32-arm64 set size:5803 disposed:false
+403 silly fetch manifest @parcel/watcher-linux-arm-musl@2.5.6
+404 silly packumentCache full:https://registry.npmmirror.com/@parcel%2fwatcher-linux-arm-musl cache-miss
+405 http fetch GET 200 https://registry.npmmirror.com/@parcel%2fwatcher-linux-arm64-glibc 70ms (cache miss)
+406 silly packumentCache full:https://registry.npmmirror.com/@parcel%2fwatcher-linux-arm64-glibc set size:6087 disposed:false
+407 silly fetch manifest @parcel/watcher-android-arm64@2.5.6
+408 silly packumentCache full:https://registry.npmmirror.com/@parcel%2fwatcher-android-arm64 cache-miss
+409 http fetch GET 200 https://registry.npmmirror.com/@parcel%2fwatcher-linux-arm64-musl 66ms (cache miss)
+410 silly packumentCache full:https://registry.npmmirror.com/@parcel%2fwatcher-linux-arm64-musl set size:6058 disposed:false
+411 silly fetch manifest @parcel/watcher-freebsd-x64@2.5.6
+412 silly packumentCache full:https://registry.npmmirror.com/@parcel%2fwatcher-freebsd-x64 cache-miss
+413 http fetch GET 200 https://registry.npmmirror.com/@parcel%2fwatcher-linux-x64-glibc 93ms (cache miss)
+414 silly packumentCache full:https://registry.npmmirror.com/@parcel%2fwatcher-linux-x64-glibc set size:6029 disposed:false
+415 silly fetch manifest readdirp@^4.0.1
+416 silly packumentCache full:https://registry.npmmirror.com/readdirp cache-miss
+417 http fetch GET 200 https://registry.npmmirror.com/@parcel%2fwatcher-linux-x64-musl 87ms (cache miss)
+418 silly packumentCache full:https://registry.npmmirror.com/@parcel%2fwatcher-linux-x64-musl set size:6040 disposed:false
+419 http fetch GET 200 https://registry.npmmirror.com/@parcel%2fwatcher-win32-ia32 104ms (cache miss)
+420 silly packumentCache full:https://registry.npmmirror.com/@parcel%2fwatcher-win32-ia32 set size:4788 disposed:false
+421 http fetch GET 200 https://registry.npmmirror.com/@parcel%2fwatcher-linux-arm-glibc 72ms (cache miss)
+422 silly packumentCache full:https://registry.npmmirror.com/@parcel%2fwatcher-linux-arm-glibc set size:6066 disposed:false
+423 http fetch GET 200 https://registry.npmmirror.com/readdirp 34ms (cache miss)
+424 silly packumentCache full:https://registry.npmmirror.com/readdirp set size:18552 disposed:false
+425 http fetch GET 200 https://registry.npmmirror.com/@parcel%2fwatcher-linux-arm-musl 70ms (cache miss)
+426 silly packumentCache full:https://registry.npmmirror.com/@parcel%2fwatcher-linux-arm-musl set size:2243 disposed:false
+427 http fetch GET 200 https://registry.npmmirror.com/@parcel%2fwatcher-android-arm64 61ms (cache miss)
+428 silly packumentCache full:https://registry.npmmirror.com/@parcel%2fwatcher-android-arm64 set size:5766 disposed:false
+429 http fetch GET 200 https://registry.npmmirror.com/@parcel%2fwatcher-freebsd-x64 60ms (cache miss)
+430 silly packumentCache full:https://registry.npmmirror.com/@parcel%2fwatcher-freebsd-x64 set size:4779 disposed:false
+431 silly placeDep ROOT @parcel/watcher-android-arm64@2.5.6 OK for: @parcel/watcher@2.5.6 want: 2.5.6
+432 silly placeDep ROOT @parcel/watcher-darwin-arm64@2.5.6 OK for: @parcel/watcher@2.5.6 want: 2.5.6
+433 silly placeDep ROOT @parcel/watcher-darwin-x64@2.5.6 OK for: @parcel/watcher@2.5.6 want: 2.5.6
+434 silly placeDep ROOT @parcel/watcher-freebsd-x64@2.5.6 OK for: @parcel/watcher@2.5.6 want: 2.5.6
+435 silly placeDep ROOT @parcel/watcher-linux-arm-glibc@2.5.6 OK for: @parcel/watcher@2.5.6 want: 2.5.6
+436 silly placeDep ROOT @parcel/watcher-linux-arm-musl@2.5.6 OK for: @parcel/watcher@2.5.6 want: 2.5.6
+437 silly placeDep ROOT @parcel/watcher-linux-arm64-glibc@2.5.6 OK for: @parcel/watcher@2.5.6 want: 2.5.6
+438 silly placeDep ROOT @parcel/watcher-linux-arm64-musl@2.5.6 OK for: @parcel/watcher@2.5.6 want: 2.5.6
+439 silly placeDep ROOT @parcel/watcher-linux-x64-glibc@2.5.6 OK for: @parcel/watcher@2.5.6 want: 2.5.6
+440 silly placeDep ROOT @parcel/watcher-linux-x64-musl@2.5.6 OK for: @parcel/watcher@2.5.6 want: 2.5.6
+441 silly placeDep ROOT @parcel/watcher-win32-arm64@2.5.6 OK for: @parcel/watcher@2.5.6 want: 2.5.6
+442 silly placeDep ROOT @parcel/watcher-win32-ia32@2.5.6 OK for: @parcel/watcher@2.5.6 want: 2.5.6
+443 silly placeDep ROOT @parcel/watcher-win32-x64@2.5.6 OK for: @parcel/watcher@2.5.6 want: 2.5.6
+444 silly placeDep ROOT detect-libc@2.1.2 OK for: @parcel/watcher@2.5.6 want: ^2.0.3
+445 silly placeDep ROOT is-glob@4.0.3 OK for: @parcel/watcher@2.5.6 want: ^4.0.3
+446 silly placeDep ROOT node-addon-api@7.1.1 OK for: @parcel/watcher@2.5.6 want: ^7.0.0
+447 silly placeDep ROOT picomatch@4.0.4 OK for: @parcel/watcher@2.5.6 want: ^4.0.3
+448 silly fetch manifest is-extglob@^2.1.1
+449 silly packumentCache full:https://registry.npmmirror.com/is-extglob cache-miss
+450 http fetch GET 200 https://registry.npmmirror.com/is-extglob 27ms (cache miss)
+451 silly packumentCache full:https://registry.npmmirror.com/is-extglob set size:3363 disposed:false
+452 silly placeDep ROOT readdirp@4.1.2 OK for: chokidar@4.0.3 want: ^4.0.1
+453 silly placeDep ROOT is-extglob@2.1.1 OK for: is-glob@4.0.3 want: ^2.1.1
+454 silly placeDep ROOT esbuild@0.21.5 OK for: vite@5.4.21 want: ^0.21.3
+455 silly placeDep ROOT fsevents@2.3.3 OK for: vite@5.4.21 want: ~2.3.3
+456 silly placeDep ROOT postcss@8.5.10 OK for: vite@5.4.21 want: ^8.4.43
+457 silly placeDep ROOT rollup@4.60.2 OK for: vite@5.4.21 want: ^4.20.0
+458 silly fetch manifest @esbuild/aix-ppc64@0.21.5
+459 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2faix-ppc64 cache-miss
+460 silly fetch manifest @esbuild/android-arm@0.21.5
+461 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2fandroid-arm cache-miss
+462 silly fetch manifest @esbuild/android-arm64@0.21.5
+463 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2fandroid-arm64 cache-miss
+464 silly fetch manifest @esbuild/android-x64@0.21.5
+465 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2fandroid-x64 cache-miss
+466 silly fetch manifest @esbuild/darwin-arm64@0.21.5
+467 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2fdarwin-arm64 cache-miss
+468 silly fetch manifest @esbuild/darwin-x64@0.21.5
+469 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2fdarwin-x64 cache-miss
+470 silly fetch manifest @esbuild/freebsd-arm64@0.21.5
+471 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2ffreebsd-arm64 cache-miss
+472 http fetch GET 200 https://registry.npmmirror.com/@esbuild%2faix-ppc64 60ms (cache miss)
+473 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2faix-ppc64 set size:15436 disposed:false
+474 silly fetch manifest @esbuild/freebsd-x64@0.21.5
+475 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2ffreebsd-x64 cache-miss
+476 http fetch GET 200 https://registry.npmmirror.com/@esbuild%2fandroid-x64 98ms (cache miss)
+477 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2fandroid-x64 set size:59942 disposed:false
+478 silly fetch manifest @esbuild/linux-arm@0.21.5
+479 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2flinux-arm cache-miss
+480 http fetch GET 200 https://registry.npmmirror.com/@esbuild%2fandroid-arm 105ms (cache miss)
+481 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2fandroid-arm set size:70088 disposed:false
+482 silly fetch manifest @esbuild/linux-arm64@0.21.5
+483 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2flinux-arm64 cache-miss
+484 http fetch GET 200 https://registry.npmmirror.com/@esbuild%2fandroid-arm64 108ms (cache miss)
+485 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2fandroid-arm64 set size:60626 disposed:false
+486 silly fetch manifest @esbuild/linux-ia32@0.21.5
+487 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2flinux-ia32 cache-miss
+488 http fetch GET 200 https://registry.npmmirror.com/@esbuild%2fdarwin-arm64 115ms (cache miss)
+489 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2fdarwin-arm64 set size:60199 disposed:false
+490 silly fetch manifest @esbuild/linux-loong64@0.21.5
+491 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2flinux-loong64 cache-miss
+492 http fetch GET 200 https://registry.npmmirror.com/@esbuild%2fdarwin-x64 145ms (cache miss)
+493 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2fdarwin-x64 set size:59848 disposed:false
+494 silly fetch manifest @esbuild/linux-mips64el@0.21.5
+495 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2flinux-mips64el cache-miss
+496 http fetch GET 200 https://registry.npmmirror.com/@esbuild%2ffreebsd-x64 103ms (cache miss)
+497 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2ffreebsd-x64 set size:60079 disposed:false
+498 silly fetch manifest @esbuild/linux-ppc64@0.21.5
+499 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2flinux-ppc64 cache-miss
+500 http fetch GET 200 https://registry.npmmirror.com/@esbuild%2ffreebsd-arm64 170ms (cache miss)
+501 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2ffreebsd-arm64 set size:59761 disposed:false
+502 silly fetch manifest @esbuild/linux-riscv64@0.21.5
+503 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2flinux-riscv64 cache-miss
+504 http fetch GET 200 https://registry.npmmirror.com/@esbuild%2flinux-arm 91ms (cache miss)
+505 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2flinux-arm set size:59341 disposed:false
+506 silly fetch manifest @esbuild/linux-s390x@0.21.5
+507 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2flinux-s390x cache-miss
+508 http fetch GET 200 https://registry.npmmirror.com/@esbuild%2flinux-arm64 94ms (cache miss)
+509 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2flinux-arm64 set size:59820 disposed:false
+510 silly fetch manifest @esbuild/linux-x64@0.21.5
+511 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2flinux-x64 cache-miss
+512 http fetch GET 200 https://registry.npmmirror.com/@esbuild%2flinux-ia32 138ms (cache miss)
+513 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2flinux-ia32 set size:60049 disposed:false
+514 silly fetch manifest @esbuild/netbsd-x64@0.21.5
+515 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2fnetbsd-x64 cache-miss
+516 http fetch GET 200 https://registry.npmmirror.com/@esbuild%2flinux-loong64 138ms (cache miss)
+517 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2flinux-loong64 set size:79436 disposed:false
+518 silly fetch manifest @esbuild/openbsd-x64@0.21.5
+519 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2fopenbsd-x64 cache-miss
+520 http fetch GET 200 https://registry.npmmirror.com/@esbuild%2flinux-mips64el 121ms (cache miss)
+521 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2flinux-mips64el set size:60066 disposed:false
+522 silly fetch manifest @esbuild/sunos-x64@0.21.5
+523 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2fsunos-x64 cache-miss
+524 http fetch GET 200 https://registry.npmmirror.com/@esbuild%2flinux-ppc64 107ms (cache miss)
+525 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2flinux-ppc64 set size:59770 disposed:false
+526 silly fetch manifest @esbuild/win32-arm64@0.21.5
+527 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2fwin32-arm64 cache-miss
+528 http fetch GET 200 https://registry.npmmirror.com/@esbuild%2flinux-x64 84ms (cache miss)
+529 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2flinux-x64 set size:59790 disposed:false
+530 silly fetch manifest @esbuild/win32-ia32@0.21.5
+531 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2fwin32-ia32 cache-miss
+532 http fetch GET 200 https://registry.npmmirror.com/@esbuild%2flinux-riscv64 120ms (cache miss)
+533 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2flinux-riscv64 set size:60122 disposed:false
+534 silly fetch manifest @esbuild/win32-x64@0.21.5
+535 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2fwin32-x64 cache-miss
+536 http fetch GET 200 https://registry.npmmirror.com/@esbuild%2flinux-s390x 111ms (cache miss)
+537 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2flinux-s390x set size:60000 disposed:false
+538 silly fetch manifest nanoid@^3.3.11
+539 silly packumentCache full:https://registry.npmmirror.com/nanoid cache-miss
+540 http fetch GET 200 https://registry.npmmirror.com/@esbuild%2fnetbsd-x64 98ms (cache miss)
+541 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2fnetbsd-x64 set size:59931 disposed:false
+542 silly fetch manifest picocolors@^1.1.1
+543 silly packumentCache full:https://registry.npmmirror.com/picocolors cache-miss
+544 http fetch GET 200 https://registry.npmmirror.com/@esbuild%2fopenbsd-x64 109ms (cache miss)
+545 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2fopenbsd-x64 set size:59989 disposed:false
+546 silly fetch manifest @types/estree@1.0.8
+547 silly packumentCache full:https://registry.npmmirror.com/@types%2festree cache-miss
+548 http fetch GET 200 https://registry.npmmirror.com/@esbuild%2fwin32-arm64 97ms (cache miss)
+549 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2fwin32-arm64 set size:59988 disposed:false
+550 silly fetch manifest @rollup/rollup-darwin-arm64@4.60.2
+551 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-darwin-arm64 cache-miss
+552 http fetch GET 200 https://registry.npmmirror.com/@esbuild%2fsunos-x64 111ms (cache miss)
+553 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2fsunos-x64 set size:59992 disposed:false
+554 silly fetch manifest @rollup/rollup-android-arm64@4.60.2
+555 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-android-arm64 cache-miss
+556 http fetch GET 200 https://registry.npmmirror.com/@esbuild%2fwin32-ia32 100ms (cache miss)
+557 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2fwin32-ia32 set size:60484 disposed:false
+558 silly fetch manifest @rollup/rollup-win32-arm64-msvc@4.60.2
+559 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-win32-arm64-msvc cache-miss
+560 http fetch GET 200 https://registry.npmmirror.com/nanoid 116ms (cache miss)
+561 silly packumentCache full:https://registry.npmmirror.com/nanoid set size:46618 disposed:false
+562 silly fetch manifest @rollup/rollup-freebsd-arm64@4.60.2
+563 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-freebsd-arm64 cache-miss
+564 http fetch GET 200 https://registry.npmmirror.com/@esbuild%2fwin32-x64 205ms (cache miss)
+565 silly packumentCache full:https://registry.npmmirror.com/@esbuild%2fwin32-x64 set size:59897 disposed:false
+566 silly fetch manifest @rollup/rollup-linux-arm64-gnu@4.60.2
+567 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-linux-arm64-gnu cache-miss
+568 http fetch GET 200 https://registry.npmmirror.com/picocolors 168ms (cache miss)
+569 silly packumentCache full:https://registry.npmmirror.com/picocolors set size:4040 disposed:false
+570 silly fetch manifest @rollup/rollup-linux-arm64-musl@4.60.2
+571 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-linux-arm64-musl cache-miss
+572 http fetch GET 200 https://registry.npmmirror.com/@types%2festree 177ms (cache miss)
+573 silly packumentCache full:https://registry.npmmirror.com/@types%2festree set size:16110 disposed:false
+574 silly fetch manifest @rollup/rollup-android-arm-eabi@4.60.2
+575 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-android-arm-eabi cache-miss
+576 http fetch GET 200 https://registry.npmmirror.com/@rollup%2frollup-freebsd-arm64 141ms (cache miss)
+577 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-freebsd-arm64 set size:38116 disposed:false
+578 silly fetch manifest @rollup/rollup-linux-arm-gnueabihf@4.60.2
+579 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-linux-arm-gnueabihf cache-miss
+580 http fetch GET 200 https://registry.npmmirror.com/@rollup%2frollup-darwin-arm64 216ms (cache miss)
+581 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-darwin-arm64 set size:68882 disposed:false
+582 silly fetch manifest @rollup/rollup-linux-arm-musleabihf@4.60.2
+583 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-linux-arm-musleabihf cache-miss
+584 http fetch GET 200 https://registry.npmmirror.com/@rollup%2frollup-android-arm64 227ms (cache miss)
+585 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-android-arm64 set size:69157 disposed:false
+586 silly fetch manifest @rollup/rollup-win32-ia32-msvc@4.60.2
+587 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-win32-ia32-msvc cache-miss
+588 http fetch GET 200 https://registry.npmmirror.com/@rollup%2frollup-win32-arm64-msvc 248ms (cache miss)
+589 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-win32-arm64-msvc set size:69358 disposed:false
+590 silly fetch manifest @rollup/rollup-linux-loong64-gnu@4.60.2
+591 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-linux-loong64-gnu cache-miss
+592 http fetch GET 200 https://registry.npmmirror.com/@rollup%2frollup-linux-arm64-gnu 146ms (cache miss)
+593 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-linux-arm64-gnu set size:69029 disposed:false
+594 silly fetch manifest @rollup/rollup-linux-loong64-musl@4.60.2
+595 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-linux-loong64-musl cache-miss
+596 http fetch GET 200 https://registry.npmmirror.com/@rollup%2frollup-linux-arm64-musl 166ms (cache miss)
+597 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-linux-arm64-musl set size:60228 disposed:false
+598 silly fetch manifest @rollup/rollup-linux-riscv64-gnu@4.60.2
+599 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-linux-riscv64-gnu cache-miss
+600 http fetch GET 200 https://registry.npmmirror.com/@rollup%2frollup-android-arm-eabi 150ms (cache miss)
+601 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-android-arm-eabi set size:69078 disposed:false
+602 silly fetch manifest @rollup/rollup-linux-riscv64-musl@4.60.2
+603 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-linux-riscv64-musl cache-miss
+604 http fetch GET 200 https://registry.npmmirror.com/@rollup%2frollup-linux-arm-musleabihf 118ms (cache miss)
+605 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-linux-arm-musleabihf set size:48602 disposed:false
+606 silly fetch manifest @rollup/rollup-linux-ppc64-gnu@4.60.2
+607 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-linux-ppc64-gnu cache-miss
+608 http fetch GET 200 https://registry.npmmirror.com/@rollup%2frollup-linux-arm-gnueabihf 147ms (cache miss)
+609 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-linux-arm-gnueabihf set size:69582 disposed:false
+610 silly fetch manifest @rollup/rollup-linux-ppc64-musl@4.60.2
+611 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-linux-ppc64-musl cache-miss
+612 http fetch GET 200 https://registry.npmmirror.com/@rollup%2frollup-linux-loong64-gnu 106ms (cache miss)
+613 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-linux-loong64-gnu set size:12756 disposed:false
+614 silly fetch manifest @rollup/rollup-linux-s390x-gnu@4.60.2
+615 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-linux-s390x-gnu cache-miss
+616 http fetch GET 200 https://registry.npmmirror.com/@rollup%2frollup-linux-loong64-musl 116ms (cache miss)
+617 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-linux-loong64-musl set size:5795 disposed:false
+618 silly fetch manifest @rollup/rollup-darwin-x64@4.60.2
+619 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-darwin-x64 cache-miss
+620 http fetch GET 200 https://registry.npmmirror.com/@rollup%2frollup-win32-ia32-msvc 163ms (cache miss)
+621 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-win32-ia32-msvc set size:69526 disposed:false
+622 silly fetch manifest @rollup/rollup-win32-x64-gnu@4.60.2
+623 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-win32-x64-gnu cache-miss
+624 http fetch GET 200 https://registry.npmmirror.com/@rollup%2frollup-linux-riscv64-musl 92ms (cache miss)
+625 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-linux-riscv64-musl set size:22327 disposed:false
+626 silly fetch manifest @rollup/rollup-win32-x64-msvc@4.60.2
+627 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-win32-x64-msvc cache-miss
+628 http fetch GET 200 https://registry.npmmirror.com/@rollup%2frollup-linux-riscv64-gnu 124ms (cache miss)
+629 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-linux-riscv64-gnu set size:54288 disposed:false
+630 silly fetch manifest @rollup/rollup-freebsd-x64@4.60.2
+631 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-freebsd-x64 cache-miss
+632 http fetch GET 200 https://registry.npmmirror.com/@rollup%2frollup-linux-ppc64-gnu 103ms (cache miss)
+633 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-linux-ppc64-gnu set size:17226 disposed:false
+634 silly fetch manifest @rollup/rollup-linux-x64-gnu@4.60.2
+635 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-linux-x64-gnu cache-miss
+636 http fetch GET 200 https://registry.npmmirror.com/@rollup%2frollup-linux-ppc64-musl 106ms (cache miss)
+637 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-linux-ppc64-musl set size:5797 disposed:false
+638 silly fetch manifest @rollup/rollup-linux-x64-musl@4.60.2
+639 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-linux-x64-musl cache-miss
+640 http fetch GET 200 https://registry.npmmirror.com/@rollup%2frollup-darwin-x64 102ms (cache miss)
+641 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-darwin-x64 set size:68539 disposed:false
+642 silly fetch manifest @rollup/rollup-openbsd-x64@4.60.2
+643 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-openbsd-x64 cache-miss
+644 http fetch GET 200 https://registry.npmmirror.com/@rollup%2frollup-linux-s390x-gnu 148ms (cache miss)
+645 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-linux-s390x-gnu set size:49594 disposed:false
+646 silly fetch manifest @rollup/rollup-openharmony-arm64@4.60.2
+647 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-openharmony-arm64 cache-miss
+648 http fetch GET 200 https://registry.npmmirror.com/@rollup%2frollup-win32-x64-gnu 152ms (cache miss)
+649 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-win32-x64-gnu set size:11593 disposed:false
+650 http fetch GET 200 https://registry.npmmirror.com/@rollup%2frollup-win32-x64-msvc 155ms (cache miss)
+651 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-win32-x64-msvc set size:68690 disposed:false
+652 http fetch GET 200 https://registry.npmmirror.com/@rollup%2frollup-openbsd-x64 76ms (cache miss)
+653 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-openbsd-x64 set size:5874 disposed:false
+654 http fetch GET 200 https://registry.npmmirror.com/@rollup%2frollup-freebsd-x64 147ms (cache miss)
+655 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-freebsd-x64 set size:37882 disposed:false
+656 http fetch GET 200 https://registry.npmmirror.com/@rollup%2frollup-linux-x64-gnu 151ms (cache miss)
+657 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-linux-x64-gnu set size:68753 disposed:false
+658 http fetch GET 200 https://registry.npmmirror.com/@rollup%2frollup-openharmony-arm64 77ms (cache miss)
+659 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-openharmony-arm64 set size:13095 disposed:false
+660 http fetch GET 200 https://registry.npmmirror.com/@rollup%2frollup-linux-x64-musl 147ms (cache miss)
+661 silly packumentCache full:https://registry.npmmirror.com/@rollup%2frollup-linux-x64-musl set size:68616 disposed:false
+662 silly placeDep ROOT @esbuild/aix-ppc64@0.21.5 OK for: esbuild@0.21.5 want: 0.21.5
+663 silly placeDep ROOT @esbuild/android-arm@0.21.5 OK for: esbuild@0.21.5 want: 0.21.5
+664 silly placeDep ROOT @esbuild/android-arm64@0.21.5 OK for: esbuild@0.21.5 want: 0.21.5
+665 silly placeDep ROOT @esbuild/android-x64@0.21.5 OK for: esbuild@0.21.5 want: 0.21.5
+666 silly placeDep ROOT @esbuild/darwin-arm64@0.21.5 OK for: esbuild@0.21.5 want: 0.21.5
+667 silly placeDep ROOT @esbuild/darwin-x64@0.21.5 OK for: esbuild@0.21.5 want: 0.21.5
+668 silly placeDep ROOT @esbuild/freebsd-arm64@0.21.5 OK for: esbuild@0.21.5 want: 0.21.5
+669 silly placeDep ROOT @esbuild/freebsd-x64@0.21.5 OK for: esbuild@0.21.5 want: 0.21.5
+670 silly placeDep ROOT @esbuild/linux-arm@0.21.5 OK for: esbuild@0.21.5 want: 0.21.5
+671 silly placeDep ROOT @esbuild/linux-arm64@0.21.5 OK for: esbuild@0.21.5 want: 0.21.5
+672 silly placeDep ROOT @esbuild/linux-ia32@0.21.5 OK for: esbuild@0.21.5 want: 0.21.5
+673 silly placeDep ROOT @esbuild/linux-loong64@0.21.5 OK for: esbuild@0.21.5 want: 0.21.5
+674 silly placeDep ROOT @esbuild/linux-mips64el@0.21.5 OK for: esbuild@0.21.5 want: 0.21.5
+675 silly placeDep ROOT @esbuild/linux-ppc64@0.21.5 OK for: esbuild@0.21.5 want: 0.21.5
+676 silly placeDep ROOT @esbuild/linux-riscv64@0.21.5 OK for: esbuild@0.21.5 want: 0.21.5
+677 silly placeDep ROOT @esbuild/linux-s390x@0.21.5 OK for: esbuild@0.21.5 want: 0.21.5
+678 silly placeDep ROOT @esbuild/linux-x64@0.21.5 OK for: esbuild@0.21.5 want: 0.21.5
+679 silly placeDep ROOT @esbuild/netbsd-x64@0.21.5 OK for: esbuild@0.21.5 want: 0.21.5
+680 silly placeDep ROOT @esbuild/openbsd-x64@0.21.5 OK for: esbuild@0.21.5 want: 0.21.5
+681 silly placeDep ROOT @esbuild/sunos-x64@0.21.5 OK for: esbuild@0.21.5 want: 0.21.5
+682 silly placeDep ROOT @esbuild/win32-arm64@0.21.5 OK for: esbuild@0.21.5 want: 0.21.5
+683 silly placeDep ROOT @esbuild/win32-ia32@0.21.5 OK for: esbuild@0.21.5 want: 0.21.5
+684 silly placeDep ROOT @esbuild/win32-x64@0.21.5 OK for: esbuild@0.21.5 want: 0.21.5
+685 silly placeDep ROOT nanoid@3.3.11 OK for: postcss@8.5.10 want: ^3.3.11
+686 silly placeDep ROOT picocolors@1.1.1 OK for: postcss@8.5.10 want: ^1.1.1
+687 silly placeDep ROOT @rollup/rollup-android-arm-eabi@4.60.2 OK for: rollup@4.60.2 want: 4.60.2
+688 silly placeDep ROOT @rollup/rollup-android-arm64@4.60.2 OK for: rollup@4.60.2 want: 4.60.2
+689 silly placeDep ROOT @rollup/rollup-darwin-arm64@4.60.2 OK for: rollup@4.60.2 want: 4.60.2
+690 silly placeDep ROOT @rollup/rollup-darwin-x64@4.60.2 OK for: rollup@4.60.2 want: 4.60.2
+691 silly placeDep ROOT @rollup/rollup-freebsd-arm64@4.60.2 OK for: rollup@4.60.2 want: 4.60.2
+692 silly placeDep ROOT @rollup/rollup-freebsd-x64@4.60.2 OK for: rollup@4.60.2 want: 4.60.2
+693 silly placeDep ROOT @rollup/rollup-linux-arm-gnueabihf@4.60.2 OK for: rollup@4.60.2 want: 4.60.2
+694 silly placeDep ROOT @rollup/rollup-linux-arm-musleabihf@4.60.2 OK for: rollup@4.60.2 want: 4.60.2
+695 silly placeDep ROOT @rollup/rollup-linux-arm64-gnu@4.60.2 OK for: rollup@4.60.2 want: 4.60.2
+696 silly placeDep ROOT @rollup/rollup-linux-arm64-musl@4.60.2 OK for: rollup@4.60.2 want: 4.60.2
+697 silly placeDep ROOT @rollup/rollup-linux-loong64-gnu@4.60.2 OK for: rollup@4.60.2 want: 4.60.2
+698 silly placeDep ROOT @rollup/rollup-linux-loong64-musl@4.60.2 OK for: rollup@4.60.2 want: 4.60.2
+699 silly placeDep ROOT @rollup/rollup-linux-ppc64-gnu@4.60.2 OK for: rollup@4.60.2 want: 4.60.2
+700 silly placeDep ROOT @rollup/rollup-linux-ppc64-musl@4.60.2 OK for: rollup@4.60.2 want: 4.60.2
+701 silly placeDep ROOT @rollup/rollup-linux-riscv64-gnu@4.60.2 OK for: rollup@4.60.2 want: 4.60.2
+702 silly placeDep ROOT @rollup/rollup-linux-riscv64-musl@4.60.2 OK for: rollup@4.60.2 want: 4.60.2
+703 silly placeDep ROOT @rollup/rollup-linux-s390x-gnu@4.60.2 OK for: rollup@4.60.2 want: 4.60.2
+704 silly placeDep ROOT @rollup/rollup-linux-x64-gnu@4.60.2 OK for: rollup@4.60.2 want: 4.60.2
+705 silly placeDep ROOT @rollup/rollup-linux-x64-musl@4.60.2 OK for: rollup@4.60.2 want: 4.60.2
+706 silly placeDep ROOT @rollup/rollup-openbsd-x64@4.60.2 OK for: rollup@4.60.2 want: 4.60.2
+707 silly placeDep ROOT @rollup/rollup-openharmony-arm64@4.60.2 OK for: rollup@4.60.2 want: 4.60.2
+708 silly placeDep ROOT @rollup/rollup-win32-arm64-msvc@4.60.2 OK for: rollup@4.60.2 want: 4.60.2
+709 silly placeDep ROOT @rollup/rollup-win32-ia32-msvc@4.60.2 OK for: rollup@4.60.2 want: 4.60.2
+710 silly placeDep ROOT @rollup/rollup-win32-x64-gnu@4.60.2 OK for: rollup@4.60.2 want: 4.60.2
+711 silly placeDep ROOT @rollup/rollup-win32-x64-msvc@4.60.2 OK for: rollup@4.60.2 want: 4.60.2
+712 silly placeDep ROOT @types/estree@1.0.8 OK for: rollup@4.60.2 want: 1.0.8
+713 silly fetch manifest vue@3.5.33
+714 silly packumentCache full:https://registry.npmmirror.com/vue cache-hit
+715 silly placeDep ROOT @vue/compiler-dom@3.5.33 OK for: vue@3.5.33 want: 3.5.33
+716 silly placeDep ROOT @vue/compiler-sfc@3.5.33 OK for: vue@3.5.33 want: 3.5.33
+717 silly placeDep ROOT @vue/runtime-dom@3.5.33 OK for: vue@3.5.33 want: 3.5.33
+718 silly placeDep ROOT @vue/server-renderer@3.5.33 OK for: vue@3.5.33 want: 3.5.33
+719 silly placeDep ROOT @vue/shared@3.5.33 OK for: vue@3.5.33 want: 3.5.33
+720 silly fetch manifest @vue/compiler-core@3.5.33
+721 silly packumentCache full:https://registry.npmmirror.com/@vue%2fcompiler-core cache-miss
+722 silly fetch manifest @babel/parser@^7.29.2
+723 silly packumentCache full:https://registry.npmmirror.com/@babel%2fparser cache-miss
+724 silly fetch manifest estree-walker@^2.0.2
+725 silly packumentCache full:https://registry.npmmirror.com/estree-walker cache-miss
+726 silly fetch manifest magic-string@^0.30.21
+727 silly packumentCache full:https://registry.npmmirror.com/magic-string cache-miss
+728 silly fetch manifest @vue/compiler-core@3.5.33
+729 silly packumentCache full:https://registry.npmmirror.com/@vue%2fcompiler-core cache-miss
+730 silly fetch manifest @vue/compiler-ssr@3.5.33
+731 silly packumentCache full:https://registry.npmmirror.com/@vue%2fcompiler-ssr cache-miss
+732 silly fetch manifest csstype@^3.2.3
+733 silly packumentCache full:https://registry.npmmirror.com/csstype cache-miss
+734 http fetch GET 200 https://registry.npmmirror.com/estree-walker 75ms (cache miss)
+735 silly packumentCache full:https://registry.npmmirror.com/estree-walker set size:11874 disposed:false
+736 silly fetch manifest @vue/runtime-core@3.5.33
+737 silly packumentCache full:https://registry.npmmirror.com/@vue%2fruntime-core cache-miss
+738 http fetch GET 200 https://registry.npmmirror.com/csstype 98ms (cache miss)
+739 silly packumentCache full:https://registry.npmmirror.com/csstype set size:41498 disposed:false
+740 silly fetch manifest @vue/reactivity@3.5.33
+741 silly packumentCache full:https://registry.npmmirror.com/@vue%2freactivity cache-miss
+742 http fetch GET 200 https://registry.npmmirror.com/magic-string 116ms (cache miss)
+743 silly packumentCache full:https://registry.npmmirror.com/magic-string set size:56351 disposed:false
+744 silly fetch manifest @vue/compiler-ssr@3.5.33
+745 silly packumentCache full:https://registry.npmmirror.com/@vue%2fcompiler-ssr cache-miss
+746 http fetch GET 200 https://registry.npmmirror.com/@babel%2fparser 165ms (cache miss)
+747 silly packumentCache full:https://registry.npmmirror.com/@babel%2fparser set size:106855 disposed:false
+748 http fetch GET 200 https://registry.npmmirror.com/@vue%2fcompiler-ssr 191ms (cache miss)
+749 silly packumentCache full:https://registry.npmmirror.com/@vue%2fcompiler-ssr set size:111241 disposed:false
+750 http fetch GET 200 https://registry.npmmirror.com/@vue%2fcompiler-core 216ms (cache miss)
+751 silly packumentCache full:https://registry.npmmirror.com/@vue%2fcompiler-core set size:116806 disposed:false
+752 http fetch GET 200 https://registry.npmmirror.com/@vue%2fcompiler-core 226ms (cache miss)
+753 silly packumentCache full:https://registry.npmmirror.com/@vue%2fcompiler-core set size:116806 disposed:false
+754 silly packumentCache full:https://registry.npmmirror.com/@vue%2fcompiler-core dispose
+755 http fetch GET 200 https://registry.npmmirror.com/@vue%2fcompiler-ssr 118ms (cache miss)
+756 silly packumentCache full:https://registry.npmmirror.com/@vue%2fcompiler-ssr set size:111241 disposed:false
+757 silly packumentCache full:https://registry.npmmirror.com/@vue%2fcompiler-ssr dispose
+758 http fetch GET 200 https://registry.npmmirror.com/@vue%2freactivity 152ms (cache miss)
+759 silly packumentCache full:https://registry.npmmirror.com/@vue%2freactivity set size:114757 disposed:false
+760 http fetch GET 200 https://registry.npmmirror.com/@vue%2fruntime-core 192ms (cache miss)
+761 silly packumentCache full:https://registry.npmmirror.com/@vue%2fruntime-core set size:115450 disposed:false
+762 silly placeDep ROOT @vue/compiler-core@3.5.33 OK for: @vue/compiler-dom@3.5.33 want: 3.5.33
+763 silly fetch manifest entities@^7.0.1
+764 silly packumentCache full:https://registry.npmmirror.com/entities cache-miss
+765 http fetch GET 200 https://registry.npmmirror.com/entities 24ms (cache miss)
+766 silly packumentCache full:https://registry.npmmirror.com/entities set size:23218 disposed:false
+767 silly placeDep ROOT @babel/parser@7.29.2 OK for: @vue/compiler-core@3.5.33 want: ^7.29.2
+768 silly placeDep ROOT entities@7.0.1 OK for: @vue/compiler-core@3.5.33 want: ^7.0.1
+769 silly placeDep ROOT estree-walker@2.0.2 OK for: @vue/compiler-core@3.5.33 want: ^2.0.2
+770 silly fetch manifest @babel/types@^7.29.0
+771 silly packumentCache full:https://registry.npmmirror.com/@babel%2ftypes cache-miss
+772 http fetch GET 200 https://registry.npmmirror.com/@babel%2ftypes 41ms (cache miss)
+773 silly packumentCache full:https://registry.npmmirror.com/@babel%2ftypes set size:80674 disposed:false
+774 silly placeDep ROOT @babel/types@7.29.0 OK for: @babel/parser@7.29.2 want: ^7.29.0
+775 silly fetch manifest @babel/helper-string-parser@^7.27.1
+776 silly packumentCache full:https://registry.npmmirror.com/@babel%2fhelper-string-parser cache-miss
+777 silly fetch manifest @babel/helper-validator-identifier@^7.28.5
+778 silly packumentCache full:https://registry.npmmirror.com/@babel%2fhelper-validator-identifier cache-miss
+779 http fetch GET 200 https://registry.npmmirror.com/@babel%2fhelper-validator-identifier 31ms (cache miss)
+780 silly packumentCache full:https://registry.npmmirror.com/@babel%2fhelper-validator-identifier set size:23402 disposed:false
+781 http fetch GET 200 https://registry.npmmirror.com/@babel%2fhelper-string-parser 38ms (cache miss)
+782 silly packumentCache full:https://registry.npmmirror.com/@babel%2fhelper-string-parser set size:19419 disposed:false
+783 silly placeDep ROOT @babel/helper-string-parser@7.27.1 OK for: @babel/types@7.29.0 want: ^7.27.1
+784 silly placeDep ROOT @babel/helper-validator-identifier@7.28.5 OK for: @babel/types@7.29.0 want: ^7.28.5
+785 silly placeDep ROOT @vue/compiler-ssr@3.5.33 OK for: @vue/compiler-sfc@3.5.33 want: 3.5.33
+786 silly placeDep ROOT magic-string@0.30.21 OK for: @vue/compiler-sfc@3.5.33 want: ^0.30.21
+787 silly fetch manifest @jridgewell/sourcemap-codec@^1.5.5
+788 silly packumentCache full:https://registry.npmmirror.com/@jridgewell%2fsourcemap-codec cache-miss
+789 http fetch GET 200 https://registry.npmmirror.com/@jridgewell%2fsourcemap-codec 27ms (cache miss)
+790 silly packumentCache full:https://registry.npmmirror.com/@jridgewell%2fsourcemap-codec set size:14577 disposed:false
+791 silly placeDep ROOT @vue/reactivity@3.5.33 OK for: @vue/runtime-dom@3.5.33 want: 3.5.33
+792 silly placeDep ROOT @vue/runtime-core@3.5.33 OK for: @vue/runtime-dom@3.5.33 want: 3.5.33
+793 silly placeDep ROOT csstype@3.2.3 OK for: @vue/runtime-dom@3.5.33 want: ^3.2.3
+794 silly placeDep ROOT @jridgewell/sourcemap-codec@1.5.5 OK for: magic-string@0.30.21 want: ^1.5.5
+795 silly placeDep ROOT @vue/devtools-api@6.6.4 OK for: vue-router@4.6.4 want: ^6.6.4
+796 silly reify moves {}
+797 silly audit bulk request {
+797 silly audit   '@element-plus/icons-vue': [ '2.3.2' ],
+797 silly audit   vue: [ '3.5.33' ],
+797 silly audit   '@vitejs/plugin-vue': [ '5.2.4' ],
+797 silly audit   vite: [ '5.4.21' ],
+797 silly audit   axios: [ '1.15.2' ],
+797 silly audit   'element-plus': [ '2.13.7' ],
+797 silly audit   sass: [ '1.99.0' ],
+797 silly audit   'vue-router': [ '4.6.4' ],
+797 silly audit   'follow-redirects': [ '1.16.0' ],
+797 silly audit   'form-data': [ '4.0.5' ],
+797 silly audit   'proxy-from-env': [ '2.1.0' ],
+797 silly audit   '@ctrl/tinycolor': [ '4.2.0' ],
+797 silly audit   '@floating-ui/dom': [ '1.7.6' ],
+797 silly audit   '@sxzz/popperjs-es': [ '2.11.8' ],
+797 silly audit   '@types/lodash': [ '4.17.24' ],
+797 silly audit   '@types/lodash-es': [ '4.17.12' ],
+797 silly audit   '@vueuse/core': [ '12.0.0' ],
+797 silly audit   'async-validator': [ '4.2.5' ],
+797 silly audit   dayjs: [ '1.11.20' ],
+797 silly audit   lodash: [ '4.18.1' ],
+797 silly audit   'lodash-es': [ '4.18.1' ],
+797 silly audit   'lodash-unified': [ '1.0.3' ],
+797 silly audit   'memoize-one': [ '6.0.0' ],
+797 silly audit   'normalize-wheel-es': [ '1.2.0' ],
+797 silly audit   'vue-component-type-helpers': [ '3.2.7' ],
+797 silly audit   '@floating-ui/core': [ '1.7.5' ],
+797 silly audit   '@floating-ui/utils': [ '0.2.11' ],
+797 silly audit   '@types/web-bluetooth': [ '0.0.20' ],
+797 silly audit   '@vueuse/metadata': [ '12.0.0' ],
+797 silly audit   '@vueuse/shared': [ '12.0.0' ],
+797 silly audit   asynckit: [ '0.4.0' ],
+797 silly audit   'combined-stream': [ '1.0.8' ],
+797 silly audit   'es-set-tostringtag': [ '2.1.0' ],
+797 silly audit   hasown: [ '2.0.3' ],
+797 silly audit   'mime-types': [ '2.1.35' ],
+797 silly audit   'delayed-stream': [ '1.0.0' ],
+797 silly audit   'es-errors': [ '1.3.0' ],
+797 silly audit   'get-intrinsic': [ '1.3.0' ],
+797 silly audit   'has-tostringtag': [ '1.0.2' ],
+797 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+797 silly audit   'es-define-property': [ '1.0.1' ],
+797 silly audit   'es-object-atoms': [ '1.1.1' ],
+797 silly audit   'function-bind': [ '1.1.2' ],
+797 silly audit   'get-proto': [ '1.0.1' ],
+797 silly audit   gopd: [ '1.2.0' ],
+797 silly audit   'has-symbols': [ '1.1.0' ],
+797 silly audit   'math-intrinsics': [ '1.1.0' ],
+797 silly audit   'dunder-proto': [ '1.0.1' ],
+797 silly audit   'mime-db': [ '1.52.0' ],
+797 silly audit   '@parcel/watcher': [ '2.5.6' ],
+797 silly audit   chokidar: [ '4.0.3' ],
+797 silly audit   immutable: [ '5.1.5' ],
+797 silly audit   'source-map-js': [ '1.2.1' ],
+797 silly audit   '@parcel/watcher-android-arm64': [ '2.5.6' ],
+797 silly audit   '@parcel/watcher-darwin-arm64': [ '2.5.6' ],
+797 silly audit   '@parcel/watcher-darwin-x64': [ '2.5.6' ],
+797 silly audit   '@parcel/watcher-freebsd-x64': [ '2.5.6' ],
+797 silly audit   '@parcel/watcher-linux-arm-glibc': [ '2.5.6' ],
+797 silly audit   '@parcel/watcher-linux-arm-musl': [ '2.5.6' ],
+797 silly audit   '@parcel/watcher-linux-arm64-glibc': [ '2.5.6' ],
+797 silly audit   '@parcel/watcher-linux-arm64-musl': [ '2.5.6' ],
+797 silly audit   '@parcel/watcher-linux-x64-glibc': [ '2.5.6' ],
+797 silly audit   '@parcel/watcher-linux-x64-musl': [ '2.5.6' ],
+797 silly audit   '@parcel/watcher-win32-arm64': [ '2.5.6' ],
+797 silly audit   '@parcel/watcher-win32-ia32': [ '2.5.6' ],
+797 silly audit   '@parcel/watcher-win32-x64': [ '2.5.6' ],
+797 silly audit   'detect-libc': [ '2.1.2' ],
+797 silly audit   'is-glob': [ '4.0.3' ],
+797 silly audit   'node-addon-api': [ '7.1.1' ],
+797 silly audit   picomatch: [ '4.0.4' ],
+797 silly audit   readdirp: [ '4.1.2' ],
+797 silly audit   'is-extglob': [ '2.1.1' ],
+797 silly audit   esbuild: [ '0.21.5' ],
+797 silly audit   fsevents: [ '2.3.3' ],
+797 silly audit   postcss: [ '8.5.10' ],
+797 silly audit   rollup: [ '4.60.2' ],
+797 silly audit   '@esbuild/aix-ppc64': [ '0.21.5' ],
+797 silly audit   '@esbuild/android-arm': [ '0.21.5' ],
+797 silly audit   '@esbuild/android-arm64': [ '0.21.5' ],
+797 silly audit   '@esbuild/android-x64': [ '0.21.5' ],
+797 silly audit   '@esbuild/darwin-arm64': [ '0.21.5' ],
+797 silly audit   '@esbuild/darwin-x64': [ '0.21.5' ],
+797 silly audit   '@esbuild/freebsd-arm64': [ '0.21.5' ],
+797 silly audit   '@esbuild/freebsd-x64': [ '0.21.5' ],
+797 silly audit   '@esbuild/linux-arm': [ '0.21.5' ],
+797 silly audit   '@esbuild/linux-arm64': [ '0.21.5' ],
+797 silly audit   '@esbuild/linux-ia32': [ '0.21.5' ],
+797 silly audit   '@esbuild/linux-loong64': [ '0.21.5' ],
+797 silly audit   '@esbuild/linux-mips64el': [ '0.21.5' ],
+797 silly audit   '@esbuild/linux-ppc64': [ '0.21.5' ],
+797 silly audit   '@esbuild/linux-riscv64': [ '0.21.5' ],
+797 silly audit   '@esbuild/linux-s390x': [ '0.21.5' ],
+797 silly audit   '@esbuild/linux-x64': [ '0.21.5' ],
+797 silly audit   '@esbuild/netbsd-x64': [ '0.21.5' ],
+797 silly audit   '@esbuild/openbsd-x64': [ '0.21.5' ],
+797 silly audit   '@esbuild/sunos-x64': [ '0.21.5' ],
+797 silly audit   '@esbuild/win32-arm64': [ '0.21.5' ],
+797 silly audit   '@esbuild/win32-ia32': [ '0.21.5' ],
+797 silly audit   '@esbuild/win32-x64': [ '0.21.5' ],
+797 silly audit   nanoid: [ '3.3.11' ],
+797 silly audit   picocolors: [ '1.1.1' ],
+797 silly audit   '@rollup/rollup-android-arm-eabi': [ '4.60.2' ],
+797 silly audit   '@rollup/rollup-android-arm64': [ '4.60.2' ],
+797 silly audit   '@rollup/rollup-darwin-arm64': [ '4.60.2' ],
+797 silly audit   '@rollup/rollup-darwin-x64': [ '4.60.2' ],
+797 silly audit   '@rollup/rollup-freebsd-arm64': [ '4.60.2' ],
+797 silly audit   '@rollup/rollup-freebsd-x64': [ '4.60.2' ],
+797 silly audit   '@rollup/rollup-linux-arm-gnueabihf': [ '4.60.2' ],
+797 silly audit   '@rollup/rollup-linux-arm-musleabihf': [ '4.60.2' ],
+797 silly audit   '@rollup/rollup-linux-arm64-gnu': [ '4.60.2' ],
+797 silly audit   '@rollup/rollup-linux-arm64-musl': [ '4.60.2' ],
+797 silly audit   '@rollup/rollup-linux-loong64-gnu': [ '4.60.2' ],
+797 silly audit   '@rollup/rollup-linux-loong64-musl': [ '4.60.2' ],
+797 silly audit   '@rollup/rollup-linux-ppc64-gnu': [ '4.60.2' ],
+797 silly audit   '@rollup/rollup-linux-ppc64-musl': [ '4.60.2' ],
+797 silly audit   '@rollup/rollup-linux-riscv64-gnu': [ '4.60.2' ],
+797 silly audit   '@rollup/rollup-linux-riscv64-musl': [ '4.60.2' ],
+797 silly audit   '@rollup/rollup-linux-s390x-gnu': [ '4.60.2' ],
+797 silly audit   '@rollup/rollup-linux-x64-gnu': [ '4.60.2' ],
+797 silly audit   '@rollup/rollup-linux-x64-musl': [ '4.60.2' ],
+797 silly audit   '@rollup/rollup-openbsd-x64': [ '4.60.2' ],
+797 silly audit   '@rollup/rollup-openharmony-arm64': [ '4.60.2' ],
+797 silly audit   '@rollup/rollup-win32-arm64-msvc': [ '4.60.2' ],
+797 silly audit   '@rollup/rollup-win32-ia32-msvc': [ '4.60.2' ],
+797 silly audit   '@rollup/rollup-win32-x64-gnu': [ '4.60.2' ],
+797 silly audit   '@rollup/rollup-win32-x64-msvc': [ '4.60.2' ],
+797 silly audit   '@types/estree': [ '1.0.8' ],
+797 silly audit   '@vue/compiler-dom': [ '3.5.33' ],
+797 silly audit   '@vue/compiler-sfc': [ '3.5.33' ],
+797 silly audit   '@vue/runtime-dom': [ '3.5.33' ],
+797 silly audit   '@vue/server-renderer': [ '3.5.33' ],
+797 silly audit   '@vue/shared': [ '3.5.33' ],
+797 silly audit   '@vue/compiler-core': [ '3.5.33' ],
+797 silly audit   '@babel/parser': [ '7.29.2' ],
+797 silly audit   entities: [ '7.0.1' ],
+797 silly audit   'estree-walker': [ '2.0.2' ],
+797 silly audit   '@babel/types': [ '7.29.0' ],
+797 silly audit   '@babel/helper-string-parser': [ '7.27.1' ],
+797 silly audit   '@babel/helper-validator-identifier': [ '7.28.5' ],
+797 silly audit   '@vue/compiler-ssr': [ '3.5.33' ],
+797 silly audit   'magic-string': [ '0.30.21' ],
+797 silly audit   '@vue/reactivity': [ '3.5.33' ],
+797 silly audit   '@vue/runtime-core': [ '3.5.33' ],
+797 silly audit   csstype: [ '3.2.3' ],
+797 silly audit   '@jridgewell/sourcemap-codec': [ '1.5.5' ],
+797 silly audit   '@vue/devtools-api': [ '6.6.4' ]
+797 silly audit }
+798 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@rollup\rollup-win32-ia32-msvc
+799 silly reify mark deleted [
+799 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@rollup\\rollup-win32-ia32-msvc'
+799 silly reify ]
+800 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@rollup\rollup-win32-arm64-msvc
+801 silly reify mark deleted [
+801 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@rollup\\rollup-win32-arm64-msvc'
+801 silly reify ]
+802 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@rollup\rollup-openharmony-arm64
+803 silly reify mark deleted [
+803 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@rollup\\rollup-openharmony-arm64'
+803 silly reify ]
+804 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@rollup\rollup-openbsd-x64
+805 silly reify mark deleted [
+805 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@rollup\\rollup-openbsd-x64'
+805 silly reify ]
+806 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@rollup\rollup-linux-x64-musl
+807 silly reify mark deleted [
+807 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@rollup\\rollup-linux-x64-musl'
+807 silly reify ]
+808 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@rollup\rollup-linux-x64-gnu
+809 silly reify mark deleted [
+809 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@rollup\\rollup-linux-x64-gnu'
+809 silly reify ]
+810 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@rollup\rollup-linux-s390x-gnu
+811 silly reify mark deleted [
+811 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@rollup\\rollup-linux-s390x-gnu'
+811 silly reify ]
+812 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@rollup\rollup-linux-riscv64-musl
+813 silly reify mark deleted [
+813 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@rollup\\rollup-linux-riscv64-musl'
+813 silly reify ]
+814 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@rollup\rollup-linux-riscv64-gnu
+815 silly reify mark deleted [
+815 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@rollup\\rollup-linux-riscv64-gnu'
+815 silly reify ]
+816 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@rollup\rollup-linux-ppc64-musl
+817 silly reify mark deleted [
+817 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@rollup\\rollup-linux-ppc64-musl'
+817 silly reify ]
+818 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@rollup\rollup-linux-ppc64-gnu
+819 silly reify mark deleted [
+819 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@rollup\\rollup-linux-ppc64-gnu'
+819 silly reify ]
+820 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@rollup\rollup-linux-loong64-musl
+821 silly reify mark deleted [
+821 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@rollup\\rollup-linux-loong64-musl'
+821 silly reify ]
+822 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@rollup\rollup-linux-loong64-gnu
+823 silly reify mark deleted [
+823 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@rollup\\rollup-linux-loong64-gnu'
+823 silly reify ]
+824 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@rollup\rollup-linux-arm64-musl
+825 silly reify mark deleted [
+825 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@rollup\\rollup-linux-arm64-musl'
+825 silly reify ]
+826 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@rollup\rollup-linux-arm64-gnu
+827 silly reify mark deleted [
+827 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@rollup\\rollup-linux-arm64-gnu'
+827 silly reify ]
+828 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@rollup\rollup-linux-arm-musleabihf
+829 silly reify mark deleted [
+829 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@rollup\\rollup-linux-arm-musleabihf'
+829 silly reify ]
+830 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@rollup\rollup-linux-arm-gnueabihf
+831 silly reify mark deleted [
+831 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@rollup\\rollup-linux-arm-gnueabihf'
+831 silly reify ]
+832 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@rollup\rollup-freebsd-x64
+833 silly reify mark deleted [
+833 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@rollup\\rollup-freebsd-x64'
+833 silly reify ]
+834 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@rollup\rollup-freebsd-arm64
+835 silly reify mark deleted [
+835 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@rollup\\rollup-freebsd-arm64'
+835 silly reify ]
+836 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@rollup\rollup-darwin-x64
+837 silly reify mark deleted [
+837 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@rollup\\rollup-darwin-x64'
+837 silly reify ]
+838 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@rollup\rollup-darwin-arm64
+839 silly reify mark deleted [
+839 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@rollup\\rollup-darwin-arm64'
+839 silly reify ]
+840 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@rollup\rollup-android-arm64
+841 silly reify mark deleted [
+841 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@rollup\\rollup-android-arm64'
+841 silly reify ]
+842 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@rollup\rollup-android-arm-eabi
+843 silly reify mark deleted [
+843 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@rollup\\rollup-android-arm-eabi'
+843 silly reify ]
+844 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@esbuild\win32-ia32
+845 silly reify mark deleted [
+845 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@esbuild\\win32-ia32'
+845 silly reify ]
+846 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@esbuild\win32-arm64
+847 silly reify mark deleted [
+847 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@esbuild\\win32-arm64'
+847 silly reify ]
+848 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@esbuild\sunos-x64
+849 silly reify mark deleted [
+849 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@esbuild\\sunos-x64'
+849 silly reify ]
+850 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@esbuild\openbsd-x64
+851 silly reify mark deleted [
+851 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@esbuild\\openbsd-x64'
+851 silly reify ]
+852 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@esbuild\netbsd-x64
+853 silly reify mark deleted [
+853 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@esbuild\\netbsd-x64'
+853 silly reify ]
+854 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@esbuild\linux-x64
+855 silly reify mark deleted [
+855 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@esbuild\\linux-x64'
+855 silly reify ]
+856 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@esbuild\linux-s390x
+857 silly reify mark deleted [
+857 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@esbuild\\linux-s390x'
+857 silly reify ]
+858 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@esbuild\linux-riscv64
+859 silly reify mark deleted [
+859 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@esbuild\\linux-riscv64'
+859 silly reify ]
+860 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@esbuild\linux-ppc64
+861 silly reify mark deleted [
+861 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@esbuild\\linux-ppc64'
+861 silly reify ]
+862 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@esbuild\linux-mips64el
+863 silly reify mark deleted [
+863 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@esbuild\\linux-mips64el'
+863 silly reify ]
+864 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@esbuild\linux-loong64
+865 silly reify mark deleted [
+865 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@esbuild\\linux-loong64'
+865 silly reify ]
+866 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@esbuild\linux-ia32
+867 silly reify mark deleted [
+867 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@esbuild\\linux-ia32'
+867 silly reify ]
+868 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@esbuild\linux-arm64
+869 silly reify mark deleted [
+869 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@esbuild\\linux-arm64'
+869 silly reify ]
+870 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@esbuild\linux-arm
+871 silly reify mark deleted [
+871 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@esbuild\\linux-arm'
+871 silly reify ]
+872 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@esbuild\freebsd-x64
+873 silly reify mark deleted [
+873 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@esbuild\\freebsd-x64'
+873 silly reify ]
+874 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@esbuild\freebsd-arm64
+875 silly reify mark deleted [
+875 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@esbuild\\freebsd-arm64'
+875 silly reify ]
+876 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@esbuild\darwin-x64
+877 silly reify mark deleted [
+877 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@esbuild\\darwin-x64'
+877 silly reify ]
+878 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@esbuild\darwin-arm64
+879 silly reify mark deleted [
+879 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@esbuild\\darwin-arm64'
+879 silly reify ]
+880 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@esbuild\android-x64
+881 silly reify mark deleted [
+881 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@esbuild\\android-x64'
+881 silly reify ]
+882 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@esbuild\android-arm64
+883 silly reify mark deleted [
+883 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@esbuild\\android-arm64'
+883 silly reify ]
+884 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@esbuild\android-arm
+885 silly reify mark deleted [
+885 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@esbuild\\android-arm'
+885 silly reify ]
+886 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@esbuild\aix-ppc64
+887 silly reify mark deleted [
+887 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@esbuild\\aix-ppc64'
+887 silly reify ]
+888 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\fsevents
+889 silly reify mark deleted [
+889 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\fsevents'
+889 silly reify ]
+890 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@parcel\watcher-win32-ia32
+891 silly reify mark deleted [
+891 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@parcel\\watcher-win32-ia32'
+891 silly reify ]
+892 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@parcel\watcher-win32-arm64
+893 silly reify mark deleted [
+893 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@parcel\\watcher-win32-arm64'
+893 silly reify ]
+894 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@parcel\watcher-linux-x64-musl
+895 silly reify mark deleted [
+895 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@parcel\\watcher-linux-x64-musl'
+895 silly reify ]
+896 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@parcel\watcher-linux-x64-glibc
+897 silly reify mark deleted [
+897 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@parcel\\watcher-linux-x64-glibc'
+897 silly reify ]
+898 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@parcel\watcher-linux-arm64-musl
+899 silly reify mark deleted [
+899 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@parcel\\watcher-linux-arm64-musl'
+899 silly reify ]
+900 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@parcel\watcher-linux-arm64-glibc
+901 silly reify mark deleted [
+901 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@parcel\\watcher-linux-arm64-glibc'
+901 silly reify ]
+902 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@parcel\watcher-linux-arm-musl
+903 silly reify mark deleted [
+903 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@parcel\\watcher-linux-arm-musl'
+903 silly reify ]
+904 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@parcel\watcher-linux-arm-glibc
+905 silly reify mark deleted [
+905 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@parcel\\watcher-linux-arm-glibc'
+905 silly reify ]
+906 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@parcel\watcher-freebsd-x64
+907 silly reify mark deleted [
+907 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@parcel\\watcher-freebsd-x64'
+907 silly reify ]
+908 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@parcel\watcher-darwin-x64
+909 silly reify mark deleted [
+909 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@parcel\\watcher-darwin-x64'
+909 silly reify ]
+910 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@parcel\watcher-darwin-arm64
+911 silly reify mark deleted [
+911 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@parcel\\watcher-darwin-arm64'
+911 silly reify ]
+912 verbose reify failed optional dependency C:\traework\a\wilmer-deeplearn\vue3-ftp-client\node_modules\@parcel\watcher-android-arm64
+913 silly reify mark deleted [
+913 silly reify   'C:\\traework\\a\\wilmer-deeplearn\\vue3-ftp-client\\node_modules\\@parcel\\watcher-android-arm64'
+913 silly reify ]
+914 http fetch POST 404 https://registry.npmmirror.com/-/npm/v1/security/advisories/bulk 81ms
+915 silly audit bulk request failed [object Object]
+916 http fetch POST 404 https://registry.npmmirror.com/-/npm/v1/security/audits/quick 8ms
+917 verbose audit error HttpErrorGeneral: 404 Not Found - POST https://registry.npmmirror.com/-/npm/v1/security/audits/quick - [NOT_IMPLEMENTED] /-/npm/v1/security/* not implemented yet
+917 verbose audit error     at C:\Users\wolfboy111\nvm\v22.22.0\node_modules\npm\node_modules\npm-registry-fetch\lib\check-response.js:103:15
+917 verbose audit error     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+917 verbose audit error     at async [getReport] (C:\Users\wolfboy111\nvm\v22.22.0\node_modules\npm\node_modules\@npmcli\arborist\lib\audit-report.js:336:21)
+917 verbose audit error     at async AuditReport.run (C:\Users\wolfboy111\nvm\v22.22.0\node_modules\npm\node_modules\@npmcli\arborist\lib\audit-report.js:106:19) {
+917 verbose audit error   headers: [Object: null prototype] {
+917 verbose audit error     server: [ 'Tengine' ],
+917 verbose audit error     date: [ 'Thu, 23 Apr 2026 15:41:14 GMT' ],
+917 verbose audit error     'content-type': [ 'application/json' ],
+917 verbose audit error     'transfer-encoding': [ 'chunked' ],
+917 verbose audit error     connection: [ 'keep-alive' ],
+917 verbose audit error     'strict-transport-security': [ 'max-age=5184000' ],
+917 verbose audit error     via: [ 'kunlun4.cn6489[,404666]' ],
+917 verbose audit error     'timing-allow-origin': [ '*' ],
+917 verbose audit error     eagleid: [ '3d30538917769588747748003e' ],
+917 verbose audit error     'x-fetch-attempts': [ '1' ]
+917 verbose audit error   },
+917 verbose audit error   statusCode: 404,
+917 verbose audit error   code: 'E404',
+917 verbose audit error   method: 'POST',
+917 verbose audit error   uri: 'https://registry.npmmirror.com/-/npm/v1/security/audits/quick',
+917 verbose audit error   body: {
+917 verbose audit error     error: '[NOT_IMPLEMENTED] /-/npm/v1/security/* not implemented yet'
+917 verbose audit error   },
+917 verbose audit error   pkgid: undefined
+917 verbose audit error }
+918 silly audit error [object Object]
+919 silly audit report null
+920 http cache @vue/devtools-api@https://registry.npmmirror.com/@vue/devtools-api/-/devtools-api-6.6.4.tgz 0ms (cache hit)
+921 http cache @jridgewell/sourcemap-codec@https://registry.npmmirror.com/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.5.5.tgz 0ms (cache hit)
+922 http cache @vue/reactivity@https://registry.npmmirror.com/@vue/reactivity/-/reactivity-3.5.33.tgz 0ms (cache hit)
+923 http cache csstype@https://registry.npmmirror.com/csstype/-/csstype-3.2.3.tgz 0ms (cache hit)
+924 http cache magic-string@https://registry.npmmirror.com/magic-string/-/magic-string-0.30.21.tgz 0ms (cache hit)
+925 http cache @vue/runtime-core@https://registry.npmmirror.com/@vue/runtime-core/-/runtime-core-3.5.33.tgz 0ms (cache hit)
+926 http cache @vue/compiler-ssr@https://registry.npmmirror.com/@vue/compiler-ssr/-/compiler-ssr-3.5.33.tgz 0ms (cache hit)
+927 http cache estree-walker@https://registry.npmmirror.com/estree-walker/-/estree-walker-2.0.2.tgz 0ms (cache hit)
+928 http cache @babel/helper-validator-identifier@https://registry.npmmirror.com/@babel/helper-validator-identifier/-/helper-validator-identifier-7.28.5.tgz 0ms (cache hit)
+929 http cache @babel/types@https://registry.npmmirror.com/@babel/types/-/types-7.29.0.tgz 0ms (cache hit)
+930 http cache @babel/helper-string-parser@https://registry.npmmirror.com/@babel/helper-string-parser/-/helper-string-parser-7.27.1.tgz 0ms (cache hit)
+931 http cache entities@https://registry.npmmirror.com/entities/-/entities-7.0.1.tgz 0ms (cache hit)
+932 http cache @babel/parser@https://registry.npmmirror.com/@babel/parser/-/parser-7.29.2.tgz 0ms (cache hit)
+933 http cache @vue/shared@https://registry.npmmirror.com/@vue/shared/-/shared-3.5.33.tgz 0ms (cache hit)
+934 http cache @types/estree@https://registry.npmmirror.com/@types/estree/-/estree-1.0.8.tgz 0ms (cache hit)
+935 http cache @vue/compiler-core@https://registry.npmmirror.com/@vue/compiler-core/-/compiler-core-3.5.33.tgz 0ms (cache hit)
+936 http cache @vue/runtime-dom@https://registry.npmmirror.com/@vue/runtime-dom/-/runtime-dom-3.5.33.tgz 0ms (cache hit)
+937 http cache @vue/server-renderer@https://registry.npmmirror.com/@vue/server-renderer/-/server-renderer-3.5.33.tgz 0ms (cache hit)
+938 http cache @vue/compiler-sfc@https://registry.npmmirror.com/@vue/compiler-sfc/-/compiler-sfc-3.5.33.tgz 0ms (cache hit)
+939 http cache @vue/compiler-dom@https://registry.npmmirror.com/@vue/compiler-dom/-/compiler-dom-3.5.33.tgz 0ms (cache hit)
+940 http cache @esbuild/win32-x64@https://registry.npmmirror.com/@esbuild/win32-x64/-/win32-x64-0.21.5.tgz 0ms (cache hit)
+941 http cache picocolors@https://registry.npmmirror.com/picocolors/-/picocolors-1.1.1.tgz 0ms (cache hit)
+942 http cache @rollup/rollup-win32-x64-msvc@https://registry.npmmirror.com/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.60.2.tgz 0ms (cache hit)
+943 http cache @rollup/rollup-win32-x64-gnu@https://registry.npmmirror.com/@rollup/rollup-win32-x64-gnu/-/rollup-win32-x64-gnu-4.60.2.tgz 0ms (cache hit)
+944 http cache nanoid@https://registry.npmmirror.com/nanoid/-/nanoid-3.3.11.tgz 0ms (cache hit)
+945 http cache rollup@https://registry.npmmirror.com/rollup/-/rollup-4.60.2.tgz 0ms (cache hit)
+946 http cache @parcel/watcher-win32-x64@https://registry.npmmirror.com/@parcel/watcher-win32-x64/-/watcher-win32-x64-2.5.6.tgz 0ms (cache hit)
+947 http cache postcss@https://registry.npmmirror.com/postcss/-/postcss-8.5.10.tgz 0ms (cache hit)
+948 http cache esbuild@https://registry.npmmirror.com/esbuild/-/esbuild-0.21.5.tgz 0ms (cache hit)
+949 http cache is-extglob@https://registry.npmmirror.com/is-extglob/-/is-extglob-2.1.1.tgz 0ms (cache hit)
+950 http cache readdirp@https://registry.npmmirror.com/readdirp/-/readdirp-4.1.2.tgz 0ms (cache hit)
+951 http cache picomatch@https://registry.npmmirror.com/picomatch/-/picomatch-4.0.4.tgz 0ms (cache hit)
+952 http cache node-addon-api@https://registry.npmmirror.com/node-addon-api/-/node-addon-api-7.1.1.tgz 0ms (cache hit)
+953 http cache is-glob@https://registry.npmmirror.com/is-glob/-/is-glob-4.0.3.tgz 0ms (cache hit)
+954 http cache detect-libc@https://registry.npmmirror.com/detect-libc/-/detect-libc-2.1.2.tgz 0ms (cache hit)
+955 http cache @parcel/watcher@https://registry.npmmirror.com/@parcel/watcher/-/watcher-2.5.6.tgz 0ms (cache hit)
+956 http cache source-map-js@https://registry.npmmirror.com/source-map-js/-/source-map-js-1.2.1.tgz 0ms (cache hit)
+957 http cache chokidar@https://registry.npmmirror.com/chokidar/-/chokidar-4.0.3.tgz 0ms (cache hit)
+958 http cache dunder-proto@https://registry.npmmirror.com/dunder-proto/-/dunder-proto-1.0.1.tgz 0ms (cache hit)
+959 http cache immutable@https://registry.npmmirror.com/immutable/-/immutable-5.1.5.tgz 0ms (cache hit)
+960 http cache has-symbols@https://registry.npmmirror.com/has-symbols/-/has-symbols-1.1.0.tgz 0ms (cache hit)
+961 http cache mime-db@https://registry.npmmirror.com/mime-db/-/mime-db-1.52.0.tgz 0ms (cache hit)
+962 http cache math-intrinsics@https://registry.npmmirror.com/math-intrinsics/-/math-intrinsics-1.1.0.tgz 0ms (cache hit)
+963 http cache gopd@https://registry.npmmirror.com/gopd/-/gopd-1.2.0.tgz 0ms (cache hit)
+964 http cache get-proto@https://registry.npmmirror.com/get-proto/-/get-proto-1.0.1.tgz 0ms (cache hit)
+965 http cache es-object-atoms@https://registry.npmmirror.com/es-object-atoms/-/es-object-atoms-1.1.1.tgz 0ms (cache hit)
+966 http cache function-bind@https://registry.npmmirror.com/function-bind/-/function-bind-1.1.2.tgz 0ms (cache hit)
+967 http cache es-define-property@https://registry.npmmirror.com/es-define-property/-/es-define-property-1.0.1.tgz 0ms (cache hit)
+968 http cache get-intrinsic@https://registry.npmmirror.com/get-intrinsic/-/get-intrinsic-1.3.0.tgz 0ms (cache hit)
+969 http cache has-tostringtag@https://registry.npmmirror.com/has-tostringtag/-/has-tostringtag-1.0.2.tgz 0ms (cache hit)
+970 http cache call-bind-apply-helpers@https://registry.npmmirror.com/call-bind-apply-helpers/-/call-bind-apply-helpers-1.0.2.tgz 0ms (cache hit)
+971 http cache es-errors@https://registry.npmmirror.com/es-errors/-/es-errors-1.3.0.tgz 0ms (cache hit)
+972 http cache delayed-stream@https://registry.npmmirror.com/delayed-stream/-/delayed-stream-1.0.0.tgz 0ms (cache hit)
+973 http cache hasown@https://registry.npmmirror.com/hasown/-/hasown-2.0.3.tgz 0ms (cache hit)
+974 http cache @types/web-bluetooth@https://registry.npmmirror.com/@types/web-bluetooth/-/web-bluetooth-0.0.20.tgz 0ms (cache hit)
+975 http cache mime-types@https://registry.npmmirror.com/mime-types/-/mime-types-2.1.35.tgz 0ms (cache hit)
+976 http cache es-set-tostringtag@https://registry.npmmirror.com/es-set-tostringtag/-/es-set-tostringtag-2.1.0.tgz 0ms (cache hit)
+977 http cache combined-stream@https://registry.npmmirror.com/combined-stream/-/combined-stream-1.0.8.tgz 0ms (cache hit)
+978 http cache asynckit@https://registry.npmmirror.com/asynckit/-/asynckit-0.4.0.tgz 0ms (cache hit)
+979 http cache @vueuse/shared@https://registry.npmmirror.com/@vueuse/shared/-/shared-12.0.0.tgz 1ms (cache hit)
+980 http cache @vueuse/metadata@https://registry.npmmirror.com/@vueuse/metadata/-/metadata-12.0.0.tgz 0ms (cache hit)
+981 http cache normalize-wheel-es@https://registry.npmmirror.com/normalize-wheel-es/-/normalize-wheel-es-1.2.0.tgz 0ms (cache hit)
+982 http cache @floating-ui/core@https://registry.npmmirror.com/@floating-ui/core/-/core-1.7.5.tgz 1ms (cache hit)
+983 http cache @floating-ui/utils@https://registry.npmmirror.com/@floating-ui/utils/-/utils-0.2.11.tgz 0ms (cache hit)
+984 http cache vue-component-type-helpers@https://registry.npmmirror.com/vue-component-type-helpers/-/vue-component-type-helpers-3.2.7.tgz 0ms (cache hit)
+985 http cache memoize-one@https://registry.npmmirror.com/memoize-one/-/memoize-one-6.0.0.tgz 0ms (cache hit)
+986 http cache lodash-unified@https://registry.npmmirror.com/lodash-unified/-/lodash-unified-1.0.3.tgz 0ms (cache hit)
+987 http cache lodash-es@https://registry.npmmirror.com/lodash-es/-/lodash-es-4.18.1.tgz 0ms (cache hit)
+988 http cache lodash@https://registry.npmmirror.com/lodash/-/lodash-4.18.1.tgz 0ms (cache hit)
+989 http cache @vueuse/core@https://registry.npmmirror.com/@vueuse/core/-/core-12.0.0.tgz 0ms (cache hit)
+990 http cache dayjs@https://registry.npmmirror.com/dayjs/-/dayjs-1.11.20.tgz 0ms (cache hit)
+991 http cache async-validator@https://registry.npmmirror.com/async-validator/-/async-validator-4.2.5.tgz 0ms (cache hit)
+992 http cache @types/lodash-es@https://registry.npmmirror.com/@types/lodash-es/-/lodash-es-4.17.12.tgz 0ms (cache hit)
+993 http cache @popperjs/core@https://registry.npmmirror.com/@sxzz/popperjs-es/-/popperjs-es-2.11.8.tgz 0ms (cache hit)
+994 http cache @types/lodash@https://registry.npmmirror.com/@types/lodash/-/lodash-4.17.24.tgz 0ms (cache hit)
+995 http cache @floating-ui/dom@https://registry.npmmirror.com/@floating-ui/dom/-/dom-1.7.6.tgz 0ms (cache hit)
+996 http cache @ctrl/tinycolor@https://registry.npmmirror.com/@ctrl/tinycolor/-/tinycolor-4.2.0.tgz 0ms (cache hit)
+997 http cache proxy-from-env@https://registry.npmmirror.com/proxy-from-env/-/proxy-from-env-2.1.0.tgz 0ms (cache hit)
+998 http cache form-data@https://registry.npmmirror.com/form-data/-/form-data-4.0.5.tgz 0ms (cache hit)
+999 http cache follow-redirects@https://registry.npmmirror.com/follow-redirects/-/follow-redirects-1.16.0.tgz 0ms (cache hit)
+1000 http cache vue-router@https://registry.npmmirror.com/vue-router/-/vue-router-4.6.4.tgz 0ms (cache hit)
+1001 http cache sass@https://registry.npmmirror.com/sass/-/sass-1.99.0.tgz 0ms (cache hit)
+1002 http cache element-plus@https://registry.npmmirror.com/element-plus/-/element-plus-2.13.7.tgz 0ms (cache hit)
+1003 silly tarball no local data for @vue/devtools-api@https://registry.npmmirror.com/@vue/devtools-api/-/devtools-api-6.6.4.tgz. Extracting by manifest.
+1004 http cache @vitejs/plugin-vue@https://registry.npmmirror.com/@vitejs/plugin-vue/-/plugin-vue-5.2.4.tgz 0ms (cache hit)
+1005 http cache vite@https://registry.npmmirror.com/vite/-/vite-5.4.21.tgz 0ms (cache hit)
+1006 http cache axios@https://registry.npmmirror.com/axios/-/axios-1.15.2.tgz 0ms (cache hit)
+1007 silly tarball no local data for @jridgewell/sourcemap-codec@https://registry.npmmirror.com/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.5.5.tgz. Extracting by manifest.
+1008 http cache @element-plus/icons-vue@https://registry.npmmirror.com/@element-plus/icons-vue/-/icons-vue-2.3.2.tgz 0ms (cache hit)
+1009 silly tarball no local data for @vue/reactivity@https://registry.npmmirror.com/@vue/reactivity/-/reactivity-3.5.33.tgz. Extracting by manifest.
+1010 silly tarball no local data for csstype@https://registry.npmmirror.com/csstype/-/csstype-3.2.3.tgz. Extracting by manifest.
+1011 http cache vue@https://registry.npmmirror.com/vue/-/vue-3.5.33.tgz 0ms (cache hit)
+1012 silly tarball no local data for magic-string@https://registry.npmmirror.com/magic-string/-/magic-string-0.30.21.tgz. Extracting by manifest.
+1013 silly tarball no local data for @vue/runtime-core@https://registry.npmmirror.com/@vue/runtime-core/-/runtime-core-3.5.33.tgz. Extracting by manifest.
+1014 silly tarball no local data for @vue/compiler-ssr@https://registry.npmmirror.com/@vue/compiler-ssr/-/compiler-ssr-3.5.33.tgz. Extracting by manifest.
+1015 silly tarball no local data for @babel/helper-validator-identifier@https://registry.npmmirror.com/@babel/helper-validator-identifier/-/helper-validator-identifier-7.28.5.tgz. Extracting by manifest.
+1016 silly tarball no local data for @babel/types@https://registry.npmmirror.com/@babel/types/-/types-7.29.0.tgz. Extracting by manifest.
+1017 silly tarball no local data for estree-walker@https://registry.npmmirror.com/estree-walker/-/estree-walker-2.0.2.tgz. Extracting by manifest.
+1018 silly tarball no local data for entities@https://registry.npmmirror.com/entities/-/entities-7.0.1.tgz. Extracting by manifest.
+1019 silly tarball no local data for @vue/shared@https://registry.npmmirror.com/@vue/shared/-/shared-3.5.33.tgz. Extracting by manifest.
+1020 silly tarball no local data for @babel/parser@https://registry.npmmirror.com/@babel/parser/-/parser-7.29.2.tgz. Extracting by manifest.
+1021 silly tarball no local data for @babel/helper-string-parser@https://registry.npmmirror.com/@babel/helper-string-parser/-/helper-string-parser-7.27.1.tgz. Extracting by manifest.
+1022 silly tarball no local data for @types/estree@https://registry.npmmirror.com/@types/estree/-/estree-1.0.8.tgz. Extracting by manifest.
+1023 silly tarball no local data for @vue/compiler-sfc@https://registry.npmmirror.com/@vue/compiler-sfc/-/compiler-sfc-3.5.33.tgz. Extracting by manifest.
+1024 silly tarball no local data for @vue/compiler-core@https://registry.npmmirror.com/@vue/compiler-core/-/compiler-core-3.5.33.tgz. Extracting by manifest.
+1025 silly tarball no local data for @vue/runtime-dom@https://registry.npmmirror.com/@vue/runtime-dom/-/runtime-dom-3.5.33.tgz. Extracting by manifest.
+1026 silly tarball no local data for @esbuild/win32-x64@https://registry.npmmirror.com/@esbuild/win32-x64/-/win32-x64-0.21.5.tgz. Extracting by manifest.
+1027 silly tarball no local data for @vue/server-renderer@https://registry.npmmirror.com/@vue/server-renderer/-/server-renderer-3.5.33.tgz. Extracting by manifest.
+1028 silly tarball no local data for @vue/compiler-dom@https://registry.npmmirror.com/@vue/compiler-dom/-/compiler-dom-3.5.33.tgz. Extracting by manifest.
+1029 silly tarball no local data for @rollup/rollup-win32-x64-msvc@https://registry.npmmirror.com/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.60.2.tgz. Extracting by manifest.
+1030 silly tarball no local data for picocolors@https://registry.npmmirror.com/picocolors/-/picocolors-1.1.1.tgz. Extracting by manifest.
+1031 silly tarball no local data for @rollup/rollup-win32-x64-gnu@https://registry.npmmirror.com/@rollup/rollup-win32-x64-gnu/-/rollup-win32-x64-gnu-4.60.2.tgz. Extracting by manifest.
+1032 silly tarball no local data for nanoid@https://registry.npmmirror.com/nanoid/-/nanoid-3.3.11.tgz. Extracting by manifest.
+1033 silly tarball no local data for rollup@https://registry.npmmirror.com/rollup/-/rollup-4.60.2.tgz. Extracting by manifest.
+1034 silly tarball no local data for postcss@https://registry.npmmirror.com/postcss/-/postcss-8.5.10.tgz. Extracting by manifest.
+1035 silly tarball no local data for @parcel/watcher-win32-x64@https://registry.npmmirror.com/@parcel/watcher-win32-x64/-/watcher-win32-x64-2.5.6.tgz. Extracting by manifest.
+1036 silly tarball no local data for esbuild@https://registry.npmmirror.com/esbuild/-/esbuild-0.21.5.tgz. Extracting by manifest.
+1037 silly tarball no local data for is-extglob@https://registry.npmmirror.com/is-extglob/-/is-extglob-2.1.1.tgz. Extracting by manifest.
+1038 silly tarball no local data for readdirp@https://registry.npmmirror.com/readdirp/-/readdirp-4.1.2.tgz. Extracting by manifest.
+1039 silly tarball no local data for node-addon-api@https://registry.npmmirror.com/node-addon-api/-/node-addon-api-7.1.1.tgz. Extracting by manifest.
+1040 silly tarball no local data for picomatch@https://registry.npmmirror.com/picomatch/-/picomatch-4.0.4.tgz. Extracting by manifest.
+1041 silly tarball no local data for source-map-js@https://registry.npmmirror.com/source-map-js/-/source-map-js-1.2.1.tgz. Extracting by manifest.
+1042 silly tarball no local data for is-glob@https://registry.npmmirror.com/is-glob/-/is-glob-4.0.3.tgz. Extracting by manifest.
+1043 silly tarball no local data for detect-libc@https://registry.npmmirror.com/detect-libc/-/detect-libc-2.1.2.tgz. Extracting by manifest.
+1044 silly tarball no local data for @parcel/watcher@https://registry.npmmirror.com/@parcel/watcher/-/watcher-2.5.6.tgz. Extracting by manifest.
+1045 silly tarball no local data for chokidar@https://registry.npmmirror.com/chokidar/-/chokidar-4.0.3.tgz. Extracting by manifest.
+1046 silly tarball no local data for dunder-proto@https://registry.npmmirror.com/dunder-proto/-/dunder-proto-1.0.1.tgz. Extracting by manifest.
+1047 silly tarball no local data for immutable@https://registry.npmmirror.com/immutable/-/immutable-5.1.5.tgz. Extracting by manifest.
+1048 silly tarball no local data for has-symbols@https://registry.npmmirror.com/has-symbols/-/has-symbols-1.1.0.tgz. Extracting by manifest.
+1049 silly tarball no local data for mime-db@https://registry.npmmirror.com/mime-db/-/mime-db-1.52.0.tgz. Extracting by manifest.
+1050 silly tarball no local data for math-intrinsics@https://registry.npmmirror.com/math-intrinsics/-/math-intrinsics-1.1.0.tgz. Extracting by manifest.
+1051 silly tarball no local data for gopd@https://registry.npmmirror.com/gopd/-/gopd-1.2.0.tgz. Extracting by manifest.
+1052 silly tarball no local data for get-proto@https://registry.npmmirror.com/get-proto/-/get-proto-1.0.1.tgz. Extracting by manifest.
+1053 silly tarball no local data for es-object-atoms@https://registry.npmmirror.com/es-object-atoms/-/es-object-atoms-1.1.1.tgz. Extracting by manifest.
+1054 silly tarball no local data for function-bind@https://registry.npmmirror.com/function-bind/-/function-bind-1.1.2.tgz. Extracting by manifest.
+1055 silly tarball no local data for es-define-property@https://registry.npmmirror.com/es-define-property/-/es-define-property-1.0.1.tgz. Extracting by manifest.
+1056 silly tarball no local data for get-intrinsic@https://registry.npmmirror.com/get-intrinsic/-/get-intrinsic-1.3.0.tgz. Extracting by manifest.
+1057 silly tarball no local data for has-tostringtag@https://registry.npmmirror.com/has-tostringtag/-/has-tostringtag-1.0.2.tgz. Extracting by manifest.
+1058 silly tarball no local data for call-bind-apply-helpers@https://registry.npmmirror.com/call-bind-apply-helpers/-/call-bind-apply-helpers-1.0.2.tgz. Extracting by manifest.
+1059 silly tarball no local data for es-errors@https://registry.npmmirror.com/es-errors/-/es-errors-1.3.0.tgz. Extracting by manifest.
+1060 silly tarball no local data for delayed-stream@https://registry.npmmirror.com/delayed-stream/-/delayed-stream-1.0.0.tgz. Extracting by manifest.
+1061 silly tarball no local data for hasown@https://registry.npmmirror.com/hasown/-/hasown-2.0.3.tgz. Extracting by manifest.
+1062 silly tarball no local data for @types/web-bluetooth@https://registry.npmmirror.com/@types/web-bluetooth/-/web-bluetooth-0.0.20.tgz. Extracting by manifest.
+1063 silly tarball no local data for mime-types@https://registry.npmmirror.com/mime-types/-/mime-types-2.1.35.tgz. Extracting by manifest.
+1064 silly tarball no local data for es-set-tostringtag@https://registry.npmmirror.com/es-set-tostringtag/-/es-set-tostringtag-2.1.0.tgz. Extracting by manifest.
+1065 silly tarball no local data for combined-stream@https://registry.npmmirror.com/combined-stream/-/combined-stream-1.0.8.tgz. Extracting by manifest.
+1066 silly tarball no local data for asynckit@https://registry.npmmirror.com/asynckit/-/asynckit-0.4.0.tgz. Extracting by manifest.
+1067 silly tarball no local data for @vueuse/shared@https://registry.npmmirror.com/@vueuse/shared/-/shared-12.0.0.tgz. Extracting by manifest.
+1068 silly tarball no local data for @vueuse/metadata@https://registry.npmmirror.com/@vueuse/metadata/-/metadata-12.0.0.tgz. Extracting by manifest.
+1069 silly tarball no local data for normalize-wheel-es@https://registry.npmmirror.com/normalize-wheel-es/-/normalize-wheel-es-1.2.0.tgz. Extracting by manifest.
+1070 silly tarball no local data for @floating-ui/core@https://registry.npmmirror.com/@floating-ui/core/-/core-1.7.5.tgz. Extracting by manifest.
+1071 silly tarball no local data for @floating-ui/utils@https://registry.npmmirror.com/@floating-ui/utils/-/utils-0.2.11.tgz. Extracting by manifest.
+1072 silly tarball no local data for vue-component-type-helpers@https://registry.npmmirror.com/vue-component-type-helpers/-/vue-component-type-helpers-3.2.7.tgz. Extracting by manifest.
+1073 silly tarball no local data for memoize-one@https://registry.npmmirror.com/memoize-one/-/memoize-one-6.0.0.tgz. Extracting by manifest.
+1074 silly tarball no local data for lodash-unified@https://registry.npmmirror.com/lodash-unified/-/lodash-unified-1.0.3.tgz. Extracting by manifest.
+1075 silly tarball no local data for lodash-es@https://registry.npmmirror.com/lodash-es/-/lodash-es-4.18.1.tgz. Extracting by manifest.
+1076 silly tarball no local data for lodash@https://registry.npmmirror.com/lodash/-/lodash-4.18.1.tgz. Extracting by manifest.
+1077 silly tarball no local data for @vueuse/core@https://registry.npmmirror.com/@vueuse/core/-/core-12.0.0.tgz. Extracting by manifest.
+1078 silly tarball no local data for dayjs@https://registry.npmmirror.com/dayjs/-/dayjs-1.11.20.tgz. Extracting by manifest.
+1079 silly tarball no local data for async-validator@https://registry.npmmirror.com/async-validator/-/async-validator-4.2.5.tgz. Extracting by manifest.
+1080 silly tarball no local data for @types/lodash-es@https://registry.npmmirror.com/@types/lodash-es/-/lodash-es-4.17.12.tgz. Extracting by manifest.
+1081 silly tarball no local data for @popperjs/core@https://registry.npmmirror.com/@sxzz/popperjs-es/-/popperjs-es-2.11.8.tgz. Extracting by manifest.
+1082 silly tarball no local data for @types/lodash@https://registry.npmmirror.com/@types/lodash/-/lodash-4.17.24.tgz. Extracting by manifest.
+1083 silly tarball no local data for @floating-ui/dom@https://registry.npmmirror.com/@floating-ui/dom/-/dom-1.7.6.tgz. Extracting by manifest.
+1084 silly tarball no local data for @ctrl/tinycolor@https://registry.npmmirror.com/@ctrl/tinycolor/-/tinycolor-4.2.0.tgz. Extracting by manifest.
+1085 silly tarball no local data for proxy-from-env@https://registry.npmmirror.com/proxy-from-env/-/proxy-from-env-2.1.0.tgz. Extracting by manifest.
+1086 silly tarball no local data for form-data@https://registry.npmmirror.com/form-data/-/form-data-4.0.5.tgz. Extracting by manifest.
+1087 silly tarball no local data for follow-redirects@https://registry.npmmirror.com/follow-redirects/-/follow-redirects-1.16.0.tgz. Extracting by manifest.
+1088 silly tarball no local data for vue-router@https://registry.npmmirror.com/vue-router/-/vue-router-4.6.4.tgz. Extracting by manifest.
+1089 silly tarball no local data for sass@https://registry.npmmirror.com/sass/-/sass-1.99.0.tgz. Extracting by manifest.
+1090 silly tarball no local data for element-plus@https://registry.npmmirror.com/element-plus/-/element-plus-2.13.7.tgz. Extracting by manifest.
+1091 silly tarball no local data for @vitejs/plugin-vue@https://registry.npmmirror.com/@vitejs/plugin-vue/-/plugin-vue-5.2.4.tgz. Extracting by manifest.
+1092 silly tarball no local data for vite@https://registry.npmmirror.com/vite/-/vite-5.4.21.tgz. Extracting by manifest.
+1093 silly tarball no local data for axios@https://registry.npmmirror.com/axios/-/axios-1.15.2.tgz. Extracting by manifest.
+1094 silly tarball no local data for @element-plus/icons-vue@https://registry.npmmirror.com/@element-plus/icons-vue/-/icons-vue-2.3.2.tgz. Extracting by manifest.
+1095 silly tarball no local data for vue@https://registry.npmmirror.com/vue/-/vue-3.5.33.tgz. Extracting by manifest.
+1096 http fetch GET 200 https://cdn.npmmirror.com/packages/%40vue/compiler-ssr/3.5.33/compiler-ssr-3.5.33.tgz 1488ms (cache miss)
+1097 http fetch GET 200 https://cdn.npmmirror.com/packages/%40types/estree/1.0.8/estree-1.0.8.tgz 1706ms (cache miss)
+1098 http fetch GET 200 https://cdn.npmmirror.com/packages/picocolors/1.1.1/picocolors-1.1.1.tgz 1739ms (cache miss)
+1099 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/helper-string-parser/7.27.1/helper-string-parser-7.27.1.tgz 1909ms (cache miss)
+1100 http fetch GET 200 https://cdn.npmmirror.com/packages/is-extglob/2.1.1/is-extglob-2.1.1.tgz 1896ms (cache miss)
+1101 http fetch GET 200 https://cdn.npmmirror.com/packages/is-glob/4.0.3/is-glob-4.0.3.tgz 1972ms (cache miss)
+1102 http fetch GET 200 https://cdn.npmmirror.com/packages/gopd/1.2.0/gopd-1.2.0.tgz 1968ms (cache miss)
+1103 http fetch GET 200 https://cdn.npmmirror.com/packages/%40types/web-bluetooth/0.0.20/web-bluetooth-0.0.20.tgz 2111ms (cache miss)
+1104 http fetch GET 200 https://cdn.npmmirror.com/packages/mime-types/2.1.35/mime-types-2.1.35.tgz 2122ms (cache miss)
+1105 http fetch GET 200 https://cdn.npmmirror.com/packages/vue-component-type-helpers/3.2.7/vue-component-type-helpers-3.2.7.tgz 2130ms (cache miss)
+1106 http fetch GET 200 https://cdn.npmmirror.com/packages/combined-stream/1.0.8/combined-stream-1.0.8.tgz 2158ms (cache miss)
+1107 http fetch GET 200 https://cdn.npmmirror.com/packages/lodash-unified/1.0.3/lodash-unified-1.0.3.tgz 2153ms (cache miss)
+1108 http fetch GET 200 https://cdn.npmmirror.com/packages/delayed-stream/1.0.0/delayed-stream-1.0.0.tgz 2200ms (cache miss)
+1109 http fetch GET 200 https://cdn.npmmirror.com/packages/proxy-from-env/2.1.0/proxy-from-env-2.1.0.tgz 2200ms (cache miss)
+1110 http fetch GET 200 https://cdn.npmmirror.com/packages/readdirp/4.1.2/readdirp-4.1.2.tgz 2312ms (cache miss)
+1111 http fetch GET 200 https://cdn.npmmirror.com/packages/detect-libc/2.1.2/detect-libc-2.1.2.tgz 2342ms (cache miss)
+1112 http fetch GET 200 https://cdn.npmmirror.com/packages/esbuild/0.21.5/esbuild-0.21.5.tgz 2428ms (cache miss)
+1113 http fetch GET 200 https://cdn.npmmirror.com/packages/%40vue/shared/3.5.33/shared-3.5.33.tgz 2450ms (cache miss)
+1114 http fetch GET 200 https://cdn.npmmirror.com/packages/follow-redirects/1.16.0/follow-redirects-1.16.0.tgz 2402ms (cache miss)
+1115 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/helper-validator-identifier/7.28.5/helper-validator-identifier-7.28.5.tgz 2464ms (cache miss)
+1116 http fetch GET 200 https://cdn.npmmirror.com/packages/mime-db/1.52.0/mime-db-1.52.0.tgz 2487ms (cache miss)
+1117 http fetch GET 200 https://cdn.npmmirror.com/packages/get-intrinsic/1.3.0/get-intrinsic-1.3.0.tgz 2559ms (cache miss)
+1118 http fetch GET 200 https://cdn.npmmirror.com/packages/es-set-tostringtag/2.1.0/es-set-tostringtag-2.1.0.tgz 2572ms (cache miss)
+1119 http fetch GET 200 https://cdn.npmmirror.com/packages/form-data/4.0.5/form-data-4.0.5.tgz 2557ms (cache miss)
+1120 http fetch GET 200 https://cdn.npmmirror.com/packages/hasown/2.0.3/hasown-2.0.3.tgz 2579ms (cache miss)
+1121 http fetch GET 200 https://cdn.npmmirror.com/packages/picomatch/4.0.4/picomatch-4.0.4.tgz 2619ms (cache miss)
+1122 http fetch GET 200 https://cdn.npmmirror.com/packages/es-define-property/1.0.1/es-define-property-1.0.1.tgz 2639ms (cache miss)
+1123 http fetch GET 200 https://cdn.npmmirror.com/packages/%40vueuse/metadata/12.0.0/metadata-12.0.0.tgz 2642ms (cache miss)
+1124 http fetch GET 200 https://cdn.npmmirror.com/packages/normalize-wheel-es/1.2.0/normalize-wheel-es-1.2.0.tgz 2646ms (cache miss)
+1125 http fetch GET 200 https://cdn.npmmirror.com/packages/function-bind/1.1.2/function-bind-1.1.2.tgz 2726ms (cache miss)
+1126 http fetch GET 200 https://cdn.npmmirror.com/packages/%40vitejs/plugin-vue/5.2.4/plugin-vue-5.2.4.tgz 2707ms (cache miss)
+1127 http fetch GET 200 https://cdn.npmmirror.com/packages/chokidar/4.0.3/chokidar-4.0.3.tgz 2793ms (cache miss)
+1128 http fetch GET 200 https://cdn.npmmirror.com/packages/%40vue/reactivity/3.5.33/reactivity-3.5.33.tgz 2839ms (cache miss)
+1129 http fetch GET 200 https://cdn.npmmirror.com/packages/memoize-one/6.0.0/memoize-one-6.0.0.tgz 2802ms (cache miss)
+1130 http fetch GET 200 https://cdn.npmmirror.com/packages/dunder-proto/1.0.1/dunder-proto-1.0.1.tgz 2831ms (cache miss)
+1131 http fetch GET 200 https://cdn.npmmirror.com/packages/%40vueuse/shared/12.0.0/shared-12.0.0.tgz 2819ms (cache miss)
+1132 http fetch GET 200 https://cdn.npmmirror.com/packages/%40floating-ui/dom/1.7.6/dom-1.7.6.tgz 2820ms (cache miss)
+1133 http fetch GET 200 https://cdn.npmmirror.com/packages/get-proto/1.0.1/get-proto-1.0.1.tgz 2844ms (cache miss)
+1134 http fetch GET 200 https://cdn.npmmirror.com/packages/%40floating-ui/core/1.7.5/core-1.7.5.tgz 2847ms (cache miss)
+1135 http fetch GET 200 https://cdn.npmmirror.com/packages/%40vue/server-renderer/3.5.33/server-renderer-3.5.33.tgz 2899ms (cache miss)
+1136 http fetch GET 200 https://cdn.npmmirror.com/packages/magic-string/0.30.21/magic-string-0.30.21.tgz 2919ms (cache miss)
+1137 http fetch GET 200 https://cdn.npmmirror.com/packages/%40parcel/watcher-win32-x64/2.5.6/watcher-win32-x64-2.5.6.tgz 2909ms (cache miss)
+1138 http fetch GET 200 https://cdn.npmmirror.com/packages/%40vue/compiler-core/3.5.33/compiler-core-3.5.33.tgz 2924ms (cache miss)
+1139 http fetch GET 200 https://cdn.npmmirror.com/packages/es-object-atoms/1.1.1/es-object-atoms-1.1.1.tgz 2903ms (cache miss)
+1140 http fetch GET 200 https://cdn.npmmirror.com/packages/has-tostringtag/1.0.2/has-tostringtag-1.0.2.tgz 2929ms (cache miss)
+1141 http fetch GET 200 https://cdn.npmmirror.com/packages/estree-walker/2.0.2/estree-walker-2.0.2.tgz 2967ms (cache miss)
+1142 http fetch GET 200 https://cdn.npmmirror.com/packages/has-symbols/1.1.0/has-symbols-1.1.0.tgz 2971ms (cache miss)
+1143 http fetch GET 200 https://cdn.npmmirror.com/packages/source-map-js/1.2.1/source-map-js-1.2.1.tgz 3035ms (cache miss)
+1144 http fetch GET 200 https://cdn.npmmirror.com/packages/%40vue/runtime-core/3.5.33/runtime-core-3.5.33.tgz 3069ms (cache miss)
+1145 http fetch GET 200 https://cdn.npmmirror.com/packages/%40vue/compiler-dom/3.5.33/compiler-dom-3.5.33.tgz 3094ms (cache miss)
+1146 http fetch GET 200 https://cdn.npmmirror.com/packages/asynckit/0.4.0/asynckit-0.4.0.tgz 3077ms (cache miss)
+1147 http fetch GET 200 https://cdn.npmmirror.com/packages/%40floating-ui/utils/0.2.11/utils-0.2.11.tgz 3082ms (cache miss)
+1148 http fetch GET 200 https://cdn.npmmirror.com/packages/call-bind-apply-helpers/1.0.2/call-bind-apply-helpers-1.0.2.tgz 3122ms (cache miss)
+1149 http fetch GET 200 https://cdn.npmmirror.com/packages/csstype/3.2.3/csstype-3.2.3.tgz 3189ms (cache miss)
+1150 http fetch GET 200 https://cdn.npmmirror.com/packages/immutable/5.1.5/immutable-5.1.5.tgz 3159ms (cache miss)
+1151 http fetch GET 200 https://cdn.npmmirror.com/packages/es-errors/1.3.0/es-errors-1.3.0.tgz 3159ms (cache miss)
+1152 http fetch GET 200 https://cdn.npmmirror.com/packages/node-addon-api/7.1.1/node-addon-api-7.1.1.tgz 3218ms (cache miss)
+1153 http fetch GET 200 https://cdn.npmmirror.com/packages/nanoid/3.3.11/nanoid-3.3.11.tgz 3232ms (cache miss)
+1154 http fetch GET 200 https://cdn.npmmirror.com/packages/%40jridgewell/sourcemap-codec/1.5.5/sourcemap-codec-1.5.5.tgz 3296ms (cache miss)
+1155 http fetch GET 200 https://cdn.npmmirror.com/packages/%40vue/runtime-dom/3.5.33/runtime-dom-3.5.33.tgz 3404ms (cache miss)
+1156 http fetch GET 200 https://cdn.npmmirror.com/packages/vue-router/4.6.4/vue-router-4.6.4.tgz 3506ms (cache miss)
+1157 http fetch GET 200 https://cdn.npmmirror.com/packages/math-intrinsics/1.1.0/math-intrinsics-1.1.0.tgz 3618ms (cache miss)
+1158 http fetch GET 200 https://cdn.npmmirror.com/packages/%40rollup/rollup-win32-x64-gnu/4.60.2/rollup-win32-x64-gnu-4.60.2.tgz 3646ms (cache miss)
+1159 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/parser/7.29.2/parser-7.29.2.tgz 3656ms (cache miss)
+1160 http fetch GET 200 https://cdn.npmmirror.com/packages/%40vue/devtools-api/6.6.4/devtools-api-6.6.4.tgz 3706ms (cache miss)
+1161 http fetch GET 200 https://cdn.npmmirror.com/packages/async-validator/4.2.5/async-validator-4.2.5.tgz 3661ms (cache miss)
+1162 http fetch GET 200 https://cdn.npmmirror.com/packages/%40vueuse/core/12.0.0/core-12.0.0.tgz 3665ms (cache miss)
+1163 http fetch GET 200 https://cdn.npmmirror.com/packages/%40vue/compiler-sfc/3.5.33/compiler-sfc-3.5.33.tgz 3754ms (cache miss)
+1164 http fetch GET 200 https://cdn.npmmirror.com/packages/%40rollup/rollup-win32-x64-msvc/4.60.2/rollup-win32-x64-msvc-4.60.2.tgz 3795ms (cache miss)
+1165 http fetch GET 200 https://cdn.npmmirror.com/packages/%40ctrl/tinycolor/4.2.0/tinycolor-4.2.0.tgz 3768ms (cache miss)
+1166 http fetch GET 200 https://cdn.npmmirror.com/packages/%40parcel/watcher/2.5.6/watcher-2.5.6.tgz 3874ms (cache miss)
+1167 http fetch GET 200 https://cdn.npmmirror.com/packages/postcss/8.5.10/postcss-8.5.10.tgz 4033ms (cache miss)
+1168 http fetch GET 200 https://cdn.npmmirror.com/packages/rollup/4.60.2/rollup-4.60.2.tgz 4273ms (cache miss)
+1169 http fetch GET 200 https://cdn.npmmirror.com/packages/%40sxzz/popperjs-es/2.11.8/popperjs-es-2.11.8.tgz 4271ms (cache miss)
+1170 http fetch GET 200 https://cdn.npmmirror.com/packages/vue/3.5.33/vue-3.5.33.tgz 4373ms (cache miss)
+1171 http fetch GET 200 https://cdn.npmmirror.com/packages/vite/5.4.21/vite-5.4.21.tgz 4445ms (cache miss)
+1172 http fetch GET 200 https://cdn.npmmirror.com/packages/entities/7.0.1/entities-7.0.1.tgz 4907ms (cache miss)
+1173 http fetch GET 200 https://cdn.npmmirror.com/packages/sass/1.99.0/sass-1.99.0.tgz 4976ms (cache miss)
+1174 http fetch GET 200 https://cdn.npmmirror.com/packages/axios/1.15.2/axios-1.15.2.tgz 5126ms (cache miss)
+1175 http fetch GET 200 https://cdn.npmmirror.com/packages/%40esbuild/win32-x64/0.21.5/win32-x64-0.21.5.tgz 5302ms (cache miss)
+1176 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/types/7.29.0/types-7.29.0.tgz 5996ms (cache miss)
+1177 http fetch GET 200 https://cdn.npmmirror.com/packages/%40types/lodash-es/4.17.12/lodash-es-4.17.12.tgz 6537ms (cache miss)
+1178 http fetch GET 200 https://cdn.npmmirror.com/packages/%40element-plus/icons-vue/2.3.2/icons-vue-2.3.2.tgz 6830ms (cache miss)
+1179 http fetch GET 200 https://cdn.npmmirror.com/packages/dayjs/1.11.20/dayjs-1.11.20.tgz 7803ms (cache miss)
+1180 http fetch GET 200 https://cdn.npmmirror.com/packages/lodash-es/4.18.1/lodash-es-4.18.1.tgz 8571ms (cache miss)
+1181 http fetch GET 200 https://cdn.npmmirror.com/packages/%40types/lodash/4.17.24/lodash-4.17.24.tgz 8720ms (cache miss)
+1182 http fetch GET 200 https://cdn.npmmirror.com/packages/lodash/4.18.1/lodash-4.18.1.tgz 10044ms (cache miss)
+1183 http fetch GET 200 https://cdn.npmmirror.com/packages/element-plus/2.13.7/element-plus-2.13.7.tgz 32661ms (cache miss)
+1184 info run @parcel/watcher@2.5.6 install node_modules/@parcel/watcher node scripts/build-from-source.js
+1185 info run @parcel/watcher@2.5.6 install { code: 0, signal: null }
+1186 info run esbuild@0.21.5 postinstall node_modules/esbuild node install.js
+1187 info run esbuild@0.21.5 postinstall { code: 0, signal: null }
+1188 silly ADD node_modules/@vue/devtools-api
+1189 silly ADD node_modules/@jridgewell/sourcemap-codec
+1190 silly ADD node_modules/csstype
+1191 silly ADD node_modules/@vue/runtime-core
+1192 silly ADD node_modules/@vue/reactivity
+1193 silly ADD node_modules/magic-string
+1194 silly ADD node_modules/@vue/compiler-ssr
+1195 silly ADD node_modules/@babel/helper-validator-identifier
+1196 silly ADD node_modules/@babel/helper-string-parser
+1197 silly ADD node_modules/@babel/types
+1198 silly ADD node_modules/estree-walker
+1199 silly ADD node_modules/entities
+1200 silly ADD node_modules/@babel/parser
+1201 silly ADD node_modules/@vue/compiler-core
+1202 silly ADD node_modules/@vue/shared
+1203 silly ADD node_modules/@vue/server-renderer
+1204 silly ADD node_modules/@vue/runtime-dom
+1205 silly ADD node_modules/@vue/compiler-sfc
+1206 silly ADD node_modules/@vue/compiler-dom
+1207 silly ADD node_modules/@types/estree
+1208 silly ADD node_modules/@rollup/rollup-win32-x64-msvc
+1209 silly ADD node_modules/@rollup/rollup-win32-x64-gnu
+1210 silly ADD
+1211 silly ADD
+1212 silly ADD
+1213 silly ADD
+1214 silly ADD
+1215 silly ADD
+1216 silly ADD
+1217 silly ADD
+1218 silly ADD
+1219 silly ADD
+1220 silly ADD
+1221 silly ADD
+1222 silly ADD
+1223 silly ADD
+1224 silly ADD
+1225 silly ADD
+1226 silly ADD
+1227 silly ADD
+1228 silly ADD
+1229 silly ADD
+1230 silly ADD
+1231 silly ADD
+1232 silly ADD
+1233 silly ADD node_modules/picocolors
+1234 silly ADD node_modules/nanoid
+1235 silly ADD node_modules/@esbuild/win32-x64
+1236 silly ADD
+1237 silly ADD
+1238 silly ADD
+1239 silly ADD
+1240 silly ADD
+1241 silly ADD
+1242 silly ADD
+1243 silly ADD
+1244 silly ADD
+1245 silly ADD
+1246 silly ADD
+1247 silly ADD
+1248 silly ADD
+1249 silly ADD
+1250 silly ADD
+1251 silly ADD
+1252 silly ADD
+1253 silly ADD
+1254 silly ADD
+1255 silly ADD
+1256 silly ADD
+1257 silly ADD
+1258 silly ADD node_modules/rollup
+1259 silly ADD node_modules/postcss
+1260 silly ADD
+1261 silly ADD node_modules/esbuild
+1262 silly ADD node_modules/is-extglob
+1263 silly ADD node_modules/readdirp
+1264 silly ADD node_modules/picomatch
+1265 silly ADD node_modules/node-addon-api
+1266 silly ADD node_modules/is-glob
+1267 silly ADD node_modules/detect-libc
+1268 silly ADD node_modules/@parcel/watcher-win32-x64
+1269 silly ADD
+1270 silly ADD
+1271 silly ADD
+1272 silly ADD
+1273 silly ADD
+1274 silly ADD
+1275 silly ADD
+1276 silly ADD
+1277 silly ADD
+1278 silly ADD
+1279 silly ADD
+1280 silly ADD
+1281 silly ADD node_modules/source-map-js
+1282 silly ADD node_modules/immutable
+1283 silly ADD node_modules/chokidar
+1284 silly ADD node_modules/@parcel/watcher
+1285 silly ADD node_modules/mime-db
+1286 silly ADD node_modules/dunder-proto
+1287 silly ADD node_modules/math-intrinsics
+1288 silly ADD node_modules/has-symbols
+1289 silly ADD node_modules/gopd
+1290 silly ADD node_modules/get-proto
+1291 silly ADD node_modules/function-bind
+1292 silly ADD node_modules/es-object-atoms
+1293 silly ADD node_modules/es-define-property
+1294 silly ADD node_modules/call-bind-apply-helpers
+1295 silly ADD node_modules/has-tostringtag
+1296 silly ADD node_modules/get-intrinsic
+1297 silly ADD node_modules/es-errors
+1298 silly ADD node_modules/delayed-stream
+1299 silly ADD node_modules/mime-types
+1300 silly ADD node_modules/hasown
+1301 silly ADD node_modules/es-set-tostringtag
+1302 silly ADD node_modules/combined-stream
+1303 silly ADD node_modules/asynckit
+1304 silly ADD node_modules/@vueuse/shared
+1305 silly ADD node_modules/@vueuse/metadata
+1306 silly ADD node_modules/@types/web-bluetooth
+1307 silly ADD node_modules/@floating-ui/utils
+1308 silly ADD node_modules/@floating-ui/core
+1309 silly ADD node_modules/vue-component-type-helpers
+1310 silly ADD node_modules/normalize-wheel-es
+1311 silly ADD node_modules/memoize-one
+1312 silly ADD node_modules/lodash-unified
+1313 silly ADD node_modules/lodash-es
+1314 silly ADD node_modules/lodash
+1315 silly ADD node_modules/dayjs
+1316 silly ADD node_modules/async-validator
+1317 silly ADD node_modules/@vueuse/core
+1318 silly ADD node_modules/@types/lodash-es
+1319 silly ADD node_modules/@types/lodash
+1320 silly ADD node_modules/@popperjs/core
+1321 silly ADD node_modules/@floating-ui/dom
+1322 silly ADD node_modules/@ctrl/tinycolor
+1323 silly ADD node_modules/proxy-from-env
+1324 silly ADD node_modules/form-data
+1325 silly ADD node_modules/follow-redirects
+1326 silly ADD node_modules/vue-router
+1327 silly ADD node_modules/sass
+1328 silly ADD node_modules/element-plus
+1329 silly ADD node_modules/axios
+1330 silly ADD node_modules/vite
+1331 silly ADD node_modules/@vitejs/plugin-vue
+1332 silly ADD node_modules/vue
+1333 silly ADD node_modules/@element-plus/icons-vue
+1334 verbose cwd C:\traework\a\wilmer-deeplearn\vue3-ftp-client
+1335 verbose os Windows_NT 10.0.22631
+1336 verbose node v22.22.0
+1337 verbose npm  v10.9.4
+1338 notice
+1338 notice New [31mmajor[39m version of npm available! [31m10.9.4[39m -> [34m11.13.0[39m
+1338 notice Changelog: [34mhttps://github.com/npm/cli/releases/tag/v11.13.0[39m
+1338 notice To update run: [4mnpm install -g npm@11.13.0[24m
+1338 notice  { force: true, [Symbol(proc-log.meta)]: true }
+1339 verbose exit 0
+1340 info ok

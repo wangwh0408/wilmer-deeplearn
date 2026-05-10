@@ -1,0 +1,523 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FNO2 Model API - Swagger UI</title>
+  <style>
+    
+/*!
+ * Swagger UI - https://swagger.io
+ * License: Apache-2.0
+ */
+:root {
+  --swagger-ui-primary: #8B5CF6;
+  --swagger-ui-primary-dark: #7C3AED;
+  --swagger-ui-secondary: #64748B;
+  --swagger-ui-accent: #F59E0B;
+  --swagger-ui-success: #10B981;
+  --swagger-ui-warning: #F59E0B;
+  --swagger-ui-danger: #EF4444;
+  --swagger-ui-bg: #0F172A;
+  --swagger-ui-surface: #1E293B;
+  --swagger-ui-border: #334155;
+  --swagger-ui-text: #E2E8F0;
+  --swagger-ui-text-muted: #94A3B8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--swagger-ui-bg);
+  color: var(--swagger-ui-text);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+#swagger-ui {
+  height: 100vh;
+  width: 100%;
+}
+
+.swagger-ui {
+  background: var(--swagger-ui-bg);
+}
+
+.swagger-ui .topbar {
+  background-color: var(--swagger-ui-surface);
+  border-bottom: 1px solid var(--swagger-ui-border);
+}
+
+.swagger-ui .topbar .download-url-wrapper {
+  display: none;
+}
+
+.swagger-ui .topbar .logo {
+  height: 30px;
+}
+
+.swagger-ui .info {
+  margin: 20px 0;
+  padding: 20px;
+  background: var(--swagger-ui-surface);
+  border-radius: 8px;
+  border: 1px solid var(--swagger-ui-border);
+}
+
+.swagger-ui .info hgroup.main > h1 {
+  font-size: 24px;
+  color: var(--swagger-ui-text);
+}
+
+.swagger-ui .info p {
+  color: var(--swagger-ui-text-muted);
+}
+
+.swagger-ui .info .base-url {
+  color: var(--swagger-ui-primary);
+}
+
+.swagger-ui .operation-tag {
+  background: var(--swagger-ui-surface);
+  border: 1px solid var(--swagger-ui-border);
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.swagger-ui .operation-tag:hover {
+  background: var(--swagger-ui-border);
+}
+
+.swagger-ui .operation-tag.active {
+  background: var(--swagger-ui-primary);
+}
+
+.swagger-ui .opblock {
+  background: var(--swagger-ui-surface);
+  border-radius: 8px;
+  border: 1px solid var(--swagger-ui-border);
+  margin: 10px 0;
+}
+
+.swagger-ui .opblock .opblock-summary {
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.swagger-ui .opblock .opblock-summary-method {
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.swagger-ui .opblock .opblock-summary-path {
+  color: var(--swagger-ui-text);
+}
+
+.swagger-ui .opblock .opblock-summary-description {
+  color: var(--swagger-ui-text-muted);
+  font-size: 13px;
+}
+
+.swagger-ui .opblock-body {
+  padding: 20px;
+  border-top: 1px solid var(--swagger-ui-border);
+}
+
+.swagger-ui .parameter__name {
+  font-family: monospace;
+  color: var(--swagger-ui-primary);
+}
+
+.swagger-ui .parameter__type {
+  color: var(--swagger-ui-text-muted);
+  font-size: 12px;
+}
+
+.swagger-ui .parameter__description {
+  color: var(--swagger-ui-text-muted);
+  font-size: 13px;
+}
+
+.swagger-ui textarea,
+.swagger-ui input[type="text"],
+.swagger-ui input[type="password"],
+.swagger-ui select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--swagger-ui-border);
+  border-radius: 4px;
+  background: var(--swagger-ui-bg);
+  color: var(--swagger-ui-text);
+  font-family: monospace;
+  font-size: 14px;
+}
+
+.swagger-ui textarea:focus,
+.swagger-ui input:focus,
+.swagger-ui select:focus {
+  outline: none;
+  border-color: var(--swagger-ui-primary);
+}
+
+.swagger-ui .btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+}
+
+.swagger-ui .btn.execute {
+  background: var(--swagger-ui-primary);
+  color: white;
+}
+
+.swagger-ui .btn.execute:hover {
+  background: var(--swagger-ui-primary-dark);
+}
+
+.swagger-ui .btn.authorize {
+  background: var(--swagger-ui-secondary);
+  color: white;
+}
+
+.swagger-ui .response-col_status {
+  font-family: monospace;
+  color: var(--swagger-ui-success);
+}
+
+.swagger-ui .response-col_description {
+  color: var(--swagger-ui-text-muted);
+}
+
+.swagger-ui .highlight-code {
+  background: var(--swagger-ui-bg);
+  border: 1px solid var(--swagger-ui-border);
+  border-radius: 4px;
+  padding: 12px;
+  overflow-x: auto;
+}
+
+.swagger-ui .highlight-code pre {
+  margin: 0;
+  font-family: monospace;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.swagger-ui .scheme-container {
+  margin-bottom: 20px;
+}
+
+.swagger-ui .scheme-container .schemes {
+  display: flex;
+  gap: 8px;
+}
+
+.swagger-ui .scheme-container .scheme {
+  padding: 4px 12px;
+  background: var(--swagger-ui-surface);
+  border: 1px solid var(--swagger-ui-border);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.swagger-ui .scheme-container .scheme.active {
+  background: var(--swagger-ui-primary);
+}
+
+@media (max-width: 768px) {
+  .swagger-ui .info {
+    padding: 15px;
+  }
+  
+  .swagger-ui .opblock .opblock-summary {
+    flex-wrap: wrap;
+  }
+}
+
+  </style>
+  <script>
+    window.onload = function() {{
+      const openapiUrl = window.location.origin + '/openapi.json';
+      
+      // Minimal Swagger UI implementation
+      const swaggerContainer = document.getElementById('swagger-ui');
+      
+      fetch(openapiUrl)
+        .then(response => response.json())
+        .then(spec => renderSwaggerUI(spec))
+        .catch(error => {{
+          swaggerContainer.innerHTML = '<div style="padding: 20px; color: #EF4444;">Failed to load OpenAPI spec: ' + error.message + '</div>';
+        }});
+      
+      function renderSwaggerUI(spec) {{
+        let html = `
+          <div style="max-width: 1200px; margin: 0 auto; padding: 20px;">
+            <!-- Top Bar -->
+            <div style="background: #1E293B; padding: 15px 20px; border-radius: 8px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;">
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <div style="width: 36px; height: 36px; background: linear-gradient(135deg, #8B5CF6, #7C3AED); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                  <span style="color: white; font-weight: bold; font-size: 18px;">FNO</span>
+                </div>
+                <div>
+                  <h2 style="margin: 0; color: #E2E8F0;">${{spec.info.title || 'API'}}</h2>
+                  <p style="margin: 0; color: #94A3B8; font-size: 13px;">Version ${{spec.info.version || '1.0.0'}}</p>
+                </div>
+              </div>
+              <div style="color: #94A3B8; font-size: 13px;">Local Swagger UI</div>
+            </div>
+            
+            <!-- Info Section -->
+            <div style="background: #1E293B; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+              <h3 style="color: #E2E8F0; margin-bottom: 10px;">${{spec.info.title || 'API Documentation'}}</h3>
+              <p style="color: #94A3B8;">${{spec.info.description || 'API endpoints documentation.'}}</p>
+              <div style="margin-top: 10px; color: #8B5CF6; font-family: monospace; font-size: 13px;">
+                Base URL: <span>${{spec.servers?.[0]?.url || '/'}}</span>
+              </div>
+            </div>
+            
+            <!-- Tags -->
+            <div style="display: flex; flex-wrap: gap: 8px; margin-bottom: 20px;">
+              ${renderTags(spec)}
+            </div>
+            
+            <!-- Operations -->
+            ${renderOperations(spec)}
+          </div>
+        `;
+        
+        swaggerContainer.innerHTML = html;
+        
+        // Add click handlers
+        document.querySelectorAll('.opblock-summary').forEach(el => {
+          el.addEventListener('click', function() {
+            const body = this.nextElementSibling;
+            body.style.display = body.style.display === 'none' ? 'block' : 'none';
+          });
+        });
+        
+        // Add execute handlers
+        document.querySelectorAll('.execute-btn').forEach(el => {
+          el.addEventListener('click', function() {
+            const operationId = this.dataset.operationId;
+            executeOperation(spec, operationId);
+          });
+        });
+      }}
+      
+      function renderTags(spec) {
+        const tags = spec.tags || [];
+        if (tags.length === 0) return '';
+        return tags.map(tag => `
+          <button class="operation-tag" style="background: #1E293B; border: 1px solid #334155; border-radius: 4px; padding: 8px 12px; margin: 4px; cursor: pointer; color: #E2E8F0; font-size: 13px;">
+            ${{tag.name}}
+          </button>
+        `).join('');
+      }
+      
+      function renderOperations(spec) {
+        const paths = spec.paths || {};
+        let html = '';
+        
+        for (const [path, methods] of Object.entries(paths)) {
+          for (const [method, operation] of Object.entries(methods)) {
+            if (['get', 'post', 'put', 'delete', 'patch'].includes(method)) {
+              const methodColor = getMethodColor(method);
+              html += `
+                <div class="opblock" style="background: #1E293B; border-radius: 8px; border: 1px solid #334155; margin: 10px 0;">
+                  <div class="opblock-summary" style="padding: 12px; cursor: pointer; display: flex; align-items: center; gap: 12px;">
+                    <span class="opblock-summary-method" style="padding: 4px 12px; border-radius: 4px; font-weight: bold; font-size: 12px; text-transform: uppercase; background: ${methodColor};">
+                      ${{method.toUpperCase()}}
+                    </span>
+                    <span class="opblock-summary-path" style="color: #E2E8F0; font-family: monospace;">
+                      ${{path}}
+                    </span>
+                    <span class="opblock-summary-description" style="color: #94A3B8; font-size: 13px; flex: 1;">
+                      ${{operation.summary || ''}}
+                    </span>
+                  </div>
+                  <div class="opblock-body" style="padding: 20px; border-top: 1px solid #334155; display: none;">
+                    ${renderOperationBody(operation, path, method)}
+                  </div>
+                </div>
+              `;
+            }
+          }
+        }
+        
+        return html;
+      }
+      
+      function getMethodColor(method) {
+        const colors = {
+          get: '#10B981',
+          post: '#3B82F6',
+          put: '#F59E0B',
+          delete: '#EF4444',
+          patch: '#8B5CF6'
+        };
+        return colors[method] || '#64748B';
+      }
+      
+      function renderOperationBody(operation, path, method) {
+        const parameters = operation.parameters || [];
+        const requestBody = operation.requestBody;
+        const responses = operation.responses || {};
+        
+        let html = '';
+        
+        // Description
+        if (operation.description) {
+          html += `<p style="color: #94A3B8; margin-bottom: 15px;">${operation.description}</p>`;
+        }
+        
+        // Parameters
+        if (parameters.length > 0) {
+          html += `
+            <div style="margin-bottom: 15px;">
+              <h4 style="color: #E2E8F0; margin-bottom: 10px;">Parameters</h4>
+              <table style="width: 100%; border-collapse: collapse;">
+                <tr style="border-bottom: 1px solid #334155;">
+                  <th style="text-align: left; padding: 8px; color: #94A3B8; font-size: 12px;">Name</th>
+                  <th style="text-align: left; padding: 8px; color: #94A3B8; font-size: 12px;">Type</th>
+                  <th style="text-align: left; padding: 8px; color: #94A3B8; font-size: 12px;">Required</th>
+                  <th style="text-align: left; padding: 8px; color: #94A3B8; font-size: 12px;">Description</th>
+                </tr>
+                ${parameters.map(p => `
+                  <tr style="border-bottom: 1px solid #334155;">
+                    <td style="padding: 8px; font-family: monospace; color: #8B5CF6;">${p.name}</td>
+                    <td style="padding: 8px; color: #94A3B8; font-size: 13px;">${p.schema?.type || p.type || 'string'}</td>
+                    <td style="padding: 8px; color: ${p.required ? '#EF4444' : '#10B981'};">${p.required ? 'Yes' : 'No'}</td>
+                    <td style="padding: 8px; color: #94A3B8; font-size: 13px;">${p.description || ''}</td>
+                  </tr>
+                `).join('')}
+              </table>
+            </div>
+          `;
+        }
+        
+        // Request Body
+        if (requestBody) {
+          const content = requestBody.content?.['application/json'];
+          html += `
+            <div style="margin-bottom: 15px;">
+              <h4 style="color: #E2E8F0; margin-bottom: 10px;">Request Body</h4>
+              <textarea id="body-${operation.operationId}" style="width: 100%; height: 150px; padding: 12px; border: 1px solid #334155; border-radius: 4px; background: #0F172A; color: #E2E8F0; font-family: monospace; font-size: 13px; resize: vertical;">
+${JSON.stringify(content?.schema?.example || {}, null, 2)}
+              </textarea>
+            </div>
+          `;
+        }
+        
+        // Responses
+        if (Object.keys(responses).length > 0) {
+          html += `
+            <div style="margin-bottom: 15px;">
+              <h4 style="color: #E2E8F0; margin-bottom: 10px;">Responses</h4>
+              ${Object.entries(responses).map(([status, response]) => `
+                <div style="margin-bottom: 10px;">
+                  <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+                    <span style="font-family: monospace; color: ${status.startsWith('2') ? '#10B981' : '#EF4444'};">${status}</span>
+                    <span style="color: #94A3B8;">${response.description || ''}</span>
+                  </div>
+                  ${response.content?.['application/json']?.schema?.example ? `
+                    <pre style="background: #0F172A; padding: 12px; border-radius: 4px; border: 1px solid #334155; font-family: monospace; font-size: 13px; overflow-x: auto;">${JSON.stringify(response.content['application/json'].schema.example, null, 2)}</pre>
+                  ` : ''}
+                </div>
+              `).join('')}
+            </div>
+          `;
+        }
+        
+        // Execute Button
+        html += `
+          <button class="execute-btn" data-operation-id="${operation.operationId}" style="background: #8B5CF6; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-weight: 500;">
+            Try it out
+          </button>
+          <div id="response-${operation.operationId}" style="margin-top: 15px; display: none;"></div>
+        `;
+        
+        return html;
+      }
+      
+      async function executeOperation(spec, operationId) {
+        const bodyEl = document.getElementById(`body-${operationId}`);
+        const responseEl = document.getElementById(`response-${operationId}`);
+        
+        // Find the operation
+        let operation = null;
+        let path = '';
+        let method = '';
+        
+        for (const [p, methods] of Object.entries(spec.paths || {})) {
+          for (const [m, op] of Object.entries(methods)) {
+            if (op.operationId === operationId) {
+              operation = op;
+              path = p;
+              method = m;
+              break;
+            }
+          }
+        }
+        
+        if (!operation) return;
+        
+        try {
+          responseEl.innerHTML = '<div style="color: #F59E0B;">Loading...</div>';
+          responseEl.style.display = 'block';
+          
+          const url = window.location.origin + path;
+          const headers = { 'Content-Type': 'application/json' };
+          const body = bodyEl ? bodyEl.value : null;
+          
+          const response = await fetch(url, {
+            method: method.toUpperCase(),
+            headers: headers,
+            body: body && body.trim() ? body : undefined
+          });
+          
+          const contentType = response.headers.get('content-type');
+          let responseText = '';
+          
+          if (contentType && contentType.includes('application/json')) {
+            const data = await response.json();
+            responseText = JSON.stringify(data, null, 2);
+          } else {
+            responseText = await response.text();
+          }
+          
+          responseEl.innerHTML = `
+            <div style="margin-bottom: 10px;">
+              <span style="font-family: monospace; color: ${response.ok ? '#10B981' : '#EF4444'};">
+                Status: ${response.status} ${response.statusText}
+              </span>
+            </div>
+            <pre style="background: #0F172A; padding: 12px; border-radius: 4px; border: 1px solid #334155; font-family: monospace; font-size: 13px; overflow-x: auto; max-height: 300px;">${responseText}</pre>
+          `;
+        } catch (error) {
+          responseEl.innerHTML = `<div style="color: #EF4444;">Error: ${error.message}</div>`;
+        }
+      }
+    }}
+  </script>
+</head>
+<body>
+  <div id="swagger-ui"></div>
+</body>
+</html>

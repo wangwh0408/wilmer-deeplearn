@@ -1,0 +1,35 @@
+0 verbose cli C:\nvm4w\nodejs\node.exe C:\nvm4w\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.4
+0 verbose cli C:\nvm4w\nodejs\node.exe C:\nvm4w\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.4
+2 info using node@v22.22.0
+3 silly config load:file:C:\Users\wolfboy111\nvm\v22.22.0\node_modules\npm\npmrc
+2 info using node@v22.22.0
+4 silly config load:file:C:\traework\a\wilmer-deeplearn\vue3-ftp-client\.npmrc
+3 silly config load:file:C:\Users\wolfboy111\nvm\v22.22.0\node_modules\npm\npmrc
+5 silly config load:file:C:\Users\wolfboy111\.npmrc
+4 silly config load:file:C:\traework\a\wilmer-deeplearn\vue3-ftp-client\.npmrc
+6 silly config load:file:C:\Program Files\nodejs\node_global\etc\npmrc
+5 silly config load:file:C:\Users\wolfboy111\.npmrc
+6 silly config load:file:C:\Program Files\nodejs\node_global\etc\npmrc
+7 verbose title npm run build
+7 verbose title npm outdated @element-plus/icons-vue @vitejs/plugin-vue vite vue element-plus axios vue-router sass
+8 verbose argv "run" "build"
+8 verbose argv "outdated" "--json" "@element-plus/icons-vue" "@vitejs/plugin-vue" "vite" "vue" "element-plus" "axios" "vue-router" "sass"
+9 verbose logfile logs-max:10 dir:C:\traework\a\wilmer-deeplearn\vue3-ftp-client\.npm-cache\_logs\2026-05-09T09_50_18_008Z-
+10 verbose logfile C:\traework\a\wilmer-deeplearn\vue3-ftp-client\.npm-cache\_logs\2026-05-09T09_50_18_008Z-debug-0.log
+9 verbose logfile logs-max:10 dir:C:\traework\a\wilmer-deeplearn\vue3-ftp-client\.npm-cache\_logs\2026-05-09T09_50_18_008Z-
+10 verbose logfile C:\traework\a\wilmer-deeplearn\vue3-ftp-client\.npm-cache\_logs\2026-05-09T09_50_18_008Z-debug-0.log
+11 silly logfile done cleaning log files
+12 http fetch GET 200 https://registry.npmmirror.com/npm 660ms
+13 verbose cwd C:\traework\a\wilmer-deeplearn\vue3-ftp-client
+14 verbose os Windows_NT 10.0.22631
+15 verbose node v22.22.0
+16 verbose npm  v10.9.4
+17 notice
+17 notice New [31mmajor[39m version of npm available! [31m10.9.4[39m -> [34m11.14.1[39m
+17 notice Changelog: [34mhttps://github.com/npm/cli/releases/tag/v11.14.1[39m
+17 notice To update run: [4mnpm install -g npm@11.14.1[24m
+17 notice  { force: true, [Symbol(proc-log.meta)]: true }
+18 verbose exit 0
+19 info ok

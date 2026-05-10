@@ -1,0 +1,96 @@
+{
+  "model_path": "C:\\traework\\a\\wilmer-deeplearn\\fno2_full_model.pth",
+  "data_root": "C:\\traework\\data",
+  "config": {
+    "model_path": "C:\\traework\\a\\wilmer-deeplearn\\fno2_full_model.pth",
+    "data_root": "C:\\traework\\data",
+    "problems": [
+      "cavity"
+    ],
+    "categories": [
+      "bc",
+      "geo",
+      "prop"
+    ],
+    "max_cases_per_category": null,
+    "normalize": true,
+    "batch_size": 8,
+    "device": "cpu"
+  },
+  "normalization_params": {
+    "u_mean": 0.3306616246700287,
+    "u_std": 6.802066336141357,
+    "u_min": -22.195133209228516,
+    "u_max": 50.0,
+    "v_mean": -0.00870604906231165,
+    "v_std": 5.861806402669678,
+    "v_min": -26.401981353759766,
+    "v_max": 23.774394989013672
+  },
+  "num_samples": 12523,
+  "average_loss": 0.00789867786786789,
+  "metrics": {
+    "u": {
+      "mse": 0.4427703022956848,
+      "rmse": 0.6654098629951477,
+      "mae": 0.36878490447998047,
+      "r2": 0.9905225820839405,
+      "mape": 6638.034820556641
+    },
+    "v": {
+      "mse": 0.21398766338825226,
+      "rmse": 0.46258801221847534,
+      "mae": 0.28699931502342224,
+      "r2": 0.9938391232863069,
+      "mape": 20703.622436523438
+    },
+    "combined": {
+      "mse": 0.32837843894958496,
+      "rmse": 0.573043167591095,
+      "mae": 0.32789164781570435,
+      "r2": 0.9919426562264562,
+      "mape": 13618.447875976562
+    }
+  },
+  "per_sample_stats": {
+    "u": {
+      "mse_mean": 0.00956968568459992,
+      "mse_std": 0.014894640001643577,
+      "r2_mean": 0.9891311667657335,
+      "r2_std": 0.02053072209814765
+    },
+    "v": {
+      "mse_mean": 0.006227670074718958,
+      "mse_std": 0.014409109179864333,
+      "r2_mean": 0.983666864356578,
+      "r2_std": 0.03960149558229184
+    }
+  },
+  "best_worst_samples": {
+    "best_u": {
+      "mse": 0.00014948126045055687,
+      "r2": 0.9946991153992712,
+      "case": "cavity/bc/case0004",
+      "time_step": 2
+    },
+    "worst_u": {
+      "mse": 0.18070372939109802,
+      "r2": 0.8646888732910156,
+      "case": "cavity/bc/case0046",
+      "time_step": 1
+    },
+    "best_v": {
+      "mse": 0.0003459055151324719,
+      "r2": 0.97499037720263,
+      "case": "cavity/bc/case0003",
+      "time_step": 0
+    },
+    "worst_v": {
+      "mse": 0.4039071500301361,
+      "r2": 0.5454959869384766,
+      "case": "cavity/bc/case0046",
+      "time_step": 1
+    }
+  },
+  "evaluation_time": "2026-04-30 02:58:21"
+}

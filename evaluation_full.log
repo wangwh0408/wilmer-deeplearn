@@ -1,0 +1,1193 @@
+[2026-04-30 02:07:37] [INFO] [0.00s] Start time: 2026-04-30 02:07:37
+[2026-04-30 02:07:37] [INFO] [0.00s] Device: cpu
+[2026-04-30 02:07:37] [INFO] [0.01s] Model: C:\traework\a\wilmer-deeplearn\fno2_full_model.pth
+[2026-04-30 02:07:37] [INFO] [0.02s] Data: C:\traework\data
+[2026-04-30 02:07:37] [INFO] [0.03s] Log file: evaluation_full.log
+[2026-04-30 02:07:37] [INFO] [0.04s] 
+[2026-04-30 02:07:37] [INFO] [0.06s] EVALUATION CONFIGURATION:
+[2026-04-30 02:07:37] [INFO] [0.07s]   model_path: C:\traework\a\wilmer-deeplearn\fno2_full_model.pth
+[2026-04-30 02:07:37] [INFO] [0.08s]   data_root: C:\traework\data
+[2026-04-30 02:07:37] [INFO] [0.09s]   problems: ['cavity']
+[2026-04-30 02:07:37] [INFO] [0.10s]   categories: ['bc', 'geo', 'prop']
+[2026-04-30 02:07:37] [INFO] [0.11s]   max_cases_per_category: None
+[2026-04-30 02:07:37] [INFO] [0.12s]   normalize: True
+[2026-04-30 02:07:37] [INFO] [0.13s]   batch_size: 8
+[2026-04-30 02:07:37] [INFO] [0.14s]   device: cpu
+[2026-04-30 02:07:37] [INFO] [0.15s] 
+[2026-04-30 02:07:37] [PHASE] [0.16s] === STARTING: Model Loading ===
+[2026-04-30 02:07:37] [INFO] [0.17s] Loading model from: C:\traework\a\wilmer-deeplearn\fno2_full_model.pth
+[2026-04-30 02:07:37] [INFO] [0.21s] Model configuration:
+[2026-04-30 02:07:37] [INFO] [0.22s]   Modes: 12
+[2026-04-30 02:07:37] [INFO] [0.23s]   Width: 32
+[2026-04-30 02:07:37] [INFO] [0.24s]   Input channels: 4
+[2026-04-30 02:07:37] [INFO] [0.26s]   Output channels: 2
+[2026-04-30 02:07:37] [INFO] [0.27s]   Training config: {'data_root': 'C:\\traework\\data', 'problems': ['cavity'], 'categories': ['bc', 'geo', 'prop'], 'modes': 12, 'width': 32, 'epochs': 30, 'batch_size': 8, 'learning_rate': 0.001, 'weight_decay': 0.0001, 'train_ratio': 0.8, 'normalize': True, 'max_cases_per_category': 10, 'in_channels': 4, 'out_channels': 2}
+[2026-04-30 02:07:37] [INFO] [0.31s] Model loaded successfully!
+[2026-04-30 02:07:37] [INFO] [0.32s]   Total parameters: 1,188,770
+[2026-04-30 02:07:37] [PHASE] [0.33s] === COMPLETED: Model Loading (took 0.18s) ===
+[2026-04-30 02:07:37] [PHASE] [0.35s]     Details: 1,188,770 parameters
+[2026-04-30 02:07:37] [INFO] [0.42s] Memory: CPU Memory: 191.90MB RSS
+[2026-04-30 02:07:37] [PHASE] [0.44s] === STARTING: Data Loading ===
+[2026-04-30 02:07:37] [DATA] [0.45s] ============================================================
+[2026-04-30 02:07:37] [DATA] [0.46s] DATA LOADING PROCESS
+[2026-04-30 02:07:37] [DATA] [0.47s] ============================================================
+[2026-04-30 02:07:38] [DATA] [0.49s] Data root: C:\traework\data
+[2026-04-30 02:07:38] [DATA] [0.50s] Problems: ['cavity']
+[2026-04-30 02:07:38] [DATA] [0.51s] Categories: ['bc', 'geo', 'prop']
+[2026-04-30 02:07:38] [DATA] [0.53s] Normalize: True
+[2026-04-30 02:07:38] [DATA] [0.54s] 
+[2026-04-30 02:07:38] [DATA] [0.55s] Processing problem: cavity
+[2026-04-30 02:07:38] [DATA] [0.56s]   Category: bc - Found 50 cases, using 50
+[2026-04-30 02:07:38] [DATA] [0.58s]     [LOAD] case0000: 10 time steps, 9 samples, shape=(64, 64)
+[2026-04-30 02:07:38] [DATA] [0.60s]     [LOAD] case0001: 11 time steps, 10 samples, shape=(64, 64)
+[2026-04-30 02:07:38] [DATA] [0.61s]     [LOAD] case0002: 13 time steps, 12 samples, shape=(64, 64)
+[2026-04-30 02:07:38] [DATA] [0.63s]     [LOAD] case0003: 14 time steps, 13 samples, shape=(64, 64)
+[2026-04-30 02:07:38] [DATA] [0.65s]     [LOAD] case0004: 15 time steps, 14 samples, shape=(64, 64)
+[2026-04-30 02:07:38] [DATA] [0.67s]     [LOAD] case0005: 16 time steps, 15 samples, shape=(64, 64)
+[2026-04-30 02:07:38] [DATA] [0.69s]     [LOAD] case0006: 17 time steps, 16 samples, shape=(64, 64)
+[2026-04-30 02:07:38] [DATA] [0.71s]     [LOAD] case0007: 18 time steps, 17 samples, shape=(64, 64)
+[2026-04-30 02:07:38] [DATA] [0.73s]     [LOAD] case0008: 20 time steps, 19 samples, shape=(64, 64)
+[2026-04-30 02:07:38] [DATA] [0.74s]     [LOAD] case0009: 21 time steps, 20 samples, shape=(64, 64)
+[2026-04-30 02:07:38] [DATA] [0.77s]     [LOAD] case0010: 21 time steps, 20 samples, shape=(64, 64)
+[2026-04-30 02:07:38] [DATA] [0.79s]     [LOAD] case0011: 22 time steps, 21 samples, shape=(64, 64)
+[2026-04-30 02:07:38] [DATA] [0.81s]     [LOAD] case0012: 23 time steps, 22 samples, shape=(64, 64)
+[2026-04-30 02:07:38] [DATA] [0.83s]     [LOAD] case0013: 24 time steps, 23 samples, shape=(64, 64)
+[2026-04-30 02:07:38] [DATA] [0.85s]     [LOAD] case0014: 25 time steps, 24 samples, shape=(64, 64)
+[2026-04-30 02:07:38] [DATA] [0.87s]     [LOAD] case0015: 26 time steps, 25 samples, shape=(64, 64)
+[2026-04-30 02:07:38] [DATA] [0.90s]     [LOAD] case0016: 27 time steps, 26 samples, shape=(64, 64)
+[2026-04-30 02:07:38] [DATA] [0.92s]     [LOAD] case0017: 28 time steps, 27 samples, shape=(64, 64)
+[2026-04-30 02:07:38] [DATA] [0.94s]     [LOAD] case0018: 28 time steps, 27 samples, shape=(64, 64)
+[2026-04-30 02:07:38] [DATA] [0.96s]     [LOAD] case0019: 29 time steps, 28 samples, shape=(64, 64)
+[2026-04-30 02:07:38] [DATA] [0.98s]     [LOAD] case0020: 30 time steps, 29 samples, shape=(64, 64)
+[2026-04-30 02:07:38] [DATA] [1.01s]     [LOAD] case0021: 31 time steps, 30 samples, shape=(64, 64)
+[2026-04-30 02:07:38] [DATA] [1.03s]     [LOAD] case0022: 32 time steps, 31 samples, shape=(64, 64)
+[2026-04-30 02:07:38] [DATA] [1.06s]     [LOAD] case0023: 33 time steps, 32 samples, shape=(64, 64)
+[2026-04-30 02:07:38] [DATA] [1.08s]     [LOAD] case0024: 36 time steps, 35 samples, shape=(64, 64)
+[2026-04-30 02:07:38] [DATA] [1.11s]     [LOAD] case0025: 38 time steps, 37 samples, shape=(64, 64)
+[2026-04-30 02:07:38] [DATA] [1.13s]     [LOAD] case0026: 40 time steps, 39 samples, shape=(64, 64)
+[2026-04-30 02:07:38] [DATA] [1.16s]     [LOAD] case0027: 44 time steps, 43 samples, shape=(64, 64)
+[2026-04-30 02:07:38] [DATA] [1.18s]     [LOAD] case0028: 43 time steps, 42 samples, shape=(64, 64)
+[2026-04-30 02:07:38] [DATA] [1.21s]     [LOAD] case0029: 48 time steps, 47 samples, shape=(64, 64)
+[2026-04-30 02:07:38] [DATA] [1.24s]     [LOAD] case0030: 46 time steps, 45 samples, shape=(64, 64)
+[2026-04-30 02:07:38] [DATA] [1.27s]     [LOAD] case0031: 54 time steps, 53 samples, shape=(64, 64)
+[2026-04-30 02:07:38] [DATA] [1.30s]     [LOAD] case0032: 52 time steps, 51 samples, shape=(64, 64)
+[2026-04-30 02:07:38] [DATA] [1.35s]     [LOAD] case0033: 173 time steps, 172 samples, shape=(64, 64)
+[2026-04-30 02:07:38] [DATA] [1.38s]     [LOAD] case0034: 62 time steps, 61 samples, shape=(64, 64)
+[2026-04-30 02:07:38] [DATA] [1.41s]     [LOAD] case0035: 57 time steps, 56 samples, shape=(64, 64)
+[2026-04-30 02:07:38] [DATA] [1.43s]     [LOAD] case0036: 62 time steps, 61 samples, shape=(64, 64)
+[2026-04-30 02:07:38] [DATA] [1.46s]     [LOAD] case0037: 62 time steps, 61 samples, shape=(64, 64)
+[2026-04-30 02:07:39] [DATA] [1.49s]     [LOAD] case0038: 67 time steps, 66 samples, shape=(64, 64)
+[2026-04-30 02:07:39] [DATA] [1.52s]     [LOAD] case0039: 70 time steps, 69 samples, shape=(64, 64)
+[2026-04-30 02:07:39] [DATA] [1.55s]     [LOAD] case0040: 70 time steps, 69 samples, shape=(64, 64)
+[2026-04-30 02:07:39] [DATA] [1.58s]     [LOAD] case0041: 77 time steps, 76 samples, shape=(64, 64)
+[2026-04-30 02:07:39] [DATA] [1.61s]     [LOAD] case0042: 78 time steps, 77 samples, shape=(64, 64)
+[2026-04-30 02:07:39] [DATA] [1.64s]     [LOAD] case0043: 78 time steps, 77 samples, shape=(64, 64)
+[2026-04-30 02:07:39] [DATA] [1.68s]     [LOAD] case0044: 83 time steps, 82 samples, shape=(64, 64)
+[2026-04-30 02:07:39] [DATA] [1.87s]     [LOAD] case0045: 1000 time steps, 999 samples, shape=(64, 64)
+[2026-04-30 02:07:39] [DATA] [1.90s]     [LOAD] case0046: 86 time steps, 85 samples, shape=(64, 64)
+[2026-04-30 02:07:39] [DATA] [1.93s]     [LOAD] case0047: 104 time steps, 103 samples, shape=(64, 64)
+[2026-04-30 02:07:39] [DATA] [2.11s]     [LOAD] case0048: 1000 time steps, 999 samples, shape=(64, 64)
+[2026-04-30 02:07:39] [DATA] [2.27s]     [LOAD] case0049: 1000 time steps, 999 samples, shape=(64, 64)
+[2026-04-30 02:07:39] [DATA] [2.29s]   Category: geo - Found 24 cases, using 24
+[2026-04-30 02:07:39] [DATA] [2.30s]     [LOAD] case0001: 23 time steps, 22 samples, shape=(64, 64)
+[2026-04-30 02:07:39] [DATA] [2.32s]     [LOAD] case0002: 20 time steps, 19 samples, shape=(64, 64)
+[2026-04-30 02:07:39] [DATA] [2.35s]     [LOAD] case0003: 20 time steps, 19 samples, shape=(64, 64)
+[2026-04-30 02:07:39] [DATA] [2.37s]     [LOAD] case0004: 21 time steps, 20 samples, shape=(64, 64)
+[2026-04-30 02:07:39] [DATA] [2.39s]     [LOAD] case0005: 37 time steps, 36 samples, shape=(64, 64)
+[2026-04-30 02:07:39] [DATA] [2.42s]     [LOAD] case0006: 43 time steps, 42 samples, shape=(64, 64)
+[2026-04-30 02:07:39] [DATA] [2.44s]     [LOAD] case0007: 43 time steps, 42 samples, shape=(64, 64)
+[2026-04-30 02:07:39] [DATA] [2.46s]     [LOAD] case0008: 42 time steps, 41 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [2.48s]     [LOAD] case0009: 60 time steps, 59 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [2.52s]     [LOAD] case0010: 203 time steps, 202 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [2.55s]     [LOAD] case0011: 68 time steps, 67 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [2.58s]     [LOAD] case0012: 84 time steps, 83 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [2.62s]     [LOAD] case0013: 137 time steps, 136 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [2.65s]     [LOAD] case0014: 113 time steps, 112 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [2.67s]     [LOAD] case0015: 23 time steps, 22 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [2.71s]     [LOAD] case0016: 100 time steps, 99 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [2.74s]     [LOAD] case0017: 87 time steps, 86 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [2.76s]     [LOAD] case0018: 37 time steps, 36 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [2.79s]     [LOAD] case0019: 45 time steps, 44 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [2.81s]     [LOAD] case0020: 44 time steps, 43 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [2.85s]     [LOAD] case0021: 100 time steps, 99 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [2.88s]     [LOAD] case0022: 74 time steps, 73 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [2.90s]     [LOAD] case0023: 72 time steps, 71 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [2.95s]     [LOAD] case0024: 194 time steps, 193 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [2.96s]   Category: prop - Found 84 cases, using 84
+[2026-04-30 02:07:40] [DATA] [2.98s]     [LOAD] case0050: 21 time steps, 20 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [2.99s]     [LOAD] case0051: 6 time steps, 5 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [3.01s]     [LOAD] case0052: 4 time steps, 3 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [3.02s]     [LOAD] case0053: 6 time steps, 5 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [3.05s]     [LOAD] case0054: 6 time steps, 5 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [3.07s]     [LOAD] case0055: 5 time steps, 4 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [3.08s]     [LOAD] case0056: 5 time steps, 4 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [3.10s]     [LOAD] case0057: 32 time steps, 31 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [3.12s]     [LOAD] case0058: 11 time steps, 10 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [3.13s]     [LOAD] case0059: 6 time steps, 5 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [3.15s]     [LOAD] case0060: 5 time steps, 4 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [3.17s]     [LOAD] case0061: 6 time steps, 5 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [3.19s]     [LOAD] case0062: 6 time steps, 5 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [3.21s]     [LOAD] case0063: 5 time steps, 4 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [3.23s]     [LOAD] case0064: 51 time steps, 50 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [3.25s]     [LOAD] case0065: 14 time steps, 13 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [3.27s]     [LOAD] case0066: 9 time steps, 8 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [3.28s]     [LOAD] case0067: 5 time steps, 4 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [3.30s]     [LOAD] case0068: 6 time steps, 5 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [3.32s]     [LOAD] case0069: 6 time steps, 5 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [3.34s]     [LOAD] case0070: 6 time steps, 5 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [3.37s]     [LOAD] case0071: 75 time steps, 74 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [3.39s]     [LOAD] case0072: 18 time steps, 17 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [3.41s]     [LOAD] case0073: 11 time steps, 10 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [3.42s]     [LOAD] case0074: 4 time steps, 3 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [3.44s]     [LOAD] case0075: 5 time steps, 4 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [3.45s]     [LOAD] case0076: 6 time steps, 5 samples, shape=(64, 64)
+[2026-04-30 02:07:40] [DATA] [3.47s]     [LOAD] case0077: 6 time steps, 5 samples, shape=(64, 64)
+[2026-04-30 02:07:41] [DATA] [3.65s]     [LOAD] case0078: 1000 time steps, 999 samples, shape=(64, 64)
+[2026-04-30 02:07:41] [DATA] [3.67s]     [LOAD] case0079: 21 time steps, 20 samples, shape=(64, 64)
+[2026-04-30 02:07:41] [DATA] [3.68s]     [LOAD] case0080: 13 time steps, 12 samples, shape=(64, 64)
+[2026-04-30 02:07:41] [DATA] [3.70s]     [LOAD] case0081: 4 time steps, 3 samples, shape=(64, 64)
+[2026-04-30 02:07:41] [DATA] [3.71s]     [LOAD] case0082: 5 time steps, 4 samples, shape=(64, 64)
+[2026-04-30 02:07:41] [DATA] [3.73s]     [LOAD] case0083: 6 time steps, 5 samples, shape=(64, 64)
+[2026-04-30 02:07:41] [DATA] [3.75s]     [LOAD] case0084: 6 time steps, 5 samples, shape=(64, 64)
+[2026-04-30 02:07:41] [DATA] [3.85s]     [LOAD] case0085: 575 time steps, 574 samples, shape=(64, 64)
+[2026-04-30 02:07:41] [DATA] [3.88s]     [LOAD] case0086: 23 time steps, 22 samples, shape=(64, 64)
+[2026-04-30 02:07:41] [DATA] [3.89s]     [LOAD] case0087: 14 time steps, 13 samples, shape=(64, 64)
+[2026-04-30 02:07:41] [DATA] [3.91s]     [LOAD] case0088: 4 time steps, 3 samples, shape=(64, 64)
+[2026-04-30 02:07:41] [DATA] [3.93s]     [LOAD] case0089: 5 time steps, 4 samples, shape=(64, 64)
+[2026-04-30 02:07:41] [DATA] [3.95s]     [LOAD] case0090: 6 time steps, 5 samples, shape=(64, 64)
+[2026-04-30 02:07:41] [DATA] [3.97s]     [LOAD] case0091: 6 time steps, 5 samples, shape=(64, 64)
+[2026-04-30 02:07:41] [DATA] [4.13s]     [LOAD] case0092: 1000 time steps, 999 samples, shape=(64, 64)
+[2026-04-30 02:07:41] [DATA] [4.15s]     [LOAD] case0093: 25 time steps, 24 samples, shape=(64, 64)
+[2026-04-30 02:07:41] [DATA] [4.17s]     [LOAD] case0094: 16 time steps, 15 samples, shape=(64, 64)
+[2026-04-30 02:07:41] [DATA] [4.18s]     [LOAD] case0095: 4 time steps, 3 samples, shape=(64, 64)
+[2026-04-30 02:07:41] [DATA] [4.20s]     [LOAD] case0096: 4 time steps, 3 samples, shape=(64, 64)
+[2026-04-30 02:07:41] [DATA] [4.22s]     [LOAD] case0097: 6 time steps, 5 samples, shape=(64, 64)
+[2026-04-30 02:07:41] [DATA] [4.25s]     [LOAD] case0098: 6 time steps, 5 samples, shape=(64, 64)
+[2026-04-30 02:07:41] [DATA] [4.45s]     [LOAD] case0099: 1000 time steps, 999 samples, shape=(64, 64)
+[2026-04-30 02:07:41] [DATA] [4.47s]     [LOAD] case0100: 28 time steps, 27 samples, shape=(64, 64)
+[2026-04-30 02:07:42] [DATA] [4.49s]     [LOAD] case0101: 18 time steps, 17 samples, shape=(64, 64)
+[2026-04-30 02:07:42] [DATA] [4.51s]     [LOAD] case0102: 5 time steps, 4 samples, shape=(64, 64)
+[2026-04-30 02:07:42] [DATA] [4.52s]     [LOAD] case0103: 4 time steps, 3 samples, shape=(64, 64)
+[2026-04-30 02:07:42] [DATA] [4.54s]     [LOAD] case0104: 6 time steps, 5 samples, shape=(64, 64)
+[2026-04-30 02:07:42] [DATA] [4.56s]     [LOAD] case0105: 6 time steps, 5 samples, shape=(64, 64)
+[2026-04-30 02:07:42] [DATA] [4.74s]     [LOAD] case0106: 1000 time steps, 999 samples, shape=(64, 64)
+[2026-04-30 02:07:42] [DATA] [4.76s]     [LOAD] case0107: 30 time steps, 29 samples, shape=(64, 64)
+[2026-04-30 02:07:42] [DATA] [4.78s]     [LOAD] case0108: 19 time steps, 18 samples, shape=(64, 64)
+[2026-04-30 02:07:42] [DATA] [4.80s]     [LOAD] case0109: 6 time steps, 5 samples, shape=(64, 64)
+[2026-04-30 02:07:42] [DATA] [4.81s]     [LOAD] case0110: 4 time steps, 3 samples, shape=(64, 64)
+[2026-04-30 02:07:42] [DATA] [4.84s]     [LOAD] case0111: 6 time steps, 5 samples, shape=(64, 64)
+[2026-04-30 02:07:42] [DATA] [4.85s]     [LOAD] case0112: 6 time steps, 5 samples, shape=(64, 64)
+[2026-04-30 02:07:42] [DATA] [4.96s]     [LOAD] case0113: 539 time steps, 538 samples, shape=(64, 64)
+[2026-04-30 02:07:42] [DATA] [4.98s]     [LOAD] case0114: 32 time steps, 31 samples, shape=(64, 64)
+[2026-04-30 02:07:42] [DATA] [5.00s]     [LOAD] case0115: 21 time steps, 20 samples, shape=(64, 64)
+[2026-04-30 02:07:42] [DATA] [5.02s]     [LOAD] case0116: 6 time steps, 5 samples, shape=(64, 64)
+[2026-04-30 02:07:42] [DATA] [5.03s]     [LOAD] case0117: 4 time steps, 3 samples, shape=(64, 64)
+[2026-04-30 02:07:42] [DATA] [5.06s]     [LOAD] case0118: 6 time steps, 5 samples, shape=(64, 64)
+[2026-04-30 02:07:42] [DATA] [5.08s]     [LOAD] case0119: 6 time steps, 5 samples, shape=(64, 64)
+[2026-04-30 02:07:42] [DATA] [5.09s]     [LOAD] case0120: 4 time steps, 3 samples, shape=(64, 64)
+[2026-04-30 02:07:42] [DATA] [5.11s]     [LOAD] case0121: 6 time steps, 5 samples, shape=(64, 64)
+[2026-04-30 02:07:42] [DATA] [5.13s]     [LOAD] case0122: 6 time steps, 5 samples, shape=(64, 64)
+[2026-04-30 02:07:42] [DATA] [5.15s]     [LOAD] case0123: 5 time steps, 4 samples, shape=(64, 64)
+[2026-04-30 02:07:42] [DATA] [5.16s]     [LOAD] case0124: 5 time steps, 4 samples, shape=(64, 64)
+[2026-04-30 02:07:42] [DATA] [5.18s]     [LOAD] case0125: 5 time steps, 4 samples, shape=(64, 64)
+[2026-04-30 02:07:42] [DATA] [5.20s]     [LOAD] case0126: 5 time steps, 4 samples, shape=(64, 64)
+[2026-04-30 02:07:42] [DATA] [5.22s]     [LOAD] case0127: 13 time steps, 12 samples, shape=(64, 64)
+[2026-04-30 02:07:42] [DATA] [5.23s]     [LOAD] case0128: 4 time steps, 3 samples, shape=(64, 64)
+[2026-04-30 02:07:42] [DATA] [5.25s]     [LOAD] case0129: 5 time steps, 4 samples, shape=(64, 64)
+[2026-04-30 02:07:42] [DATA] [5.27s]     [LOAD] case0130: 6 time steps, 5 samples, shape=(64, 64)
+[2026-04-30 02:07:42] [DATA] [5.29s]     [LOAD] case0131: 6 time steps, 5 samples, shape=(64, 64)
+[2026-04-30 02:07:42] [DATA] [5.30s]     [LOAD] case0132: 5 time steps, 4 samples, shape=(64, 64)
+[2026-04-30 02:07:42] [DATA] [5.32s]     [LOAD] case0133: 5 time steps, 4 samples, shape=(64, 64)
+[2026-04-30 02:07:42] [DATA] [5.33s] 
+[2026-04-30 02:07:42] [DATA] [5.34s] ------------------------------------------------------------
+[2026-04-30 02:07:42] [DATA] [5.36s] DATA LOADING SUMMARY
+[2026-04-30 02:07:42] [DATA] [5.37s] ------------------------------------------------------------
+[2026-04-30 02:07:42] [DATA] [5.38s]   Total cases loaded: 158
+[2026-04-30 02:07:42] [DATA] [5.40s]   Total cases skipped: 0
+[2026-04-30 02:07:42] [DATA] [5.41s]   Total time-step pairs: 12523
+[2026-04-30 02:07:42] [DATA] [5.42s] 
+[2026-04-30 02:07:42] [DATA] [5.43s] Computing normalization statistics...
+[2026-04-30 02:07:43] [DATA] [6.15s]   U Component:
+[2026-04-30 02:07:43] [DATA] [6.16s]     mean = 0.330662
+[2026-04-30 02:07:43] [DATA] [6.18s]     std  = 6.802066
+[2026-04-30 02:07:43] [DATA] [6.19s]     min  = -22.195133
+[2026-04-30 02:07:43] [DATA] [6.20s]     max  = 50.000000
+[2026-04-30 02:07:43] [DATA] [6.22s]   V Component:
+[2026-04-30 02:07:43] [DATA] [6.23s]     mean = -0.008706
+[2026-04-30 02:07:43] [DATA] [6.24s]     std  = 5.861806
+[2026-04-30 02:07:43] [DATA] [6.26s]     min  = -26.401981
+[2026-04-30 02:07:43] [DATA] [6.27s]     max  = 23.774395
+[2026-04-30 02:07:43] [DATA] [6.28s] 
+[2026-04-30 02:07:43] [DATA] [6.30s] Normalizing data...
+[2026-04-30 02:07:43] [DATA] [6.31s]   Normalized 50/12523 samples
+[2026-04-30 02:07:43] [DATA] [6.33s]   Normalized 100/12523 samples
+[2026-04-30 02:07:43] [DATA] [6.34s]   Normalized 150/12523 samples
+[2026-04-30 02:07:43] [DATA] [6.36s]   Normalized 200/12523 samples
+[2026-04-30 02:07:43] [DATA] [6.37s]   Normalized 250/12523 samples
+[2026-04-30 02:07:43] [DATA] [6.39s]   Normalized 300/12523 samples
+[2026-04-30 02:07:43] [DATA] [6.40s]   Normalized 350/12523 samples
+[2026-04-30 02:07:43] [DATA] [6.42s]   Normalized 400/12523 samples
+[2026-04-30 02:07:43] [DATA] [6.44s]   Normalized 450/12523 samples
+[2026-04-30 02:07:43] [DATA] [6.45s]   Normalized 500/12523 samples
+[2026-04-30 02:07:43] [DATA] [6.47s]   Normalized 550/12523 samples
+[2026-04-30 02:07:44] [DATA] [6.48s]   Normalized 600/12523 samples
+[2026-04-30 02:07:44] [DATA] [6.50s]   Normalized 650/12523 samples
+[2026-04-30 02:07:44] [DATA] [6.51s]   Normalized 700/12523 samples
+[2026-04-30 02:07:44] [DATA] [6.53s]   Normalized 750/12523 samples
+[2026-04-30 02:07:44] [DATA] [6.55s]   Normalized 800/12523 samples
+[2026-04-30 02:07:44] [DATA] [6.56s]   Normalized 850/12523 samples
+[2026-04-30 02:07:44] [DATA] [6.57s]   Normalized 900/12523 samples
+[2026-04-30 02:07:44] [DATA] [6.59s]   Normalized 950/12523 samples
+[2026-04-30 02:07:44] [DATA] [6.60s]   Normalized 1000/12523 samples
+[2026-04-30 02:07:44] [DATA] [6.62s]   Normalized 1050/12523 samples
+[2026-04-30 02:07:44] [DATA] [6.63s]   Normalized 1100/12523 samples
+[2026-04-30 02:07:44] [DATA] [6.64s]   Normalized 1150/12523 samples
+[2026-04-30 02:07:44] [DATA] [6.66s]   Normalized 1200/12523 samples
+[2026-04-30 02:07:44] [DATA] [6.67s]   Normalized 1250/12523 samples
+[2026-04-30 02:07:44] [DATA] [6.69s]   Normalized 1300/12523 samples
+[2026-04-30 02:07:44] [DATA] [6.70s]   Normalized 1350/12523 samples
+[2026-04-30 02:07:44] [DATA] [6.71s]   Normalized 1400/12523 samples
+[2026-04-30 02:07:44] [DATA] [6.73s]   Normalized 1450/12523 samples
+[2026-04-30 02:07:44] [DATA] [6.74s]   Normalized 1500/12523 samples
+[2026-04-30 02:07:44] [DATA] [6.76s]   Normalized 1550/12523 samples
+[2026-04-30 02:07:44] [DATA] [6.77s]   Normalized 1600/12523 samples
+[2026-04-30 02:07:44] [DATA] [6.78s]   Normalized 1650/12523 samples
+[2026-04-30 02:07:44] [DATA] [6.80s]   Normalized 1700/12523 samples
+[2026-04-30 02:07:44] [DATA] [6.81s]   Normalized 1750/12523 samples
+[2026-04-30 02:07:44] [DATA] [6.83s]   Normalized 1800/12523 samples
+[2026-04-30 02:07:44] [DATA] [6.84s]   Normalized 1850/12523 samples
+[2026-04-30 02:07:44] [DATA] [6.86s]   Normalized 1900/12523 samples
+[2026-04-30 02:07:44] [DATA] [6.87s]   Normalized 1950/12523 samples
+[2026-04-30 02:07:44] [DATA] [6.89s]   Normalized 2000/12523 samples
+[2026-04-30 02:07:44] [DATA] [6.90s]   Normalized 2050/12523 samples
+[2026-04-30 02:07:44] [DATA] [6.92s]   Normalized 2100/12523 samples
+[2026-04-30 02:07:44] [DATA] [6.94s]   Normalized 2150/12523 samples
+[2026-04-30 02:07:44] [DATA] [6.95s]   Normalized 2200/12523 samples
+[2026-04-30 02:07:44] [DATA] [6.97s]   Normalized 2250/12523 samples
+[2026-04-30 02:07:44] [DATA] [6.98s]   Normalized 2300/12523 samples
+[2026-04-30 02:07:44] [DATA] [6.99s]   Normalized 2350/12523 samples
+[2026-04-30 02:07:44] [DATA] [7.01s]   Normalized 2400/12523 samples
+[2026-04-30 02:07:44] [DATA] [7.02s]   Normalized 2450/12523 samples
+[2026-04-30 02:07:44] [DATA] [7.05s]   Normalized 2500/12523 samples
+[2026-04-30 02:07:44] [DATA] [7.06s]   Normalized 2550/12523 samples
+[2026-04-30 02:07:44] [DATA] [7.08s]   Normalized 2600/12523 samples
+[2026-04-30 02:07:44] [DATA] [7.09s]   Normalized 2650/12523 samples
+[2026-04-30 02:07:44] [DATA] [7.11s]   Normalized 2700/12523 samples
+[2026-04-30 02:07:44] [DATA] [7.12s]   Normalized 2750/12523 samples
+[2026-04-30 02:07:44] [DATA] [7.14s]   Normalized 2800/12523 samples
+[2026-04-30 02:07:44] [DATA] [7.15s]   Normalized 2850/12523 samples
+[2026-04-30 02:07:44] [DATA] [7.16s]   Normalized 2900/12523 samples
+[2026-04-30 02:07:44] [DATA] [7.18s]   Normalized 2950/12523 samples
+[2026-04-30 02:07:44] [DATA] [7.20s]   Normalized 3000/12523 samples
+[2026-04-30 02:07:44] [DATA] [7.22s]   Normalized 3050/12523 samples
+[2026-04-30 02:07:44] [DATA] [7.24s]   Normalized 3100/12523 samples
+[2026-04-30 02:07:44] [DATA] [7.25s]   Normalized 3150/12523 samples
+[2026-04-30 02:07:44] [DATA] [7.27s]   Normalized 3200/12523 samples
+[2026-04-30 02:07:44] [DATA] [7.29s]   Normalized 3250/12523 samples
+[2026-04-30 02:07:44] [DATA] [7.31s]   Normalized 3300/12523 samples
+[2026-04-30 02:07:44] [DATA] [7.32s]   Normalized 3350/12523 samples
+[2026-04-30 02:07:44] [DATA] [7.34s]   Normalized 3400/12523 samples
+[2026-04-30 02:07:44] [DATA] [7.36s]   Normalized 3450/12523 samples
+[2026-04-30 02:07:44] [DATA] [7.38s]   Normalized 3500/12523 samples
+[2026-04-30 02:07:44] [DATA] [7.39s]   Normalized 3550/12523 samples
+[2026-04-30 02:07:44] [DATA] [7.41s]   Normalized 3600/12523 samples
+[2026-04-30 02:07:44] [DATA] [7.42s]   Normalized 3650/12523 samples
+[2026-04-30 02:07:44] [DATA] [7.44s]   Normalized 3700/12523 samples
+[2026-04-30 02:07:44] [DATA] [7.45s]   Normalized 3750/12523 samples
+[2026-04-30 02:07:44] [DATA] [7.47s]   Normalized 3800/12523 samples
+[2026-04-30 02:07:45] [DATA] [7.48s]   Normalized 3850/12523 samples
+[2026-04-30 02:07:45] [DATA] [7.49s]   Normalized 3900/12523 samples
+[2026-04-30 02:07:45] [DATA] [7.51s]   Normalized 3950/12523 samples
+[2026-04-30 02:07:45] [DATA] [7.52s]   Normalized 4000/12523 samples
+[2026-04-30 02:07:45] [DATA] [7.54s]   Normalized 4050/12523 samples
+[2026-04-30 02:07:45] [DATA] [7.55s]   Normalized 4100/12523 samples
+[2026-04-30 02:07:45] [DATA] [7.57s]   Normalized 4150/12523 samples
+[2026-04-30 02:07:45] [DATA] [7.58s]   Normalized 4200/12523 samples
+[2026-04-30 02:07:45] [DATA] [7.60s]   Normalized 4250/12523 samples
+[2026-04-30 02:07:45] [DATA] [7.61s]   Normalized 4300/12523 samples
+[2026-04-30 02:07:45] [DATA] [7.63s]   Normalized 4350/12523 samples
+[2026-04-30 02:07:45] [DATA] [7.64s]   Normalized 4400/12523 samples
+[2026-04-30 02:07:45] [DATA] [7.65s]   Normalized 4450/12523 samples
+[2026-04-30 02:07:45] [DATA] [7.67s]   Normalized 4500/12523 samples
+[2026-04-30 02:07:45] [DATA] [7.68s]   Normalized 4550/12523 samples
+[2026-04-30 02:07:45] [DATA] [7.70s]   Normalized 4600/12523 samples
+[2026-04-30 02:07:45] [DATA] [7.71s]   Normalized 4650/12523 samples
+[2026-04-30 02:07:45] [DATA] [7.73s]   Normalized 4700/12523 samples
+[2026-04-30 02:07:45] [DATA] [7.75s]   Normalized 4750/12523 samples
+[2026-04-30 02:07:45] [DATA] [7.76s]   Normalized 4800/12523 samples
+[2026-04-30 02:07:45] [DATA] [7.78s]   Normalized 4850/12523 samples
+[2026-04-30 02:07:45] [DATA] [7.79s]   Normalized 4900/12523 samples
+[2026-04-30 02:07:45] [DATA] [7.81s]   Normalized 4950/12523 samples
+[2026-04-30 02:07:45] [DATA] [7.82s]   Normalized 5000/12523 samples
+[2026-04-30 02:07:45] [DATA] [7.84s]   Normalized 5050/12523 samples
+[2026-04-30 02:07:45] [DATA] [7.86s]   Normalized 5100/12523 samples
+[2026-04-30 02:07:45] [DATA] [7.87s]   Normalized 5150/12523 samples
+[2026-04-30 02:07:45] [DATA] [7.89s]   Normalized 5200/12523 samples
+[2026-04-30 02:07:45] [DATA] [7.91s]   Normalized 5250/12523 samples
+[2026-04-30 02:07:45] [DATA] [7.92s]   Normalized 5300/12523 samples
+[2026-04-30 02:07:45] [DATA] [7.94s]   Normalized 5350/12523 samples
+[2026-04-30 02:07:45] [DATA] [7.95s]   Normalized 5400/12523 samples
+[2026-04-30 02:07:45] [DATA] [7.98s]   Normalized 5450/12523 samples
+[2026-04-30 02:07:45] [DATA] [8.05s]   Normalized 5500/12523 samples
+[2026-04-30 02:07:45] [DATA] [8.13s]   Normalized 5550/12523 samples
+[2026-04-30 02:07:45] [DATA] [8.15s]   Normalized 5600/12523 samples
+[2026-04-30 02:07:45] [DATA] [8.23s]   Normalized 5650/12523 samples
+[2026-04-30 02:07:45] [DATA] [8.26s]   Normalized 5700/12523 samples
+[2026-04-30 02:07:45] [DATA] [8.32s]   Normalized 5750/12523 samples
+[2026-04-30 02:07:45] [DATA] [8.36s]   Normalized 5800/12523 samples
+[2026-04-30 02:07:45] [DATA] [8.38s]   Normalized 5850/12523 samples
+[2026-04-30 02:07:45] [DATA] [8.40s]   Normalized 5900/12523 samples
+[2026-04-30 02:07:45] [DATA] [8.41s]   Normalized 5950/12523 samples
+[2026-04-30 02:07:45] [DATA] [8.43s]   Normalized 6000/12523 samples
+[2026-04-30 02:07:45] [DATA] [8.44s]   Normalized 6050/12523 samples
+[2026-04-30 02:07:45] [DATA] [8.46s]   Normalized 6100/12523 samples
+[2026-04-30 02:07:46] [DATA] [8.48s]   Normalized 6150/12523 samples
+[2026-04-30 02:07:46] [DATA] [8.49s]   Normalized 6200/12523 samples
+[2026-04-30 02:07:46] [DATA] [8.51s]   Normalized 6250/12523 samples
+[2026-04-30 02:07:46] [DATA] [8.53s]   Normalized 6300/12523 samples
+[2026-04-30 02:07:46] [DATA] [8.54s]   Normalized 6350/12523 samples
+[2026-04-30 02:07:46] [DATA] [8.56s]   Normalized 6400/12523 samples
+[2026-04-30 02:07:46] [DATA] [8.57s]   Normalized 6450/12523 samples
+[2026-04-30 02:07:46] [DATA] [8.58s]   Normalized 6500/12523 samples
+[2026-04-30 02:07:46] [DATA] [8.60s]   Normalized 6550/12523 samples
+[2026-04-30 02:07:46] [DATA] [8.62s]   Normalized 6600/12523 samples
+[2026-04-30 02:07:46] [DATA] [8.63s]   Normalized 6650/12523 samples
+[2026-04-30 02:07:46] [DATA] [8.65s]   Normalized 6700/12523 samples
+[2026-04-30 02:07:46] [DATA] [8.66s]   Normalized 6750/12523 samples
+[2026-04-30 02:07:46] [DATA] [8.67s]   Normalized 6800/12523 samples
+[2026-04-30 02:07:46] [DATA] [8.69s]   Normalized 6850/12523 samples
+[2026-04-30 02:07:46] [DATA] [8.70s]   Normalized 6900/12523 samples
+[2026-04-30 02:07:46] [DATA] [8.72s]   Normalized 6950/12523 samples
+[2026-04-30 02:07:46] [DATA] [8.74s]   Normalized 7000/12523 samples
+[2026-04-30 02:07:46] [DATA] [8.75s]   Normalized 7050/12523 samples
+[2026-04-30 02:07:46] [DATA] [8.77s]   Normalized 7100/12523 samples
+[2026-04-30 02:07:46] [DATA] [8.78s]   Normalized 7150/12523 samples
+[2026-04-30 02:07:46] [DATA] [8.80s]   Normalized 7200/12523 samples
+[2026-04-30 02:07:46] [DATA] [8.81s]   Normalized 7250/12523 samples
+[2026-04-30 02:07:46] [DATA] [8.83s]   Normalized 7300/12523 samples
+[2026-04-30 02:07:46] [DATA] [8.85s]   Normalized 7350/12523 samples
+[2026-04-30 02:07:46] [DATA] [8.86s]   Normalized 7400/12523 samples
+[2026-04-30 02:07:46] [DATA] [8.88s]   Normalized 7450/12523 samples
+[2026-04-30 02:07:46] [DATA] [8.89s]   Normalized 7500/12523 samples
+[2026-04-30 02:07:46] [DATA] [8.91s]   Normalized 7550/12523 samples
+[2026-04-30 02:07:46] [DATA] [8.92s]   Normalized 7600/12523 samples
+[2026-04-30 02:07:46] [DATA] [8.94s]   Normalized 7650/12523 samples
+[2026-04-30 02:07:46] [DATA] [8.95s]   Normalized 7700/12523 samples
+[2026-04-30 02:07:46] [DATA] [8.97s]   Normalized 7750/12523 samples
+[2026-04-30 02:07:46] [DATA] [8.98s]   Normalized 7800/12523 samples
+[2026-04-30 02:07:46] [DATA] [9.00s]   Normalized 7850/12523 samples
+[2026-04-30 02:07:46] [DATA] [9.01s]   Normalized 7900/12523 samples
+[2026-04-30 02:07:46] [DATA] [9.03s]   Normalized 7950/12523 samples
+[2026-04-30 02:07:46] [DATA] [9.05s]   Normalized 8000/12523 samples
+[2026-04-30 02:07:46] [DATA] [9.06s]   Normalized 8050/12523 samples
+[2026-04-30 02:07:46] [DATA] [9.08s]   Normalized 8100/12523 samples
+[2026-04-30 02:07:46] [DATA] [9.10s]   Normalized 8150/12523 samples
+[2026-04-30 02:07:46] [DATA] [9.11s]   Normalized 8200/12523 samples
+[2026-04-30 02:07:46] [DATA] [9.13s]   Normalized 8250/12523 samples
+[2026-04-30 02:07:46] [DATA] [9.14s]   Normalized 8300/12523 samples
+[2026-04-30 02:07:46] [DATA] [9.15s]   Normalized 8350/12523 samples
+[2026-04-30 02:07:46] [DATA] [9.17s]   Normalized 8400/12523 samples
+[2026-04-30 02:07:46] [DATA] [9.18s]   Normalized 8450/12523 samples
+[2026-04-30 02:07:46] [DATA] [9.19s]   Normalized 8500/12523 samples
+[2026-04-30 02:07:46] [DATA] [9.21s]   Normalized 8550/12523 samples
+[2026-04-30 02:07:46] [DATA] [9.22s]   Normalized 8600/12523 samples
+[2026-04-30 02:07:46] [DATA] [9.24s]   Normalized 8650/12523 samples
+[2026-04-30 02:07:46] [DATA] [9.25s]   Normalized 8700/12523 samples
+[2026-04-30 02:07:46] [DATA] [9.27s]   Normalized 8750/12523 samples
+[2026-04-30 02:07:46] [DATA] [9.28s]   Normalized 8800/12523 samples
+[2026-04-30 02:07:46] [DATA] [9.29s]   Normalized 8850/12523 samples
+[2026-04-30 02:07:46] [DATA] [9.31s]   Normalized 8900/12523 samples
+[2026-04-30 02:07:46] [DATA] [9.32s]   Normalized 8950/12523 samples
+[2026-04-30 02:07:46] [DATA] [9.34s]   Normalized 9000/12523 samples
+[2026-04-30 02:07:46] [DATA] [9.35s]   Normalized 9050/12523 samples
+[2026-04-30 02:07:46] [DATA] [9.36s]   Normalized 9100/12523 samples
+[2026-04-30 02:07:46] [DATA] [9.38s]   Normalized 9150/12523 samples
+[2026-04-30 02:07:46] [DATA] [9.39s]   Normalized 9200/12523 samples
+[2026-04-30 02:07:46] [DATA] [9.40s]   Normalized 9250/12523 samples
+[2026-04-30 02:07:46] [DATA] [9.42s]   Normalized 9300/12523 samples
+[2026-04-30 02:07:46] [DATA] [9.43s]   Normalized 9350/12523 samples
+[2026-04-30 02:07:46] [DATA] [9.45s]   Normalized 9400/12523 samples
+[2026-04-30 02:07:46] [DATA] [9.46s]   Normalized 9450/12523 samples
+[2026-04-30 02:07:46] [DATA] [9.47s]   Normalized 9500/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.49s]   Normalized 9550/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.50s]   Normalized 9600/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.51s]   Normalized 9650/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.53s]   Normalized 9700/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.54s]   Normalized 9750/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.55s]   Normalized 9800/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.57s]   Normalized 9850/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.58s]   Normalized 9900/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.59s]   Normalized 9950/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.61s]   Normalized 10000/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.62s]   Normalized 10050/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.63s]   Normalized 10100/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.65s]   Normalized 10150/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.66s]   Normalized 10200/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.67s]   Normalized 10250/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.68s]   Normalized 10300/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.70s]   Normalized 10350/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.71s]   Normalized 10400/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.72s]   Normalized 10450/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.74s]   Normalized 10500/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.75s]   Normalized 10550/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.76s]   Normalized 10600/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.78s]   Normalized 10650/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.80s]   Normalized 10700/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.81s]   Normalized 10750/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.82s]   Normalized 10800/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.83s]   Normalized 10850/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.85s]   Normalized 10900/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.86s]   Normalized 10950/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.87s]   Normalized 11000/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.89s]   Normalized 11050/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.90s]   Normalized 11100/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.91s]   Normalized 11150/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.93s]   Normalized 11200/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.94s]   Normalized 11250/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.96s]   Normalized 11300/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.97s]   Normalized 11350/12523 samples
+[2026-04-30 02:07:47] [DATA] [9.98s]   Normalized 11400/12523 samples
+[2026-04-30 02:07:47] [DATA] [10.00s]   Normalized 11450/12523 samples
+[2026-04-30 02:07:47] [DATA] [10.01s]   Normalized 11500/12523 samples
+[2026-04-30 02:07:47] [DATA] [10.02s]   Normalized 11550/12523 samples
+[2026-04-30 02:07:47] [DATA] [10.04s]   Normalized 11600/12523 samples
+[2026-04-30 02:07:47] [DATA] [10.05s]   Normalized 11650/12523 samples
+[2026-04-30 02:07:47] [DATA] [10.07s]   Normalized 11700/12523 samples
+[2026-04-30 02:07:47] [DATA] [10.08s]   Normalized 11750/12523 samples
+[2026-04-30 02:07:47] [DATA] [10.10s]   Normalized 11800/12523 samples
+[2026-04-30 02:07:47] [DATA] [10.11s]   Normalized 11850/12523 samples
+[2026-04-30 02:07:47] [DATA] [10.13s]   Normalized 11900/12523 samples
+[2026-04-30 02:07:47] [DATA] [10.14s]   Normalized 11950/12523 samples
+[2026-04-30 02:07:47] [DATA] [10.15s]   Normalized 12000/12523 samples
+[2026-04-30 02:07:47] [DATA] [10.16s]   Normalized 12050/12523 samples
+[2026-04-30 02:07:47] [DATA] [10.18s]   Normalized 12100/12523 samples
+[2026-04-30 02:07:47] [DATA] [10.19s]   Normalized 12150/12523 samples
+[2026-04-30 02:07:47] [DATA] [10.20s]   Normalized 12200/12523 samples
+[2026-04-30 02:07:47] [DATA] [10.22s]   Normalized 12250/12523 samples
+[2026-04-30 02:07:47] [DATA] [10.23s]   Normalized 12300/12523 samples
+[2026-04-30 02:07:47] [DATA] [10.25s]   Normalized 12350/12523 samples
+[2026-04-30 02:07:47] [DATA] [10.27s]   Normalized 12400/12523 samples
+[2026-04-30 02:07:47] [DATA] [10.28s]   Normalized 12450/12523 samples
+[2026-04-30 02:07:47] [DATA] [10.29s]   Normalized 12500/12523 samples
+[2026-04-30 02:07:47] [DATA] [10.31s]   Normalization complete: 12523 samples
+[2026-04-30 02:07:47] [DATA] [10.32s] 
+[2026-04-30 02:07:47] [DATA] [10.33s] ============================================================
+[2026-04-30 02:07:47] [DATA] [10.35s] DATA LOADING COMPLETE
+[2026-04-30 02:07:47] [DATA] [10.36s] ============================================================
+[2026-04-30 02:07:47] [PHASE] [10.45s] === COMPLETED: Data Loading (took 10.01s) ===
+[2026-04-30 02:07:47] [PHASE] [10.46s]     Details: 12523 samples, 1566 batches
+[2026-04-30 02:07:47] [INFO] [10.47s] Memory: CPU Memory: 1006.36MB RSS
+[2026-04-30 02:07:48] [PHASE] [10.48s] === STARTING: Model Evaluation ===
+[2026-04-30 02:07:48] [INFO] [10.50s] ================================================================================
+[2026-04-30 02:07:48] [INFO] [10.51s] EVALUATION PROCESS
+[2026-04-30 02:07:48] [INFO] [10.52s] ================================================================================
+[2026-04-30 02:07:48] [INFO] [10.53s] Number of samples: 12523
+[2026-04-30 02:07:48] [INFO] [10.55s] Number of batches: 1566
+[2026-04-30 02:07:48] [INFO] [10.56s] Print progress every 20 samples
+[2026-04-30 02:07:48] [INFO] [10.58s] 
+[2026-04-30 02:07:48] [INFO] [11.20s]   [Sample 20/12523] Loss = 0.000377 | Avg Loss = 0.000502 | Case: cavity/bc/case0002 (t=0)
+[2026-04-30 02:07:48] [INFO] [11.40s]   [Sample 40/12523] Loss = 0.000365 | Avg Loss = 0.000402 | Case: cavity/bc/case0003 (t=8)
+[2026-04-30 02:07:49] [INFO] [11.69s]   [Sample 60/12523] Loss = 0.000424 | Avg Loss = 0.000434 | Case: cavity/bc/case0005 (t=1)
+[2026-04-30 02:07:49] [INFO] [11.88s]   [Sample 80/12523] Loss = 0.000481 | Avg Loss = 0.000423 | Case: cavity/bc/case0006 (t=6)
+[2026-04-30 02:07:49] [INFO] [12.17s]   [Sample 100/12523] Loss = 0.000647 | Avg Loss = 0.000480 | Case: cavity/bc/case0007 (t=10)
+[2026-04-30 02:07:49] [INFO] [12.37s]   [Sample 120/12523] Loss = 0.000709 | Avg Loss = 0.000488 | Case: cavity/bc/case0008 (t=13)
+[2026-04-30 02:07:50] [INFO] [12.65s]   [Sample 140/12523] Loss = 0.000806 | Avg Loss = 0.000547 | Case: cavity/bc/case0009 (t=14)
+[2026-04-30 02:07:50] [INFO] [12.85s]   [Sample 160/12523] Loss = 0.000839 | Avg Loss = 0.000559 | Case: cavity/bc/case0010 (t=14)
+[2026-04-30 02:07:50] [INFO] [13.15s]   [Sample 180/12523] Loss = 0.000899 | Avg Loss = 0.000612 | Case: cavity/bc/case0011 (t=14)
+[2026-04-30 02:07:50] [INFO] [13.40s]   [Sample 200/12523] Loss = 0.000910 | Avg Loss = 0.000623 | Case: cavity/bc/case0012 (t=13)
+[2026-04-30 02:07:51] [INFO] [13.75s]   [Sample 220/12523] Loss = 0.000935 | Avg Loss = 0.000669 | Case: cavity/bc/case0013 (t=11)
+[2026-04-30 02:07:51] [INFO] [13.96s]   [Sample 240/12523] Loss = 0.000930 | Avg Loss = 0.000679 | Case: cavity/bc/case0014 (t=8)
+[2026-04-30 02:07:51] [INFO] [14.27s]   [Sample 260/12523] Loss = 0.000968 | Avg Loss = 0.000717 | Case: cavity/bc/case0015 (t=4)
+[2026-04-30 02:07:52] [INFO] [14.48s]   [Sample 280/12523] Loss = 0.000909 | Avg Loss = 0.000719 | Case: cavity/bc/case0015 (t=24)
+[2026-04-30 02:07:52] [INFO] [14.75s]   [Sample 300/12523] Loss = 0.000890 | Avg Loss = 0.000750 | Case: cavity/bc/case0016 (t=19)
+[2026-04-30 02:07:52] [INFO] [14.96s]   [Sample 320/12523] Loss = 0.000948 | Avg Loss = 0.000757 | Case: cavity/bc/case0017 (t=13)
+[2026-04-30 02:07:52] [INFO] [15.28s]   [Sample 340/12523] Loss = 0.000999 | Avg Loss = 0.000784 | Case: cavity/bc/case0018 (t=6)
+[2026-04-30 02:07:53] [INFO] [15.48s]   [Sample 360/12523] Loss = 0.000837 | Avg Loss = 0.000779 | Case: cavity/bc/case0018 (t=26)
+[2026-04-30 02:07:53] [INFO] [15.78s]   [Sample 380/12523] Loss = 0.000833 | Avg Loss = 0.000803 | Case: cavity/bc/case0019 (t=19)
+[2026-04-30 02:07:53] [INFO] [16.12s]   [Sample 400/12523] Loss = 0.000989 | Avg Loss = 0.000809 | Case: cavity/bc/case0020 (t=11)
+[2026-04-30 02:07:53] [INFO] [16.46s]   [Sample 420/12523] Loss = 0.001502 | Avg Loss = 0.000831 | Case: cavity/bc/case0021 (t=2)
+[2026-04-30 02:07:54] [INFO] [16.69s]   [Sample 440/12523] Loss = 0.000834 | Avg Loss = 0.000825 | Case: cavity/bc/case0021 (t=22)
+[2026-04-30 02:07:54] [INFO] [16.99s]   [Sample 460/12523] Loss = 0.000897 | Avg Loss = 0.000848 | Case: cavity/bc/case0022 (t=12)
+[2026-04-30 02:07:54] [INFO] [17.25s]   [Sample 480/12523] Loss = 0.001454 | Avg Loss = 0.000851 | Case: cavity/bc/case0023 (t=1)
+[2026-04-30 02:07:55] [INFO] [17.57s]   [Sample 500/12523] Loss = 0.000862 | Avg Loss = 0.000863 | Case: cavity/bc/case0023 (t=21)
+[2026-04-30 02:07:55] [INFO] [17.81s]   [Sample 520/12523] Loss = 0.001145 | Avg Loss = 0.000871 | Case: cavity/bc/case0024 (t=9)
+[2026-04-30 02:07:55] [INFO] [18.18s]   [Sample 540/12523] Loss = 0.000913 | Avg Loss = 0.000879 | Case: cavity/bc/case0024 (t=29)
+[2026-04-30 02:07:55] [INFO] [18.46s]   [Sample 560/12523] Loss = 0.000980 | Avg Loss = 0.000889 | Case: cavity/bc/case0025 (t=14)
+[2026-04-30 02:07:56] [INFO] [18.86s]   [Sample 580/12523] Loss = 0.001815 | Avg Loss = 0.000910 | Case: cavity/bc/case0025 (t=34)
+[2026-04-30 02:07:56] [INFO] [19.18s]   [Sample 600/12523] Loss = 0.000982 | Avg Loss = 0.000908 | Case: cavity/bc/case0026 (t=17)
+[2026-04-30 02:07:57] [INFO] [19.51s]   [Sample 620/12523] Loss = 0.002055 | Avg Loss = 0.000932 | Case: cavity/bc/case0026 (t=37)
+[2026-04-30 02:07:57] [INFO] [19.73s]   [Sample 640/12523] Loss = 0.001024 | Avg Loss = 0.000930 | Case: cavity/bc/case0027 (t=18)
+[2026-04-30 02:07:57] [INFO] [20.15s]   [Sample 660/12523] Loss = 0.001176 | Avg Loss = 0.000943 | Case: cavity/bc/case0027 (t=38)
+[2026-04-30 02:07:58] [INFO] [21.16s]   [Sample 680/12523] Loss = 0.001054 | Avg Loss = 0.000954 | Case: cavity/bc/case0028 (t=15)
+[2026-04-30 02:07:59] [INFO] [21.72s]   [Sample 700/12523] Loss = 0.001247 | Avg Loss = 0.000967 | Case: cavity/bc/case0028 (t=35)
+[2026-04-30 02:07:59] [INFO] [22.12s]   [Sample 720/12523] Loss = 0.001086 | Avg Loss = 0.000980 | Case: cavity/bc/case0029 (t=13)
+[2026-04-30 02:08:00] [INFO] [22.76s]   [Sample 740/12523] Loss = 0.001309 | Avg Loss = 0.000993 | Case: cavity/bc/case0029 (t=33)
+[2026-04-30 02:08:01] [INFO] [23.65s]   [Sample 760/12523] Loss = 0.002634 | Avg Loss = 0.001009 | Case: cavity/bc/case0030 (t=6)
+[2026-04-30 02:08:02] [INFO] [24.72s]   [Sample 780/12523] Loss = 0.001300 | Avg Loss = 0.001020 | Case: cavity/bc/case0030 (t=26)
+[2026-04-30 02:08:02] [INFO] [25.35s]   [Sample 800/12523] Loss = 0.002858 | Avg Loss = 0.001037 | Case: cavity/bc/case0031 (t=1)
+[2026-04-30 02:08:03] [INFO] [26.32s]   [Sample 820/12523] Loss = 0.001283 | Avg Loss = 0.001049 | Case: cavity/bc/case0031 (t=21)
+[2026-04-30 02:08:04] [INFO] [26.74s]   [Sample 840/12523] Loss = 0.001456 | Avg Loss = 0.001051 | Case: cavity/bc/case0031 (t=41)
+[2026-04-30 02:08:04] [INFO] [27.18s]   [Sample 860/12523] Loss = 0.001165 | Avg Loss = 0.001081 | Case: cavity/bc/case0032 (t=8)
+[2026-04-30 02:08:04] [INFO] [27.44s]   [Sample 880/12523] Loss = 0.001371 | Avg Loss = 0.001080 | Case: cavity/bc/case0032 (t=28)
+[2026-04-30 02:08:05] [INFO] [27.85s]   [Sample 900/12523] Loss = 0.003609 | Avg Loss = 0.001115 | Case: cavity/bc/case0032 (t=48)
+[2026-04-30 02:08:05] [INFO] [28.22s]   [Sample 920/12523] Loss = 0.001595 | Avg Loss = 0.001123 | Case: cavity/bc/case0033 (t=17)
+[2026-04-30 02:08:06] [INFO] [28.66s]   [Sample 940/12523] Loss = 0.001971 | Avg Loss = 0.001147 | Case: cavity/bc/case0033 (t=37)
+[2026-04-30 02:08:06] [INFO] [28.92s]   [Sample 960/12523] Loss = 0.002065 | Avg Loss = 0.001157 | Case: cavity/bc/case0033 (t=57)
+[2026-04-30 02:08:06] [INFO] [29.25s]   [Sample 980/12523] Loss = 0.002124 | Avg Loss = 0.001185 | Case: cavity/bc/case0033 (t=77)
+[2026-04-30 02:08:06] [INFO] [29.44s]   [Sample 1000/12523] Loss = 0.002126 | Avg Loss = 0.001195 | Case: cavity/bc/case0033 (t=97)
+[2026-04-30 02:08:07] [INFO] [29.72s]   [Sample 1020/12523] Loss = 0.002129 | Avg Loss = 0.001222 | Case: cavity/bc/case0033 (t=117)
+[2026-04-30 02:08:07] [INFO] [29.92s]   [Sample 1040/12523] Loss = 0.002131 | Avg Loss = 0.001231 | Case: cavity/bc/case0033 (t=137)
+[2026-04-30 02:08:07] [INFO] [30.22s]   [Sample 1060/12523] Loss = 0.002131 | Avg Loss = 0.001256 | Case: cavity/bc/case0033 (t=157)
+[2026-04-30 02:08:07] [INFO] [30.40s]   [Sample 1080/12523] Loss = 0.004806 | Avg Loss = 0.001284 | Case: cavity/bc/case0034 (t=5)
+[2026-04-30 02:08:08] [INFO] [30.68s]   [Sample 1100/12523] Loss = 0.002014 | Avg Loss = 0.001301 | Case: cavity/bc/case0034 (t=25)
+[2026-04-30 02:08:08] [INFO] [30.89s]   [Sample 1120/12523] Loss = 0.002186 | Avg Loss = 0.001309 | Case: cavity/bc/case0034 (t=45)
+[2026-04-30 02:08:08] [INFO] [31.22s]   [Sample 1140/12523] Loss = 0.003651 | Avg Loss = 0.001357 | Case: cavity/bc/case0035 (t=4)
+[2026-04-30 02:08:08] [INFO] [31.44s]   [Sample 1160/12523] Loss = 0.002102 | Avg Loss = 0.001361 | Case: cavity/bc/case0035 (t=24)
+[2026-04-30 02:08:09] [INFO] [31.75s]   [Sample 1180/12523] Loss = 0.002493 | Avg Loss = 0.001387 | Case: cavity/bc/case0035 (t=44)
+[2026-04-30 02:08:09] [INFO] [31.95s]   [Sample 1200/12523] Loss = 0.005166 | Avg Loss = 0.001430 | Case: cavity/bc/case0036 (t=8)
+[2026-04-30 02:08:09] [INFO] [32.24s]   [Sample 1220/12523] Loss = 0.001931 | Avg Loss = 0.001440 | Case: cavity/bc/case0036 (t=28)
+[2026-04-30 02:08:09] [INFO] [32.43s]   [Sample 1240/12523] Loss = 0.002237 | Avg Loss = 0.001444 | Case: cavity/bc/case0036 (t=48)
+[2026-04-30 02:08:10] [INFO] [32.72s]   [Sample 1260/12523] Loss = 0.001768 | Avg Loss = 0.001527 | Case: cavity/bc/case0037 (t=7)
+[2026-04-30 02:08:10] [INFO] [32.91s]   [Sample 1280/12523] Loss = 0.002104 | Avg Loss = 0.001527 | Case: cavity/bc/case0037 (t=27)
+[2026-04-30 02:08:10] [INFO] [33.20s]   [Sample 1300/12523] Loss = 0.002780 | Avg Loss = 0.001552 | Case: cavity/bc/case0037 (t=47)
+[2026-04-30 02:08:10] [INFO] [33.40s]   [Sample 1320/12523] Loss = 0.033536 | Avg Loss = 0.001749 | Case: cavity/bc/case0038 (t=6)
+[2026-04-30 02:08:11] [INFO] [33.67s]   [Sample 1340/12523] Loss = 0.003466 | Avg Loss = 0.001778 | Case: cavity/bc/case0038 (t=26)
+[2026-04-30 02:08:11] [INFO] [33.87s]   [Sample 1360/12523] Loss = 0.004157 | Avg Loss = 0.001799 | Case: cavity/bc/case0038 (t=46)
+[2026-04-30 02:08:11] [INFO] [34.16s]   [Sample 1380/12523] Loss = 0.044159 | Avg Loss = 0.002080 | Case: cavity/bc/case0039 (t=0)
+[2026-04-30 02:08:11] [INFO] [34.35s]   [Sample 1400/12523] Loss = 0.003375 | Avg Loss = 0.002090 | Case: cavity/bc/case0039 (t=20)
+[2026-04-30 02:08:12] [INFO] [34.63s]   [Sample 1420/12523] Loss = 0.005007 | Avg Loss = 0.002137 | Case: cavity/bc/case0039 (t=40)
+[2026-04-30 02:08:12] [INFO] [34.83s]   [Sample 1440/12523] Loss = 0.005564 | Avg Loss = 0.002168 | Case: cavity/bc/case0039 (t=60)
+[2026-04-30 02:08:12] [INFO] [35.12s]   [Sample 1460/12523] Loss = 0.003708 | Avg Loss = 0.002462 | Case: cavity/bc/case0040 (t=11)
+[2026-04-30 02:08:12] [INFO] [35.36s]   [Sample 1480/12523] Loss = 0.005121 | Avg Loss = 0.002480 | Case: cavity/bc/case0040 (t=31)
+[2026-04-30 02:08:13] [INFO] [35.72s]   [Sample 1500/12523] Loss = 0.006664 | Avg Loss = 0.002547 | Case: cavity/bc/case0040 (t=51)
+[2026-04-30 02:08:13] [INFO] [36.15s]   [Sample 1520/12523] Loss = 0.042989 | Avg Loss = 0.002776 | Case: cavity/bc/case0041 (t=2)
+[2026-04-30 02:08:13] [INFO] [36.46s]   [Sample 1540/12523] Loss = 0.004502 | Avg Loss = 0.002861 | Case: cavity/bc/case0041 (t=22)
+[2026-04-30 02:08:14] [INFO] [36.78s]   [Sample 1560/12523] Loss = 0.006115 | Avg Loss = 0.002884 | Case: cavity/bc/case0041 (t=42)
+[2026-04-30 02:08:15] [INFO] [37.84s]   [Sample 1580/12523] Loss = 0.007222 | Avg Loss = 0.002952 | Case: cavity/bc/case0041 (t=62)
+[2026-04-30 02:08:15] [INFO] [38.13s]   [Sample 1600/12523] Loss = 0.062845 | Avg Loss = 0.003266 | Case: cavity/bc/case0042 (t=6)
+[2026-04-30 02:08:15] [INFO] [38.47s]   [Sample 1620/12523] Loss = 0.007190 | Avg Loss = 0.003322 | Case: cavity/bc/case0042 (t=26)
+[2026-04-30 02:08:16] [INFO] [38.66s]   [Sample 1640/12523] Loss = 0.009074 | Avg Loss = 0.003366 | Case: cavity/bc/case0042 (t=46)
+[2026-04-30 02:08:16] [INFO] [39.12s]   [Sample 1660/12523] Loss = 0.010392 | Avg Loss = 0.003470 | Case: cavity/bc/case0042 (t=66)
+[2026-04-30 02:08:16] [INFO] [39.45s]   [Sample 1680/12523] Loss = 0.061752 | Avg Loss = 0.003933 | Case: cavity/bc/case0043 (t=9)
+[2026-04-30 02:08:17] [INFO] [39.83s]   [Sample 1700/12523] Loss = 0.008840 | Avg Loss = 0.004003 | Case: cavity/bc/case0043 (t=29)
+[2026-04-30 02:08:17] [INFO] [40.18s]   [Sample 1720/12523] Loss = 0.010947 | Avg Loss = 0.004054 | Case: cavity/bc/case0043 (t=49)
+[2026-04-30 02:08:18] [INFO] [40.59s]   [Sample 1740/12523] Loss = 0.012437 | Avg Loss = 0.004173 | Case: cavity/bc/case0043 (t=69)
+[2026-04-30 02:08:18] [INFO] [40.87s]   [Sample 1760/12523] Loss = 0.020128 | Avg Loss = 0.004470 | Case: cavity/bc/case0044 (t=12)
+[2026-04-30 02:08:18] [INFO] [41.37s]   [Sample 1780/12523] Loss = 0.011361 | Avg Loss = 0.004550 | Case: cavity/bc/case0044 (t=32)
+[2026-04-30 02:08:19] [INFO] [41.70s]   [Sample 1800/12523] Loss = 0.013387 | Avg Loss = 0.004615 | Case: cavity/bc/case0044 (t=52)
+[2026-04-30 02:08:19] [INFO] [42.24s]   [Sample 1820/12523] Loss = 0.014822 | Avg Loss = 0.004754 | Case: cavity/bc/case0044 (t=72)
+[2026-04-30 02:08:20] [INFO] [43.09s]   [Sample 1840/12523] Loss = 0.058325 | Avg Loss = 0.005253 | Case: cavity/bc/case0045 (t=10)
+[2026-04-30 02:08:21] [INFO] [43.71s]   [Sample 1860/12523] Loss = 0.010592 | Avg Loss = 0.005323 | Case: cavity/bc/case0045 (t=30)
+[2026-04-30 02:08:21] [INFO] [44.26s]   [Sample 1880/12523] Loss = 0.013178 | Avg Loss = 0.005374 | Case: cavity/bc/case0045 (t=50)
+[2026-04-30 02:08:22] [INFO] [44.80s]   [Sample 1900/12523] Loss = 0.015173 | Avg Loss = 0.005503 | Case: cavity/bc/case0045 (t=70)
+[2026-04-30 02:08:22] [INFO] [45.14s]   [Sample 1920/12523] Loss = 0.015800 | Avg Loss = 0.005576 | Case: cavity/bc/case0045 (t=90)
+[2026-04-30 02:08:23] [INFO] [45.66s]   [Sample 1940/12523] Loss = 0.016242 | Avg Loss = 0.005718 | Case: cavity/bc/case0045 (t=110)
+[2026-04-30 02:08:23] [INFO] [45.97s]   [Sample 1960/12523] Loss = 0.016301 | Avg Loss = 0.005793 | Case: cavity/bc/case0045 (t=130)
+[2026-04-30 02:08:23] [INFO] [46.40s]   [Sample 1980/12523] Loss = 0.016444 | Avg Loss = 0.005933 | Case: cavity/bc/case0045 (t=150)
+[2026-04-30 02:08:24] [INFO] [46.64s]   [Sample 2000/12523] Loss = 0.016415 | Avg Loss = 0.006005 | Case: cavity/bc/case0045 (t=170)
+[2026-04-30 02:08:24] [INFO] [47.20s]   [Sample 2020/12523] Loss = 0.016479 | Avg Loss = 0.006142 | Case: cavity/bc/case0045 (t=190)
+[2026-04-30 02:08:25] [INFO] [47.77s]   [Sample 2040/12523] Loss = 0.016440 | Avg Loss = 0.006210 | Case: cavity/bc/case0045 (t=210)
+[2026-04-30 02:08:25] [INFO] [48.21s]   [Sample 2060/12523] Loss = 0.016482 | Avg Loss = 0.006342 | Case: cavity/bc/case0045 (t=230)
+[2026-04-30 02:08:25] [INFO] [48.47s]   [Sample 2080/12523] Loss = 0.016478 | Avg Loss = 0.006408 | Case: cavity/bc/case0045 (t=250)
+[2026-04-30 02:08:26] [INFO] [48.82s]   [Sample 2100/12523] Loss = 0.016499 | Avg Loss = 0.006535 | Case: cavity/bc/case0045 (t=270)
+[2026-04-30 02:08:26] [INFO] [49.06s]   [Sample 2120/12523] Loss = 0.016501 | Avg Loss = 0.006598 | Case: cavity/bc/case0045 (t=290)
+[2026-04-30 02:08:26] [INFO] [49.39s]   [Sample 2140/12523] Loss = 0.016478 | Avg Loss = 0.006721 | Case: cavity/bc/case0045 (t=310)
+[2026-04-30 02:08:27] [INFO] [49.63s]   [Sample 2160/12523] Loss = 0.016507 | Avg Loss = 0.006781 | Case: cavity/bc/case0045 (t=330)
+[2026-04-30 02:08:27] [INFO] [49.97s]   [Sample 2180/12523] Loss = 0.016501 | Avg Loss = 0.006900 | Case: cavity/bc/case0045 (t=350)
+[2026-04-30 02:08:27] [INFO] [50.23s]   [Sample 2200/12523] Loss = 0.016491 | Avg Loss = 0.006958 | Case: cavity/bc/case0045 (t=370)
+[2026-04-30 02:08:28] [INFO] [50.55s]   [Sample 2220/12523] Loss = 0.016501 | Avg Loss = 0.007073 | Case: cavity/bc/case0045 (t=390)
+[2026-04-30 02:08:28] [INFO] [50.78s]   [Sample 2240/12523] Loss = 0.016483 | Avg Loss = 0.007128 | Case: cavity/bc/case0045 (t=410)
+[2026-04-30 02:08:28] [INFO] [51.13s]   [Sample 2260/12523] Loss = 0.016500 | Avg Loss = 0.007240 | Case: cavity/bc/case0045 (t=430)
+[2026-04-30 02:08:29] [INFO] [51.87s]   [Sample 2280/12523] Loss = 0.016471 | Avg Loss = 0.007292 | Case: cavity/bc/case0045 (t=450)
+[2026-04-30 02:08:29] [INFO] [52.25s]   [Sample 2300/12523] Loss = 0.016495 | Avg Loss = 0.007400 | Case: cavity/bc/case0045 (t=470)
+[2026-04-30 02:08:29] [INFO] [52.47s]   [Sample 2320/12523] Loss = 0.016454 | Avg Loss = 0.007450 | Case: cavity/bc/case0045 (t=490)
+[2026-04-30 02:08:30] [INFO] [52.79s]   [Sample 2340/12523] Loss = 0.016481 | Avg Loss = 0.007556 | Case: cavity/bc/case0045 (t=510)
+[2026-04-30 02:08:30] [INFO] [53.00s]   [Sample 2360/12523] Loss = 0.016462 | Avg Loss = 0.007603 | Case: cavity/bc/case0045 (t=530)
+[2026-04-30 02:08:30] [INFO] [53.34s]   [Sample 2380/12523] Loss = 0.016488 | Avg Loss = 0.007706 | Case: cavity/bc/case0045 (t=550)
+[2026-04-30 02:08:31] [INFO] [53.56s]   [Sample 2400/12523] Loss = 0.016458 | Avg Loss = 0.007751 | Case: cavity/bc/case0045 (t=570)
+[2026-04-30 02:08:31] [INFO] [53.88s]   [Sample 2420/12523] Loss = 0.016461 | Avg Loss = 0.007851 | Case: cavity/bc/case0045 (t=590)
+[2026-04-30 02:08:31] [INFO] [54.12s]   [Sample 2440/12523] Loss = 0.016475 | Avg Loss = 0.007894 | Case: cavity/bc/case0045 (t=610)
+[2026-04-30 02:08:31] [INFO] [54.43s]   [Sample 2460/12523] Loss = 0.016490 | Avg Loss = 0.007991 | Case: cavity/bc/case0045 (t=630)
+[2026-04-30 02:08:32] [INFO] [54.65s]   [Sample 2480/12523] Loss = 0.016495 | Avg Loss = 0.008033 | Case: cavity/bc/case0045 (t=650)
+[2026-04-30 02:08:32] [INFO] [54.98s]   [Sample 2500/12523] Loss = 0.016483 | Avg Loss = 0.008127 | Case: cavity/bc/case0045 (t=670)
+[2026-04-30 02:08:32] [INFO] [55.22s]   [Sample 2520/12523] Loss = 0.016503 | Avg Loss = 0.008167 | Case: cavity/bc/case0045 (t=690)
+[2026-04-30 02:08:33] [INFO] [55.52s]   [Sample 2540/12523] Loss = 0.016506 | Avg Loss = 0.008258 | Case: cavity/bc/case0045 (t=710)
+[2026-04-30 02:08:33] [INFO] [55.78s]   [Sample 2560/12523] Loss = 0.016498 | Avg Loss = 0.008297 | Case: cavity/bc/case0045 (t=730)
+[2026-04-30 02:08:33] [INFO] [56.30s]   [Sample 2580/12523] Loss = 0.016501 | Avg Loss = 0.008386 | Case: cavity/bc/case0045 (t=750)
+[2026-04-30 02:08:34] [INFO] [56.53s]   [Sample 2600/12523] Loss = 0.016496 | Avg Loss = 0.008423 | Case: cavity/bc/case0045 (t=770)
+[2026-04-30 02:08:34] [INFO] [56.84s]   [Sample 2620/12523] Loss = 0.016516 | Avg Loss = 0.008509 | Case: cavity/bc/case0045 (t=790)
+[2026-04-30 02:08:34] [INFO] [57.11s]   [Sample 2640/12523] Loss = 0.016502 | Avg Loss = 0.008545 | Case: cavity/bc/case0045 (t=810)
+[2026-04-30 02:08:34] [INFO] [57.47s]   [Sample 2660/12523] Loss = 0.016500 | Avg Loss = 0.008629 | Case: cavity/bc/case0045 (t=830)
+[2026-04-30 02:08:35] [INFO] [57.80s]   [Sample 2680/12523] Loss = 0.016474 | Avg Loss = 0.008663 | Case: cavity/bc/case0045 (t=850)
+[2026-04-30 02:08:35] [INFO] [58.22s]   [Sample 2700/12523] Loss = 0.016490 | Avg Loss = 0.008746 | Case: cavity/bc/case0045 (t=870)
+[2026-04-30 02:08:36] [INFO] [58.59s]   [Sample 2720/12523] Loss = 0.016489 | Avg Loss = 0.008778 | Case: cavity/bc/case0045 (t=890)
+[2026-04-30 02:08:36] [INFO] [58.88s]   [Sample 2740/12523] Loss = 0.016482 | Avg Loss = 0.008859 | Case: cavity/bc/case0045 (t=910)
+[2026-04-30 02:08:36] [INFO] [59.10s]   [Sample 2760/12523] Loss = 0.016476 | Avg Loss = 0.008890 | Case: cavity/bc/case0045 (t=930)
+[2026-04-30 02:08:36] [INFO] [59.40s]   [Sample 2780/12523] Loss = 0.016461 | Avg Loss = 0.008968 | Case: cavity/bc/case0045 (t=950)
+[2026-04-30 02:08:37] [INFO] [59.61s]   [Sample 2800/12523] Loss = 0.016500 | Avg Loss = 0.008998 | Case: cavity/bc/case0045 (t=970)
+[2026-04-30 02:08:37] [INFO] [59.87s]   [Sample 2820/12523] Loss = 0.016473 | Avg Loss = 0.009075 | Case: cavity/bc/case0045 (t=990)
+[2026-04-30 02:08:37] [INFO] [60.30s]   [Sample 2840/12523] Loss = 0.024959 | Avg Loss = 0.009288 | Case: cavity/bc/case0046 (t=11)
+[2026-04-30 02:08:38] [INFO] [60.63s]   [Sample 2860/12523] Loss = 0.014944 | Avg Loss = 0.009329 | Case: cavity/bc/case0046 (t=31)
+[2026-04-30 02:08:38] [INFO] [60.94s]   [Sample 2880/12523] Loss = 0.017749 | Avg Loss = 0.009360 | Case: cavity/bc/case0046 (t=51)
+[2026-04-30 02:08:38] [INFO] [61.34s]   [Sample 2900/12523] Loss = 0.019836 | Avg Loss = 0.009455 | Case: cavity/bc/case0046 (t=71)
+[2026-04-30 02:08:39] [INFO] [61.58s]   [Sample 2920/12523] Loss = 0.086786 | Avg Loss = 0.009683 | Case: cavity/bc/case0047 (t=6)
+[2026-04-30 02:08:39] [INFO] [61.95s]   [Sample 2940/12523] Loss = 0.015764 | Avg Loss = 0.009742 | Case: cavity/bc/case0047 (t=26)
+[2026-04-30 02:08:39] [INFO] [62.17s]   [Sample 2960/12523] Loss = 0.019497 | Avg Loss = 0.009777 | Case: cavity/bc/case0047 (t=46)
+[2026-04-30 02:08:39] [INFO] [62.45s]   [Sample 2980/12523] Loss = 0.022360 | Avg Loss = 0.009886 | Case: cavity/bc/case0047 (t=66)
+[2026-04-30 02:08:40] [INFO] [62.65s]   [Sample 3000/12523] Loss = 0.023186 | Avg Loss = 0.009943 | Case: cavity/bc/case0047 (t=86)
+[2026-04-30 02:08:40] [INFO] [62.94s]   [Sample 3020/12523] Loss = 0.087497 | Avg Loss = 0.010233 | Case: cavity/bc/case0048 (t=3)
+[2026-04-30 02:08:40] [INFO] [63.16s]   [Sample 3040/12523] Loss = 0.015188 | Avg Loss = 0.010246 | Case: cavity/bc/case0048 (t=23)
+[2026-04-30 02:08:40] [INFO] [63.46s]   [Sample 3060/12523] Loss = 0.022341 | Avg Loss = 0.010339 | Case: cavity/bc/case0048 (t=43)
+[2026-04-30 02:08:41] [INFO] [63.68s]   [Sample 3080/12523] Loss = 0.024489 | Avg Loss = 0.010397 | Case: cavity/bc/case0048 (t=63)
+[2026-04-30 02:08:41] [INFO] [64.00s]   [Sample 3100/12523] Loss = 0.026334 | Avg Loss = 0.010530 | Case: cavity/bc/case0048 (t=83)
+[2026-04-30 02:08:41] [INFO] [64.23s]   [Sample 3120/12523] Loss = 0.026938 | Avg Loss = 0.010600 | Case: cavity/bc/case0048 (t=103)
+[2026-04-30 02:08:42] [INFO] [64.69s]   [Sample 3140/12523] Loss = 0.027284 | Avg Loss = 0.010739 | Case: cavity/bc/case0048 (t=123)
+[2026-04-30 02:08:42] [INFO] [64.91s]   [Sample 3160/12523] Loss = 0.027142 | Avg Loss = 0.010809 | Case: cavity/bc/case0048 (t=143)
+[2026-04-30 02:08:42] [INFO] [65.25s]   [Sample 3180/12523] Loss = 0.027271 | Avg Loss = 0.010947 | Case: cavity/bc/case0048 (t=163)
+[2026-04-30 02:08:42] [INFO] [65.45s]   [Sample 3200/12523] Loss = 0.027489 | Avg Loss = 0.011016 | Case: cavity/bc/case0048 (t=183)
+[2026-04-30 02:08:43] [INFO] [65.76s]   [Sample 3220/12523] Loss = 0.027523 | Avg Loss = 0.011152 | Case: cavity/bc/case0048 (t=203)
+[2026-04-30 02:08:43] [INFO] [65.97s]   [Sample 3240/12523] Loss = 0.027453 | Avg Loss = 0.011218 | Case: cavity/bc/case0048 (t=223)
+[2026-04-30 02:08:43] [INFO] [66.26s]   [Sample 3260/12523] Loss = 0.027375 | Avg Loss = 0.011351 | Case: cavity/bc/case0048 (t=243)
+[2026-04-30 02:08:44] [INFO] [66.48s]   [Sample 3280/12523] Loss = 0.027504 | Avg Loss = 0.011416 | Case: cavity/bc/case0048 (t=263)
+[2026-04-30 02:08:44] [INFO] [66.82s]   [Sample 3300/12523] Loss = 0.027349 | Avg Loss = 0.011546 | Case: cavity/bc/case0048 (t=283)
+[2026-04-30 02:08:44] [INFO] [67.04s]   [Sample 3320/12523] Loss = 0.027354 | Avg Loss = 0.011608 | Case: cavity/bc/case0048 (t=303)
+[2026-04-30 02:08:45] [INFO] [67.64s]   [Sample 3340/12523] Loss = 0.027333 | Avg Loss = 0.011736 | Case: cavity/bc/case0048 (t=323)
+[2026-04-30 02:08:45] [INFO] [67.99s]   [Sample 3360/12523] Loss = 0.027394 | Avg Loss = 0.011796 | Case: cavity/bc/case0048 (t=343)
+[2026-04-30 02:08:45] [INFO] [68.40s]   [Sample 3380/12523] Loss = 0.027237 | Avg Loss = 0.011920 | Case: cavity/bc/case0048 (t=363)
+[2026-04-30 02:08:46] [INFO] [68.65s]   [Sample 3400/12523] Loss = 0.027464 | Avg Loss = 0.011980 | Case: cavity/bc/case0048 (t=383)
+[2026-04-30 02:08:46] [INFO] [69.01s]   [Sample 3420/12523] Loss = 0.027560 | Avg Loss = 0.012102 | Case: cavity/bc/case0048 (t=403)
+[2026-04-30 02:08:46] [INFO] [69.26s]   [Sample 3440/12523] Loss = 0.027214 | Avg Loss = 0.012158 | Case: cavity/bc/case0048 (t=423)
+[2026-04-30 02:08:47] [INFO] [69.60s]   [Sample 3460/12523] Loss = 0.027377 | Avg Loss = 0.012279 | Case: cavity/bc/case0048 (t=443)
+[2026-04-30 02:08:47] [INFO] [69.82s]   [Sample 3480/12523] Loss = 0.027520 | Avg Loss = 0.012334 | Case: cavity/bc/case0048 (t=463)
+[2026-04-30 02:08:47] [INFO] [70.14s]   [Sample 3500/12523] Loss = 0.027528 | Avg Loss = 0.012451 | Case: cavity/bc/case0048 (t=483)
+[2026-04-30 02:08:47] [INFO] [70.34s]   [Sample 3520/12523] Loss = 0.027381 | Avg Loss = 0.012505 | Case: cavity/bc/case0048 (t=503)
+[2026-04-30 02:08:48] [INFO] [70.64s]   [Sample 3540/12523] Loss = 0.027351 | Avg Loss = 0.012620 | Case: cavity/bc/case0048 (t=523)
+[2026-04-30 02:08:48] [INFO] [70.84s]   [Sample 3560/12523] Loss = 0.027534 | Avg Loss = 0.012672 | Case: cavity/bc/case0048 (t=543)
+[2026-04-30 02:08:48] [INFO] [71.15s]   [Sample 3580/12523] Loss = 0.027295 | Avg Loss = 0.012784 | Case: cavity/bc/case0048 (t=563)
+[2026-04-30 02:08:48] [INFO] [71.35s]   [Sample 3600/12523] Loss = 0.027257 | Avg Loss = 0.012835 | Case: cavity/bc/case0048 (t=583)
+[2026-04-30 02:08:49] [INFO] [71.64s]   [Sample 3620/12523] Loss = 0.027319 | Avg Loss = 0.012946 | Case: cavity/bc/case0048 (t=603)
+[2026-04-30 02:08:49] [INFO] [71.85s]   [Sample 3640/12523] Loss = 0.027325 | Avg Loss = 0.012995 | Case: cavity/bc/case0048 (t=623)
+[2026-04-30 02:08:49] [INFO] [72.16s]   [Sample 3660/12523] Loss = 0.027362 | Avg Loss = 0.013103 | Case: cavity/bc/case0048 (t=643)
+[2026-04-30 02:08:49] [INFO] [72.37s]   [Sample 3680/12523] Loss = 0.027377 | Avg Loss = 0.013151 | Case: cavity/bc/case0048 (t=663)
+[2026-04-30 02:08:50] [INFO] [72.67s]   [Sample 3700/12523] Loss = 0.027552 | Avg Loss = 0.013258 | Case: cavity/bc/case0048 (t=683)
+[2026-04-30 02:08:50] [INFO] [72.88s]   [Sample 3720/12523] Loss = 0.027153 | Avg Loss = 0.013304 | Case: cavity/bc/case0048 (t=703)
+[2026-04-30 02:08:50] [INFO] [73.24s]   [Sample 3740/12523] Loss = 0.027345 | Avg Loss = 0.013410 | Case: cavity/bc/case0048 (t=723)
+[2026-04-30 02:08:50] [INFO] [73.45s]   [Sample 3760/12523] Loss = 0.027437 | Avg Loss = 0.013455 | Case: cavity/bc/case0048 (t=743)
+[2026-04-30 02:08:51] [INFO] [73.75s]   [Sample 3780/12523] Loss = 0.027521 | Avg Loss = 0.013557 | Case: cavity/bc/case0048 (t=763)
+[2026-04-30 02:08:51] [INFO] [74.03s]   [Sample 3800/12523] Loss = 0.027254 | Avg Loss = 0.013601 | Case: cavity/bc/case0048 (t=783)
+[2026-04-30 02:08:52] [INFO] [74.49s]   [Sample 3820/12523] Loss = 0.027402 | Avg Loss = 0.013702 | Case: cavity/bc/case0048 (t=803)
+[2026-04-30 02:08:52] [INFO] [74.74s]   [Sample 3840/12523] Loss = 0.027627 | Avg Loss = 0.013745 | Case: cavity/bc/case0048 (t=823)
+[2026-04-30 02:08:52] [INFO] [75.10s]   [Sample 3860/12523] Loss = 0.027417 | Avg Loss = 0.013844 | Case: cavity/bc/case0048 (t=843)
+[2026-04-30 02:08:52] [INFO] [75.34s]   [Sample 3880/12523] Loss = 0.027314 | Avg Loss = 0.013886 | Case: cavity/bc/case0048 (t=863)
+[2026-04-30 02:08:53] [INFO] [75.63s]   [Sample 3900/12523] Loss = 0.027484 | Avg Loss = 0.013983 | Case: cavity/bc/case0048 (t=883)
+[2026-04-30 02:08:53] [INFO] [75.85s]   [Sample 3920/12523] Loss = 0.027387 | Avg Loss = 0.014023 | Case: cavity/bc/case0048 (t=903)
+[2026-04-30 02:08:53] [INFO] [76.15s]   [Sample 3940/12523] Loss = 0.027292 | Avg Loss = 0.014119 | Case: cavity/bc/case0048 (t=923)
+[2026-04-30 02:08:53] [INFO] [76.33s]   [Sample 3960/12523] Loss = 0.027431 | Avg Loss = 0.014159 | Case: cavity/bc/case0048 (t=943)
+[2026-04-30 02:08:54] [INFO] [76.61s]   [Sample 3980/12523] Loss = 0.027549 | Avg Loss = 0.014253 | Case: cavity/bc/case0048 (t=963)
+[2026-04-30 02:08:54] [INFO] [76.82s]   [Sample 4000/12523] Loss = 0.027267 | Avg Loss = 0.014291 | Case: cavity/bc/case0048 (t=983)
+[2026-04-30 02:08:54] [INFO] [77.15s]   [Sample 4020/12523] Loss = 0.120889 | Avg Loss = 0.014570 | Case: cavity/bc/case0049 (t=4)
+[2026-04-30 02:08:54] [INFO] [77.36s]   [Sample 4040/12523] Loss = 0.015427 | Avg Loss = 0.014639 | Case: cavity/bc/case0049 (t=24)
+[2026-04-30 02:08:55] [INFO] [77.66s]   [Sample 4060/12523] Loss = 0.023975 | Avg Loss = 0.014693 | Case: cavity/bc/case0049 (t=44)
+[2026-04-30 02:08:55] [INFO] [77.91s]   [Sample 4080/12523] Loss = 0.027023 | Avg Loss = 0.014724 | Case: cavity/bc/case0049 (t=64)
+[2026-04-30 02:08:55] [INFO] [78.47s]   [Sample 4100/12523] Loss = 0.029257 | Avg Loss = 0.014821 | Case: cavity/bc/case0049 (t=84)
+[2026-04-30 02:08:56] [INFO] [78.68s]   [Sample 4120/12523] Loss = 0.030258 | Avg Loss = 0.014865 | Case: cavity/bc/case0049 (t=104)
+[2026-04-30 02:08:56] [INFO] [78.98s]   [Sample 4140/12523] Loss = 0.030810 | Avg Loss = 0.014971 | Case: cavity/bc/case0049 (t=124)
+[2026-04-30 02:08:56] [INFO] [79.22s]   [Sample 4160/12523] Loss = 0.030956 | Avg Loss = 0.015017 | Case: cavity/bc/case0049 (t=144)
+[2026-04-30 02:08:57] [INFO] [79.62s]   [Sample 4180/12523] Loss = 0.030822 | Avg Loss = 0.015123 | Case: cavity/bc/case0049 (t=164)
+[2026-04-30 02:08:57] [INFO] [79.85s]   [Sample 4200/12523] Loss = 0.030805 | Avg Loss = 0.015168 | Case: cavity/bc/case0049 (t=184)
+[2026-04-30 02:08:57] [INFO] [80.42s]   [Sample 4220/12523] Loss = 0.030919 | Avg Loss = 0.015273 | Case: cavity/bc/case0049 (t=204)
+[2026-04-30 02:08:58] [INFO] [80.65s]   [Sample 4240/12523] Loss = 0.030952 | Avg Loss = 0.015317 | Case: cavity/bc/case0049 (t=224)
+[2026-04-30 02:08:58] [INFO] [80.99s]   [Sample 4260/12523] Loss = 0.030960 | Avg Loss = 0.015420 | Case: cavity/bc/case0049 (t=244)
+[2026-04-30 02:08:58] [INFO] [81.22s]   [Sample 4280/12523] Loss = 0.030905 | Avg Loss = 0.015463 | Case: cavity/bc/case0049 (t=264)
+[2026-04-30 02:08:59] [INFO] [81.51s]   [Sample 4300/12523] Loss = 0.030855 | Avg Loss = 0.015564 | Case: cavity/bc/case0049 (t=284)
+[2026-04-30 02:08:59] [INFO] [81.71s]   [Sample 4320/12523] Loss = 0.031157 | Avg Loss = 0.015607 | Case: cavity/bc/case0049 (t=304)
+[2026-04-30 02:08:59] [INFO] [82.03s]   [Sample 4340/12523] Loss = 0.030940 | Avg Loss = 0.015706 | Case: cavity/bc/case0049 (t=324)
+[2026-04-30 02:08:59] [INFO] [82.29s]   [Sample 4360/12523] Loss = 0.030896 | Avg Loss = 0.015747 | Case: cavity/bc/case0049 (t=344)
+[2026-04-30 02:09:00] [INFO] [82.64s]   [Sample 4380/12523] Loss = 0.030917 | Avg Loss = 0.015845 | Case: cavity/bc/case0049 (t=364)
+[2026-04-30 02:09:00] [INFO] [83.08s]   [Sample 4400/12523] Loss = 0.030907 | Avg Loss = 0.015886 | Case: cavity/bc/case0049 (t=384)
+[2026-04-30 02:09:00] [INFO] [83.43s]   [Sample 4420/12523] Loss = 0.031043 | Avg Loss = 0.015982 | Case: cavity/bc/case0049 (t=404)
+[2026-04-30 02:09:01] [INFO] [83.64s]   [Sample 4440/12523] Loss = 0.030916 | Avg Loss = 0.016021 | Case: cavity/bc/case0049 (t=424)
+[2026-04-30 02:09:01] [INFO] [83.91s]   [Sample 4460/12523] Loss = 0.030709 | Avg Loss = 0.016116 | Case: cavity/bc/case0049 (t=444)
+[2026-04-30 02:09:01] [INFO] [84.14s]   [Sample 4480/12523] Loss = 0.030787 | Avg Loss = 0.016154 | Case: cavity/bc/case0049 (t=464)
+[2026-04-30 02:09:01] [INFO] [84.43s]   [Sample 4500/12523] Loss = 0.031131 | Avg Loss = 0.016248 | Case: cavity/bc/case0049 (t=484)
+[2026-04-30 02:09:02] [INFO] [84.64s]   [Sample 4520/12523] Loss = 0.030978 | Avg Loss = 0.016285 | Case: cavity/bc/case0049 (t=504)
+[2026-04-30 02:09:02] [INFO] [84.94s]   [Sample 4540/12523] Loss = 0.030943 | Avg Loss = 0.016377 | Case: cavity/bc/case0049 (t=524)
+[2026-04-30 02:09:02] [INFO] [85.17s]   [Sample 4560/12523] Loss = 0.030825 | Avg Loss = 0.016413 | Case: cavity/bc/case0049 (t=544)
+[2026-04-30 02:09:02] [INFO] [85.44s]   [Sample 4580/12523] Loss = 0.031036 | Avg Loss = 0.016504 | Case: cavity/bc/case0049 (t=564)
+[2026-04-30 02:09:03] [INFO] [85.66s]   [Sample 4600/12523] Loss = 0.030772 | Avg Loss = 0.016540 | Case: cavity/bc/case0049 (t=584)
+[2026-04-30 02:09:03] [INFO] [85.95s]   [Sample 4620/12523] Loss = 0.031003 | Avg Loss = 0.016628 | Case: cavity/bc/case0049 (t=604)
+[2026-04-30 02:09:03] [INFO] [86.30s]   [Sample 4640/12523] Loss = 0.031129 | Avg Loss = 0.016664 | Case: cavity/bc/case0049 (t=624)
+[2026-04-30 02:09:04] [INFO] [86.59s]   [Sample 4660/12523] Loss = 0.031108 | Avg Loss = 0.016752 | Case: cavity/bc/case0049 (t=644)
+[2026-04-30 02:09:04] [INFO] [86.78s]   [Sample 4680/12523] Loss = 0.030988 | Avg Loss = 0.016786 | Case: cavity/bc/case0049 (t=664)
+[2026-04-30 02:09:04] [INFO] [87.06s]   [Sample 4700/12523] Loss = 0.030906 | Avg Loss = 0.016873 | Case: cavity/bc/case0049 (t=684)
+[2026-04-30 02:09:04] [INFO] [87.29s]   [Sample 4720/12523] Loss = 0.030959 | Avg Loss = 0.016906 | Case: cavity/bc/case0049 (t=704)
+[2026-04-30 02:09:05] [INFO] [87.63s]   [Sample 4740/12523] Loss = 0.030957 | Avg Loss = 0.016992 | Case: cavity/bc/case0049 (t=724)
+[2026-04-30 02:09:05] [INFO] [87.90s]   [Sample 4760/12523] Loss = 0.030871 | Avg Loss = 0.017025 | Case: cavity/bc/case0049 (t=744)
+[2026-04-30 02:09:06] [INFO] [88.62s]   [Sample 4780/12523] Loss = 0.031032 | Avg Loss = 0.017109 | Case: cavity/bc/case0049 (t=764)
+[2026-04-30 02:09:06] [INFO] [88.93s]   [Sample 4800/12523] Loss = 0.030919 | Avg Loss = 0.017141 | Case: cavity/bc/case0049 (t=784)
+[2026-04-30 02:09:06] [INFO] [89.28s]   [Sample 4820/12523] Loss = 0.030968 | Avg Loss = 0.017223 | Case: cavity/bc/case0049 (t=804)
+[2026-04-30 02:09:07] [INFO] [89.53s]   [Sample 4840/12523] Loss = 0.031029 | Avg Loss = 0.017255 | Case: cavity/bc/case0049 (t=824)
+[2026-04-30 02:09:07] [INFO] [89.87s]   [Sample 4860/12523] Loss = 0.030933 | Avg Loss = 0.017337 | Case: cavity/bc/case0049 (t=844)
+[2026-04-30 02:09:07] [INFO] [90.14s]   [Sample 4880/12523] Loss = 0.030997 | Avg Loss = 0.017367 | Case: cavity/bc/case0049 (t=864)
+[2026-04-30 02:09:08] [INFO] [90.61s]   [Sample 4900/12523] Loss = 0.030859 | Avg Loss = 0.017447 | Case: cavity/bc/case0049 (t=884)
+[2026-04-30 02:09:08] [INFO] [91.02s]   [Sample 4920/12523] Loss = 0.030952 | Avg Loss = 0.017476 | Case: cavity/bc/case0049 (t=904)
+[2026-04-30 02:09:09] [INFO] [91.70s]   [Sample 4940/12523] Loss = 0.030936 | Avg Loss = 0.017556 | Case: cavity/bc/case0049 (t=924)
+[2026-04-30 02:09:09] [INFO] [91.95s]   [Sample 4960/12523] Loss = 0.030922 | Avg Loss = 0.017585 | Case: cavity/bc/case0049 (t=944)
+[2026-04-30 02:09:09] [INFO] [92.39s]   [Sample 4980/12523] Loss = 0.030983 | Avg Loss = 0.017664 | Case: cavity/bc/case0049 (t=964)
+[2026-04-30 02:09:10] [INFO] [92.65s]   [Sample 5000/12523] Loss = 0.031064 | Avg Loss = 0.017692 | Case: cavity/bc/case0049 (t=984)
+[2026-04-30 02:09:10] [INFO] [93.03s]   [Sample 5020/12523] Loss = 0.001130 | Avg Loss = 0.017710 | Case: cavity/geo/case0001 (t=5)
+[2026-04-30 02:09:10] [INFO] [93.26s]   [Sample 5040/12523] Loss = 0.001150 | Avg Loss = 0.017643 | Case: cavity/geo/case0002 (t=3)
+[2026-04-30 02:09:11] [INFO] [93.56s]   [Sample 5060/12523] Loss = 0.000981 | Avg Loss = 0.017579 | Case: cavity/geo/case0003 (t=4)
+[2026-04-30 02:09:11] [INFO] [93.76s]   [Sample 5080/12523] Loss = 0.000966 | Avg Loss = 0.017513 | Case: cavity/geo/case0004 (t=5)
+[2026-04-30 02:09:11] [INFO] [94.13s]   [Sample 5100/12523] Loss = 0.000787 | Avg Loss = 0.017449 | Case: cavity/geo/case0005 (t=5)
+[2026-04-30 02:09:12] [INFO] [94.51s]   [Sample 5120/12523] Loss = 0.000842 | Avg Loss = 0.017383 | Case: cavity/geo/case0005 (t=25)
+[2026-04-30 02:09:12] [INFO] [94.97s]   [Sample 5140/12523] Loss = 0.001032 | Avg Loss = 0.017325 | Case: cavity/geo/case0006 (t=9)
+[2026-04-30 02:09:12] [INFO] [95.28s]   [Sample 5160/12523] Loss = 0.001162 | Avg Loss = 0.017261 | Case: cavity/geo/case0006 (t=29)
+[2026-04-30 02:09:13] [INFO] [95.67s]   [Sample 5180/12523] Loss = 0.001270 | Avg Loss = 0.017200 | Case: cavity/geo/case0007 (t=7)
+[2026-04-30 02:09:13] [INFO] [95.98s]   [Sample 5200/12523] Loss = 0.001294 | Avg Loss = 0.017138 | Case: cavity/geo/case0007 (t=27)
+[2026-04-30 02:09:13] [INFO] [96.40s]   [Sample 5220/12523] Loss = 0.001209 | Avg Loss = 0.017079 | Case: cavity/geo/case0008 (t=5)
+[2026-04-30 02:09:14] [INFO] [96.69s]   [Sample 5240/12523] Loss = 0.001205 | Avg Loss = 0.017017 | Case: cavity/geo/case0008 (t=25)
+[2026-04-30 02:09:14] [INFO] [97.08s]   [Sample 5260/12523] Loss = 0.000936 | Avg Loss = 0.016958 | Case: cavity/geo/case0009 (t=4)
+[2026-04-30 02:09:14] [INFO] [97.34s]   [Sample 5280/12523] Loss = 0.000950 | Avg Loss = 0.016897 | Case: cavity/geo/case0009 (t=24)
+[2026-04-30 02:09:15] [INFO] [97.69s]   [Sample 5300/12523] Loss = 0.000880 | Avg Loss = 0.016837 | Case: cavity/geo/case0009 (t=44)
+[2026-04-30 02:09:15] [INFO] [98.01s]   [Sample 5320/12523] Loss = 0.001332 | Avg Loss = 0.016777 | Case: cavity/geo/case0010 (t=5)
+[2026-04-30 02:09:16] [INFO] [98.82s]   [Sample 5340/12523] Loss = 0.001588 | Avg Loss = 0.016727 | Case: cavity/geo/case0010 (t=25)
+[2026-04-30 02:09:16] [INFO] [99.12s]   [Sample 5360/12523] Loss = 0.001084 | Avg Loss = 0.016667 | Case: cavity/geo/case0010 (t=45)
+[2026-04-30 02:09:16] [INFO] [99.42s]   [Sample 5380/12523] Loss = 0.001114 | Avg Loss = 0.016610 | Case: cavity/geo/case0010 (t=65)
+[2026-04-30 02:09:17] [INFO] [99.62s]   [Sample 5400/12523] Loss = 0.001103 | Avg Loss = 0.016552 | Case: cavity/geo/case0010 (t=85)
+[2026-04-30 02:09:17] [INFO] [99.93s]   [Sample 5420/12523] Loss = 0.001092 | Avg Loss = 0.016496 | Case: cavity/geo/case0010 (t=105)
+[2026-04-30 02:09:17] [INFO] [100.34s]   [Sample 5440/12523] Loss = 0.001091 | Avg Loss = 0.016439 | Case: cavity/geo/case0010 (t=125)
+[2026-04-30 02:09:18] [INFO] [100.77s]   [Sample 5460/12523] Loss = 0.001088 | Avg Loss = 0.016383 | Case: cavity/geo/case0010 (t=145)
+[2026-04-30 02:09:18] [INFO] [101.14s]   [Sample 5480/12523] Loss = 0.001085 | Avg Loss = 0.016326 | Case: cavity/geo/case0010 (t=165)
+[2026-04-30 02:09:19] [INFO] [101.54s]   [Sample 5500/12523] Loss = 0.001085 | Avg Loss = 0.016272 | Case: cavity/geo/case0010 (t=185)
+[2026-04-30 02:09:19] [INFO] [101.78s]   [Sample 5520/12523] Loss = 0.003370 | Avg Loss = 0.016219 | Case: cavity/geo/case0011 (t=3)
+[2026-04-30 02:09:19] [INFO] [102.16s]   [Sample 5540/12523] Loss = 0.001298 | Avg Loss = 0.016167 | Case: cavity/geo/case0011 (t=23)
+[2026-04-30 02:09:19] [INFO] [102.43s]   [Sample 5560/12523] Loss = 0.001374 | Avg Loss = 0.016112 | Case: cavity/geo/case0011 (t=43)
+[2026-04-30 02:09:20] [INFO] [102.79s]   [Sample 5580/12523] Loss = 0.001669 | Avg Loss = 0.016061 | Case: cavity/geo/case0011 (t=63)
+[2026-04-30 02:09:20] [INFO] [103.04s]   [Sample 5600/12523] Loss = 0.001092 | Avg Loss = 0.016007 | Case: cavity/geo/case0012 (t=16)
+[2026-04-30 02:09:20] [INFO] [103.41s]   [Sample 5620/12523] Loss = 0.001024 | Avg Loss = 0.015954 | Case: cavity/geo/case0012 (t=36)
+[2026-04-30 02:09:21] [INFO] [103.66s]   [Sample 5640/12523] Loss = 0.000963 | Avg Loss = 0.015900 | Case: cavity/geo/case0012 (t=56)
+[2026-04-30 02:09:21] [INFO] [103.99s]   [Sample 5660/12523] Loss = 0.000907 | Avg Loss = 0.015848 | Case: cavity/geo/case0012 (t=76)
+[2026-04-30 02:09:21] [INFO] [104.27s]   [Sample 5680/12523] Loss = 0.000927 | Avg Loss = 0.015796 | Case: cavity/geo/case0013 (t=13)
+[2026-04-30 02:09:22] [INFO] [104.63s]   [Sample 5700/12523] Loss = 0.000913 | Avg Loss = 0.015744 | Case: cavity/geo/case0013 (t=33)
+[2026-04-30 02:09:22] [INFO] [104.85s]   [Sample 5720/12523] Loss = 0.000807 | Avg Loss = 0.015697 | Case: cavity/geo/case0013 (t=53)
+[2026-04-30 02:09:22] [INFO] [105.27s]   [Sample 5740/12523] Loss = 0.001205 | Avg Loss = 0.015653 | Case: cavity/geo/case0013 (t=73)
+[2026-04-30 02:09:23] [INFO] [105.54s]   [Sample 5760/12523] Loss = 0.001226 | Avg Loss = 0.015602 | Case: cavity/geo/case0013 (t=93)
+[2026-04-30 02:09:23] [INFO] [105.88s]   [Sample 5780/12523] Loss = 0.001178 | Avg Loss = 0.015553 | Case: cavity/geo/case0013 (t=113)
+[2026-04-30 02:09:23] [INFO] [106.16s]   [Sample 5800/12523] Loss = 0.001158 | Avg Loss = 0.015502 | Case: cavity/geo/case0013 (t=133)
+[2026-04-30 02:09:24] [INFO] [106.54s]   [Sample 5820/12523] Loss = 0.000910 | Avg Loss = 0.015453 | Case: cavity/geo/case0014 (t=17)
+[2026-04-30 02:09:24] [INFO] [106.77s]   [Sample 5840/12523] Loss = 0.000935 | Avg Loss = 0.015403 | Case: cavity/geo/case0014 (t=37)
+[2026-04-30 02:09:24] [INFO] [107.12s]   [Sample 5860/12523] Loss = 0.000968 | Avg Loss = 0.015354 | Case: cavity/geo/case0014 (t=57)
+[2026-04-30 02:09:24] [INFO] [107.34s]   [Sample 5880/12523] Loss = 0.000989 | Avg Loss = 0.015305 | Case: cavity/geo/case0014 (t=77)
+[2026-04-30 02:09:25] [INFO] [107.71s]   [Sample 5900/12523] Loss = 0.001013 | Avg Loss = 0.015257 | Case: cavity/geo/case0014 (t=97)
+[2026-04-30 02:09:25] [INFO] [107.97s]   [Sample 5920/12523] Loss = 0.004305 | Avg Loss = 0.015213 | Case: cavity/geo/case0015 (t=5)
+[2026-04-30 02:09:25] [INFO] [108.33s]   [Sample 5940/12523] Loss = 0.005599 | Avg Loss = 0.015184 | Case: cavity/geo/case0016 (t=3)
+[2026-04-30 02:09:26] [INFO] [108.57s]   [Sample 5960/12523] Loss = 0.005686 | Avg Loss = 0.015148 | Case: cavity/geo/case0016 (t=23)
+[2026-04-30 02:09:26] [INFO] [108.95s]   [Sample 5980/12523] Loss = 0.005827 | Avg Loss = 0.015121 | Case: cavity/geo/case0016 (t=43)
+[2026-04-30 02:09:26] [INFO] [109.46s]   [Sample 6000/12523] Loss = 0.005843 | Avg Loss = 0.015086 | Case: cavity/geo/case0016 (t=63)
+[2026-04-30 02:09:27] [INFO] [109.82s]   [Sample 6020/12523] Loss = 0.005845 | Avg Loss = 0.015059 | Case: cavity/geo/case0016 (t=83)
+[2026-04-30 02:09:27] [INFO] [110.07s]   [Sample 6040/12523] Loss = 0.006164 | Avg Loss = 0.015025 | Case: cavity/geo/case0017 (t=4)
+[2026-04-30 02:09:27] [INFO] [110.36s]   [Sample 6060/12523] Loss = 0.005562 | Avg Loss = 0.014997 | Case: cavity/geo/case0017 (t=24)
+[2026-04-30 02:09:28] [INFO] [110.58s]   [Sample 6080/12523] Loss = 0.005628 | Avg Loss = 0.014962 | Case: cavity/geo/case0017 (t=44)
+[2026-04-30 02:09:28] [INFO] [110.90s]   [Sample 6100/12523] Loss = 0.005637 | Avg Loss = 0.014935 | Case: cavity/geo/case0017 (t=64)
+[2026-04-30 02:09:28] [INFO] [111.16s]   [Sample 6120/12523] Loss = 0.005635 | Avg Loss = 0.014901 | Case: cavity/geo/case0017 (t=84)
+[2026-04-30 02:09:28] [INFO] [111.45s]   [Sample 6140/12523] Loss = 0.005385 | Avg Loss = 0.014876 | Case: cavity/geo/case0018 (t=18)
+[2026-04-30 02:09:29] [INFO] [111.66s]   [Sample 6160/12523] Loss = 0.004921 | Avg Loss = 0.014841 | Case: cavity/geo/case0019 (t=2)
+[2026-04-30 02:09:29] [INFO] [111.93s]   [Sample 6180/12523] Loss = 0.003997 | Avg Loss = 0.014807 | Case: cavity/geo/case0019 (t=22)
+[2026-04-30 02:09:29] [INFO] [112.16s]   [Sample 6200/12523] Loss = 0.004323 | Avg Loss = 0.014770 | Case: cavity/geo/case0019 (t=42)
+[2026-04-30 02:09:29] [INFO] [112.46s]   [Sample 6220/12523] Loss = 0.004911 | Avg Loss = 0.014740 | Case: cavity/geo/case0020 (t=18)
+[2026-04-30 02:09:30] [INFO] [112.67s]   [Sample 6240/12523] Loss = 0.005432 | Avg Loss = 0.014707 | Case: cavity/geo/case0020 (t=38)
+[2026-04-30 02:09:30] [INFO] [112.95s]   [Sample 6260/12523] Loss = 0.004747 | Avg Loss = 0.014678 | Case: cavity/geo/case0021 (t=15)
+[2026-04-30 02:09:30] [INFO] [113.19s]   [Sample 6280/12523] Loss = 0.005093 | Avg Loss = 0.014644 | Case: cavity/geo/case0021 (t=35)
+[2026-04-30 02:09:31] [INFO] [113.47s]   [Sample 6300/12523] Loss = 0.005429 | Avg Loss = 0.014618 | Case: cavity/geo/case0021 (t=55)
+[2026-04-30 02:09:31] [INFO] [113.68s]   [Sample 6320/12523] Loss = 0.005484 | Avg Loss = 0.014585 | Case: cavity/geo/case0021 (t=75)
+[2026-04-30 02:09:31] [INFO] [114.09s]   [Sample 6340/12523] Loss = 0.005510 | Avg Loss = 0.014560 | Case: cavity/geo/case0021 (t=95)
+[2026-04-30 02:09:31] [INFO] [114.31s]   [Sample 6360/12523] Loss = 0.007266 | Avg Loss = 0.014526 | Case: cavity/geo/case0022 (t=16)
+[2026-04-30 02:09:32] [INFO] [114.60s]   [Sample 6380/12523] Loss = 0.002705 | Avg Loss = 0.014490 | Case: cavity/geo/case0022 (t=36)
+[2026-04-30 02:09:32] [INFO] [114.80s]   [Sample 6400/12523] Loss = 0.002976 | Avg Loss = 0.014452 | Case: cavity/geo/case0022 (t=56)
+[2026-04-30 02:09:32] [INFO] [115.13s]   [Sample 6420/12523] Loss = 0.003500 | Avg Loss = 0.014419 | Case: cavity/geo/case0023 (t=3)
+[2026-04-30 02:09:32] [INFO] [115.36s]   [Sample 6440/12523] Loss = 0.003663 | Avg Loss = 0.014383 | Case: cavity/geo/case0023 (t=23)
+[2026-04-30 02:09:33] [INFO] [115.68s]   [Sample 6460/12523] Loss = 0.004455 | Avg Loss = 0.014354 | Case: cavity/geo/case0023 (t=43)
+[2026-04-30 02:09:33] [INFO] [116.04s]   [Sample 6480/12523] Loss = 0.004728 | Avg Loss = 0.014321 | Case: cavity/geo/case0023 (t=63)
+[2026-04-30 02:09:33] [INFO] [116.34s]   [Sample 6500/12523] Loss = 0.001853 | Avg Loss = 0.014288 | Case: cavity/geo/case0024 (t=12)
+[2026-04-30 02:09:34] [INFO] [116.56s]   [Sample 6520/12523] Loss = 0.005998 | Avg Loss = 0.014254 | Case: cavity/geo/case0024 (t=32)
+[2026-04-30 02:09:34] [INFO] [116.84s]   [Sample 6540/12523] Loss = 0.002233 | Avg Loss = 0.014218 | Case: cavity/geo/case0024 (t=52)
+[2026-04-30 02:09:34] [INFO] [117.05s]   [Sample 6560/12523] Loss = 0.002445 | Avg Loss = 0.014180 | Case: cavity/geo/case0024 (t=72)
+[2026-04-30 02:09:34] [INFO] [117.34s]   [Sample 6580/12523] Loss = 0.002642 | Avg Loss = 0.014147 | Case: cavity/geo/case0024 (t=92)
+[2026-04-30 02:09:35] [INFO] [117.55s]   [Sample 6600/12523] Loss = 0.002723 | Avg Loss = 0.014110 | Case: cavity/geo/case0024 (t=112)
+[2026-04-30 02:09:35] [INFO] [117.84s]   [Sample 6620/12523] Loss = 0.002793 | Avg Loss = 0.014078 | Case: cavity/geo/case0024 (t=132)
+[2026-04-30 02:09:35] [INFO] [118.03s]   [Sample 6640/12523] Loss = 0.002819 | Avg Loss = 0.014042 | Case: cavity/geo/case0024 (t=152)
+[2026-04-30 02:09:35] [INFO] [118.34s]   [Sample 6660/12523] Loss = 0.002843 | Avg Loss = 0.014010 | Case: cavity/geo/case0024 (t=172)
+[2026-04-30 02:09:36] [INFO] [118.54s]   [Sample 6680/12523] Loss = 0.002854 | Avg Loss = 0.013975 | Case: cavity/geo/case0024 (t=192)
+[2026-04-30 02:09:36] [INFO] [118.82s]   [Sample 6700/12523] Loss = 0.000998 | Avg Loss = 0.013936 | Case: cavity/prop/case0050 (t=19)
+[2026-04-30 02:09:36] [INFO] [119.14s]   [Sample 6720/12523] Loss = 0.000929 | Avg Loss = 0.013898 | Case: cavity/prop/case0055 (t=1)
+[2026-04-30 02:09:36] [INFO] [119.45s]   [Sample 6740/12523] Loss = 0.000795 | Avg Loss = 0.013860 | Case: cavity/prop/case0057 (t=13)
+[2026-04-30 02:09:37] [INFO] [119.76s]   [Sample 6760/12523] Loss = 0.000757 | Avg Loss = 0.013820 | Case: cavity/prop/case0058 (t=2)
+[2026-04-30 02:09:37] [INFO] [120.08s]   [Sample 6780/12523] Loss = 0.001030 | Avg Loss = 0.013784 | Case: cavity/prop/case0061 (t=3)
+[2026-04-30 02:09:37] [INFO] [120.29s]   [Sample 6800/12523] Loss = 0.000779 | Avg Loss = 0.013745 | Case: cavity/prop/case0064 (t=9)
+[2026-04-30 02:09:38] [INFO] [120.58s]   [Sample 6820/12523] Loss = 0.000819 | Avg Loss = 0.013708 | Case: cavity/prop/case0064 (t=29)
+[2026-04-30 02:09:38] [INFO] [120.77s]   [Sample 6840/12523] Loss = 0.000812 | Avg Loss = 0.013670 | Case: cavity/prop/case0064 (t=49)
+[2026-04-30 02:09:38] [INFO] [121.08s]   [Sample 6860/12523] Loss = 0.001404 | Avg Loss = 0.013633 | Case: cavity/prop/case0066 (t=6)
+[2026-04-30 02:09:38] [INFO] [121.30s]   [Sample 6880/12523] Loss = 0.001052 | Avg Loss = 0.013596 | Case: cavity/prop/case0070 (t=4)
+[2026-04-30 02:09:39] [INFO] [121.58s]   [Sample 6900/12523] Loss = 0.000857 | Avg Loss = 0.013562 | Case: cavity/prop/case0071 (t=19)
+[2026-04-30 02:09:39] [INFO] [121.78s]   [Sample 6920/12523] Loss = 0.000832 | Avg Loss = 0.013524 | Case: cavity/prop/case0071 (t=39)
+[2026-04-30 02:09:39] [INFO] [122.09s]   [Sample 6940/12523] Loss = 0.000814 | Avg Loss = 0.013488 | Case: cavity/prop/case0071 (t=59)
+[2026-04-30 02:09:39] [INFO] [122.30s]   [Sample 6960/12523] Loss = 0.000694 | Avg Loss = 0.013451 | Case: cavity/prop/case0072 (t=5)
+[2026-04-30 02:09:40] [INFO] [122.59s]   [Sample 6980/12523] Loss = 0.001423 | Avg Loss = 0.013416 | Case: cavity/prop/case0073 (t=8)
+[2026-04-30 02:09:40] [INFO] [122.79s]   [Sample 7000/12523] Loss = 0.001275 | Avg Loss = 0.013381 | Case: cavity/prop/case0078 (t=1)
+[2026-04-30 02:09:40] [INFO] [123.10s]   [Sample 7020/12523] Loss = 0.000894 | Avg Loss = 0.013352 | Case: cavity/prop/case0078 (t=21)
+[2026-04-30 02:09:40] [INFO] [123.33s]   [Sample 7040/12523] Loss = 0.000847 | Avg Loss = 0.013316 | Case: cavity/prop/case0078 (t=41)
+[2026-04-30 02:09:41] [INFO] [123.68s]   [Sample 7060/12523] Loss = 0.000816 | Avg Loss = 0.013281 | Case: cavity/prop/case0078 (t=61)
+[2026-04-30 02:09:41] [INFO] [123.93s]   [Sample 7080/12523] Loss = 0.000805 | Avg Loss = 0.013245 | Case: cavity/prop/case0078 (t=81)
+[2026-04-30 02:09:41] [INFO] [124.29s]   [Sample 7100/12523] Loss = 0.000802 | Avg Loss = 0.013211 | Case: cavity/prop/case0078 (t=101)
+[2026-04-30 02:09:42] [INFO] [124.54s]   [Sample 7120/12523] Loss = 0.000800 | Avg Loss = 0.013175 | Case: cavity/prop/case0078 (t=121)
+[2026-04-30 02:09:42] [INFO] [124.86s]   [Sample 7140/12523] Loss = 0.000800 | Avg Loss = 0.013141 | Case: cavity/prop/case0078 (t=141)
+[2026-04-30 02:09:42] [INFO] [125.15s]   [Sample 7160/12523] Loss = 0.000797 | Avg Loss = 0.013106 | Case: cavity/prop/case0078 (t=161)
+[2026-04-30 02:09:43] [INFO] [125.50s]   [Sample 7180/12523] Loss = 0.000800 | Avg Loss = 0.013072 | Case: cavity/prop/case0078 (t=181)
+[2026-04-30 02:09:43] [INFO] [125.75s]   [Sample 7200/12523] Loss = 0.000802 | Avg Loss = 0.013038 | Case: cavity/prop/case0078 (t=201)
+[2026-04-30 02:09:43] [INFO] [126.41s]   [Sample 7220/12523] Loss = 0.000800 | Avg Loss = 0.013004 | Case: cavity/prop/case0078 (t=221)
+[2026-04-30 02:09:44] [INFO] [126.73s]   [Sample 7240/12523] Loss = 0.000797 | Avg Loss = 0.012970 | Case: cavity/prop/case0078 (t=241)
+[2026-04-30 02:09:44] [INFO] [127.31s]   [Sample 7260/12523] Loss = 0.000793 | Avg Loss = 0.012937 | Case: cavity/prop/case0078 (t=261)
+[2026-04-30 02:09:45] [INFO] [127.55s]   [Sample 7280/12523] Loss = 0.000800 | Avg Loss = 0.012903 | Case: cavity/prop/case0078 (t=281)
+[2026-04-30 02:09:45] [INFO] [127.90s]   [Sample 7300/12523] Loss = 0.000794 | Avg Loss = 0.012871 | Case: cavity/prop/case0078 (t=301)
+[2026-04-30 02:09:45] [INFO] [128.42s]   [Sample 7320/12523] Loss = 0.000796 | Avg Loss = 0.012837 | Case: cavity/prop/case0078 (t=321)
+[2026-04-30 02:09:46] [INFO] [129.32s]   [Sample 7340/12523] Loss = 0.000798 | Avg Loss = 0.012805 | Case: cavity/prop/case0078 (t=341)
+[2026-04-30 02:09:47] [INFO] [129.63s]   [Sample 7360/12523] Loss = 0.000799 | Avg Loss = 0.012772 | Case: cavity/prop/case0078 (t=361)
+[2026-04-30 02:09:47] [INFO] [130.18s]   [Sample 7380/12523] Loss = 0.000797 | Avg Loss = 0.012740 | Case: cavity/prop/case0078 (t=381)
+[2026-04-30 02:09:48] [INFO] [130.52s]   [Sample 7400/12523] Loss = 0.000801 | Avg Loss = 0.012707 | Case: cavity/prop/case0078 (t=401)
+[2026-04-30 02:09:48] [INFO] [131.24s]   [Sample 7420/12523] Loss = 0.000802 | Avg Loss = 0.012675 | Case: cavity/prop/case0078 (t=421)
+[2026-04-30 02:09:49] [INFO] [132.31s]   [Sample 7440/12523] Loss = 0.000801 | Avg Loss = 0.012643 | Case: cavity/prop/case0078 (t=441)
+[2026-04-30 02:09:50] [INFO] [132.92s]   [Sample 7460/12523] Loss = 0.000797 | Avg Loss = 0.012612 | Case: cavity/prop/case0078 (t=461)
+[2026-04-30 02:09:51] [INFO] [133.51s]   [Sample 7480/12523] Loss = 0.000798 | Avg Loss = 0.012580 | Case: cavity/prop/case0078 (t=481)
+[2026-04-30 02:09:51] [INFO] [134.00s]   [Sample 7500/12523] Loss = 0.000799 | Avg Loss = 0.012549 | Case: cavity/prop/case0078 (t=501)
+[2026-04-30 02:09:51] [INFO] [134.42s]   [Sample 7520/12523] Loss = 0.000795 | Avg Loss = 0.012517 | Case: cavity/prop/case0078 (t=521)
+[2026-04-30 02:09:52] [INFO] [134.97s]   [Sample 7540/12523] Loss = 0.000803 | Avg Loss = 0.012486 | Case: cavity/prop/case0078 (t=541)
+[2026-04-30 02:09:52] [INFO] [135.25s]   [Sample 7560/12523] Loss = 0.000795 | Avg Loss = 0.012455 | Case: cavity/prop/case0078 (t=561)
+[2026-04-30 02:09:53] [INFO] [135.62s]   [Sample 7580/12523] Loss = 0.000796 | Avg Loss = 0.012425 | Case: cavity/prop/case0078 (t=581)
+[2026-04-30 02:09:53] [INFO] [135.87s]   [Sample 7600/12523] Loss = 0.000795 | Avg Loss = 0.012394 | Case: cavity/prop/case0078 (t=601)
+[2026-04-30 02:09:53] [INFO] [136.32s]   [Sample 7620/12523] Loss = 0.000798 | Avg Loss = 0.012364 | Case: cavity/prop/case0078 (t=621)
+[2026-04-30 02:09:54] [INFO] [136.58s]   [Sample 7640/12523] Loss = 0.000797 | Avg Loss = 0.012333 | Case: cavity/prop/case0078 (t=641)
+[2026-04-30 02:09:54] [INFO] [136.89s]   [Sample 7660/12523] Loss = 0.000792 | Avg Loss = 0.012303 | Case: cavity/prop/case0078 (t=661)
+[2026-04-30 02:09:54] [INFO] [137.14s]   [Sample 7680/12523] Loss = 0.000799 | Avg Loss = 0.012273 | Case: cavity/prop/case0078 (t=681)
+[2026-04-30 02:09:54] [INFO] [137.44s]   [Sample 7700/12523] Loss = 0.000800 | Avg Loss = 0.012244 | Case: cavity/prop/case0078 (t=701)
+[2026-04-30 02:09:55] [INFO] [137.67s]   [Sample 7720/12523] Loss = 0.000796 | Avg Loss = 0.012213 | Case: cavity/prop/case0078 (t=721)
+[2026-04-30 02:09:55] [INFO] [137.97s]   [Sample 7740/12523] Loss = 0.000799 | Avg Loss = 0.012184 | Case: cavity/prop/case0078 (t=741)
+[2026-04-30 02:09:55] [INFO] [138.20s]   [Sample 7760/12523] Loss = 0.000792 | Avg Loss = 0.012155 | Case: cavity/prop/case0078 (t=761)
+[2026-04-30 02:09:56] [INFO] [138.49s]   [Sample 7780/12523] Loss = 0.000796 | Avg Loss = 0.012126 | Case: cavity/prop/case0078 (t=781)
+[2026-04-30 02:09:56] [INFO] [138.69s]   [Sample 7800/12523] Loss = 0.000801 | Avg Loss = 0.012096 | Case: cavity/prop/case0078 (t=801)
+[2026-04-30 02:09:56] [INFO] [138.97s]   [Sample 7820/12523] Loss = 0.000796 | Avg Loss = 0.012068 | Case: cavity/prop/case0078 (t=821)
+[2026-04-30 02:09:56] [INFO] [139.21s]   [Sample 7840/12523] Loss = 0.000802 | Avg Loss = 0.012039 | Case: cavity/prop/case0078 (t=841)
+[2026-04-30 02:09:57] [INFO] [139.54s]   [Sample 7860/12523] Loss = 0.000795 | Avg Loss = 0.012011 | Case: cavity/prop/case0078 (t=861)
+[2026-04-30 02:09:57] [INFO] [139.93s]   [Sample 7880/12523] Loss = 0.000796 | Avg Loss = 0.011982 | Case: cavity/prop/case0078 (t=881)
+[2026-04-30 02:09:57] [INFO] [140.33s]   [Sample 7900/12523] Loss = 0.000799 | Avg Loss = 0.011954 | Case: cavity/prop/case0078 (t=901)
+[2026-04-30 02:09:58] [INFO] [140.74s]   [Sample 7920/12523] Loss = 0.000803 | Avg Loss = 0.011925 | Case: cavity/prop/case0078 (t=921)
+[2026-04-30 02:09:58] [INFO] [141.08s]   [Sample 7940/12523] Loss = 0.000795 | Avg Loss = 0.011898 | Case: cavity/prop/case0078 (t=941)
+[2026-04-30 02:09:58] [INFO] [141.28s]   [Sample 7960/12523] Loss = 0.000800 | Avg Loss = 0.011869 | Case: cavity/prop/case0078 (t=961)
+[2026-04-30 02:09:59] [INFO] [141.58s]   [Sample 7980/12523] Loss = 0.000797 | Avg Loss = 0.011842 | Case: cavity/prop/case0078 (t=981)
+[2026-04-30 02:09:59] [INFO] [141.78s]   [Sample 8000/12523] Loss = 0.000750 | Avg Loss = 0.011814 | Case: cavity/prop/case0079 (t=2)
+[2026-04-30 02:09:59] [INFO] [142.09s]   [Sample 8020/12523] Loss = 0.000708 | Avg Loss = 0.011787 | Case: cavity/prop/case0080 (t=2)
+[2026-04-30 02:09:59] [INFO] [142.30s]   [Sample 8040/12523] Loss = 0.001430 | Avg Loss = 0.011760 | Case: cavity/prop/case0083 (t=3)
+[2026-04-30 02:10:00] [INFO] [142.60s]   [Sample 8060/12523] Loss = 0.001203 | Avg Loss = 0.011737 | Case: cavity/prop/case0085 (t=13)
+[2026-04-30 02:10:00] [INFO] [142.80s]   [Sample 8080/12523] Loss = 0.000895 | Avg Loss = 0.011710 | Case: cavity/prop/case0085 (t=33)
+[2026-04-30 02:10:00] [INFO] [143.13s]   [Sample 8100/12523] Loss = 0.000889 | Avg Loss = 0.011684 | Case: cavity/prop/case0085 (t=53)
+[2026-04-30 02:10:00] [INFO] [143.35s]   [Sample 8120/12523] Loss = 0.000907 | Avg Loss = 0.011657 | Case: cavity/prop/case0085 (t=73)
+[2026-04-30 02:10:01] [INFO] [143.64s]   [Sample 8140/12523] Loss = 0.000892 | Avg Loss = 0.011631 | Case: cavity/prop/case0085 (t=93)
+[2026-04-30 02:10:01] [INFO] [143.85s]   [Sample 8160/12523] Loss = 0.000844 | Avg Loss = 0.011604 | Case: cavity/prop/case0085 (t=113)
+[2026-04-30 02:10:01] [INFO] [144.24s]   [Sample 8180/12523] Loss = 0.000835 | Avg Loss = 0.011578 | Case: cavity/prop/case0085 (t=133)
+[2026-04-30 02:10:02] [INFO] [144.49s]   [Sample 8200/12523] Loss = 0.000887 | Avg Loss = 0.011552 | Case: cavity/prop/case0085 (t=153)
+[2026-04-30 02:10:02] [INFO] [144.82s]   [Sample 8220/12523] Loss = 0.000901 | Avg Loss = 0.011526 | Case: cavity/prop/case0085 (t=173)
+[2026-04-30 02:10:02] [INFO] [145.08s]   [Sample 8240/12523] Loss = 0.000809 | Avg Loss = 0.011500 | Case: cavity/prop/case0085 (t=193)
+[2026-04-30 02:10:02] [INFO] [145.42s]   [Sample 8260/12523] Loss = 0.000808 | Avg Loss = 0.011474 | Case: cavity/prop/case0085 (t=213)
+[2026-04-30 02:10:03] [INFO] [145.67s]   [Sample 8280/12523] Loss = 0.000808 | Avg Loss = 0.011448 | Case: cavity/prop/case0085 (t=233)
+[2026-04-30 02:10:03] [INFO] [146.03s]   [Sample 8300/12523] Loss = 0.000806 | Avg Loss = 0.011423 | Case: cavity/prop/case0085 (t=253)
+[2026-04-30 02:10:03] [INFO] [146.28s]   [Sample 8320/12523] Loss = 0.000811 | Avg Loss = 0.011397 | Case: cavity/prop/case0085 (t=273)
+[2026-04-30 02:10:04] [INFO] [146.63s]   [Sample 8340/12523] Loss = 0.000808 | Avg Loss = 0.011372 | Case: cavity/prop/case0085 (t=293)
+[2026-04-30 02:10:04] [INFO] [146.83s]   [Sample 8360/12523] Loss = 0.000806 | Avg Loss = 0.011346 | Case: cavity/prop/case0085 (t=313)
+[2026-04-30 02:10:04] [INFO] [147.16s]   [Sample 8380/12523] Loss = 0.000808 | Avg Loss = 0.011322 | Case: cavity/prop/case0085 (t=333)
+[2026-04-30 02:10:04] [INFO] [147.36s]   [Sample 8400/12523] Loss = 0.000809 | Avg Loss = 0.011296 | Case: cavity/prop/case0085 (t=353)
+[2026-04-30 02:10:05] [INFO] [147.66s]   [Sample 8420/12523] Loss = 0.000810 | Avg Loss = 0.011272 | Case: cavity/prop/case0085 (t=373)
+[2026-04-30 02:10:05] [INFO] [147.90s]   [Sample 8440/12523] Loss = 0.000806 | Avg Loss = 0.011246 | Case: cavity/prop/case0085 (t=393)
+[2026-04-30 02:10:05] [INFO] [148.29s]   [Sample 8460/12523] Loss = 0.000806 | Avg Loss = 0.011222 | Case: cavity/prop/case0085 (t=413)
+[2026-04-30 02:10:06] [INFO] [148.56s]   [Sample 8480/12523] Loss = 0.000809 | Avg Loss = 0.011197 | Case: cavity/prop/case0085 (t=433)
+[2026-04-30 02:10:06] [INFO] [148.91s]   [Sample 8500/12523] Loss = 0.000807 | Avg Loss = 0.011173 | Case: cavity/prop/case0085 (t=453)
+[2026-04-30 02:10:06] [INFO] [149.20s]   [Sample 8520/12523] Loss = 0.000809 | Avg Loss = 0.011148 | Case: cavity/prop/case0085 (t=473)
+[2026-04-30 02:10:07] [INFO] [149.55s]   [Sample 8540/12523] Loss = 0.000809 | Avg Loss = 0.011125 | Case: cavity/prop/case0085 (t=493)
+[2026-04-30 02:10:07] [INFO] [149.81s]   [Sample 8560/12523] Loss = 0.000807 | Avg Loss = 0.011100 | Case: cavity/prop/case0085 (t=513)
+[2026-04-30 02:10:07] [INFO] [150.23s]   [Sample 8580/12523] Loss = 0.000807 | Avg Loss = 0.011077 | Case: cavity/prop/case0085 (t=533)
+[2026-04-30 02:10:08] [INFO] [150.48s]   [Sample 8600/12523] Loss = 0.000810 | Avg Loss = 0.011052 | Case: cavity/prop/case0085 (t=553)
+[2026-04-30 02:10:08] [INFO] [150.86s]   [Sample 8620/12523] Loss = 0.000749 | Avg Loss = 0.011029 | Case: cavity/prop/case0085 (t=573)
+[2026-04-30 02:10:08] [INFO] [151.35s]   [Sample 8640/12523] Loss = 0.000802 | Avg Loss = 0.011005 | Case: cavity/prop/case0086 (t=19)
+[2026-04-30 02:10:09] [INFO] [151.68s]   [Sample 8660/12523] Loss = 0.001422 | Avg Loss = 0.010982 | Case: cavity/prop/case0089 (t=1)
+[2026-04-30 02:10:09] [INFO] [151.89s]   [Sample 8680/12523] Loss = 0.001824 | Avg Loss = 0.010960 | Case: cavity/prop/case0092 (t=7)
+[2026-04-30 02:10:09] [INFO] [152.23s]   [Sample 8700/12523] Loss = 0.002732 | Avg Loss = 0.010941 | Case: cavity/prop/case0092 (t=27)
+[2026-04-30 02:10:09] [INFO] [152.47s]   [Sample 8720/12523] Loss = 0.003113 | Avg Loss = 0.010921 | Case: cavity/prop/case0092 (t=47)
+[2026-04-30 02:10:10] [INFO] [152.79s]   [Sample 8740/12523] Loss = 0.000945 | Avg Loss = 0.010900 | Case: cavity/prop/case0092 (t=67)
+[2026-04-30 02:10:10] [INFO] [153.06s]   [Sample 8760/12523] Loss = 0.000909 | Avg Loss = 0.010877 | Case: cavity/prop/case0092 (t=87)
+[2026-04-30 02:10:10] [INFO] [153.37s]   [Sample 8780/12523] Loss = 0.000938 | Avg Loss = 0.010854 | Case: cavity/prop/case0092 (t=107)
+[2026-04-30 02:10:11] [INFO] [153.59s]   [Sample 8800/12523] Loss = 0.000902 | Avg Loss = 0.010831 | Case: cavity/prop/case0092 (t=127)
+[2026-04-30 02:10:11] [INFO] [153.89s]   [Sample 8820/12523] Loss = 0.000917 | Avg Loss = 0.010809 | Case: cavity/prop/case0092 (t=147)
+[2026-04-30 02:10:11] [INFO] [154.20s]   [Sample 8840/12523] Loss = 0.000911 | Avg Loss = 0.010787 | Case: cavity/prop/case0092 (t=167)
+[2026-04-30 02:10:12] [INFO] [154.54s]   [Sample 8860/12523] Loss = 0.000827 | Avg Loss = 0.010765 | Case: cavity/prop/case0092 (t=187)
+[2026-04-30 02:10:12] [INFO] [154.94s]   [Sample 8880/12523] Loss = 0.000898 | Avg Loss = 0.010742 | Case: cavity/prop/case0092 (t=207)
+[2026-04-30 02:10:12] [INFO] [155.31s]   [Sample 8900/12523] Loss = 0.000901 | Avg Loss = 0.010720 | Case: cavity/prop/case0092 (t=227)
+[2026-04-30 02:10:13] [INFO] [155.52s]   [Sample 8920/12523] Loss = 0.000917 | Avg Loss = 0.010698 | Case: cavity/prop/case0092 (t=247)
+[2026-04-30 02:10:13] [INFO] [155.81s]   [Sample 8940/12523] Loss = 0.000905 | Avg Loss = 0.010676 | Case: cavity/prop/case0092 (t=267)
+[2026-04-30 02:10:13] [INFO] [156.18s]   [Sample 8960/12523] Loss = 0.000866 | Avg Loss = 0.010654 | Case: cavity/prop/case0092 (t=287)
+[2026-04-30 02:10:14] [INFO] [156.55s]   [Sample 8980/12523] Loss = 0.000906 | Avg Loss = 0.010632 | Case: cavity/prop/case0092 (t=307)
+[2026-04-30 02:10:14] [INFO] [156.76s]   [Sample 9000/12523] Loss = 0.000907 | Avg Loss = 0.010610 | Case: cavity/prop/case0092 (t=327)
+[2026-04-30 02:10:14] [INFO] [157.04s]   [Sample 9020/12523] Loss = 0.000841 | Avg Loss = 0.010589 | Case: cavity/prop/case0092 (t=347)
+[2026-04-30 02:10:14] [INFO] [157.34s]   [Sample 9040/12523] Loss = 0.000887 | Avg Loss = 0.010567 | Case: cavity/prop/case0092 (t=367)
+[2026-04-30 02:10:15] [INFO] [157.63s]   [Sample 9060/12523] Loss = 0.000892 | Avg Loss = 0.010546 | Case: cavity/prop/case0092 (t=387)
+[2026-04-30 02:10:15] [INFO] [157.86s]   [Sample 9080/12523] Loss = 0.000893 | Avg Loss = 0.010525 | Case: cavity/prop/case0092 (t=407)
+[2026-04-30 02:10:15] [INFO] [158.19s]   [Sample 9100/12523] Loss = 0.000879 | Avg Loss = 0.010504 | Case: cavity/prop/case0092 (t=427)
+[2026-04-30 02:10:15] [INFO] [158.42s]   [Sample 9120/12523] Loss = 0.000842 | Avg Loss = 0.010482 | Case: cavity/prop/case0092 (t=447)
+[2026-04-30 02:10:16] [INFO] [158.70s]   [Sample 9140/12523] Loss = 0.000819 | Avg Loss = 0.010462 | Case: cavity/prop/case0092 (t=467)
+[2026-04-30 02:10:16] [INFO] [158.90s]   [Sample 9160/12523] Loss = 0.000859 | Avg Loss = 0.010441 | Case: cavity/prop/case0092 (t=487)
+[2026-04-30 02:10:16] [INFO] [159.21s]   [Sample 9180/12523] Loss = 0.000804 | Avg Loss = 0.010420 | Case: cavity/prop/case0092 (t=507)
+[2026-04-30 02:10:16] [INFO] [159.42s]   [Sample 9200/12523] Loss = 0.000803 | Avg Loss = 0.010399 | Case: cavity/prop/case0092 (t=527)
+[2026-04-30 02:10:17] [INFO] [159.71s]   [Sample 9220/12523] Loss = 0.000803 | Avg Loss = 0.010378 | Case: cavity/prop/case0092 (t=547)
+[2026-04-30 02:10:17] [INFO] [159.90s]   [Sample 9240/12523] Loss = 0.000804 | Avg Loss = 0.010357 | Case: cavity/prop/case0092 (t=567)
+[2026-04-30 02:10:17] [INFO] [160.24s]   [Sample 9260/12523] Loss = 0.000806 | Avg Loss = 0.010337 | Case: cavity/prop/case0092 (t=587)
+[2026-04-30 02:10:17] [INFO] [160.44s]   [Sample 9280/12523] Loss = 0.000800 | Avg Loss = 0.010316 | Case: cavity/prop/case0092 (t=607)
+[2026-04-30 02:10:18] [INFO] [160.73s]   [Sample 9300/12523] Loss = 0.000800 | Avg Loss = 0.010296 | Case: cavity/prop/case0092 (t=627)
+[2026-04-30 02:10:18] [INFO] [161.00s]   [Sample 9320/12523] Loss = 0.000802 | Avg Loss = 0.010275 | Case: cavity/prop/case0092 (t=647)
+[2026-04-30 02:10:18] [INFO] [161.31s]   [Sample 9340/12523] Loss = 0.000804 | Avg Loss = 0.010255 | Case: cavity/prop/case0092 (t=667)
+[2026-04-30 02:10:19] [INFO] [161.52s]   [Sample 9360/12523] Loss = 0.000806 | Avg Loss = 0.010235 | Case: cavity/prop/case0092 (t=687)
+[2026-04-30 02:10:19] [INFO] [161.81s]   [Sample 9380/12523] Loss = 0.000808 | Avg Loss = 0.010215 | Case: cavity/prop/case0092 (t=707)
+[2026-04-30 02:10:19] [INFO] [162.00s]   [Sample 9400/12523] Loss = 0.000808 | Avg Loss = 0.010194 | Case: cavity/prop/case0092 (t=727)
+[2026-04-30 02:10:19] [INFO] [162.30s]   [Sample 9420/12523] Loss = 0.000800 | Avg Loss = 0.010175 | Case: cavity/prop/case0092 (t=747)
+[2026-04-30 02:10:20] [INFO] [162.48s]   [Sample 9440/12523] Loss = 0.000804 | Avg Loss = 0.010155 | Case: cavity/prop/case0092 (t=767)
+[2026-04-30 02:10:20] [INFO] [162.77s]   [Sample 9460/12523] Loss = 0.000802 | Avg Loss = 0.010135 | Case: cavity/prop/case0092 (t=787)
+[2026-04-30 02:10:20] [INFO] [162.96s]   [Sample 9480/12523] Loss = 0.000803 | Avg Loss = 0.010115 | Case: cavity/prop/case0092 (t=807)
+[2026-04-30 02:10:20] [INFO] [163.25s]   [Sample 9500/12523] Loss = 0.000803 | Avg Loss = 0.010096 | Case: cavity/prop/case0092 (t=827)
+[2026-04-30 02:10:20] [INFO] [163.43s]   [Sample 9520/12523] Loss = 0.000803 | Avg Loss = 0.010076 | Case: cavity/prop/case0092 (t=847)
+[2026-04-30 02:10:21] [INFO] [163.70s]   [Sample 9540/12523] Loss = 0.000802 | Avg Loss = 0.010057 | Case: cavity/prop/case0092 (t=867)
+[2026-04-30 02:10:21] [INFO] [163.90s]   [Sample 9560/12523] Loss = 0.000801 | Avg Loss = 0.010037 | Case: cavity/prop/case0092 (t=887)
+[2026-04-30 02:10:21] [INFO] [164.17s]   [Sample 9580/12523] Loss = 0.000804 | Avg Loss = 0.010018 | Case: cavity/prop/case0092 (t=907)
+[2026-04-30 02:10:21] [INFO] [164.37s]   [Sample 9600/12523] Loss = 0.000800 | Avg Loss = 0.009999 | Case: cavity/prop/case0092 (t=927)
+[2026-04-30 02:10:22] [INFO] [164.75s]   [Sample 9620/12523] Loss = 0.000806 | Avg Loss = 0.009980 | Case: cavity/prop/case0092 (t=947)
+[2026-04-30 02:10:22] [INFO] [164.96s]   [Sample 9640/12523] Loss = 0.000805 | Avg Loss = 0.009961 | Case: cavity/prop/case0092 (t=967)
+[2026-04-30 02:10:22] [INFO] [165.28s]   [Sample 9660/12523] Loss = 0.000803 | Avg Loss = 0.009942 | Case: cavity/prop/case0092 (t=987)
+[2026-04-30 02:10:23] [INFO] [165.50s]   [Sample 9680/12523] Loss = 0.000684 | Avg Loss = 0.009923 | Case: cavity/prop/case0093 (t=8)
+[2026-04-30 02:10:23] [INFO] [165.77s]   [Sample 9700/12523] Loss = 0.000683 | Avg Loss = 0.009904 | Case: cavity/prop/case0094 (t=4)
+[2026-04-30 02:10:23] [INFO] [165.97s]   [Sample 9720/12523] Loss = 0.001494 | Avg Loss = 0.009886 | Case: cavity/prop/case0097 (t=3)
+[2026-04-30 02:10:23] [INFO] [166.26s]   [Sample 9740/12523] Loss = 0.001720 | Avg Loss = 0.009869 | Case: cavity/prop/case0099 (t=13)
+[2026-04-30 02:10:23] [INFO] [166.46s]   [Sample 9760/12523] Loss = 0.000940 | Avg Loss = 0.009851 | Case: cavity/prop/case0099 (t=33)
+[2026-04-30 02:10:24] [INFO] [166.74s]   [Sample 9780/12523] Loss = 0.000884 | Avg Loss = 0.009833 | Case: cavity/prop/case0099 (t=53)
+[2026-04-30 02:10:24] [INFO] [166.94s]   [Sample 9800/12523] Loss = 0.000997 | Avg Loss = 0.009814 | Case: cavity/prop/case0099 (t=73)
+[2026-04-30 02:10:24] [INFO] [167.23s]   [Sample 9820/12523] Loss = 0.000853 | Avg Loss = 0.009797 | Case: cavity/prop/case0099 (t=93)
+[2026-04-30 02:10:25] [INFO] [167.47s]   [Sample 9840/12523] Loss = 0.000929 | Avg Loss = 0.009778 | Case: cavity/prop/case0099 (t=113)
+[2026-04-30 02:10:25] [INFO] [167.76s]   [Sample 9860/12523] Loss = 0.000844 | Avg Loss = 0.009760 | Case: cavity/prop/case0099 (t=133)
+[2026-04-30 02:10:25] [INFO] [167.96s]   [Sample 9880/12523] Loss = 0.000821 | Avg Loss = 0.009742 | Case: cavity/prop/case0099 (t=153)
+[2026-04-30 02:10:25] [INFO] [168.27s]   [Sample 9900/12523] Loss = 0.000930 | Avg Loss = 0.009725 | Case: cavity/prop/case0099 (t=173)
+[2026-04-30 02:10:26] [INFO] [168.48s]   [Sample 9920/12523] Loss = 0.000876 | Avg Loss = 0.009706 | Case: cavity/prop/case0099 (t=193)
+[2026-04-30 02:10:26] [INFO] [168.79s]   [Sample 9940/12523] Loss = 0.000806 | Avg Loss = 0.009689 | Case: cavity/prop/case0099 (t=213)
+[2026-04-30 02:10:26] [INFO] [169.01s]   [Sample 9960/12523] Loss = 0.000802 | Avg Loss = 0.009671 | Case: cavity/prop/case0099 (t=233)
+[2026-04-30 02:10:26] [INFO] [169.35s]   [Sample 9980/12523] Loss = 0.000804 | Avg Loss = 0.009653 | Case: cavity/prop/case0099 (t=253)
+[2026-04-30 02:10:27] [INFO] [169.53s]   [Sample 10000/12523] Loss = 0.000803 | Avg Loss = 0.009635 | Case: cavity/prop/case0099 (t=273)
+[2026-04-30 02:10:27] [INFO] [169.90s]   [Sample 10020/12523] Loss = 0.000802 | Avg Loss = 0.009618 | Case: cavity/prop/case0099 (t=293)
+[2026-04-30 02:10:27] [INFO] [170.18s]   [Sample 10040/12523] Loss = 0.000799 | Avg Loss = 0.009600 | Case: cavity/prop/case0099 (t=313)
+[2026-04-30 02:10:28] [INFO] [170.76s]   [Sample 10060/12523] Loss = 0.000801 | Avg Loss = 0.009583 | Case: cavity/prop/case0099 (t=333)
+[2026-04-30 02:10:28] [INFO] [171.04s]   [Sample 10080/12523] Loss = 0.000799 | Avg Loss = 0.009565 | Case: cavity/prop/case0099 (t=353)
+[2026-04-30 02:10:29] [INFO] [171.50s]   [Sample 10100/12523] Loss = 0.000800 | Avg Loss = 0.009548 | Case: cavity/prop/case0099 (t=373)
+[2026-04-30 02:10:29] [INFO] [171.70s]   [Sample 10120/12523] Loss = 0.000800 | Avg Loss = 0.009530 | Case: cavity/prop/case0099 (t=393)
+[2026-04-30 02:10:29] [INFO] [172.00s]   [Sample 10140/12523] Loss = 0.000800 | Avg Loss = 0.009513 | Case: cavity/prop/case0099 (t=413)
+[2026-04-30 02:10:29] [INFO] [172.22s]   [Sample 10160/12523] Loss = 0.000798 | Avg Loss = 0.009496 | Case: cavity/prop/case0099 (t=433)
+[2026-04-30 02:10:30] [INFO] [172.51s]   [Sample 10180/12523] Loss = 0.000801 | Avg Loss = 0.009479 | Case: cavity/prop/case0099 (t=453)
+[2026-04-30 02:10:30] [INFO] [172.70s]   [Sample 10200/12523] Loss = 0.000800 | Avg Loss = 0.009462 | Case: cavity/prop/case0099 (t=473)
+[2026-04-30 02:10:30] [INFO] [172.98s]   [Sample 10220/12523] Loss = 0.000798 | Avg Loss = 0.009445 | Case: cavity/prop/case0099 (t=493)
+[2026-04-30 02:10:30] [INFO] [173.19s]   [Sample 10240/12523] Loss = 0.000800 | Avg Loss = 0.009428 | Case: cavity/prop/case0099 (t=513)
+[2026-04-30 02:10:31] [INFO] [173.49s]   [Sample 10260/12523] Loss = 0.000801 | Avg Loss = 0.009412 | Case: cavity/prop/case0099 (t=533)
+[2026-04-30 02:10:31] [INFO] [173.68s]   [Sample 10280/12523] Loss = 0.000796 | Avg Loss = 0.009394 | Case: cavity/prop/case0099 (t=553)
+[2026-04-30 02:10:31] [INFO] [174.00s]   [Sample 10300/12523] Loss = 0.000798 | Avg Loss = 0.009378 | Case: cavity/prop/case0099 (t=573)
+[2026-04-30 02:10:31] [INFO] [174.23s]   [Sample 10320/12523] Loss = 0.000804 | Avg Loss = 0.009361 | Case: cavity/prop/case0099 (t=593)
+[2026-04-30 02:10:32] [INFO] [174.51s]   [Sample 10340/12523] Loss = 0.000799 | Avg Loss = 0.009345 | Case: cavity/prop/case0099 (t=613)
+[2026-04-30 02:10:32] [INFO] [174.72s]   [Sample 10360/12523] Loss = 0.000802 | Avg Loss = 0.009328 | Case: cavity/prop/case0099 (t=633)
+[2026-04-30 02:10:32] [INFO] [175.00s]   [Sample 10380/12523] Loss = 0.000799 | Avg Loss = 0.009312 | Case: cavity/prop/case0099 (t=653)
+[2026-04-30 02:10:32] [INFO] [175.22s]   [Sample 10400/12523] Loss = 0.000802 | Avg Loss = 0.009295 | Case: cavity/prop/case0099 (t=673)
+[2026-04-30 02:10:33] [INFO] [175.53s]   [Sample 10420/12523] Loss = 0.000798 | Avg Loss = 0.009279 | Case: cavity/prop/case0099 (t=693)
+[2026-04-30 02:10:33] [INFO] [175.73s]   [Sample 10440/12523] Loss = 0.000802 | Avg Loss = 0.009263 | Case: cavity/prop/case0099 (t=713)
+[2026-04-30 02:10:33] [INFO] [176.03s]   [Sample 10460/12523] Loss = 0.000799 | Avg Loss = 0.009247 | Case: cavity/prop/case0099 (t=733)
+[2026-04-30 02:10:33] [INFO] [176.25s]   [Sample 10480/12523] Loss = 0.000800 | Avg Loss = 0.009230 | Case: cavity/prop/case0099 (t=753)
+[2026-04-30 02:10:34] [INFO] [176.56s]   [Sample 10500/12523] Loss = 0.000802 | Avg Loss = 0.009215 | Case: cavity/prop/case0099 (t=773)
+[2026-04-30 02:10:34] [INFO] [176.76s]   [Sample 10520/12523] Loss = 0.000801 | Avg Loss = 0.009198 | Case: cavity/prop/case0099 (t=793)
+[2026-04-30 02:10:34] [INFO] [177.10s]   [Sample 10540/12523] Loss = 0.000801 | Avg Loss = 0.009183 | Case: cavity/prop/case0099 (t=813)
+[2026-04-30 02:10:34] [INFO] [177.31s]   [Sample 10560/12523] Loss = 0.000799 | Avg Loss = 0.009167 | Case: cavity/prop/case0099 (t=833)
+[2026-04-30 02:10:35] [INFO] [177.63s]   [Sample 10580/12523] Loss = 0.000801 | Avg Loss = 0.009151 | Case: cavity/prop/case0099 (t=853)
+[2026-04-30 02:10:35] [INFO] [177.84s]   [Sample 10600/12523] Loss = 0.000805 | Avg Loss = 0.009135 | Case: cavity/prop/case0099 (t=873)
+[2026-04-30 02:10:35] [INFO] [178.17s]   [Sample 10620/12523] Loss = 0.000801 | Avg Loss = 0.009120 | Case: cavity/prop/case0099 (t=893)
+[2026-04-30 02:10:35] [INFO] [178.41s]   [Sample 10640/12523] Loss = 0.000803 | Avg Loss = 0.009104 | Case: cavity/prop/case0099 (t=913)
+[2026-04-30 02:10:36] [INFO] [178.69s]   [Sample 10660/12523] Loss = 0.000803 | Avg Loss = 0.009088 | Case: cavity/prop/case0099 (t=933)
+[2026-04-30 02:10:36] [INFO] [178.93s]   [Sample 10680/12523] Loss = 0.000809 | Avg Loss = 0.009073 | Case: cavity/prop/case0099 (t=953)
+[2026-04-30 02:10:36] [INFO] [179.30s]   [Sample 10700/12523] Loss = 0.000802 | Avg Loss = 0.009057 | Case: cavity/prop/case0099 (t=973)
+[2026-04-30 02:10:37] [INFO] [179.52s]   [Sample 10720/12523] Loss = 0.000805 | Avg Loss = 0.009042 | Case: cavity/prop/case0099 (t=993)
+[2026-04-30 02:10:37] [INFO] [179.84s]   [Sample 10740/12523] Loss = 0.000794 | Avg Loss = 0.009027 | Case: cavity/prop/case0100 (t=14)
+[2026-04-30 02:10:37] [INFO] [180.26s]   [Sample 10760/12523] Loss = 0.000680 | Avg Loss = 0.009011 | Case: cavity/prop/case0101 (t=7)
+[2026-04-30 02:10:38] [INFO] [180.67s]   [Sample 10780/12523] Loss = 0.000961 | Avg Loss = 0.008997 | Case: cavity/prop/case0104 (t=3)
+[2026-04-30 02:10:38] [INFO] [180.92s]   [Sample 10800/12523] Loss = 0.002562 | Avg Loss = 0.008983 | Case: cavity/prop/case0106 (t=13)
+[2026-04-30 02:10:38] [INFO] [181.30s]   [Sample 10820/12523] Loss = 0.001862 | Avg Loss = 0.008971 | Case: cavity/prop/case0106 (t=33)
+[2026-04-30 02:10:39] [INFO] [181.63s]   [Sample 10840/12523] Loss = 0.001308 | Avg Loss = 0.008957 | Case: cavity/prop/case0106 (t=53)
+[2026-04-30 02:10:39] [INFO] [182.00s]   [Sample 10860/12523] Loss = 0.000905 | Avg Loss = 0.008942 | Case: cavity/prop/case0106 (t=73)
+[2026-04-30 02:10:39] [INFO] [182.25s]   [Sample 10880/12523] Loss = 0.000897 | Avg Loss = 0.008927 | Case: cavity/prop/case0106 (t=93)
+[2026-04-30 02:10:40] [INFO] [182.56s]   [Sample 10900/12523] Loss = 0.000852 | Avg Loss = 0.008913 | Case: cavity/prop/case0106 (t=113)
+[2026-04-30 02:10:40] [INFO] [182.77s]   [Sample 10920/12523] Loss = 0.000846 | Avg Loss = 0.008898 | Case: cavity/prop/case0106 (t=133)
+[2026-04-30 02:10:40] [INFO] [183.09s]   [Sample 10940/12523] Loss = 0.000821 | Avg Loss = 0.008884 | Case: cavity/prop/case0106 (t=153)
+[2026-04-30 02:10:40] [INFO] [183.31s]   [Sample 10960/12523] Loss = 0.000894 | Avg Loss = 0.008869 | Case: cavity/prop/case0106 (t=173)
+[2026-04-30 02:10:41] [INFO] [183.60s]   [Sample 10980/12523] Loss = 0.000922 | Avg Loss = 0.008855 | Case: cavity/prop/case0106 (t=193)
+[2026-04-30 02:10:41] [INFO] [183.81s]   [Sample 11000/12523] Loss = 0.000940 | Avg Loss = 0.008840 | Case: cavity/prop/case0106 (t=213)
+[2026-04-30 02:10:41] [INFO] [184.11s]   [Sample 11020/12523] Loss = 0.000915 | Avg Loss = 0.008826 | Case: cavity/prop/case0106 (t=233)
+[2026-04-30 02:10:41] [INFO] [184.35s]   [Sample 11040/12523] Loss = 0.000924 | Avg Loss = 0.008811 | Case: cavity/prop/case0106 (t=253)
+[2026-04-30 02:10:42] [INFO] [184.63s]   [Sample 11060/12523] Loss = 0.000904 | Avg Loss = 0.008797 | Case: cavity/prop/case0106 (t=273)
+[2026-04-30 02:10:42] [INFO] [184.83s]   [Sample 11080/12523] Loss = 0.000890 | Avg Loss = 0.008782 | Case: cavity/prop/case0106 (t=293)
+[2026-04-30 02:10:42] [INFO] [185.13s]   [Sample 11100/12523] Loss = 0.000830 | Avg Loss = 0.008768 | Case: cavity/prop/case0106 (t=313)
+[2026-04-30 02:10:42] [INFO] [185.32s]   [Sample 11120/12523] Loss = 0.000941 | Avg Loss = 0.008754 | Case: cavity/prop/case0106 (t=333)
+[2026-04-30 02:10:43] [INFO] [185.63s]   [Sample 11140/12523] Loss = 0.000842 | Avg Loss = 0.008740 | Case: cavity/prop/case0106 (t=353)
+[2026-04-30 02:10:43] [INFO] [185.83s]   [Sample 11160/12523] Loss = 0.000879 | Avg Loss = 0.008726 | Case: cavity/prop/case0106 (t=373)
+[2026-04-30 02:10:43] [INFO] [186.24s]   [Sample 11180/12523] Loss = 0.000888 | Avg Loss = 0.008712 | Case: cavity/prop/case0106 (t=393)
+[2026-04-30 02:10:44] [INFO] [186.56s]   [Sample 11200/12523] Loss = 0.000900 | Avg Loss = 0.008698 | Case: cavity/prop/case0106 (t=413)
+[2026-04-30 02:10:44] [INFO] [186.89s]   [Sample 11220/12523] Loss = 0.000818 | Avg Loss = 0.008684 | Case: cavity/prop/case0106 (t=433)
+[2026-04-30 02:10:44] [INFO] [187.32s]   [Sample 11240/12523] Loss = 0.000911 | Avg Loss = 0.008670 | Case: cavity/prop/case0106 (t=453)
+[2026-04-30 02:10:45] [INFO] [187.67s]   [Sample 11260/12523] Loss = 0.000885 | Avg Loss = 0.008656 | Case: cavity/prop/case0106 (t=473)
+[2026-04-30 02:10:45] [INFO] [187.90s]   [Sample 11280/12523] Loss = 0.000916 | Avg Loss = 0.008642 | Case: cavity/prop/case0106 (t=493)
+[2026-04-30 02:10:45] [INFO] [188.24s]   [Sample 11300/12523] Loss = 0.000920 | Avg Loss = 0.008629 | Case: cavity/prop/case0106 (t=513)
+[2026-04-30 02:10:45] [INFO] [188.45s]   [Sample 11320/12523] Loss = 0.000933 | Avg Loss = 0.008615 | Case: cavity/prop/case0106 (t=533)
+[2026-04-30 02:10:46] [INFO] [188.71s]   [Sample 11340/12523] Loss = 0.000893 | Avg Loss = 0.008601 | Case: cavity/prop/case0106 (t=553)
+[2026-04-30 02:10:46] [INFO] [188.91s]   [Sample 11360/12523] Loss = 0.000813 | Avg Loss = 0.008587 | Case: cavity/prop/case0106 (t=573)
+[2026-04-30 02:10:46] [INFO] [189.22s]   [Sample 11380/12523] Loss = 0.000918 | Avg Loss = 0.008574 | Case: cavity/prop/case0106 (t=593)
+[2026-04-30 02:10:47] [INFO] [189.49s]   [Sample 11400/12523] Loss = 0.000850 | Avg Loss = 0.008560 | Case: cavity/prop/case0106 (t=613)
+[2026-04-30 02:10:47] [INFO] [189.81s]   [Sample 11420/12523] Loss = 0.000840 | Avg Loss = 0.008547 | Case: cavity/prop/case0106 (t=633)
+[2026-04-30 02:10:47] [INFO] [190.04s]   [Sample 11440/12523] Loss = 0.000878 | Avg Loss = 0.008533 | Case: cavity/prop/case0106 (t=653)
+[2026-04-30 02:10:48] [INFO] [190.72s]   [Sample 11460/12523] Loss = 0.000883 | Avg Loss = 0.008520 | Case: cavity/prop/case0106 (t=673)
+[2026-04-30 02:10:48] [INFO] [191.01s]   [Sample 11480/12523] Loss = 0.000907 | Avg Loss = 0.008507 | Case: cavity/prop/case0106 (t=693)
+[2026-04-30 02:10:48] [INFO] [191.39s]   [Sample 11500/12523] Loss = 0.000903 | Avg Loss = 0.008494 | Case: cavity/prop/case0106 (t=713)
+[2026-04-30 02:10:49] [INFO] [191.69s]   [Sample 11520/12523] Loss = 0.000924 | Avg Loss = 0.008480 | Case: cavity/prop/case0106 (t=733)
+[2026-04-30 02:10:49] [INFO] [192.37s]   [Sample 11540/12523] Loss = 0.000944 | Avg Loss = 0.008468 | Case: cavity/prop/case0106 (t=753)
+[2026-04-30 02:10:50] [INFO] [192.62s]   [Sample 11560/12523] Loss = 0.000898 | Avg Loss = 0.008454 | Case: cavity/prop/case0106 (t=773)
+[2026-04-30 02:10:50] [INFO] [192.97s]   [Sample 11580/12523] Loss = 0.000878 | Avg Loss = 0.008441 | Case: cavity/prop/case0106 (t=793)
+[2026-04-30 02:10:50] [INFO] [193.24s]   [Sample 11600/12523] Loss = 0.000871 | Avg Loss = 0.008428 | Case: cavity/prop/case0106 (t=813)
+[2026-04-30 02:10:51] [INFO] [193.57s]   [Sample 11620/12523] Loss = 0.000929 | Avg Loss = 0.008415 | Case: cavity/prop/case0106 (t=833)
+[2026-04-30 02:10:51] [INFO] [193.80s]   [Sample 11640/12523] Loss = 0.000819 | Avg Loss = 0.008402 | Case: cavity/prop/case0106 (t=853)
+[2026-04-30 02:10:51] [INFO] [194.19s]   [Sample 11660/12523] Loss = 0.000903 | Avg Loss = 0.008389 | Case: cavity/prop/case0106 (t=873)
+[2026-04-30 02:10:52] [INFO] [194.50s]   [Sample 11680/12523] Loss = 0.000817 | Avg Loss = 0.008376 | Case: cavity/prop/case0106 (t=893)
+[2026-04-30 02:10:52] [INFO] [195.00s]   [Sample 11700/12523] Loss = 0.000925 | Avg Loss = 0.008364 | Case: cavity/prop/case0106 (t=913)
+[2026-04-30 02:10:52] [INFO] [195.42s]   [Sample 11720/12523] Loss = 0.000816 | Avg Loss = 0.008351 | Case: cavity/prop/case0106 (t=933)
+[2026-04-30 02:10:53] [INFO] [195.88s]   [Sample 11740/12523] Loss = 0.000924 | Avg Loss = 0.008338 | Case: cavity/prop/case0106 (t=953)
+[2026-04-30 02:10:53] [INFO] [196.18s]   [Sample 11760/12523] Loss = 0.000868 | Avg Loss = 0.008325 | Case: cavity/prop/case0106 (t=973)
+[2026-04-30 02:10:54] [INFO] [196.52s]   [Sample 11780/12523] Loss = 0.000851 | Avg Loss = 0.008313 | Case: cavity/prop/case0106 (t=993)
+[2026-04-30 02:10:54] [INFO] [196.76s]   [Sample 11800/12523] Loss = 0.000778 | Avg Loss = 0.008300 | Case: cavity/prop/case0107 (t=14)
+[2026-04-30 02:10:54] [INFO] [197.15s]   [Sample 11820/12523] Loss = 0.000709 | Avg Loss = 0.008287 | Case: cavity/prop/case0108 (t=5)
+[2026-04-30 02:10:54] [INFO] [197.42s]   [Sample 11840/12523] Loss = 0.001656 | Avg Loss = 0.008275 | Case: cavity/prop/case0110 (t=2)
+[2026-04-30 02:10:55] [INFO] [197.79s]   [Sample 11860/12523] Loss = 0.002438 | Avg Loss = 0.008264 | Case: cavity/prop/case0113 (t=9)
+[2026-04-30 02:10:55] [INFO] [198.06s]   [Sample 11880/12523] Loss = 0.002093 | Avg Loss = 0.008253 | Case: cavity/prop/case0113 (t=29)
+[2026-04-30 02:10:55] [INFO] [198.44s]   [Sample 11900/12523] Loss = 0.002357 | Avg Loss = 0.008244 | Case: cavity/prop/case0113 (t=49)
+[2026-04-30 02:11:19] [INFO] [222.44s]   [Sample 11920/12523] Loss = 0.001885 | Avg Loss = 0.008234 | Case: cavity/prop/case0113 (t=69)
+[2026-04-30 02:13:53] [INFO] [376.14s]   [Sample 11940/12523] Loss = 0.003702 | Avg Loss = 0.008227 | Case: cavity/prop/case0113 (t=89)
+[2026-04-30 02:15:16] [INFO] [458.73s]   [Sample 11960/12523] Loss = 0.003551 | Avg Loss = 0.008217 | Case: cavity/prop/case0113 (t=109)
+[2026-04-30 02:17:05] [INFO] [567.99s]   [Sample 11980/12523] Loss = 0.003210 | Avg Loss = 0.008209 | Case: cavity/prop/case0113 (t=129)
+[2026-04-30 02:18:25] [INFO] [647.58s]   [Sample 12000/12523] Loss = 0.001810 | Avg Loss = 0.008198 | Case: cavity/prop/case0113 (t=149)
+[2026-04-30 02:20:45] [INFO] [788.42s]   [Sample 12020/12523] Loss = 0.002714 | Avg Loss = 0.008190 | Case: cavity/prop/case0113 (t=169)
+[2026-04-30 02:21:54] [INFO] [857.23s]   [Sample 12040/12523] Loss = 0.001501 | Avg Loss = 0.008179 | Case: cavity/prop/case0113 (t=189)
+[2026-04-30 02:23:39] [INFO] [962.00s]   [Sample 12060/12523] Loss = 0.000922 | Avg Loss = 0.008168 | Case: cavity/prop/case0113 (t=209)
+[2026-04-30 02:24:23] [INFO] [1006.46s]   [Sample 12080/12523] Loss = 0.000897 | Avg Loss = 0.008155 | Case: cavity/prop/case0113 (t=229)
+[2026-04-30 02:25:17] [INFO] [1059.56s]   [Sample 12100/12523] Loss = 0.000862 | Avg Loss = 0.008144 | Case: cavity/prop/case0113 (t=249)
+[2026-04-30 02:25:17] [INFO] [1060.44s]   [Sample 12120/12523] Loss = 0.000852 | Avg Loss = 0.008131 | Case: cavity/prop/case0113 (t=269)
+[2026-04-30 02:26:23] [INFO] [1125.68s]   [Sample 12140/12523] Loss = 0.000830 | Avg Loss = 0.008120 | Case: cavity/prop/case0113 (t=289)
+[2026-04-30 02:26:58] [INFO] [1161.37s]   [Sample 12160/12523] Loss = 0.000828 | Avg Loss = 0.008107 | Case: cavity/prop/case0113 (t=309)
+[2026-04-30 02:28:26] [INFO] [1249.29s]   [Sample 12180/12523] Loss = 0.000810 | Avg Loss = 0.008096 | Case: cavity/prop/case0113 (t=329)
+[2026-04-30 02:29:21] [INFO] [1304.02s]   [Sample 12200/12523] Loss = 0.000809 | Avg Loss = 0.008083 | Case: cavity/prop/case0113 (t=349)
+[2026-04-30 02:31:29] [INFO] [1431.79s]   [Sample 12220/12523] Loss = 0.000829 | Avg Loss = 0.008072 | Case: cavity/prop/case0113 (t=369)
+[2026-04-30 02:32:55] [INFO] [1517.50s]   [Sample 12240/12523] Loss = 0.000811 | Avg Loss = 0.008060 | Case: cavity/prop/case0113 (t=389)
+[2026-04-30 02:35:02] [INFO] [1644.89s]   [Sample 12260/12523] Loss = 0.000831 | Avg Loss = 0.008048 | Case: cavity/prop/case0113 (t=409)
+[2026-04-30 02:36:21] [INFO] [1723.65s]   [Sample 12280/12523] Loss = 0.000917 | Avg Loss = 0.008036 | Case: cavity/prop/case0113 (t=429)
+[2026-04-30 02:37:12] [INFO] [1775.14s]   [Sample 12300/12523] Loss = 0.000792 | Avg Loss = 0.008025 | Case: cavity/prop/case0113 (t=449)
+[2026-04-30 02:37:37] [INFO] [1799.61s]   [Sample 12320/12523] Loss = 0.000838 | Avg Loss = 0.008013 | Case: cavity/prop/case0113 (t=469)
+[2026-04-30 02:38:26] [INFO] [1849.18s]   [Sample 12340/12523] Loss = 0.000808 | Avg Loss = 0.008002 | Case: cavity/prop/case0113 (t=489)
+[2026-04-30 02:39:23] [INFO] [1905.96s]   [Sample 12360/12523] Loss = 0.000809 | Avg Loss = 0.007990 | Case: cavity/prop/case0113 (t=509)
+[2026-04-30 02:41:02] [INFO] [2005.00s]   [Sample 12380/12523] Loss = 0.000905 | Avg Loss = 0.007979 | Case: cavity/prop/case0113 (t=529)
+[2026-04-30 02:41:56] [INFO] [2059.42s]   [Sample 12400/12523] Loss = 0.000755 | Avg Loss = 0.007967 | Case: cavity/prop/case0114 (t=11)
+[2026-04-30 02:43:58] [INFO] [2180.83s]   [Sample 12420/12523] Loss = 0.000717 | Avg Loss = 0.007955 | Case: cavity/prop/case0115 (t=0)
+[2026-04-30 02:45:17] [INFO] [2259.86s]   [Sample 12440/12523] Loss = 0.001022 | Avg Loss = 0.007944 | Case: cavity/prop/case0116 (t=0)
+[2026-04-30 02:47:45] [INFO] [2408.16s]   [Sample 12460/12523] Loss = 0.001571 | Avg Loss = 0.007934 | Case: cavity/prop/case0120 (t=2)
+[2026-04-30 02:49:11] [INFO] [2494.16s]   [Sample 12480/12523] Loss = 0.000959 | Avg Loss = 0.007922 | Case: cavity/prop/case0125 (t=1)
+[2026-04-30 02:52:46] [INFO] [2709.03s]   [Sample 12500/12523] Loss = 0.001904 | Avg Loss = 0.007912 | Case: cavity/prop/case0128 (t=1)
+[2026-04-30 02:55:08] [INFO] [2851.22s]   [Sample 12520/12523] Loss = 0.000992 | Avg Loss = 0.007900 | Case: cavity/prop/case0133 (t=0)
+[2026-04-30 02:55:58] [INFO] [2901.10s] 
+[2026-04-30 02:55:58] [INFO] [2901.12s] --------------------------------------------------------------------------------
+[2026-04-30 02:55:58] [INFO] [2901.15s] EVALUATION COMPLETE - COMPUTING METRICS
+[2026-04-30 02:55:58] [INFO] [2901.17s] --------------------------------------------------------------------------------
+[2026-04-30 02:55:58] [INFO] [2901.20s] 
+Average MSE Loss (normalized): 0.007899
+[2026-04-30 02:55:58] [INFO] [2901.22s] 
+[2026-04-30 02:55:58] [INFO] [2901.25s] ================================================================================
+[2026-04-30 02:55:58] [INFO] [2901.27s] DENORMALIZED METRICS (Actual Velocity Values)
+[2026-04-30 02:55:58] [INFO] [2901.30s] ================================================================================
+[2026-04-30 02:56:08] [INFO] [2911.04s] 
+[2026-04-30 02:56:08] [INFO] [2911.06s] ------------------------------------------------------------
+[2026-04-30 02:56:29] [METRIC] [2932.14s]   U COMPONENT:
+[2026-04-30 02:56:31] [METRIC] [2934.09s]     MSE:  0.44277030
+[2026-04-30 02:56:35] [METRIC] [2937.57s]     RMSE: 0.665410
+[2026-04-30 02:56:35] [METRIC] [2938.23s]     MAE:  0.368785
+[2026-04-30 02:56:36] [METRIC] [2938.90s]     R2:   0.990523
+[2026-04-30 02:56:37] [METRIC] [2939.86s]     MAPE: 6638.0348%
+[2026-04-30 02:56:37] [INFO] [2939.89s] 
+[2026-04-30 02:56:37] [INFO] [2939.92s] ------------------------------------------------------------
+[2026-04-30 02:57:06] [METRIC] [2969.12s]   V COMPONENT:
+[2026-04-30 02:57:06] [METRIC] [2969.19s]     MSE:  0.21398766
+[2026-04-30 02:57:07] [METRIC] [2969.87s]     RMSE: 0.462588
+[2026-04-30 02:57:09] [METRIC] [2972.14s]     MAE:  0.286999
+[2026-04-30 02:57:09] [METRIC] [2972.17s]     R2:   0.993839
+[2026-04-30 02:57:09] [METRIC] [2972.20s]     MAPE: 20703.6224%
+[2026-04-30 02:57:09] [INFO] [2972.22s] 
+[2026-04-30 02:57:09] [INFO] [2972.25s] ------------------------------------------------------------
+[2026-04-30 02:58:15] [METRIC] [3037.74s]   COMBINED (U + V):
+[2026-04-30 02:58:15] [METRIC] [3038.30s]     MSE:  0.32837844
+[2026-04-30 02:58:17] [METRIC] [3039.57s]     RMSE: 0.573043
+[2026-04-30 02:58:17] [METRIC] [3039.59s]     MAE:  0.327892
+[2026-04-30 02:58:17] [METRIC] [3039.62s]     R2:   0.991943
+[2026-04-30 02:58:17] [METRIC] [3039.64s]     MAPE: 13618.4479%
+[2026-04-30 02:58:17] [INFO] [3039.67s] 
+[2026-04-30 02:58:17] [INFO] [3039.69s] ------------------------------------------------------------
+[2026-04-30 02:58:17] [INFO] [3039.71s] PER-SAMPLE STATISTICS
+[2026-04-30 02:58:17] [INFO] [3039.74s] ------------------------------------------------------------
+[2026-04-30 02:58:17] [INFO] [3039.93s]   U: MSE mean=0.00956969, std=0.01489464
+[2026-04-30 02:58:17] [INFO] [3040.12s]   U: R2  mean=0.989131, std=0.020531
+[2026-04-30 02:58:17] [INFO] [3040.43s]   V: MSE mean=0.00622767, std=0.01440911
+[2026-04-30 02:58:18] [INFO] [3040.48s]   V: R2  mean=0.983667, std=0.039601
+[2026-04-30 02:58:18] [INFO] [3040.90s] 
+[2026-04-30 02:58:18] [INFO] [3041.32s] ------------------------------------------------------------
+[2026-04-30 02:58:19] [INFO] [3041.63s] BEST / WORST SAMPLES
+[2026-04-30 02:58:19] [INFO] [3041.77s] ------------------------------------------------------------
+[2026-04-30 02:58:19] [INFO] [3041.89s] 
+  Best U sample: cavity/bc/case0004 (t=2)
+[2026-04-30 02:58:19] [INFO] [3041.96s]     MSE=0.00014948, R2=0.994699
+[2026-04-30 02:58:20] [INFO] [3042.95s] 
+  Worst U sample: cavity/bc/case0046 (t=1)
+[2026-04-30 02:58:20] [INFO] [3042.97s]     MSE=0.18070373, R2=0.864689
+[2026-04-30 02:58:20] [INFO] [3043.01s] 
+  Best V sample: cavity/bc/case0003 (t=0)
+[2026-04-30 02:58:20] [INFO] [3043.03s]     MSE=0.00034591, R2=0.974990
+[2026-04-30 02:58:20] [INFO] [3043.06s] 
+  Worst V sample: cavity/bc/case0046 (t=1)
+[2026-04-30 02:58:20] [INFO] [3043.08s]     MSE=0.40390715, R2=0.545496
+[2026-04-30 02:58:20] [PHASE] [3043.11s] === COMPLETED: Model Evaluation (took 3032.62s) ===
+[2026-04-30 02:58:20] [PHASE] [3043.13s] === STARTING: Report Saving ===
+[2026-04-30 02:58:21] [INFO] [3044.36s] Report saved to: C:\traework\a\wilmer-deeplearn\evaluation_report_full.json
+[2026-04-30 02:58:21] [PHASE] [3044.39s] === COMPLETED: Report Saving (took 1.26s) ===
+[2026-04-30 02:58:22] [INFO] [3044.93s] 
+================================================================================
+[2026-04-30 02:58:22] [INFO] [3044.95s] EVALUATION COMPLETE - FINAL SUMMARY
+[2026-04-30 02:58:22] [INFO] [3045.20s] ================================================================================
+[2026-04-30 02:58:22] [INFO] [3045.24s] Model: C:\traework\a\wilmer-deeplearn\fno2_full_model.pth
+[2026-04-30 02:58:22] [INFO] [3045.26s] Data: C:\traework\data
+[2026-04-30 02:58:22] [INFO] [3045.29s] Samples: 12523
+[2026-04-30 02:58:22] [INFO] [3045.32s] Average Loss: 0.007899
+[2026-04-30 02:58:27] [INFO] [3049.84s] 
+[2026-04-30 02:58:30] [INFO] [3052.93s] Final Metrics (Denormalized):
+[2026-04-30 02:58:30] [INFO] [3052.96s]   U Component - R2: 0.990523, RMSE: 0.665410
+[2026-04-30 02:58:30] [INFO] [3052.98s]   V Component - R2: 0.993839, RMSE: 0.462588
+[2026-04-30 02:58:30] [INFO] [3053.01s]   Combined    - R2: 0.991943, RMSE: 0.573043
+[2026-04-30 02:58:30] [INFO] [3053.03s] 
+[2026-04-30 02:58:30] [INFO] [3053.05s] Log saved at: C:\traework\a\wilmer-deeplearn\evaluation_full.log
+[2026-04-30 02:58:30] [INFO] [3053.08s] Report saved at: C:\traework\a\wilmer-deeplearn\evaluation_report_full.json
+[2026-04-30 02:58:30] [INFO] [3053.26s] End time: 2026-04-30 02:58:30
+[2026-04-30 02:58:30] [INFO] [3053.28s] ================================================================================
